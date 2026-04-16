@@ -12,7 +12,8 @@ engine:
   model: "claude-sonnet-4.5"
 
 tools:
-  playwright:
+  web-fetch:
+  bash: ["curl:*"]
 
 strict: false
 
@@ -35,23 +36,21 @@ You are a senior financial market expert. Produce a **daily morning stock market
 
 ## Data collection rules (must follow)
 
-Use Playwright browser automation to gather fresh data from these sources:
+Use `web-fetch` or `curl` to gather fresh data from these sources:
 
 1. `https://wallstreetcn.com/`  
-   - Capture overnight US stock market moves, major headlines, and flash news.
-2. WallstreetCN calendar page (`https://wallstreetcn.com/calendar`) — key data & events for today/tonight.
-3. Tiger Broker market news page — 24/7 news feed.  
-   - Try `https://www.tigerbrokers.com/news` or `https://www.tigertrade.com/news`.
+   - Fetch the homepage HTML and extract headline articles, brief descriptions, and market data from the content.
+2. `https://wallstreetcn.com/calendar` — key scheduled data/events for today/tonight.
+3. Tiger Broker market news — try: `https://www.tigerbrokers.com/news` or `https://www.tigertrade.com/news`.
 
-Steps for each site:
-1. Navigate to the URL with Playwright
-2. Take a screenshot to confirm the page loaded
-3. Extract the visible text content of the main feed/headlines
-4. Click into at most 1-2 individual articles per site to read details
+Steps for each source:
+1. Fetch the page content using `web_fetch` tool or `curl -L -A "Mozilla/5.0" <url>`
+2. Scan the returned HTML/JSON for headline text, article titles, and key figures
+3. If a page returns mostly JavaScript (empty body), try appending `/api/` or `/rss` to the URL
 
 Important limits:
 
-- Read **at most 3-4 articles total** across all sites.
+- Read **at most 3-4 sources total**.
 - Prefer high-signal items (macro prints, Fed-related updates, mega-cap tech/AI, earnings surprises, risk events).
 - Do not browse beyond what is needed for the briefing.
 
