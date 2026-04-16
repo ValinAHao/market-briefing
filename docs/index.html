@@ -1,0 +1,1356 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>早间财经简报 | 2026年4月19日</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+      :root {
+        --bg-primary: #0a0e17;
+        --bg-card: #111827;
+        --bg-card-alt: #1a2235;
+        --bg-highlight: rgba(59, 130, 246, 0.08);
+        --border: #1e293b;
+        --border-accent: #2563eb;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --accent-blue: #3b82f6;
+        --accent-cyan: #06b6d4;
+        --green: #10b981;
+        --green-bg: rgba(16, 185, 129, 0.1);
+        --green-border: rgba(16, 185, 129, 0.3);
+        --red: #ef4444;
+        --red-bg: rgba(239, 68, 68, 0.1);
+        --red-border: rgba(239, 68, 68, 0.3);
+        --yellow: #f59e0b;
+        --yellow-bg: rgba(245, 158, 11, 0.08);
+        --yellow-border: rgba(245, 158, 11, 0.3);
+        --orange: #f97316;
+        --purple: #a78bfa;
+        --gold: #fbbf24;
+        --gradient-brand: linear-gradient(135deg, #3b82f6, #06b6d4);
+        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+        --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+        --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        font-family:
+          "Noto Sans SC",
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 24px 20px 60px;
+      }
+
+      /* ── Header ── */
+      .header {
+        text-align: center;
+        padding: 48px 24px 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.12) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .header-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 12px;
+        color: var(--text-secondary);
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+      }
+
+      .header-badge .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+
+      .header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        background: var(--gradient-brand);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+      }
+
+      .header .date {
+        font-size: 15px;
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .header .subtitle {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-top: 6px;
+      }
+
+      /* ── Section ── */
+      .section {
+        margin-top: 32px;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      .section-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-primary);
+        letter-spacing: -0.3px;
+      }
+
+      /* ── Cards ── */
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 12px;
+        box-shadow: var(--shadow-card);
+        transition: border-color 0.2s;
+      }
+
+      .card:hover {
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+
+      /* ── Index Grid ── */
+      .index-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .index-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: var(--shadow-card);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .index-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+      }
+
+      .index-card.up::after {
+        background: var(--gradient-brand);
+      }
+      .index-card.down::after {
+        background: var(--red);
+      }
+
+      .index-name {
+        font-size: 12px;
+        color: var(--text-muted);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-bottom: 6px;
+      }
+
+      .index-value {
+        font-family: "JetBrains Mono", "Inter", monospace;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .index-change {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .index-change.up {
+        color: var(--green);
+      }
+      .index-change.down {
+        color: var(--red);
+      }
+
+      /* ── Asset Table ── */
+      .asset-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 14px;
+      }
+
+      .asset-table thead th {
+        text-align: left;
+        padding: 10px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .asset-table tbody td {
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        vertical-align: middle;
+      }
+
+      .asset-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .asset-table tbody tr:hover {
+        background: var(--bg-highlight);
+      }
+
+      .asset-name {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .asset-price {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 500;
+        color: var(--text-secondary);
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 2px 8px;
+        border-radius: 6px;
+        gap: 3px;
+      }
+
+      .tag.up {
+        color: var(--green);
+        background: var(--green-bg);
+      }
+
+      .tag.down {
+        color: var(--red);
+        background: var(--red-bg);
+      }
+
+      .asset-note {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-left: 6px;
+      }
+
+      /* ── Insight Box ── */
+      .insight {
+        background: var(--bg-card-alt);
+        border-left: 3px solid var(--accent-blue);
+        border-radius: 0 8px 8px 0;
+        padding: 14px 16px;
+        margin-top: 12px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .insight strong {
+        color: var(--accent-cyan);
+        font-weight: 600;
+      }
+
+      /* ── Bullet List ── */
+      .bullet-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .bullet-list li {
+        position: relative;
+        padding: 6px 0 6px 20px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .bullet-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-blue);
+      }
+
+      .bullet-list li strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .bullet-list li .num {
+        font-family: "JetBrains Mono", monospace;
+        color: var(--green);
+        font-weight: 500;
+      }
+
+      .bullet-list li .num.down {
+        color: var(--red);
+      }
+
+      /* ── Event Timeline ── */
+      .timeline {
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-blue),
+          var(--border)
+        );
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 8px 0;
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 15px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-blue);
+        background: var(--bg-primary);
+      }
+
+      .timeline-item.important::before {
+        background: var(--accent-blue);
+        box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+      }
+
+      .timeline-label {
+        font-size: 11px;
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+        margin-right: 6px;
+      }
+
+      .timeline-label.data {
+        background: rgba(6, 182, 212, 0.15);
+        color: var(--accent-cyan);
+      }
+      .timeline-label.speech {
+        background: rgba(167, 139, 250, 0.15);
+        color: var(--purple);
+      }
+      .timeline-label.report {
+        background: rgba(249, 115, 22, 0.15);
+        color: var(--orange);
+      }
+      .timeline-label.earnings {
+        background: rgba(251, 191, 36, 0.15);
+        color: var(--gold);
+      }
+
+      /* ── Earnings Card ── */
+      .earnings-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 12px;
+        box-shadow: var(--shadow-card);
+      }
+
+      .earnings-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+
+      .earnings-ticker {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .ticker-badge {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 6px;
+        background: var(--bg-card-alt);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(6, 182, 212, 0.2);
+      }
+
+      .earnings-name {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--text-primary);
+      }
+
+      .beat-badge {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .beat-badge.beat {
+        background: var(--green-bg);
+        color: var(--green);
+        border: 1px solid var(--green-border);
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .metric {
+        background: var(--bg-card-alt);
+        border-radius: 8px;
+        padding: 10px 12px;
+      }
+
+      .metric-label {
+        font-size: 11px;
+        color: var(--text-muted);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+      }
+
+      .metric-value {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .metric-delta {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      .metric-delta.up {
+        color: var(--green);
+      }
+      .metric-delta.down {
+        color: var(--red);
+      }
+
+      /* ── AI/Tech Chips ── */
+      .tech-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .tech-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--bg-card-alt);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .tech-chip .name {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+      .tech-chip .pct {
+        color: var(--green);
+        font-weight: 600;
+      }
+
+      /* ── Alert Boxes ── */
+      .alert-box {
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-bottom: 12px;
+        border: 1px solid;
+      }
+
+      .alert-box.green {
+        background: var(--green-bg);
+        border-color: var(--green-border);
+      }
+
+      .alert-box.red {
+        background: var(--red-bg);
+        border-color: var(--red-border);
+      }
+
+      .alert-box.yellow {
+        background: var(--yellow-bg);
+        border-color: var(--yellow-border);
+      }
+
+      .alert-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .alert-box.green .alert-title {
+        color: var(--green);
+      }
+      .alert-box.red .alert-title {
+        color: var(--red);
+      }
+      .alert-box.yellow .alert-title {
+        color: var(--yellow);
+      }
+
+      .alert-text {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* ── Action List ── */
+      .action-list {
+        counter-reset: action;
+        list-style: none;
+        padding: 0;
+      }
+
+      .action-item {
+        position: relative;
+        padding: 16px 16px 16px 56px;
+        margin-bottom: 10px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow-card);
+        counter-increment: action;
+      }
+
+      .action-item::before {
+        content: counter(action);
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        background: var(--gradient-brand);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .action-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .action-desc {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* ── Footer ── */
+      .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      .footer .disclaimer {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--yellow-bg);
+        border: 1px solid var(--yellow-border);
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-bottom: 12px;
+        color: var(--yellow);
+        font-weight: 500;
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--border),
+          transparent
+        );
+        margin: 8px 0;
+      }
+
+      /* ── Survey Bar Chart ── */
+      .survey-bar {
+        margin: 10px 0;
+      }
+
+      .survey-bar-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .survey-bar-label .label {
+        color: var(--text-secondary);
+      }
+      .survey-bar-label .value {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .survey-bar-track {
+        height: 6px;
+        background: var(--bg-card-alt);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+
+      .survey-bar-fill {
+        height: 100%;
+        border-radius: 3px;
+        transition: width 1s ease;
+      }
+
+      .survey-bar-fill.red {
+        background: linear-gradient(90deg, var(--red), #f97316);
+      }
+      .survey-bar-fill.blue {
+        background: var(--gradient-brand);
+      }
+      .survey-bar-fill.yellow {
+        background: linear-gradient(90deg, var(--yellow), var(--gold));
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 640px) {
+        .container {
+          padding: 16px 12px 40px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+        .index-grid {
+          grid-template-columns: 1fr;
+        }
+        .metric-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .index-value {
+          font-size: 18px;
+        }
+        .asset-table {
+          font-size: 13px;
+        }
+        .asset-table thead th,
+        .asset-table tbody td {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ═══ Header ═══ -->
+      <header class="header">
+        <div class="header-badge">
+          <span class="dot"></span>
+          LIVE · 马来西亚美股投资者专属
+        </div>
+        <h1>🌅 财经简报</h1>
+        <div class="date">2026年4月19日 · 周日 · 数据截至上周五（4月17日）美股收盘</div>
+        <div class="subtitle">数据源：华尔街见闻</div>
+      </header>
+
+      <!-- ═══ 1. 隔夜美股 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div
+            class="section-icon"
+            style="background: rgba(59, 130, 246, 0.12)"
+          >
+            📊
+          </div>
+          <h2 class="section-title">隔夜美股</h2>
+        </div>
+
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">道琼斯</div>
+            <div class="index-value">49,218</div>
+            <div class="index-change up">+314 (+0.64%)</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">纳斯达克</div>
+            <div class="index-value">23,512</div>
+            <div class="index-change up">+连涨第13日 🔥</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">S&P 500 ETF</div>
+            <div class="index-value">695.30</div>
+            <div class="index-change up">新高 · 前瞻P/E ~22x</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <ul class="bullet-list">
+            <li>
+              <strong>纳斯达克连涨13个交易日</strong>，创2009年7月以来最长连涨纪录；XLK科技ETF收创周线新高，报收<span class="num">$153+</span>
+            </li>
+            <li>
+              <strong>S&P 500攀至历史新高</strong>，已完全收复伊朗冲突以来全部跌幅，自3月底低点反弹近<span class="num">+9%</span>；前瞻市盈率约22x（10月高峰23x+已回落）
+            </li>
+            <li>
+              <strong>油价单日暴跌</strong>：WTI盘中一度跌<span class="num down">-11%</span>——伊朗宣布短暂开放霍尔木兹海峡，但随后于4月18日（周六）再度关闭
+            </li>
+            <li>
+              高盛AI基础设施篮子自ChatGPT发布以来累涨<span class="num">+327%</span>；散户最爱股自3月末低点以来上涨<span class="num">+24.3%</span>
+            </li>
+            <li>
+              全球股票周资金流出创纪录：<span class="num down">-$1,722亿</span>（BofA数据）；但2026年全球股票累计流入已有望突破<span class="num">$1万亿</span>历史纪录
+            </li>
+          </ul>
+        </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong>纳指13连涨背后是情绪从"极度悲观"到"超买"的急速逆转——BofA Hartnett指出，这是1982年以来第二快的情绪转向（仅11天）。<strong>重点关注：</strong>S&P 500创历史新高，但BofA警告这可能是"牛市陷阱"——驱动因素为AI芯片需求与伊朗战争能源利润，均属一次性因素。
+        </div>
+      </section>
+
+      <!-- ═══ 2. 全球资产 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">
+            🌍
+          </div>
+          <h2 class="section-title">全球资产</h2>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden">
+          <table class="asset-table">
+            <thead>
+              <tr>
+                <th>资产</th>
+                <th>价格</th>
+                <th>变动</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="asset-name">🟡 现货黄金</span></td>
+                <td><span class="asset-price">$4,830.43/oz</span></td>
+                <td>
+                  <span class="tag up">▲ +0.83%</span><span class="asset-note">持续创历史新高</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ WTI 原油</span></td>
+                <td><span class="asset-price">$85.56</span></td>
+                <td>
+                  <span class="tag down">▼ -9.64%</span><span class="asset-note">霍尔木兹短暂开放引发暴跌</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">~$90.00</span></td>
+                <td>
+                  <span class="tag down">▼ 大幅下跌</span><span class="asset-note">与WTI同步</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">💵 美元指数 DXY</span></td>
+                <td><span class="asset-price">98.23</span></td>
+                <td><span class="tag up">▲ +0.03%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
+                <td><span class="asset-price">1.1762</span></td>
+                <td><span class="tag down">▼ -0.18%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
+                <td><span class="asset-price">158.61</span></td>
+                <td>
+                  <span class="tag down">▼ -0.10%</span><span class="asset-note">日元小幅走强</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
+                <td><span class="asset-price">6.8135</span></td>
+                <td>
+                  <span class="tag down">▼ -0.08%</span><span class="asset-note">人民币微弱走弱</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇰🇷 韩国综指 KOSPI</span></td>
+                <td><span class="asset-price">YTD +37.72%</span></td>
+                <td><span class="tag up">▲ 年内最强亚太股市</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong>油价在周五急跌后，周六伊朗再度关闭霍尔木兹，<strong>WTI已处于$85区间，不确定性极高。</strong>黄金突破$4,830并持续刷新历史高位，在地缘与停火不确定性下强势不减。美元指数维持在98，未见明显方向。<strong>本周关键变量</strong>：停火到期（4/20 16:00）后油价如何定向将主导市场走势。
+        </div>
+      </section>
+
+      <!-- ═══ 3. 今日关注 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div
+            class="section-icon"
+            style="background: rgba(249, 115, 22, 0.12)"
+          >
+            🎯
+          </div>
+          <h2 class="section-title">今日关注</h2>
+        </div>
+
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>新西兰3月贸易差额</strong>（4月19日） → 反映出口压力
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>英国Rightmove房价指数</strong>（4月19日） → 英国通胀次级指标
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>日本3月贸易差额</strong>（4月19日） → 出口受油价与关税影响
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label data">数据</span>
+              <strong>中国1年期/5年期LPR利率决定</strong>（4月20日 01:00 MYT）→ 预期不变（1Y: 3.0%，5Y: 3.5%）；若意外降息，将利好A股与港股
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">发布</span>
+              <strong>华为Pura AI眼镜系列新品发布</strong>（4月20日 06:30 MYT）→ 中国AI可穿戴赛道标志性事件
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>SanDisk正式加入纳斯达克100指数</strong>（4月20日 08:00 MYT）→ 关注被动资金追捧效应
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label data">数据</span>
+              <strong>加拿大3月CPI</strong>（4月20日 12:30 MYT）→ 预期同比+2.6%（上月+1.8%）；若超预期，加元强、油价联动
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label speech">讲话</span>
+              <strong>德国总理默茨 + ECB行长拉加德</strong>联合讲话（4月20日 15:00 MYT）→ 关注欧元区经济态度与欧元走向
+            </div>
+            <div class="timeline-item important" style="border-left: 2px solid var(--red); padding-left: 8px; background: rgba(239,68,68,0.05); border-radius: 6px;">
+              <span class="timeline-label report" style="background: rgba(239,68,68,0.2); color: var(--red);">⚠️ 风险</span>
+              <strong>美伊两周停火协议到期</strong>（4月20日 16:00 MYT）→ 特朗普警告"好说话的日子结束了"，威胁摧毁伊朗电厂与桥梁；伊朗态度强硬，最关键地缘风险时间窗口
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>新西兰Q1 CPI</strong>（4月20日 22:45 MYT）→ 预期同比+2.9%（上季+3.1%）；降温趋势若成立，利好降息预期
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 4. AI与科技产业动态 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div
+            class="section-icon"
+            style="background: rgba(167, 139, 250, 0.12)"
+          >
+            🤖
+          </div>
+          <h2 class="section-title">AI与科技产业动态</h2>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              margin-bottom: 10px;
+              font-size: 14px;
+              color: var(--text-secondary);
+            "
+          >
+            <strong style="color: var(--purple)">半导体ETF</strong> 4月至今资金净流入创历史纪录
+            <span class="tag up" style="font-size: 13px">+$40亿</span> ·
+            <strong style="color: var(--purple)">高盛AI基础设施篮子</strong>
+            <span class="tag up" style="font-size: 13px">+327% 自ChatGPT发布以来</span>
+          </div>
+
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">SMH/SOXX</span><span class="pct">4月流入创纪录</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">XLK</span><span class="pct">$153+ 周线高</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MU 美光</span><span class="pct">EPS预期 $101</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇰🇷 KOSPI</span><span class="pct">YTD +37.72%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">Cursor AI</span><span class="pct">估值$500亿+</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <ul class="bullet-list" style="margin-top: 10px">
+            <li>
+              <strong>OpenAI高管震动：</strong>IPO前夕3名核心高管集体辞职——Sora创始人、AI科学副总裁、企业级CTO同日离职；Sora平台随即关闭；股东讨论以Bret Taylor取代Altman；IPO目标估值<span class="num">$8,500亿</span>
+            </li>
+            <li>
+              <strong>Cursor AI：</strong>拟融资<span class="num">$20亿</span>，估值突破<span class="num">$500亿</span>，英伟达计划跟投——AI编程赛道估值快速膨胀
+            </li>
+            <li>
+              <strong>DRAM内存危机深化：</strong>供应商预计2027年前仅能满足<span class="num down">60%</span>市场需求；多年短缺格局已成定局；美光科技(MU) EPS预测从2025年10月的$19大幅上调至<span class="num">$101</span>（2027财年）
+            </li>
+            <li>
+              <strong>DeepSeek V4：</strong>梁文锋史上首次对外融资，声称最新模型彻底摆脱英伟达GPU依赖
+            </li>
+            <li>
+              <strong>Anthropic：</strong>推出Claude Design AI视觉创作工具，强化付费订阅竞争力
+            </li>
+            <li>
+              <strong>Google：</strong>据报道正与Marvell洽谈联合开发下一代AI专用芯片
+            </li>
+          </ul>
+        </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong>半导体ETF单月流入$40亿创历史纪录，超越2025年12月全月$30亿，显示资金重仓AI算力主线。<strong>但OpenAI高层动荡是重要警示信号</strong>——IPO前夕关键人才出走、Sora关闭，可能引发市场对AI龙头盈利可持续性的重新审视。DRAM短缺确定性高，MU等存储股中长期逻辑强劲。
+        </div>
+      </section>
+
+      <!-- ═══ 5. 美股财报 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div
+            class="section-icon"
+            style="background: rgba(251, 191, 36, 0.12)"
+          >
+            💼
+          </div>
+          <h2 class="section-title">美股财报</h2>
+        </div>
+
+        <!-- MU 美光科技 EPS revision highlight -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">MU</span>
+              <span class="earnings-name">美光科技 — EPS预期大幅上调</span>
+            </div>
+            <span class="beat-badge beat">🔥 DRAM短缺受益</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">2027财年EPS预测</div>
+              <div class="metric-value">$101</div>
+              <div class="metric-delta up">2025年10月预测仅$19</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">上调幅度</div>
+              <div class="metric-value">+431%</div>
+              <div class="metric-delta up">6个月内大幅修订</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">驱动因素</div>
+              <div class="metric-value">DRAM供给</div>
+              <div class="metric-delta up">2027年前仅60%需求可满足</div>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>
+              DRAM厂商产能扩张远滞后于AI推理需求爆发；HBM（高带宽内存）尤为短缺
+            </li>
+            <li>
+              MU、SK海力士、三星均是主要受益标的；韩国KOSPI YTD +37.72%部分由此驱动
+            </li>
+          </ul>
+        </div>
+
+        <!-- S&P 500 EPS outlook -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">SPX</span>
+              <span class="earnings-name">S&P 500整体盈利展望</span>
+            </div>
+            <span class="beat-badge beat">✓ 2026全年预测上调</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">2026年EPS预测</div>
+              <div class="metric-value">$330+</div>
+              <div class="metric-delta up">前瞻P/E ~22x</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">驱动一：AI芯片</div>
+              <div class="metric-value">一次性</div>
+              <div class="metric-delta down">结构性可持续存疑</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">驱动二：油企利润</div>
+              <div class="metric-value">一次性</div>
+              <div class="metric-delta down">油价逆转风险大</div>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>
+              本周末无重大财报；<strong>下周关注：</strong>特斯拉Q1（预期EV交付量下滑）、英特尔（AI芯片营收）
+            </li>
+            <li>
+              BofA Hartnett警告：当前创纪录美股建立在"<strong>一次性虚假地基</strong>"之上，需警惕P/E扩张到头、盈利预期回落
+            </li>
+          </ul>
+        </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong>S&P 500 EPS预测$330+看似强劲，但主要受益于AI芯片需求暴增（美光EPS +431%）与伊朗战争推高油企利润——这两个驱动均属于非常规性、可逆因素。若停火持续、油价回落，能源板块EPS将大幅下滑。<strong>本周关注特斯拉财报</strong>是否验证成长叙事仍在。
+        </div>
+      </section>
+
+      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">
+            📉
+          </div>
+          <h2 class="section-title">宏观指标与市场数据</h2>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 14px;
+            "
+          >
+            BofA Hartnett 市场情绪警告 ⚠️ "牛市陷阱"
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">从超卖→超买转变速度（1982年以来第几快）</span>
+              <span class="value" style="color: var(--red)">第2快</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill red" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">逆转所用交易日（11天）</span>
+              <span class="value" style="color: var(--red)">11天</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill red" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">2026年全球股票资金流入（有望突破历史纪录$1万亿）</span>
+              <span class="value" style="color: var(--accent-blue)">$1T轨道</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill blue" style="width: 65%"></div>
+            </div>
+          </div>
+
+          <div class="divider" style="margin: 14px 0"></div>
+
+          <ul class="bullet-list">
+            <li>
+              <strong>周资金流出创历史纪录：$1,722亿</strong>（截至4月17日当周）——但被解读为"获利了结"非恐慌性抛售
+            </li>
+            <li>
+              最拥挤交易：<strong>"做多半导体"</strong>（SMH/SOXX 4月流入$40亿创纪录，超越2025年12月全月$30亿）
+            </li>
+            <li>
+              SEC正式取消FINRA $25,000散户日内交易门槛限制 → 美股进入"全民YOLO"时代，散户活跃度上升
+            </li>
+            <li>
+              国际航协警告：欧洲航空公司可能因伊朗油价冲击出现"停飞潮"，航运成本上升
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🔍 霍尔木兹神秘空单事件
+          </div>
+          <ul class="bullet-list">
+            <li>
+              4月17日（周五）开市前<strong>20分钟</strong>，$7.6亿神秘石油空单建仓
+            </li>
+            <li>
+              随后伊朗宣布开放霍尔木兹海峡 → WTI盘中暴跌<span class="num down">-11%</span>
+            </li>
+            <li>
+              CFTC已启动调查，涉及三笔可疑交易，<strong>总规模$22亿</strong>，疑似内幕交易
+            </li>
+            <li>
+              4月18日（周六）伊朗以"美国违反停火条款"为由<strong>重新关闭霍尔木兹</strong>，事件尚未平息
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🌏 亚太市场近况
+          </div>
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">🇰🇷 韩国综指</span><span class="pct">YTD +37.72%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 沪深股市</span><span class="pct">受LPR预期支撑</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇯🇵 日本</span><span class="pct">日元小幅升值</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 7. 投资者的建议 ═══ -->
+      <section class="section">
+        <div class="section-header">
+          <div
+            class="section-icon"
+            style="background: rgba(16, 185, 129, 0.12)"
+          >
+            💡
+          </div>
+          <h2 class="section-title">投资者的建议</h2>
+        </div>
+
+        <div class="alert-box green">
+          <div class="alert-title">🟢 值得关注 — 机会</div>
+          <div class="alert-text">
+            <strong>① 半导体/AI算力主线未变</strong> —
+            SMH/SOXX创历史最强月度流入，DRAM供给短缺至2027年，MU等EPS预期大幅上调。AI基础设施叙事仍是全球资金核心配置方向<br />
+            <strong>② SanDisk加入纳斯达克100</strong> —
+            4月20日正式纳入，被动指数基金将被动买入，关注开盘溢价机会
+          </div>
+        </div>
+
+        <div class="alert-box red">
+          <div class="alert-title">🔴 需要警惕 — 风险</div>
+          <div class="alert-text">
+            <strong>① 美伊停火4月20日16:00到期</strong> —
+            特朗普"好说话的日子结束了"、伊朗强硬表态，谈判破裂将导致油价V形反弹、科技股抛压；霍尔木兹神秘空单事件CFTC调查，市场操控风险需警惕<br />
+            <strong>② BofA"牛市陷阱"警告</strong> —
+            市场11天内从极度超卖转向超买，为1982年以来第二快。纳指13连涨已是历史极值，获利回吐压力将在停火不确定性触发下集中释放<br />
+            <strong>③ OpenAI高管离职 + IPO不确定性</strong> —
+            若Altman被取代或IPO延期，科技板块情绪将承压，高估值AI软件股首当其冲
+          </div>
+        </div>
+
+        <div class="divider" style="margin: 20px 0"></div>
+
+        <div
+          style="
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          ✅ 三条可执行关注清单
+        </div>
+
+        <ol class="action-list">
+          <li class="action-item">
+            <div class="action-title">今晚密切监控美伊停火到期时间窗口（MYT 16:00）</div>
+            <div class="action-desc">
+              若停火顺利延续或达成新协议 → 油价继续下行，能源股减仓、科技股加仓；若停火破裂/伊朗关闭霍尔木兹 → 油价急涨，应持有能源多头（XLE）对冲，同时减持高估值成长股（ARKK、软件SaaS）
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-title">跟踪半导体ETF（SMH/SOXX）开盘表现及SanDisk纳入效应</div>
+            <div class="action-desc">
+              4月20日SanDisk正式加入纳斯达克100，被动资金追买短期支撑存储概念；结合DRAM短缺逻辑，可关注MU、SK海力士ADR逢低布局机会；若SMH开盘延续创纪录流入趋势，半导体仓位可适当加仓
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-title">观察加拿大CPI数据（MYT 12:30）是否超预期推高通胀担忧</div>
+            <div class="action-desc">
+              加拿大3月CPI预期同比+2.6%（上月仅1.8%），若超预期 → 北美整体通胀叙事回归，美联储降息预期进一步压缩，美债收益率上行，高估值科技股承压；若低于预期 → 宽松预期升温，成长股续涨，可逢机加仓纳指ETF（QQQ）
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ═══ Footer ═══ -->
+      <footer class="footer">
+        <div class="disclaimer">
+          ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
+        </div>
+        <div>📡 数据来源：华尔街见闻（wallstreetcn.com）</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年4月19日</div>
+      </footer>
+    </div>
+  </body>
+</html>

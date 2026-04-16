@@ -1,0 +1,30 @@
+name: Auto Merge Briefing PR
+
+on:
+  workflow_run:
+    workflows: ["Market Briefing"]
+    types: [completed]
+
+jobs:
+  auto-merge:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge open briefing PRs
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          prs=$(gh pr list --repo "$REPO" --state open --base main \
+                  --search "head:briefing/ author:app/github-actions" \
+                  --json number,headRefName \
+                  --jq '.[] | select(.headRefName | startswith("briefing/")) | .number')
+          if [ -z "$prs" ]; then
+            echo "No open briefing PRs to merge."
+            exit 0
+          fi
+          for n in $prs; do
+            echo "Merging PR #$n"
+            gh pr merge "$n" --repo "$REPO" --squash --delete-branch
+          done
