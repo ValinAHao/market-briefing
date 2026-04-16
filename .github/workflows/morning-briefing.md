@@ -11,6 +11,19 @@ engine:
   id: copilot
   model: "claude-sonnet-4.6"
 
+tools:
+  playwright:
+
+strict: false
+
+network:
+  allowed:
+    - defaults
+    - playwright
+    - "wallstreetcn.com"
+    - "tigertrade.com"
+    - "tigerbrokers.com"
+
 safe-outputs:
   create-issue:
     max: 1
@@ -22,22 +35,19 @@ You are a senior financial market expert. Produce a **daily morning stock market
 
 ## Data collection rules (must follow)
 
-Use `agent-browser` CLI to gather fresh data from these sources:
+Use Playwright browser automation to gather fresh data from these sources:
 
 1. `https://wallstreetcn.com/`  
    - Capture overnight US stock market moves, major headlines, and flash news.
-2. WallstreetCN calendar page (today/tonight key data and events).  
-   - Navigate from homepage or directly open the calendar URL you identify.
-3. Tiger Broker market news page (24/7 feed).  
-   - Use the market/news page that provides latest US market-related updates.
+2. WallstreetCN calendar page (`https://wallstreetcn.com/calendar`) — key data & events for today/tonight.
+3. Tiger Broker market news page — 24/7 news feed.  
+   - Try `https://www.tigerbrokers.com/news` or `https://www.tigertrade.com/news`.
 
-Use these commands explicitly:
-
-- `agent-browser open <url>` to navigate
-- `agent-browser snapshot -i --json` to inspect structure and get element refs
-- `agent-browser get text <selector>` to extract key text blocks
-- `agent-browser click @e1` (or other refs) to open relevant modules/articles
-- `agent-browser screenshot` only if needed to confirm context
+Steps for each site:
+1. Navigate to the URL with Playwright
+2. Take a screenshot to confirm the page loaded
+3. Extract the visible text content of the main feed/headlines
+4. Click into at most 1-2 individual articles per site to read details
 
 Important limits:
 
