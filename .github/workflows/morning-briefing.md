@@ -12,8 +12,7 @@ engine:
   model: "claude-sonnet-4.5"
 
 tools:
-  web-fetch:
-  bash: ["curl:*"]
+  playwright:
 
 strict: false
 
@@ -36,7 +35,7 @@ You are a senior financial market expert. Produce a **daily morning stock market
 
 ## Data collection rules (must follow)
 
-Use `web-fetch` or `curl` to gather fresh data from these sources:
+Use `playwright` browser tools to gather fresh data from these sources:
 
 1. `https://wallstreetcn.com/`  
    - Fetch the homepage HTML and extract headline articles, brief descriptions, and market data from the content.
@@ -44,9 +43,9 @@ Use `web-fetch` or `curl` to gather fresh data from these sources:
 3. Tiger Broker market news — try: `https://www.tigerbrokers.com/news` or `https://www.tigertrade.com/news`.
 
 Steps for each source:
-1. Fetch the page content using `web_fetch` tool or `curl -L -A "Mozilla/5.0" <url>`
-2. Scan the returned HTML/JSON for headline text, article titles, and key figures
-3. If a page returns mostly JavaScript (empty body), try appending `/api/` or `/rss` to the URL
+1. Open the page with Playwright and wait for key content to render
+2. Extract headline text, article titles, brief descriptions, and key figures from the visible page
+3. If needed, scroll once and wait briefly to load lazy content before extracting
 
 Important limits:
 
