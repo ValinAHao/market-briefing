@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 engine:
-  id: copilot
+  id: claude
   model: "claude-sonnet-4.5"
 
 tools:
