@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * 1-5"
+    - cron: "30 12 * * 1-5"
 
 
 engine:
