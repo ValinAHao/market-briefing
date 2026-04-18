@@ -7,7 +7,7 @@ on:
 
 jobs:
   auto-merge:
-    if: github.actor == 'github-actions[bot]'
+    if: github.actor == 'github-actions[bot]' && startsWith(github.head_ref, 'briefing/')
     runs-on: ubuntu-latest
     steps:
       - name: Merge PR
