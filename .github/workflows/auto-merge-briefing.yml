@@ -1,0 +1,16 @@
+name: Auto Merge Briefing PR
+
+on:
+  pull_request:
+    types: [opened]
+    branches: [main]
+
+jobs:
+  auto-merge:
+    if: github.actor == 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge PR
+        run: gh pr merge "${{ github.event.pull_request.html_url }}" --squash --yes
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}

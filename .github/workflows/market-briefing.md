@@ -19,7 +19,6 @@ network:
     - defaults
     - playwright
     - "wallstreetcn.com"
-    - "tigertrade.com"
     - "tigerbrokers.com"
 
 safe-outputs:
