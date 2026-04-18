@@ -5,7 +5,6 @@ on:
     - cron: "0 0 * * 1-5"
     - cron: "30 12 * * 1-5"
 
-
 engine:
   id: copilot
   model: "claude-sonnet-4.6"
@@ -26,6 +25,7 @@ network:
 safe-outputs:
   create-pull-request:
     auto-merge: true
+    draft: false
 ---
 
 # Market Briefing
@@ -34,12 +34,12 @@ You are a senior financial market expert. Produce a **daily stock market briefin
 
 ## Data collection rules (must follow)
 
-Use `playwright` browser tools to gather fresh data from these sources:
+Use `playwright` browser tools to gather fresh data from these sources only:
 
 1. `https://wallstreetcn.com/`
    - Fetch the homepage HTML and extract headline articles, brief descriptions, and market data from the content.
 2. `https://wallstreetcn.com/calendar` — key scheduled data/events for today/tonight.
-3. Tiger Broker market news — try: `https://www.tigerbrokers.com/news` or `https://www.tigertrade.com/news`.
+3. Tiger Broker market news — try: `https://www.tigerbrokers.com/news`.
 
 Steps for each source:
 
@@ -93,6 +93,7 @@ Use this exact section order and titles:
 Read the file `template.html` in the repository root to get the full HTML layout and CSS.
 
 Then produce `docs/index.html` by:
+
 1. Keeping the entire `<style>` block from `template.html` **exactly as-is** — do not modify a single character of the CSS.
 2. Updating the `<title>` tag date to today's date (e.g., `早间财经简报 | 2026年4月17日`).
 3. Replacing every placeholder value in the `<body>` with real scraped data — index levels, asset prices, event timeline, earnings data, and all analysis text.
