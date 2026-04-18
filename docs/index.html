@@ -506,6 +506,12 @@
         border: 1px solid var(--green-border);
       }
 
+      .beat-badge.miss {
+        background: var(--red-bg);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+
       .metric-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -575,6 +581,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -788,78 +797,65 @@
           <span class="dot"></span>
           LIVE · 马来西亚美股投资者专属
         </div>
-        <h1>🌅 早间财经简报</h1>
-        <div class="date">2026年4月18日 · 周六 · 数据截至 EST 4月17日收盘</div>
-        <div class="subtitle">数据源：华尔街见闻 · 新华社 · 彭博</div>
+        <h1>🌅 财经简报</h1>
+        <div class="date">2026年4月18日 · 周六 · 数据截至 EST 16:00（周五收盘）</div>
+        <div class="subtitle">数据源：华尔街见闻 · 华尔街见闻财经日历 · 新华社</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">
-            📊
-          </div>
+          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
         <div class="index-grid">
           <div class="index-card up">
             <div class="index-name">道琼斯</div>
-            <div class="index-value">49,447</div>
-            <div class="index-change up">+868.71 (+1.79%)</div>
+            <div class="index-value">48,624</div>
+            <div class="index-change up">+406 (+0.84%)</div>
           </div>
           <div class="index-card up">
             <div class="index-name">纳斯达克</div>
-            <div class="index-value">24,468</div>
-            <div class="index-change up">+365.78 (+1.52%)</div>
+            <div class="index-value">23,712</div>
+            <div class="index-change up">+528 (+2.28%)</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">S&amp;P 500</div>
-            <div class="index-value">7,126</div>
-            <div class="index-change up">+84.78 (+1.20%)</div>
+            <div class="index-name">S&amp;P 500 ETF</div>
+            <div class="index-value">692.80</div>
+            <div class="index-change up">+6.70 (+0.98%)</div>
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>霍尔木兹海峡重开</strong> → 伊朗宣布恢复商业航运 → 油价暴跌<span class="num down"> -11.45%</span>，风险情绪全面逆转
+              <strong>美伊停火落地</strong> → 霍尔木兹封锁压力缓解 → 油价单日暴跌
+              <span class="num down">-9.64%</span>，WTI跌至
+              <span class="num">$85.56</span>，通胀忧虑骤减，风险资产全线拉升
             </li>
             <li>
-              S&amp;P 500 连续第三日<strong>刷新收盘历史高点</strong>；自3月30日低点以来累涨 <span class="num">+12.34%</span>，本周累涨 <span class="num">+4.54%</span>
+              纳指领涨，AI/科技板块回归主线；高盛交易台发表报告：<strong>全球市场"已经打完仗了"</strong>，AI主题重新占据主导
             </li>
             <li>
-              纳指和纳指100<strong>连涨第13天</strong>，后者创2013年以来最长连涨纪录；罗素2000 <span class="num">+2.11%</span>，本周累涨 <span class="num">+5.56%</span>
+              以14日RSI衡量，美股仅用<strong>11天</strong>从超卖跃升至超买区域——历史上仅1982年涨势更快，市场情绪翻转速度史上罕见
             </li>
             <li>
-              道指大涨 <span class="num">+1.79%</span>，<strong>彻底收复伊朗冲突以来全部跌幅</strong>；本周累涨 <span class="num">+3.19%</span>
-            </li>
-            <li>
-              <strong>科技七巨头全线走强：</strong>特斯拉 <span class="num">+3.01%</span>，苹果 <span class="num">+2.59%</span>，Meta <span class="num">+1.73%</span>，英伟达/谷歌A <span class="num">+1.68%</span>，微软 <span class="num">+0.60%</span>；Mag7自3月27日以来无一下跌，期间累涨约 <span class="num">+19%</span>
-            </li>
-            <li>
-              <strong>航空+游轮板块</strong>受益油价暴跌领涨标普：皇家加勒比游轮 <span class="num">+7.34%</span>，美联航 <span class="num">+7%+</span>；全球航空ETF收涨 <span class="num">+4.84%</span>
-            </li>
-            <li>
-              VIX恐慌指数收跌 <span class="num down">-2.62%</span>，报17.47；能源板块ETF逆势收跌 <span class="num down">-2.76%</span>
-            </li>
-            <li>
-              <strong>14天RSI</strong>仅用11天从超卖跃升至超买区域 —— 历史上仅1982年那次更快，市场反转速度令人叹为观止
+              S&amp;P 500自3月底低点累计反弹逾
+              <span class="num">+9%</span>，已完全收复战事冲击以来全部失地
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>油价暴跌释放通胀压力 → 降息预期急升（年内至少降一次概率从30%升至70%）→ 利率敏感型成长股受益最大。但市场广度仍弱，情绪指标尚未跟随股价改善。<strong>高盛交易台警告：</strong>CTA量化本周大规模买入约330亿美元S&amp;P多头，最高速买入阶段已过，下周存在回调风险。
+          <strong>💡 解读：</strong>停火 + 油价骤降 = 双重利好。市场将霍尔木兹重新开放解读为"通胀压力减轻 + 地缘风险溢价退潮"。但<strong>特朗普4月22日停火期限</strong>悬而未决，伊朗否认多项声明，本次上涨部分建立在乐观预期之上，需保持警惕。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">
-            🌍
-          </div>
+          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -875,65 +871,66 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,834.05/oz</span></td>
+                <td><span class="asset-price">$4,834.02/oz</span></td>
                 <td>
-                  <span class="tag up">▲ +0.92%</span><span class="asset-note">盘中一度逼近$4,900；本周累涨+1.78%</span>
+                  <span class="tag up">▲ +0.91%</span>
+                  <span class="asset-note">近历史高位</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">⚪ 现货白银</span></td>
-                <td><span class="asset-price">$80.98/oz</span></td>
-                <td><span class="tag up">▲ +3.27%</span><span class="asset-note">日内曾涨6%；金银比跌回60倍以下</span></td>
+                <td><span class="asset-price">$49.18/oz</span></td>
+                <td><span class="tag up">▲ +1.30%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$83.85/桶</span></td>
-                <td><span class="tag down">▼ -11.45%</span><span class="asset-note">跌破50日均线；本周累跌-13.17%</span></td>
+                <td><span class="asset-price">$85.56</span></td>
+                <td>
+                  <span class="tag down">▼ -9.64%</span>
+                  <span class="asset-note">霍尔木兹重开预期</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ 布伦特原油</span></td>
-                <td><span class="asset-price">$90.38/桶</span></td>
-                <td><span class="tag down">▼ -9.07%</span><span class="asset-note">Abu Dhabi Murban跌11.10%</span></td>
+                <td><span class="asset-price">$88.40</span></td>
+                <td><span class="tag down">▼ -9.10%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
                 <td><span class="asset-price">98.23</span></td>
-                <td>
-                  <span class="tag up">▲ +0.01%</span><span class="asset-note">V形反弹；日内一度跌超0.6%创七周低</span>
-                </td>
+                <td><span class="tag up">▲ +0.03%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🔷 10Y 美债</span></td>
-                <td><span class="asset-price">4.248%</span></td>
-                <td><span class="tag down">▼ -6.3bp</span><span class="asset-note">创3月30日以来最大单日降幅</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🔷 2Y 美债</span></td>
-                <td><span class="asset-price">3.708%</span></td>
-                <td><span class="tag down">▼ -6.6bp</span><span class="asset-note">跌破联邦基金利率3.75%，逾一月首次</span></td>
+                <td><span class="asset-price">4.31%</span></td>
+                <td>
+                  <span class="tag down">▼ -2bp</span>
+                  <span class="asset-note">油价跌降通胀预期</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">₿ 比特币</span></td>
-                <td><span class="asset-price">~$78,000</span></td>
-                <td><span class="tag up">▲ +3.0%</span><span class="asset-note">2月2日以来首次突破$78,000</span></td>
+                <td><span class="asset-price">~$84,800</span></td>
+                <td><span class="tag up">▲ +1.8%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1780</span></td>
-                <td><span class="tag up">▲ 偏强</span></td>
+                <td><span class="asset-price">1.1762</span></td>
+                <td><span class="tag up">▲ +0.20%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">158.63</span></td>
+                <td><span class="asset-price">158.61</span></td>
                 <td>
-                  <span class="tag down">▼ -0.34%</span><span class="asset-note">日元走强；本周整体区间157.50-159.86</span>
+                  <span class="tag down">▼ -0.18%</span>
+                  <span class="asset-note">日元小幅走强</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.8160</span></td>
+                <td><span class="asset-price">6.8135</span></td>
                 <td>
-                  <span class="tag up">▲ 走强</span><span class="asset-note">本周人民币累涨约0.14%</span>
+                  <span class="tag up">▲ 稳定</span>
                 </td>
               </tr>
             </tbody>
@@ -941,48 +938,42 @@
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>油价暴跌是本周最大宏观信号 —— WTI本周累跌<strong>-13.17%</strong>，回吐约70%冲突涨幅。黄金/白银/比特币三者同涨，体现"通胀对冲+流动性逐险"并存。<strong>关键信号：</strong>2Y美债跌破联邦基金利率，市场开始隐含降息预期，对成长股中期偏多；但油价能否持续低位取决于伊朗局势周末走向。
+          <strong>💡 解读：</strong>油价暴跌是本日最大宏观事件。WTI单日 <strong>-9.64%</span></strong>，为近年最大单日跌幅之一，直接打压通胀预期，推动美债收益率小幅回落。黄金维持强势（$4,834），与美元稳定并行，反映市场对美联储仍保持观望态度。人民币及日元基本稳定，无明显资本流动压力。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">
-            🎯
-          </div>
+          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label report">要事</span>
-              <strong>美联储进入利率决议前静默期</strong> — 所有官员禁止公开发言，市场情绪将自主演绎，周末或放大波动
+              <span class="timeline-label report">重磅</span>
+              <strong>美联储进入利率决议前静默期</strong>（4月18日起）→ 5月7日FOMC会议前不再有官员公开讲话，市场失去"Fed Put"信号窗口
             </div>
             <div class="timeline-item important">
               <span class="timeline-label data">地缘</span>
-              <strong>伊朗-美国停火协议稳定性</strong> — 特朗普称若4月22日无长期协议将终止停火；伊朗议长强硬表态，双方"各执一词"
+              <strong>特朗普伊朗停火期限：4月22日（周三）</strong> → 若无长期协议，特朗普警告"重启轰炸"并维持对伊朗港口封锁；伊朗否认多项声明
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>4月21日（周二）</strong>：特斯拉 TSLA Q1财报 → 交付量承压 + 马斯克政府职务争议是焦点
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">动态</span>
-              <strong>百度 AI 算力产品涨价（4月18日起执行）</strong> — 国内大模型商业化定价权确立；关注 BIDU 盘前反应
+              <span class="timeline-label earnings">财报</span>
+              <strong>大科技财报周（4月22–25日）</strong>：Alphabet (GOOGL)、Meta (META)、微软 (MSFT) 陆续披露Q1业绩 → 全市场最重要催化剂
             </div>
             <div class="timeline-item">
-              <span class="timeline-label report">地缘</span>
-              <strong>霍尔木兹海峡实际通行情况</strong> — 伊朗外长所称"开放"为须与伊朗协调方可通行，受制裁油轮等是否顺利通过是关键试金石
+              <span class="timeline-label data">数据</span>
+              <strong>4月25日（周五）</strong>：美国Q1 GDP初值 → 关税冲击下的增长读数，若低于预期将加深衰退担忧
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">消息</span>
-              美国考虑<strong>解冻200亿美元伊朗资产</strong>换取放弃浓缩铀，谈判框架若确立将进一步压制油价
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label earnings">财报预告</span>
-              <strong>下周重点财报：</strong>特斯拉 TSLA（4/22），Netflix NFLX，摩根士丹利 MS，美国银行 BAC，美联航 UAL，美国航空 AAL
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">宏观</span>
-              <strong>下周宏观日历：</strong>美国4月 PMI 初值、消费者信心指数、耐用品订单；欧元区 CPI 终值
+              <span class="timeline-label data">数据</span>
+              <strong>4月30日 / 5月1日</strong>：FOMC利率决议 → 静默期内市场只能自行消化数据
             </div>
           </div>
         </div>
@@ -991,38 +982,39 @@
       <!-- ═══ 4. AI与科技产业动态 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">
-            🤖
-          </div>
+          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
-            <strong style="color: var(--purple)">本周 Mag7 累涨</strong>
-            <span class="tag up" style="font-size: 13px">+7.8%</span> ·
-            <strong style="color: var(--purple)">费城半导体指数</strong>
-            <span class="tag up" style="font-size: 13px">+7.49% 周</span>
+          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
+            <strong style="color: var(--purple)">高盛交易台研报</strong>：AI主题将持续跑赢，重点关注
+            <span class="tag up" style="font-size: 13px">液冷</span>
+            <span class="tag up" style="font-size: 13px">光学网络</span>
+            <span class="tag up" style="font-size: 13px">推理算力</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">TSLA</span><span class="pct">+14.81% 周</span>
+              <span class="name">NVDA</span><span class="pct">+3.12%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MSFT</span><span class="pct">+14.00% 周</span>
+              <span class="name">MSFT</span><span class="pct">+2.47%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">META</span><span class="pct">+9.32% 周</span>
+              <span class="name">AMZN</span><span class="pct">+2.85%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">GOOGL</span><span class="pct">+7.70% 周</span>
+              <span class="name">META</span><span class="pct">+3.24%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">NVDA</span><span class="pct">+6.92% 周</span>
+              <span class="name">GOOGL</span><span class="pct">+1.96%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AMZN</span><span class="pct">+5.11% 周</span>
+              <span class="name">ADBE</span><span class="pct down">-4.18%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">FIGMA(未上市)</span><span class="pct down">估值压力</span>
             </div>
           </div>
 
@@ -1030,40 +1022,32 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>DeepSeek V4 首次对外融资</strong> — 梁文锋史上首次融资，V4彻底脱离英伟达依赖，算力自主路线确立；中国AI独立叙事持续强化
+              <strong>DeepSeek V4 史上首次融资</strong>：梁文锋首次对外募资，V4模型<strong>彻底摆脱英伟达GPU</strong>，完全基于国产算力运行 → 国产AI去英伟达化里程碑
             </li>
             <li>
-              <strong>Cursor 拟融资 $20亿</strong>，估值超 $500亿，<strong>英伟达</strong>计划跟投 — AI编程助手进入超级独角兽行列；NVDA AI生态布局继续扩张
+              <strong>AI编程工具 Cursor 计划融资$20亿</strong>，估值拟超$500亿，<strong>英伟达计划跟投</strong> → 推理+代码AI领域估值再创新高
             </li>
             <li>
-              <strong>Claude Design 暴击设计行业</strong> — Anthropic 发布 Claude Design，Figma、Adobe 盘中市值闪崩；垂直SaaS面临AI替代估值重压
+              <strong>Anthropic Claude Design 冲击设计行业</strong>：可直接生成可用UI设计，Figma、Adobe盘中市值急跌 → 传统设计软件护城河受威胁
             </li>
             <li>
-              <strong>OpenAI vs 英伟达「推理之战」</strong> — 双方各斥资约$200亿争夺推理算力主导权；AI基础设施军备竞赛进入白热化阶段
+              <strong>OpenAI vs 英伟达"推理之战"</strong>：双方各投入约$200亿布局推理基础设施，争夺全球AI推理市场主导权
             </li>
             <li>
-              <strong>Meta 宣布裁员8,000人（约10%）</strong> — 5月20日启动，AI提效驱动，运营杠杆改善预期；短期情绪扰动有限
-            </li>
-            <li>
-              <strong>Anthropic Claude Opus 4.7 对决 OpenAI Codex</strong> — Coding AI领域顶级竞争白热化；"Opus 4.7赢了Coding，Codex想赢一切"
-            </li>
-            <li>
-              <strong>高盛交易台明确看多三大AI子行业：</strong>液冷散热、光学网络、推理算力基础设施 — 对冲基金已重新买入Mag7但仓位仍远低于2016年峰值，追仓空间存在
+              <strong>百度AI算力涨价</strong>：AI相关云计算产品自<strong>4月18日起提价</strong> → 国内AI应用成本上行，云厂商受益
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>地缘缓和后资金迅速轮回AI主题。DeepSeek V4独立融资 + Cursor $500亿估值双重信号表明AI应用层变现加速。但需注意：Claude Design冲击Figma/Adobe暗示<strong>垂直SaaS的AI替代风险真实存在</strong>；Meta裁员则标志科技公司战略从"AI投入期"切换至"AI减员提效"收割期。持仓方向：偏向算力基础设施（NVDA/AMD）+ 推理算力受益者，谨慎持有纯SaaS设计工具类股。
+          <strong>💡 解读：</strong>高盛"AI主线持续跑赢"的判断获得资金共识，但三条技术路线分化加剧：<strong>推理算力（英伟达/OpenAI）、光学互联（液冷+光网络）、国产替代（DeepSeek）</strong>齐头并进。Claude Design冲击传统SaaS的案例说明AI"降维打击"边界仍在扩展，需关注下周MSFT/GOOGL财报对AI货币化进度的指引。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">
-            💼
-          </div>
+          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
@@ -1079,111 +1063,124 @@
 
           <div class="metric-grid">
             <div class="metric">
+              <div class="metric-label">营收</div>
+              <div class="metric-value">$152亿</div>
+              <div class="metric-delta up">超预期 +8%</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">EPS</div>
+              <div class="metric-value">$14.12</div>
+              <div class="metric-delta up">+22% YoY</div>
+            </div>
+            <div class="metric">
               <div class="metric-label">交易收入</div>
-              <div class="metric-value">创季度纪录</div>
-              <div class="metric-delta up">高波动受益</div>
+              <div class="metric-value">$88亿</div>
+              <div class="metric-delta up">+18% YoY</div>
             </div>
             <div class="metric">
-              <div class="metric-label">股价反应（财报日）</div>
+              <div class="metric-label">股价反应</div>
               <div class="metric-value">-1.9%</div>
-              <div class="metric-delta down">财报后回落</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">本周累涨</div>
-              <div class="metric-value">跟随大市</div>
-              <div class="metric-delta up">随板块修复</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">金融ETF(XLF) 年内</div>
-              <div class="metric-value">-3.78%</div>
-              <div class="metric-delta down">板块仍承压</div>
+              <div class="metric-delta down">利好出尽</div>
             </div>
           </div>
 
           <ul class="bullet-list">
             <li>
-              高盛交易业务受高市场波动驱动创佳绩，但<strong>财报后股价-1.9%</strong>，市场对"波动性利润可持续性"存疑
+              业绩亮眼但股价盘后下跌<span class="num down">-1.9%</span>——典型"利好出尽"，说明预期已充分定价
             </li>
             <li>
-              高盛交易台发声看多AI主题，尤其重点布局<strong>液冷、光学网络、推理算力</strong>三大方向
-            </li>
-            <li>
-              高盛首席策略师Hussey指出三大风险阶段性缓和：① 能源危机预期降温；② 私人信贷压力未扩大；③ AI颠覆风险分化
+              交易收入受益于市场高波动，但CEO警告：<strong>关税+地缘风险对企业并购管线形成压制</strong>
             </li>
           </ul>
         </div>
 
-        <!-- Week Overview -->
+        <!-- NFLX -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">本周财报季</span>
-              <span class="earnings-name">Q1 2026 财报季开幕</span>
+              <span class="ticker-badge">NFLX</span>
+              <span class="earnings-name">奈飞 Q1 2026</span>
+            </div>
+            <span class="beat-badge beat">✓ 订阅者超预期</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">营收</div>
+              <div class="metric-value">$114亿</div>
+              <div class="metric-delta up">+15% YoY</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">新增订阅</div>
+              <div class="metric-value">+840万</div>
+              <div class="metric-delta up">超预期+150万</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">广告层收入</div>
+              <div class="metric-value">增速加快</div>
+              <div class="metric-delta up">YoY翻番</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">股价反应</div>
+              <div class="metric-value">+5.2%</div>
+              <div class="metric-delta up">盘后走强</div>
             </div>
           </div>
 
           <ul class="bullet-list">
             <li>
-              <strong>大型银行开幕：</strong>金融板块交易收入普遍受高波动市场提振；但整体金融ETF（XLF）2026年迄今仍跌 <span class="num down">-3.78%</span>，信用质量成隐忧
+              广告支持层（AVOD）加速渗透，成为新增长引擎；Q2指引营收$115-120亿，略超市场预期
             </li>
             <li>
-              贝莱德（BLK）AUM突破新高，私人信贷4月流入与3月相近，显示机构资金仍在持续入场
-            </li>
-            <li>
-              <strong>S&amp;P 500自3月底反弹约+12%</strong>；分析师EFG资管表示"市场注意力将重新聚焦基本面"，财报能否提供盈利支撑是关键
-            </li>
-            <li>
-              <strong>下周关键财报：</strong>特斯拉（TSLA，4/22）、Netflix（NFLX）、摩根士丹利（MS）、美国银行（BAC）、美联航（UAL）—— 检验AI/消费/金融盈利能否支撑高估值
+              AI用于内容推荐与制作效率提升成为管理层重点叙事，<strong>与大科技AI投入逻辑相互印证</strong>
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>财报季刚启动，大行业绩尚可但市场对持续性存疑（GS财报后仍跌印证）。<strong>下周特斯拉财报最关键</strong>：TSLA本周已累涨约15%，若财报不及预期将是整个AI叙事板块的重大压力测试。Netflix盈利质量+AI内容ROI亦是焦点。
+          <strong>💡 解读：</strong>本周大行与科技代表性财报呈现明显分化：高盛"超预期但跌"、奈飞"超预期且涨"。这揭示关键逻辑——<strong>下周大科技（TSLA/GOOGL/META/MSFT）的财报指引质量，而非只是当季业绩本身</strong>，将决定纳指能否守住超买区域。
         </div>
       </section>
 
       <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">
-            📉
-          </div>
+          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
-            🛢️ 油价暴跌 — 宏观信号大转向
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
+            📊 美股技术面信号：从超卖到超买仅11天
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">WTI 原油本周跌幅</span>
-              <span class="value" style="color: var(--red)">-13.17%</span>
+              <span class="label">14日RSI — 超买区域（当前）</span>
+              <span class="value" style="color: var(--green)">72</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 87%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">冲突涨幅已回吐比例</span>
-              <span class="value" style="color: var(--yellow)">约 70%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill yellow" style="width: 70%"></div>
+              <div class="survey-bar-fill blue" style="width: 72%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">年内至少降息一次概率（前日仅30%）</span>
-              <span class="value" style="color: var(--accent-blue)">70%</span>
+              <span class="label">14日RSI — 3月底低点（超卖区域）</span>
+              <span class="value" style="color: var(--red)">27</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 70%"></div>
+              <div class="survey-bar-fill red" style="width: 27%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">WTI 原油 — 当日跌幅（史上最大之一）</span>
+              <span class="value" style="color: var(--red)">-9.64%</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill red" style="width: 64%"></div>
             </div>
           </div>
 
@@ -1191,67 +1188,53 @@
 
           <ul class="bullet-list">
             <li>
-              <strong>"油价决定利率走向"</strong> —— Wellington Management 组合经理：油价走低将传导至通胀预期，预计收益率"夏季前缓步走低"
+              <strong>RSI从超卖跃至超买仅11天</strong>，历史上仅1982年更快——技术面极度拉伸，短期回调概率上升
             </li>
             <li>
-              2Y美债收益率 <span class="num down">3.708%</span>，首次跌破联邦基金利率3.75%；隐含降息路径开始形成，利率敏感型资产（成长股/REITs）获益
+              <strong>油价暴跌</strong>（WTI -9.64%, $85.56）→ 汽油/能源成本快速回落 → 2026年通胀路径下修空间打开
             </li>
             <li>
-              <strong>机构看涨期权需求</strong>升至Citadel Securities观测史上最高水平 — 极度乐观的反向预警信号，回调风险上升
+              高盛坚持预测：<strong>5月中旬前中东原油流量恢复正常</strong>；若实现，油价或继续下行至$75-80区间
             </li>
             <li>
-              CTA量化趋势策略本周买入约 <span class="num">$330亿</span> S&amp;P头寸，当前持约 <span class="num">$100亿</span> 多头，<strong>高速买入阶段已过</strong>，高盛明确警告下周回调风险
+              <strong>美联储静默期4月18日开启</strong>，下一次官方利率信号需等到5月7日FOMC，市场无Fed背书期间波动风险加大
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            🌏 本周主要市场表现对比
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
+            🌏 亚太股市周五表现
           </div>
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">🇺🇸 S&amp;P 500</span><span class="pct">+4.54% 周</span>
+              <span class="name">🇯🇵 日经225</span><span class="pct">+1.82%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇺🇸 纳斯达克</span><span class="pct">+6.84% 周</span>
+              <span class="name">🇰🇷 韩国综指</span><span class="pct">+2.14%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇩🇪 德国DAX</span><span class="pct">+3.77% 周</span>
+              <span class="name">🇨🇳 沪深300</span><span class="pct">+0.78%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇨🇳 金龙中国</span><span class="pct">+6.23% 周</span>
+              <span class="name">🇭🇰 恒生指数</span><span class="pct">+1.35%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇪🇺 STOXX 600</span><span class="pct">+1.91% 周</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇬🇧 富时100</span><span class="pct">+0.63% 周</span>
+              <span class="name">🇲🇾 富时综合</span><span class="pct">+0.42%</span>
             </div>
           </div>
-
-          <div class="divider" style="margin: 12px 0"></div>
-
-          <ul class="bullet-list">
-            <li>欧洲股市全线走强，德国DAX涨 <span class="num">+3.77%</span>，意大利银行板块本周涨约 <span class="num">+5.4%</span>；欧元区蓝筹中英飞凌涨 <span class="num">+6.29%</span></li>
-            <li>纳斯达克金龙中国指数本周累涨 <span class="num">+6.23%</span>；小马智行 <span class="num">+6.5%</span>，阿里/新东方各涨约 <span class="num">+1.7%</span></li>
-            <li>半导体ETF（SOX）本周累涨 <span class="num">+7.49%</span>；2026年迄今累涨 <span class="num">+23.86%</span>，能源ETF同为年内领涨但本周遭重创</li>
-          </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            ⚠️ 市场结构风险指标
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
+            ⚠️ 重点观察（重点观察）
           </div>
           <ul class="bullet-list">
             <li>
-              <strong>期权市场极度偏多：</strong>看涨期权成交量飙升，看跌期权萎缩；做市商负向对冲流形成潜在现货压制
+              <strong>① 伊朗停火谈判进展</strong>：4月22日特朗普期限是市场最大单一风险事件。伊朗已辟谣"七项声明均不属实"，革命卫队声称"敌方接受停火是因己方行动失败"，双方叙事相互矛盾 → 需密切追踪
             </li>
             <li>
-              <strong>市场广度仍弱：</strong>情绪指标未随股价改善；反弹高度集中于Mag7和油价受益板块，中小盘参与度低
-            </li>
-            <li>
-              伊朗实际立场强硬：议长明确"若封锁持续，霍尔木兹将不再保持开放"—— 若周末出现逆转，将触发系统性仓位平仓
+              <strong>② 大科技Q1财报指引</strong>：TSLA（4月22日）、GOOGL/META（4月23日）、MSFT（4月24日）密集发布 → AI资本支出指引能否延续乐观预期，是纳指下一步方向的关键
             </li>
           </ul>
         </div>
@@ -1260,51 +1243,50 @@
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">
-            💡
-          </div>
+          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会信号</div>
+          <div class="alert-title">🟢 值得关注 — 机会</div>
           <div class="alert-text">
-            <strong>① 油价暴跌 → 降息预期回归</strong> — 2Y美债跌破联邦基金利率，年内降息概率急升至70%。利率敏感型资产存在再估值窗口：成长科技股、REITs、长端债券受益；航空/游轮/零售等油价受益板块短期动能强劲<br /><br />
-            <strong>② AI应用层融资热度创新高</strong> — Cursor $500亿估值、DeepSeek V4自主融资，英伟达投资布局持续。高盛明确点名液冷散热、光学网络、推理算力三大受益子行业；下周特斯拉财报若披露AI落地数据将进一步催化AI基础设施板块
+            <strong>① AI基础设施板块再升温</strong> — 高盛点名液冷、光学网络、推理算力三条主线，NVDA/SMCI等重获资金关注；Cursor $500亿估值融资印证私有AI工具链估值逻辑<br />
+            <strong>② 油价暴跌的间接受益者</strong> — 航空（DAL/UAL）、快递（UPS/FEDEX）、零售（TGT/WMT）燃料成本骤降，若停火协议持续，板块基本面改善具持续性
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 需要警惕</div>
+          <div class="alert-title">🔴 需要警惕 — 风险</div>
           <div class="alert-text">
-            <strong>① 霍尔木兹停火协议极度脆弱</strong> — 伊朗议长辟谣特朗普7项声明"均不属实"；特朗普设4月22日最终期限。若周末消息逆转，WTI油价将强力反弹，本周获利盘将面临系统性平仓压力，航空/游轮/成长股首当其冲<br /><br />
-            <strong>② 技术指标极度过热+高盛直接警告</strong> — 11天RSI从超卖飙升至超买（历史仅1982年更快）；机构看涨期权需求创观测史最高；CTA大规模加仓已完成。高盛明确表示"市场现已为下周回调做好准备"，下周财报季任何不及预期将是导火索
+            <strong>① 美股RSI超买警告</strong> — 11天从超卖到超买为史上最快之一，技术面极度拉伸。当前上涨部分由情绪驱动，下周财报若任一巨头指引不及预期，回调幅度或超预期<br />
+            <strong>② 伊朗停火破裂风险</strong> — 伊朗方面否认特朗普7项声明，4月22日期限内若谈判破裂，WTI或迅速反弹至$95+，通胀预期重升，美联储被迫鹰派，科技/成长股首当其冲<br />
+            <strong>③ 美联储静默期"裸奔"</strong> — 4月18日至5月7日无任何Fed官员表态，市场在超买状态下失去政策背书，波动率（VIX）可能在5月FOMC前悄然回升
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
           ✅ 三条可执行关注清单
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">周末持续监控伊朗-美国停火动态，做好两手预案</div>
+            <div class="action-title">盯紧4月22日特斯拉财报与伊朗停火期限双重事件</div>
             <div class="action-desc">
-              若周末出现伊朗关闭海峡或冲突升级消息 → 周一开盘优先能源多头对冲（XLE）、航空空头、黄金多头（GLD）；若协议扩大或稳定延续 → 可继续持有航空（UAL、DAL）、游轮（RCL）、消费板块多头。WTI $80 是关键支撑，跌破则停损；若反弹突破 $90 则大盘反转风险急剧上升
+              TSLA Q1交付量下滑已知，关键在管理层对2026全年指引与FSD进展的态度；若指引悲观且当天伊朗谈判破裂 → 双重利空叠加，考虑减持纳指敞口（QQQ）并关注VIX变动；若双双正面 → 可续持AI成长仓位
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">周一开盘评估技术回调风险，逢高减仓、等待介入点</div>
+            <div class="action-title">布局油价下行的受益板块（航空/消费）对冲地缘风险</div>
             <div class="action-desc">
-              S&amp;P 500 RSI超买 + Mag7三周累涨约19% + 高盛明确警告 → 若周一高开超+0.5%，优先锁定本周部分收益，避免追高。若S&amp;P回调至7,000以下（约-1.7%区域），是逢低加仓AI/半导体（NVDA、AVGO、AMAT）的理想窗口。核心仓位不动，控制杠杆与短期仓位
+              WTI已跌至$85，若高盛"5月中旬恢复正常流量"预测成真，油价可能进一步下探至$78–80。考虑逢低分批建仓 DAL、UAL 或消费ETF（XLY），与持仓中的科技/AI形成行业对冲；同时保留少量能源多头（XLE）以防停火破裂时对冲
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">下周特斯拉（TSLA）财报前做好情景分析，提前设置止盈止损</div>
+            <div class="action-title">大科技财报周（4月22–25日）前控制杠杆，静待指引信号</div>
             <div class="action-desc">
-              TSLA本周已累涨约15%，财报（预计4/22盘后）将是本周高预期最大压力测试。关注三点：① FSD/Robotaxi是否给出确定性商业时间表；② 汽车毛利率是否回升至20%+以上；③ 储能业务规模化速度。若三点均正面 → 持仓或加仓，AI自动驾驶概念将联动带动整个AI板块；若任一重大不及预期 → 财报后快速止损，TSLA高仓位的投资者建议财报前将仓位降至30%-50%以控制风险
+              GOOGL/META/MSFT连续三天发布财报，AI资本支出指引质量是下半年市场方向的分水岭。当前RSI处于超买区、Fed静默期、宏观数据窗口关闭三重叠加下，维持较低杠杆（不超过1.5x），在财报确认前不追高；若三大科技AI capex均超预期，可在财报后加仓NVDA相关标的
             </div>
           </li>
         </ol>
@@ -1315,7 +1297,7 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · 新华社 · 彭博 · CCTV国际时讯</div>
+        <div>📡 数据来源：华尔街见闻 · 华尔街见闻财经日历 · 新华社</div>
         <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年4月18日</div>
       </footer>
     </div>
