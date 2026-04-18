@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Merge PR
-        run: gh pr merge "${{ github.event.pull_request.html_url }}" --squash --yes
+        run: gh pr merge "${{ github.event.pull_request.html_url }}" --squash
         env:
           GH_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
