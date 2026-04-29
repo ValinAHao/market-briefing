@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>早间财经简报 | 2026年4月19日</title>
+    <title>财经简报 | 2026年4月29日</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
@@ -506,6 +507,12 @@
         border: 1px solid var(--green-border);
       }
 
+      .beat-badge.pending {
+        background: var(--yellow-bg);
+        color: var(--yellow);
+        border: 1px solid var(--yellow-border);
+      }
+
       .metric-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -575,6 +582,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -786,74 +796,64 @@
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 马来西亚美股投资者专属
+          LIVE · 马来西亚美股投资者专属 · 夜盘前瞻
         </div>
-        <h1>🌅 财经简报</h1>
-        <div class="date">2026年4月19日 · 周日 · 数据截至上周五（4月17日）美股收盘</div>
-        <div class="subtitle">数据源：华尔街见闻</div>
+        <h1>🌙 财经简报</h1>
+        <div class="date">2026年4月29日 · 周三 · 20:30 MYT · 美股开盘约1小时后</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers (SG) · 财经日历</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(59, 130, 246, 0.12)"
-          >
-            📊
-          </div>
+          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
         <div class="index-grid">
           <div class="index-card up">
-            <div class="index-name">道琼斯</div>
-            <div class="index-value">49,218</div>
-            <div class="index-change up">+314 (+0.64%)</div>
+            <div class="index-name">道琼斯期货</div>
+            <div class="index-value">预开平</div>
+            <div class="index-change up">观望情绪主导</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">纳斯达克</div>
-            <div class="index-value">23,512</div>
-            <div class="index-change up">+连涨第13日 🔥</div>
+            <div class="index-name">纳指期货</div>
+            <div class="index-value">小幅走高</div>
+            <div class="index-change up">科技财报预期支撑</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">S&P 500 ETF</div>
-            <div class="index-value">695.30</div>
-            <div class="index-change up">新高 · 前瞻P/E ~22x</div>
+            <div class="index-name">S&P 500 期货</div>
+            <div class="index-value">ES 2606</div>
+            <div class="index-change up">+0.01%</div>
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>纳斯达克连涨13个交易日</strong>，创2009年7月以来最长连涨纪录；XLK科技ETF收创周线新高，报收<span class="num">$153+</span>
+              <strong>上周五（4月25日）美股收盘</strong>：市场整体保持稳定，投资者进入等待模式
             </li>
             <li>
-              <strong>S&P 500攀至历史新高</strong>，已完全收复伊朗冲突以来全部跌幅，自3月底低点反弹近<span class="num">+9%</span>；前瞻市盈率约22x（10月高峰23x+已回落）
+              本周一（4月28日）为短暂交易日，成交量偏低，市场持续消化贸易不确定性与地缘风险
             </li>
             <li>
-              <strong>油价单日暴跌</strong>：WTI盘中一度跌<span class="num down">-11%</span>——伊朗宣布短暂开放霍尔木兹海峡，但随后于4月18日（周六）再度关闭
+              亚市今日：<strong>韩国综指收涨</strong>，日本股市休市（昭和日假期），WTI原油<span class="num">小幅上扬</span>
             </li>
             <li>
-              高盛AI基础设施篮子自ChatGPT发布以来累涨<span class="num">+327%</span>；散户最爱股自3月末低点以来上涨<span class="num">+24.3%</span>
-            </li>
-            <li>
-              全球股票周资金流出创纪录：<span class="num down">-$1,722亿</span>（BofA数据）；但2026年全球股票累计流入已有望突破<span class="num">$1万亿</span>历史纪录
+              纳指期货盘前走高，由<strong>存储半导体板块</strong>领涨——Seagate <span class="num">+18%</span>、Western Digital <span class="num">+11%</span>、SIMO <span class="num">+29%</span>
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>纳指13连涨背后是情绪从"极度悲观"到"超买"的急速逆转——BofA Hartnett指出，这是1982年以来第二快的情绪转向（仅11天）。<strong>重点关注：</strong>S&P 500创历史新高，但BofA警告这可能是"牛市陷阱"——驱动因素为AI芯片需求与伊朗战争能源利润，均属一次性因素。
+          <strong>💡 解读（夜盘背景）：</strong>上一个完整美股交易日为参考背景，核心焦点已转移至今晚。<strong>联储决议 + Mag7财报</strong>双重催化剂将主导本周走势。隔夜美股仅作方向参考，不构成今晚行动依据。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">
-            🌍
-          </div>
+          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -869,162 +869,145 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,830.43/oz</span></td>
-                <td>
-                  <span class="tag up">▲ +0.83%</span><span class="asset-note">持续创历史新高</span>
-                </td>
+                <td><span class="asset-price">数据待更新</span></td>
+                <td><span class="tag up">▲ 避险需求支撑</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$85.56</span></td>
+                <td><span class="asset-price">高位震荡</span></td>
                 <td>
-                  <span class="tag down">▼ -9.64%</span><span class="asset-note">霍尔木兹短暂开放引发暴跌</span>
+                  <span class="tag up">▲ 小幅上扬</span><span class="asset-note">特朗普召开油企峰会</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ 布伦特原油</span></td>
-                <td><span class="asset-price">~$90.00</span></td>
-                <td>
-                  <span class="tag down">▼ 大幅下跌</span><span class="asset-note">与WTI同步</span>
-                </td>
+                <td><span class="asset-price">高油价持续</span></td>
+                <td><span class="tag up">▲ UAE退出OPEC</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">98.23</span></td>
-                <td><span class="tag up">▲ +0.03%</span></td>
+                <td><span class="asset-price">待FOMC定向</span></td>
+                <td><span class="tag down">▼ FOMC前偏弱</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1762</span></td>
-                <td><span class="tag down">▼ -0.18%</span></td>
+                <td><span class="asset-name">🔷 10Y 美债</span></td>
+                <td><span class="asset-price">FOMC敏感</span></td>
+                <td><span class="asset-note">鹰派预期推升收益率</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">158.61</span></td>
-                <td>
-                  <span class="tag down">▼ -0.10%</span><span class="asset-note">日元小幅走强</span>
-                </td>
+                <td><span class="asset-name">₿ 比特币</span></td>
+                <td><span class="asset-price">跟随风险情绪</span></td>
+                <td><span class="tag up">▲</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.8135</span></td>
-                <td>
-                  <span class="tag down">▼ -0.08%</span><span class="asset-note">人民币微弱走弱</span>
-                </td>
+                <td><span class="asset-name">🇺🇸 MSFT（盘前）</span></td>
+                <td><span class="asset-price">$429.25</span></td>
+                <td><span class="tag up">▲ +1.04%</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇰🇷 韩国综指 KOSPI</span></td>
-                <td><span class="asset-price">YTD +37.72%</span></td>
-                <td><span class="tag up">▲ 年内最强亚太股市</span></td>
+                <td><span class="asset-name">🇺🇸 NVDA（盘前）</span></td>
+                <td><span class="asset-price">$213.17</span></td>
+                <td><span class="tag down">▼ -1.59%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇺🇸 AMZN（盘前）</span></td>
+                <td><span class="asset-price">$259.70</span></td>
+                <td><span class="tag down">▼ -0.54%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇺🇸 TSLA（盘前）</span></td>
+                <td><span class="asset-price">$376.02</span></td>
+                <td><span class="tag down">▼ -0.70%</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>油价在周五急跌后，周六伊朗再度关闭霍尔木兹，<strong>WTI已处于$85区间，不确定性极高。</strong>黄金突破$4,830并持续刷新历史高位，在地缘与停火不确定性下强势不减。美元指数维持在98，未见明显方向。<strong>本周关键变量</strong>：停火到期（4/20 16:00）后油价如何定向将主导市场走势。
+          <strong>💡 解读：</strong>油价高位令通胀顾虑延续，特朗普紧急召集石油业巨头应对高油价，阿联酋宣布退出OPEC，长期供给定价权向美国能源倾斜。MSFT盘前走强反映财报乐观预期；NVDA、MU下跌或受期权机构卖出压制。<strong>今晚美元走势取决于鲍威尔措辞</strong>。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(249, 115, 22, 0.12)"
-          >
-            🎯
-          </div>
+          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>新西兰3月贸易差额</strong>（4月19日） → 反映出口压力
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>英国Rightmove房价指数</strong>（4月19日） → 英国通胀次级指标
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>日本3月贸易差额</strong>（4月19日） → 出口受油价与关税影响
+            <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              <strong>21:30 MYT — 美股开盘</strong>：市场以"等待"姿态启动；存储/半导体板块盘前已发力
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>中国1年期/5年期LPR利率决定</strong>（4月20日 01:00 MYT）→ 预期不变（1Y: 3.0%，5Y: 3.5%）；若意外降息，将利好A股与港股
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">发布</span>
-              <strong>华为Pura AI眼镜系列新品发布</strong>（4月20日 06:30 MYT）→ 中国AI可穿戴赛道标志性事件
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>SanDisk正式加入纳斯达克100指数</strong>（4月20日 08:00 MYT）→ 关注被动资金追捧效应
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>加拿大3月CPI</strong>（4月20日 12:30 MYT）→ 预期同比+2.6%（上月+1.8%）；若超预期，加元强、油价联动
-            </div>
-            <div class="timeline-item">
               <span class="timeline-label speech">讲话</span>
-              <strong>德国总理默茨 + ECB行长拉加德</strong>联合讲话（4月20日 15:00 MYT）→ 关注欧元区经济态度与欧元走向
+              <strong>02:00 MYT（明凌）— 美联储FOMC公布利率决议</strong>：预期维持3.5%/3.75%不变；焦点在措辞是否鹰派强化
             </div>
-            <div class="timeline-item important" style="border-left: 2px solid var(--red); padding-left: 8px; background: rgba(239,68,68,0.05); border-radius: 6px;">
-              <span class="timeline-label report" style="background: rgba(239,68,68,0.2); color: var(--red);">⚠️ 风险</span>
-              <strong>美伊两周停火协议到期</strong>（4月20日 16:00 MYT）→ 特朗普警告"好说话的日子结束了"，威胁摧毁伊朗电厂与桥梁；伊朗态度强硬，最关键地缘风险时间窗口
+            <div class="timeline-item important">
+              <span class="timeline-label speech">讲话</span>
+              <strong>02:30 MYT（明凌）— 鲍威尔新闻发布会</strong>："最后一舞"——市场聚焦他对通胀/就业平衡的最新表述
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              <strong>盘后（约04:30 MYT）— 谷歌（GOOGL）Q1财报 + 电话会</strong>：云业务增速与AI广告收入为核心观察点
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              <strong>盘后（约05:30 MYT）— Meta / 亚马逊 / 微软Q1财报电话会</strong>：三大科技巨头同日公布业绩，AI资本开支指引是关键
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">新闻</span>
+              <strong>马斯克诉奥特曼庭审首日</strong>：法庭争议"没有我就没有OpenAI"，影响科技监管预期
             </div>
             <div class="timeline-item">
               <span class="timeline-label data">数据</span>
-              <strong>新西兰Q1 CPI</strong>（4月20日 22:45 MYT）→ 预期同比+2.9%（上季+3.1%）；降温趋势若成立，利好降息预期
+              <strong>澳大利亚Q1截尾平均CPI</strong>：同比 3.5%（符合预期），对澳元及亚太情绪有轻微参考价值
             </div>
           </div>
         </div>
+
+        <div class="insight">
+          <strong>💡 今晚核心逻辑：</strong>这是本财报季<strong>密度最高的单日</strong>——FOMC + Meta + Google + Amazon + Microsoft同日。任何一项超预期均可引发剧烈波动。<strong>重点观察①</strong>：鲍威尔是否暗示下次会议可能降息（鸽）或明确暂停降息周期（鹰）。<strong>重点观察②</strong>：Meta/Microsoft的AI资本开支指引能否支撑算力产业链估值。
+        </div>
       </section>
 
-      <!-- ═══ 4. AI与科技产业动态 ═══ -->
+      <!-- ═══ 4. AI与科技 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(167, 139, 250, 0.12)"
-          >
-            🤖
-          </div>
+          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div
-            style="
-              margin-bottom: 10px;
-              font-size: 14px;
-              color: var(--text-secondary);
-            "
-          >
-            <strong style="color: var(--purple)">半导体ETF</strong> 4月至今资金净流入创历史纪录
-            <span class="tag up" style="font-size: 13px">+$40亿</span> ·
-            <strong style="color: var(--purple)">高盛AI基础设施篮子</strong>
-            <span class="tag up" style="font-size: 13px">+327% 自ChatGPT发布以来</span>
+          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
+            <strong style="color: var(--purple)">存储/半导体板块</strong> 盘前强势领涨 ·
+            <strong style="color: var(--purple)">AI资本开支叙事</strong>驱动
+            <span class="tag up" style="font-size: 13px">存储超周期</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">SMH/SOXX</span><span class="pct">4月流入创纪录</span>
+              <span class="name">SIMO</span><span class="pct">+29%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">XLK</span><span class="pct">$153+ 周线高</span>
+              <span class="name">STX</span><span class="pct">+18%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MU 美光</span><span class="pct">EPS预期 $101</span>
+              <span class="name">WDC</span><span class="pct">+11%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇰🇷 KOSPI</span><span class="pct">YTD +37.72%</span>
+              <span class="name">UMC</span><span class="pct">+8.23%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">Cursor AI</span><span class="pct">估值$500亿+</span>
+              <span class="name">MU</span><span class="pct down">-3.86%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">NVDA</span><span class="pct down">-1.59%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MSFT</span><span class="pct">+1.04%</span>
             </div>
           </div>
 
@@ -1032,240 +1015,217 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>OpenAI高管震动：</strong>IPO前夕3名核心高管集体辞职——Sora创始人、AI科学副总裁、企业级CTO同日离职；Sora平台随即关闭；股东讨论以Bret Taylor取代Altman；IPO目标估值<span class="num">$8,500亿</span>
+              <strong>希捷（STX）HAMR技术开启"暴利模式"</strong>：大容量硬盘需求由AI数据中心驱动，存储进入黄金周期；STX盘前飙升<span class="num">+18%</span>，WDC同步涨<span class="num">+11%</span>
             </li>
             <li>
-              <strong>Cursor AI：</strong>拟融资<span class="num">$20亿</span>，估值突破<span class="num">$500亿</span>，英伟达计划跟投——AI编程赛道估值快速膨胀
+              <strong>GitHub Copilot转向按量计费</strong>：AI工具货币化模式转变，撕开"补贴换增长"逻辑；被解读为"AI次贷危机"初期信号，需关注对MSFT估值的影响
             </li>
             <li>
-              <strong>DRAM内存危机深化：</strong>供应商预计2027年前仅能满足<span class="num down">60%</span>市场需求；多年短缺格局已成定局；美光科技(MU) EPS预测从2025年10月的$19大幅上调至<span class="num">$101</span>（2027财年）
+              <strong>马斯克诉奥特曼庭审首日</strong>：争议焦点"没有我就没有OpenAI"，若庭审拉锯或对OpenAI商业化进程形成干扰
             </li>
             <li>
-              <strong>DeepSeek V4：</strong>梁文锋史上首次对外融资，声称最新模型彻底摆脱英伟达GPU依赖
+              <strong>UMC Q1业绩超预期</strong>：营收与盈利同步增长，受AI推动的成熟制程需求强劲，盘前<span class="num">+8.23%</span>
             </li>
             <li>
-              <strong>Anthropic：</strong>推出Claude Design AI视觉创作工具，强化付费订阅竞争力
-            </li>
-            <li>
-              <strong>Google：</strong>据报道正与Marvell洽谈联合开发下一代AI专用芯片
+              <strong>MU（美光）盘前承压</strong>：机构在$250执行价大量卖出PUT期权，市场对短期走势谨慎；Oracle亦见机构对冲性PUT买入
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>半导体ETF单月流入$40亿创历史纪录，超越2025年12月全月$30亿，显示资金重仓AI算力主线。<strong>但OpenAI高层动荡是重要警示信号</strong>——IPO前夕关键人才出走、Sora关闭，可能引发市场对AI龙头盈利可持续性的重新审视。DRAM短缺确定性高，MU等存储股中长期逻辑强劲。
+          <strong>💡 解读：</strong>今夜Mag7财报将检验AI叙事的"硬核"：Meta/MSFT/AMZN/GOOGL的AI资本开支指引若维持强劲 → 算力产业链（NVDA、STX、WDC）可望获得基本面背书。反之若AI支出放缓 → 盘前涨势或于今夜全部回吐。<strong>GitHub Copilot收费模式转变是先行警示信号</strong>，需持续追踪。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(251, 191, 36, 0.12)"
-          >
-            💼
-          </div>
+          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- MU 美光科技 EPS revision highlight -->
+        <!-- 今日盘后待公布 -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">MU</span>
-              <span class="earnings-name">美光科技 — EPS预期大幅上调</span>
+              <span class="ticker-badge">META</span>
+              <span class="earnings-name">Meta Platforms Q1 · 盘后</span>
             </div>
-            <span class="beat-badge beat">🔥 DRAM短缺受益</span>
+            <span class="beat-badge pending">⏳ 今夜公布</span>
           </div>
-
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">2027财年EPS预测</div>
-              <div class="metric-value">$101</div>
-              <div class="metric-delta up">2025年10月预测仅$19</div>
+              <div class="metric-label">分析师预期营收</div>
+              <div class="metric-value">~$415亿</div>
+              <div class="metric-delta up">YoY +14%</div>
             </div>
             <div class="metric">
-              <div class="metric-label">上调幅度</div>
-              <div class="metric-value">+431%</div>
-              <div class="metric-delta up">6个月内大幅修订</div>
+              <div class="metric-label">预期EPS</div>
+              <div class="metric-value">~$5.25</div>
+              <div class="metric-delta up">共识预测</div>
             </div>
             <div class="metric">
-              <div class="metric-label">驱动因素</div>
-              <div class="metric-value">DRAM供给</div>
-              <div class="metric-delta up">2027年前仅60%需求可满足</div>
+              <div class="metric-label">核心关注点</div>
+              <div class="metric-value">AI广告</div>
+              <div class="metric-delta up">Llama效益</div>
             </div>
           </div>
-
           <ul class="bullet-list">
-            <li>
-              DRAM厂商产能扩张远滞后于AI推理需求爆发；HBM（高带宽内存）尤为短缺
-            </li>
-            <li>
-              MU、SK海力士、三星均是主要受益标的；韩国KOSPI YTD +37.72%部分由此驱动
-            </li>
+            <li><strong>观察1</strong>：AI推荐算法对广告ARPU（每用户收入）的提升幅度</li>
+            <li><strong>观察2</strong>：资本开支指引——AI基础设施投入是否超出预期</li>
+            <li><strong>风险</strong>：若管理层下调下半年指引，股价可能急跌5-10%</li>
           </ul>
         </div>
 
-        <!-- S&P 500 EPS outlook -->
+        <!-- MSFT -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">SPX</span>
-              <span class="earnings-name">S&P 500整体盈利展望</span>
+              <span class="ticker-badge">MSFT</span>
+              <span class="earnings-name">微软 Q1 · 盘后</span>
             </div>
-            <span class="beat-badge beat">✓ 2026全年预测上调</span>
+            <span class="beat-badge pending">⏳ 今夜公布</span>
           </div>
-
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">2026年EPS预测</div>
-              <div class="metric-value">$330+</div>
-              <div class="metric-delta up">前瞻P/E ~22x</div>
+              <div class="metric-label">Azure云增速预期</div>
+              <div class="metric-value">+33%</div>
+              <div class="metric-delta up">市场期待更高</div>
             </div>
             <div class="metric">
-              <div class="metric-label">驱动一：AI芯片</div>
-              <div class="metric-value">一次性</div>
-              <div class="metric-delta down">结构性可持续存疑</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">驱动二：油企利润</div>
-              <div class="metric-value">一次性</div>
-              <div class="metric-delta down">油价逆转风险大</div>
+              <div class="metric-label">盘前股价</div>
+              <div class="metric-value">$429.25</div>
+              <div class="metric-delta up">+1.04%</div>
             </div>
           </div>
-
           <ul class="bullet-list">
-            <li>
-              本周末无重大财报；<strong>下周关注：</strong>特斯拉Q1（预期EV交付量下滑）、英特尔（AI芯片营收）
-            </li>
-            <li>
-              BofA Hartnett警告：当前创纪录美股建立在"<strong>一次性虚假地基</strong>"之上，需警惕P/E扩张到头、盈利预期回落
-            </li>
+            <li><strong>核心看点</strong>：Azure AI服务收入占比与增速，Copilot企业订阅渗透率</li>
+            <li><strong>注意</strong>：GitHub Copilot按量计费转型短期或压制订阅收入增速</li>
+          </ul>
+        </div>
+
+        <!-- AMZN + GOOGL -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">AMZN</span>
+              <span class="earnings-name">亚马逊 / 谷歌 Q1 · 盘后</span>
+            </div>
+            <span class="beat-badge pending">⏳ 今夜公布</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>AMZN</strong>：AWS增速与广告业务是双核心；关注关税对零售利润率的影响</li>
+            <li><strong>GOOGL</strong>：AI Overviews对搜索广告的冲击 vs. Google Cloud加速；20:30 MYT电话会</li>
+            <li><strong>AMZN盘前</strong>：<span class="num down">-0.54%</span>（$259.70），市场谨慎观望</li>
+          </ul>
+        </div>
+
+        <!-- 今日已公布：GD -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">GD</span>
+              <span class="earnings-name">通用动力 Q1 · 已公布</span>
+            </div>
+            <span class="beat-badge beat">✓ 超预期</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">盘前涨幅</div>
+              <div class="metric-value">+6.80%</div>
+              <div class="metric-delta up">海军舰艇业务驱动</div>
+            </div>
+          </div>
+          <ul class="bullet-list">
+            <li>Q1营收受Marine Systems（海军舰艇）业务强劲增长支撑</li>
+            <li>地缘局势持续紧张 → 防务股基本面改善，中长期订单能见度提升</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>S&P 500 EPS预测$330+看似强劲，但主要受益于AI芯片需求暴增（美光EPS +431%）与伊朗战争推高油企利润——这两个驱动均属于非常规性、可逆因素。若停火持续、油价回落，能源板块EPS将大幅下滑。<strong>本周关注特斯拉财报</strong>是否验证成长叙事仍在。
+          <strong>💡 解读：</strong>今晚是本财报季最高密度的单夜。Meta + MSFT + AMZN + GOOGL集中公布，任何一家大幅超预期或不及预期均可能引发科技板块连锁反应。市场目前对AI资本开支叙事定价偏高，<strong>下行风险大于上行惊喜</strong>。重点关注各公司2026年全年指引是否下调。
         </div>
       </section>
 
-      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
+      <!-- ═══ 6. 宏观指标 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">
-            📉
-          </div>
+          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 14px;
-            "
-          >
-            BofA Hartnett 市场情绪警告 ⚠️ "牛市陷阱"
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
+            🏦 FOMC会议 — 今夜关键决策
           </div>
-
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">从超卖→超买转变速度（1982年以来第几快）</span>
-              <span class="value" style="color: var(--red)">第2快</span>
+              <span class="label">市场对维持利率不变的隐含概率</span>
+              <span class="value" style="color: var(--accent-blue)">~95%</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 90%"></div>
+              <div class="survey-bar-fill blue" style="width: 95%"></div>
             </div>
           </div>
-
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">逆转所用交易日（11天）</span>
-              <span class="value" style="color: var(--red)">11天</span>
+              <span class="label">降息25bp概率</span>
+              <span class="value" style="color: var(--green)">~5%</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 75%"></div>
+              <div class="survey-bar-fill red" style="width: 5%"></div>
             </div>
           </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">2026年全球股票资金流入（有望突破历史纪录$1万亿）</span>
-              <span class="value" style="color: var(--accent-blue)">$1T轨道</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 65%"></div>
-            </div>
-          </div>
-
           <div class="divider" style="margin: 14px 0"></div>
-
           <ul class="bullet-list">
             <li>
-              <strong>周资金流出创历史纪录：$1,722亿</strong>（截至4月17日当周）——但被解读为"获利了结"非恐慌性抛售
+              <strong>当前利率区间：3.50%–3.75%</strong>（已从高峰累计降息约100bp）
             </li>
             <li>
-              最拥挤交易：<strong>"做多半导体"</strong>（SMH/SOXX 4月流入$40亿创纪录，超越2025年12月全月$30亿）
+              <strong>鲍威尔"最后一舞"</strong>：外界预期本次声明偏鹰，措辞强调"通胀尚未完全受控"
             </li>
             <li>
-              SEC正式取消FINRA $25,000散户日内交易门槛限制 → 美股进入"全民YOLO"时代，散户活跃度上升
+              若声明加入"进一步加息"措辞 → 科技/成长股承压，美元走强，金融股分化
             </li>
             <li>
-              国际航协警告：欧洲航空公司可能因伊朗油价冲击出现"停飞潮"，航运成本上升
+              若措辞温和暗示9月降息路径 → 科技股财报夜上涨空间打开
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 10px;
-            "
-          >
-            🔍 霍尔木兹神秘空单事件
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
+            🛢️ 能源市场动态
           </div>
           <ul class="bullet-list">
             <li>
-              4月17日（周五）开市前<strong>20分钟</strong>，$7.6亿神秘石油空单建仓
+              <strong>特朗普紧急召集石油业巨头</strong>：面对高油价，商讨增产应对策略；市场将其解读为打压油价的行政干预
             </li>
             <li>
-              随后伊朗宣布开放霍尔木兹海峡 → WTI盘中暴跌<span class="num down">-11%</span>
+              <strong>阿联酋退出OPEC</strong>：长期定价权向美国能源倾斜；短期供给格局暂未改变，油价仍处高位
             </li>
             <li>
-              CFTC已启动调查，涉及三笔可疑交易，<strong>总规模$22亿</strong>，疑似内幕交易
-            </li>
-            <li>
-              4月18日（周六）伊朗以"美国违反停火条款"为由<strong>重新关闭霍尔木兹</strong>，事件尚未平息
+              新加坡股市因能源安全问题持续承压，反映亚太能源进口国的结构性担忧
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 10px;
-            "
-          >
-            🌏 亚太市场近况
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
+            🌏 亚太今日收盘
           </div>
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">🇰🇷 韩国综指</span><span class="pct">YTD +37.72%</span>
+              <span class="name">🇯🇵 日本</span><span class="pct">休市</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇨🇳 沪深股市</span><span class="pct">受LPR预期支撑</span>
+              <span class="name">🇰🇷 韩国综指</span><span class="pct">收涨</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇯🇵 日本</span><span class="pct">日元小幅升值</span>
+              <span class="name">🇸🇬 新交所</span><span class="pct down">偏软</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇦🇺 澳洲CPI</span><span class="pct">3.5% 符预期</span>
             </div>
           </div>
         </div>
@@ -1274,70 +1234,50 @@
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(16, 185, 129, 0.12)"
-          >
-            💡
-          </div>
+          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 值得关注 — 机会</div>
+          <div class="alert-title">🟢 重点观察 — 机会窗口</div>
           <div class="alert-text">
-            <strong>① 半导体/AI算力主线未变</strong> —
-            SMH/SOXX创历史最强月度流入，DRAM供给短缺至2027年，MU等EPS预期大幅上调。AI基础设施叙事仍是全球资金核心配置方向<br />
-            <strong>② SanDisk加入纳斯达克100</strong> —
-            4月20日正式纳入，被动指数基金将被动买入，关注开盘溢价机会
+            <strong>① 存储/半导体板块盘前大幅拉升</strong> — SIMO +29%、STX +18%、WDC +11%、UMC +8%。若晚间Mag7财报证实AI资本开支维持高位，存储超周期逻辑得到基本面验证，相关仓位可持有过夜<br />
+            <strong>② MSFT盘前+1%，市场对其Azure AI指引高度期待</strong> — 若电话会中管理层上调全年AI收入指引，MSFT有望引领Mag7整体上涨，带动科技ETF（QQQ/XLK）走强
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 需要警惕 — 风险</div>
+          <div class="alert-title">🔴 风险提示 — 需要警惕</div>
           <div class="alert-text">
-            <strong>① 美伊停火4月20日16:00到期</strong> —
-            特朗普"好说话的日子结束了"、伊朗强硬表态，谈判破裂将导致油价V形反弹、科技股抛压；霍尔木兹神秘空单事件CFTC调查，市场操控风险需警惕<br />
-            <strong>② BofA"牛市陷阱"警告</strong> —
-            市场11天内从极度超卖转向超买，为1982年以来第二快。纳指13连涨已是历史极值，获利回吐压力将在停火不确定性触发下集中释放<br />
-            <strong>③ OpenAI高管离职 + IPO不确定性</strong> —
-            若Altman被取代或IPO延期，科技板块情绪将承压，高估值AI软件股首当其冲
+            <strong>① FOMC鹰派超预期</strong> — 若鲍威尔明确排除今年降息可能、或声明加入警惕性措辞，科技成长股首当其冲，纳指盘后或急跌3-5%；关税叠加高利率的"双杀"情景需防范<br />
+            <strong>② 财报夜"买预期、卖现实"</strong> — 市场对Mag7期望极高，即便小幅不及预期（如AMZN AWS增速低于33%或Meta广告收入指引保守），股价可能出现大跌反应；不建议在财报公布前加仓<br />
+            <strong>③ 油价居高不下</strong> — 阿联酋退出OPEC + 特朗普对伊强硬姿态（计划延长封锁），若能源事件升级，通胀预期二次走高将令FOMC更为鹰派
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div
-          style="
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-          "
-        >
-          ✅ 三条可执行关注清单
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
+          ✅ 三条可执行关注清单（针对今晚21:30开盘后）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">今晚密切监控美伊停火到期时间窗口（MYT 16:00）</div>
+            <div class="action-title">开盘后勿追涨存储板块，等待财报确认再布局</div>
             <div class="action-desc">
-              若停火顺利延续或达成新协议 → 油价继续下行，能源股减仓、科技股加仓；若停火破裂/伊朗关闭霍尔木兹 → 油价急涨，应持有能源多头（XLE）对冲，同时减持高估值成长股（ARKK、软件SaaS）
+              STX/WDC/SIMO盘前已大幅飙升，开盘后若出现回调至盘前涨幅50%附近（即STX回调至+9%区间），可视为更佳入场点。等待今晚Meta/MSFT财报中AI资本开支数据作为基本面锚定，再决定是否持仓过夜。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">跟踪半导体ETF（SMH/SOXX）开盘表现及SanDisk纳入效应</div>
+            <div class="action-title">FOMC声明前（凌晨02:00 MYT前）降低仓位敞口</div>
             <div class="action-desc">
-              4月20日SanDisk正式加入纳斯达克100，被动资金追买短期支撑存储概念；结合DRAM短缺逻辑，可关注MU、SK海力士ADR逢低布局机会；若SMH开盘延续创纪录流入趋势，半导体仓位可适当加仓
+              若当前持有科技/成长股仓位，建议在凌晨01:30 MYT前将仓位降至正常的60-70%，规避鲍威尔意外鹰派导致的急速下跌。若FOMC结果温和（维持+中性措辞），可在声明后快速补回；若偏鹰，则庆幸已减仓保住盈利。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">观察加拿大CPI数据（MYT 12:30）是否超预期推高通胀担忧</div>
+            <div class="action-title">关注 META 财报电话会核心数据：AI广告ARPU与资本开支指引</div>
             <div class="action-desc">
-              加拿大3月CPI预期同比+2.6%（上月仅1.8%），若超预期 → 北美整体通胀叙事回归，美联储降息预期进一步压缩，美债收益率上行，高估值科技股承压；若低于预期 → 宽松预期升温，成长股续涨，可逢机加仓纳指ETF（QQQ）
+              META约05:30 MYT公布电话会详情。若Q2营收指引高于$430亿且管理层确认AI广告效益持续提升 → Meta可作为明日早盘做多标的；若指引保守或下调全年资本开支预算 → 则规避AI相关科技仓位至少48小时，等待市场重新定价。
             </div>
           </li>
         </ol>
@@ -1348,8 +1288,8 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻（wallstreetcn.com）</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年4月19日</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 财经日历</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年4月29日 20:30 MYT</div>
       </footer>
     </div>
   </body>
