@@ -2,11 +2,16 @@
 
 A fully automated daily stock market briefing for **Malaysian investors focused on US stocks**, powered by [GitHub Agentic Workflows (gh-aw)](https://github.github.com/gh-aw/).
 
-Every weekday, an AI agent scrapes live financial data, synthesizes the key moves, and publishes a polished HTML briefing to **GitHub Pages** — no manual effort required.
+Twice a weekday, an AI agent scrapes live financial data, synthesizes the key moves, and publishes a polished HTML briefing to **GitHub Pages** — no manual effort required.
 
 ## What It Does
 
-The workflow runs on a cron schedule (weekdays at 00:00 UTC). An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline end-to-end:
+The workflow runs on two cron schedules (UTC):
+
+- **Morning recap** — `00:00 UTC` Tue–Sat (08:00 MYT), recapping the US session that just closed and looking ahead to tonight's open.
+- **Night preview** — `12:30 UTC` Mon–Fri (20:30 MYT), a tactical pre-open preview ~1 hour before US markets open.
+
+An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline end-to-end:
 
 1. **Scrape** — Uses Playwright browser tools to gather real-time data from financial sources (wallstreetcn, Tiger Brokers)
 2. **Analyze** — Synthesizes market data into a structured briefing covering 7 sections, written in Chinese
@@ -22,13 +27,15 @@ The workflow runs on a cron schedule (weekdays at 00:00 UTC). An AI agent (Claud
 | 4 | AI与科技产业动态 | AI & tech industry developments |
 | 5 | 美股财报 | US earnings highlights |
 | 6 | 宏观指标与市场数据 | Macro indicators and market data |
-| 7 | 投资者的建议 | 3 actionable watch-list items for tonight's session |
+| 7 | 投资者的建议 | 3 actionable watch-list items (morning run targets tonight's open; night run targets the open in ~1 hour) |
 
 ## How It Works
 
 ```
 ┌─────────────────────────────────┐
-│   Cron Trigger (Weekdays UTC 0) │
+│  Cron Triggers (UTC)            │
+│  • 00:00 Tue–Sat → morning      │
+│  • 12:30 Mon–Fri → night        │
 └──────────────┬──────────────────┘
                │
                ▼
@@ -40,7 +47,8 @@ The workflow runs on a cron schedule (weekdays at 00:00 UTC). An AI agent (Claud
                ▼
 ┌──────────────────────────────────────────────┐
 │  gh-aw Workflow (Claude Sonnet 4.6)          │
-│  Reads: daily-summary.md + template.html     │
+│  Reads: morning- or night-briefing-          │
+│         template.html (per run)              │
 │                                              │
 │  ┌────────────────────────────────────────┐  │
 │  │  Playwright Browser Scraping           │  │
@@ -56,7 +64,7 @@ The workflow runs on a cron schedule (weekdays at 00:00 UTC). An AI agent (Claud
 │  ┌────────────────────────────────────────┐  │
 │  │  AI Analysis & HTML Generation         │  │
 │  │  • Explains data → market reaction     │  │
-│  │  • Populates template.html with data   │  │
+│  │  • Populates chosen template with data │  │
 │  │  • Outputs docs/index.html             │  │
 │  └────────────────┬───────────────────────┘  │
 └───────────────────┼──────────────────────────┘
@@ -77,15 +85,17 @@ The workflow runs on a cron schedule (weekdays at 00:00 UTC). An AI agent (Claud
 
 ```
 market-briefing/
-├── daily-summary.md                  # Prompt instructions for the AI agent
-├── template.html                     # Fixed HTML/CSS layout for the briefing
+├── daily-summary.md                  # Original prompt notes (reference)
+├── morning-briefing-template.html    # HTML/CSS layout for the morning recap
+├── night-briefing-template.html      # HTML/CSS layout for the night preview
 ├── docs/
 │   └── index.html                    # Latest briefing (auto-updated, served by Pages)
 └── .github/
     ├── workflows/
-    │   ├── market-briefing.md        # gh-aw workflow definition
-    │   ├── market-briefing.lock.yml  # Compiled GitHub Actions workflow
-    │   └── copilot-setup-steps.yml   # Runner setup (Playwright install)
+    │   ├── market-briefing.md          # gh-aw workflow definition
+    │   ├── market-briefing.lock.yml    # Compiled GitHub Actions workflow
+    │   ├── auto-merge-briefing.yml     # Auto-merges briefing PRs after success
+    │   └── copilot-setup-steps.yml     # Runner setup (Playwright install)
     ├── aw/
     │   └── actions-lock.json         # Pinned action SHAs for reproducibility
     └── agents/
