@@ -3,52 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年4月30日</title>
+    <title>财经简报 | 2026年5月1日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
-    <!-- 
+    <!--
   ╔══════════════════════════════════════════════════════════════╗
-  ║  MORNING BRIEFING HTML TEMPLATE                             ║
+  ║  MORNING BRIEFING HTML TEMPLATE — LIGHT / SUNRISE THEME     ║
   ║                                                             ║
-  ║  Instructions:                                              ║
-  ║  1. Keep ALL CSS unchanged (the <style> block is fixed)     ║
-  ║  2. Replace data values in the <body> with real scraped data║
-  ║  3. Update: date, timestamps, index values, asset prices,   ║
-  ║     event timeline, earnings data, analysis text            ║
-  ║  4. Follow the component patterns shown below               ║
-  ║  5. Save as: morning-briefing-YYYY-MM-DD.html               ║
+  ║  Palette: warm ivory background, charcoal text, amber +     ║
+  ║  soft sky-blue accents. Same component API as dark version. ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
-        --bg-primary: #0a0e17;
-        --bg-card: #111827;
-        --bg-card-alt: #1a2235;
-        --bg-highlight: rgba(59, 130, 246, 0.08);
-        --border: #1e293b;
-        --border-accent: #2563eb;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --text-muted: #64748b;
-        --accent-blue: #3b82f6;
-        --accent-cyan: #06b6d4;
-        --green: #10b981;
-        --green-bg: rgba(16, 185, 129, 0.1);
-        --green-border: rgba(16, 185, 129, 0.3);
-        --red: #ef4444;
-        --red-bg: rgba(239, 68, 68, 0.1);
-        --red-border: rgba(239, 68, 68, 0.3);
-        --yellow: #f59e0b;
-        --yellow-bg: rgba(245, 158, 11, 0.08);
-        --yellow-border: rgba(245, 158, 11, 0.3);
-        --orange: #f97316;
-        --purple: #a78bfa;
-        --gold: #fbbf24;
-        --gradient-brand: linear-gradient(135deg, #3b82f6, #06b6d4);
-        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
-        --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
-        --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.1);
+        /* Warm ivory surfaces */
+        --bg-primary: #faf7f2;
+        --bg-card: #ffffff;
+        --bg-card-alt: #f5efe6;
+        --bg-highlight: rgba(234, 138, 62, 0.06);
+        --border: #ece4d6;
+        --border-soft: #f2ead c;
+        --border-accent: #ea8a3e;
+
+        /* Text */
+        --text-primary: #2a2520;
+        --text-secondary: #6b6257;
+        --text-muted: #9a9187;
+
+        /* Accents — sunrise */
+        --accent-amber: #ea8a3e; /* warm primary */
+        --accent-rose: #d97070; /* soft coral */
+        --accent-sky: #5b95c9; /* morning sky */
+        --accent-sky-deep: #3b7aa8;
+
+        /* Semantic */
+        --green: #5a9a6a;
+        --green-bg: rgba(90, 154, 106, 0.1);
+        --green-border: rgba(90, 154, 106, 0.3);
+        --red: #c8574f;
+        --red-bg: rgba(200, 87, 79, 0.08);
+        --red-border: rgba(200, 87, 79, 0.28);
+        --yellow: #c58a2a;
+        --yellow-bg: rgba(234, 179, 62, 0.12);
+        --yellow-border: rgba(234, 179, 62, 0.35);
+        --orange: #e07a3a;
+        --purple: #8a7fc9;
+        --gold: #d9a23a;
+
+        --gradient-brand: linear-gradient(135deg, #ea8a3e, #f4b961);
+        --gradient-sky: linear-gradient(135deg, #ea8a3e, #5b95c9);
+        --gradient-gold: linear-gradient(135deg, #d9a23a, #f4cc6b);
+        --shadow-card:
+          0 1px 2px rgba(64, 48, 28, 0.04), 0 6px 20px rgba(64, 48, 28, 0.05);
+        --shadow-glow: 0 0 48px rgba(234, 138, 62, 0.12);
       }
 
       * {
@@ -68,6 +76,19 @@
           sans-serif;
         line-height: 1.7;
         min-height: 100vh;
+        /* subtle sunrise wash top */
+        background-image:
+          radial-gradient(
+            ellipse 1200px 500px at 50% -10%,
+            rgba(244, 185, 97, 0.28) 0%,
+            rgba(244, 185, 97, 0) 60%
+          ),
+          radial-gradient(
+            ellipse 900px 400px at 85% 0%,
+            rgba(217, 112, 112, 0.12) 0%,
+            rgba(217, 112, 112, 0) 55%
+          );
+        background-attachment: fixed;
       }
 
       .container {
@@ -87,14 +108,15 @@
       .header::before {
         content: "";
         position: absolute;
-        top: -60%;
+        top: -40%;
         left: 50%;
         transform: translateX(-50%);
-        width: 600px;
-        height: 600px;
+        width: 640px;
+        height: 640px;
         background: radial-gradient(
           circle,
-          rgba(59, 130, 246, 0.12) 0%,
+          rgba(234, 138, 62, 0.18) 0%,
+          rgba(244, 185, 97, 0.06) 45%,
           transparent 70%
         );
         pointer-events: none;
@@ -112,28 +134,33 @@
         color: var(--text-secondary);
         letter-spacing: 0.5px;
         margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(64, 48, 28, 0.04);
+        position: relative;
       }
 
       .header-badge .dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--green);
+        background: var(--accent-amber);
         animation: pulse 2s infinite;
+        box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
       }
 
       @keyframes pulse {
         0%,
         100% {
           opacity: 1;
+          box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
         }
         50% {
-          opacity: 0.4;
+          opacity: 0.55;
+          box-shadow: 0 0 0 6px rgba(234, 138, 62, 0);
         }
       }
 
       .header h1 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 700;
         background: var(--gradient-brand);
         -webkit-background-clip: text;
@@ -141,18 +168,21 @@
         background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -0.5px;
+        position: relative;
       }
 
       .header .date {
         font-size: 15px;
         color: var(--text-secondary);
-        font-weight: 400;
+        font-weight: 500;
+        position: relative;
       }
 
       .header .subtitle {
         font-size: 13px;
         color: var(--text-muted);
         margin-top: 6px;
+        position: relative;
       }
 
       /* ── Section ── */
@@ -195,11 +225,13 @@
         padding: 20px;
         margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        transition: border-color 0.2s;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
       }
 
       .card:hover {
-        border-color: rgba(59, 130, 246, 0.3);
+        border-color: rgba(234, 138, 62, 0.35);
       }
 
       /* ── Index Grid ── */
@@ -284,11 +316,12 @@
         text-transform: uppercase;
         letter-spacing: 0.8px;
         border-bottom: 1px solid var(--border);
+        background: var(--bg-card-alt);
       }
 
       .asset-table tbody td {
         padding: 10px 12px;
-        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        border-bottom: 1px solid rgba(236, 228, 214, 0.8);
         vertical-align: middle;
       }
 
@@ -341,7 +374,7 @@
       /* ── Insight Box ── */
       .insight {
         background: var(--bg-card-alt);
-        border-left: 3px solid var(--accent-blue);
+        border-left: 3px solid var(--accent-amber);
         border-radius: 0 8px 8px 0;
         padding: 14px 16px;
         margin-top: 12px;
@@ -351,7 +384,7 @@
       }
 
       .insight strong {
-        color: var(--accent-cyan);
+        color: var(--accent-sky-deep);
         font-weight: 600;
       }
 
@@ -377,7 +410,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-blue);
+        background: var(--accent-amber);
       }
 
       .bullet-list li strong {
@@ -410,7 +443,7 @@
         width: 1px;
         background: linear-gradient(
           to bottom,
-          var(--accent-blue),
+          var(--accent-amber),
           var(--border)
         );
       }
@@ -430,13 +463,13 @@
         width: 9px;
         height: 9px;
         border-radius: 50%;
-        border: 2px solid var(--accent-blue);
+        border: 2px solid var(--accent-amber);
         background: var(--bg-primary);
       }
 
       .timeline-item.important::before {
-        background: var(--accent-blue);
-        box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+        background: var(--accent-amber);
+        box-shadow: 0 0 0 3px rgba(234, 138, 62, 0.18);
       }
 
       .timeline-label {
@@ -449,19 +482,19 @@
       }
 
       .timeline-label.data {
-        background: rgba(6, 182, 212, 0.15);
-        color: var(--accent-cyan);
+        background: rgba(91, 149, 201, 0.14);
+        color: var(--accent-sky-deep);
       }
       .timeline-label.speech {
-        background: rgba(167, 139, 250, 0.15);
+        background: rgba(138, 127, 201, 0.14);
         color: var(--purple);
       }
       .timeline-label.report {
-        background: rgba(249, 115, 22, 0.15);
+        background: rgba(224, 122, 58, 0.14);
         color: var(--orange);
       }
       .timeline-label.earnings {
-        background: rgba(251, 191, 36, 0.15);
+        background: rgba(217, 162, 58, 0.16);
         color: var(--gold);
       }
 
@@ -495,8 +528,8 @@
         padding: 4px 10px;
         border-radius: 6px;
         background: var(--bg-card-alt);
-        color: var(--accent-cyan);
-        border: 1px solid rgba(6, 182, 212, 0.2);
+        color: var(--accent-sky-deep);
+        border: 1px solid rgba(91, 149, 201, 0.25);
       }
 
       .earnings-name {
@@ -518,6 +551,12 @@
         background: var(--green-bg);
         color: var(--green);
         border: 1px solid var(--green-border);
+      }
+
+      .beat-badge.miss {
+        background: var(--red-bg);
+        color: var(--red);
+        border: 1px solid var(--red-border);
       }
 
       .metric-grid {
@@ -589,6 +628,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -673,6 +715,7 @@
         align-items: center;
         justify-content: center;
         font-family: "JetBrains Mono", monospace;
+        box-shadow: 0 2px 6px rgba(234, 138, 62, 0.28);
       }
 
       .action-title {
@@ -758,13 +801,17 @@
       }
 
       .survey-bar-fill.red {
-        background: linear-gradient(90deg, var(--red), #f97316);
+        background: linear-gradient(90deg, var(--red), var(--orange));
       }
       .survey-bar-fill.blue {
-        background: var(--gradient-brand);
+        background: linear-gradient(
+          90deg,
+          var(--accent-sky),
+          var(--accent-sky-deep)
+        );
       }
       .survey-bar-fill.yellow {
-        background: linear-gradient(90deg, var(--yellow), var(--gold));
+        background: linear-gradient(90deg, var(--accent-amber), var(--gold));
       }
 
       /* ── Responsive ── */
@@ -800,39 +847,73 @@
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 马来西亚美股投资者专属
+          LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
-        <h1>🌙 财经简报</h1>
-        <div class="date">2026年4月30日 · 周四 · 美股开盘前约30分钟 · MYT 21:06</div>
-        <div class="subtitle">数据源：华尔街见闻 · ⚠️ Tiger Brokers 数据源今日不可用（网络错误）</div>
+        <h1>🌅 财经晨报</h1>
+        <div class="date">2026年5月1日 · 周五 · 数据截至 EST 04/30 收盘</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers（DNS不可达，已标注）</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
+          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
+        </div>
+
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">道琼斯</div>
+            <div class="index-value">49,652</div>
+            <div class="index-change up">+790.33 (+1.62%)</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">纳斯达克</div>
+            <div class="index-value">24,892</div>
+            <div class="index-change up">+219.07 (+0.89%)</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">S&amp;P 500</div>
+            <div class="index-value">7,209</div>
+            <div class="index-change up">+73.06 (+1.02%)</div>
+          </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
-            <li><strong>四巨头财报（谷歌、微软、Meta、亚马逊）</strong>集体超预期 → 科技板块提振美股昨夜全面上涨</li>
-            <li><strong>谷歌云收入同比暴涨 +63%</strong>；微软 AI 年化营收突破 <span class="num">370亿美元</span>，AI 军备竞赛迎来首轮丰收</li>
-            <li>礼来 (LLY) 盘前涨超 <span class="num">+4%</span>，Q1 营收 $198亿（预期 $177.7亿），GLP-1 药物销售近乎翻倍，全年指引上调</li>
-            <li>日元盘中跌破 160 干预红线 → 日本当局密集喊话 → 日元跳涨，USD/JPY 从 160+ 急速回落</li>
-            <li>油价高位略回落，金银上涨；科技财报提供正向情绪基础</li>
+            <li>
+              <strong>S&amp;P 500首次收于7200点上方</strong>，4月累涨 <span class="num">+10%</span>，创2020年11月以来最佳单月表现
+            </li>
+            <li>
+              <strong>强劲财报 + 经济数据支撑：</strong>美国Q1 GDP年化增长 <span class="num">+2%</span>，AI驱动商业投资回升，消费者支出稳健
+            </li>
+            <li>
+              <strong>谷歌(GOOGL)暴涨 <span class="num">+9.96%</span></strong>，创历史新高；Q1广告收入强劲，AI搜索货币化超预期
+            </li>
+            <li>
+              <strong>Meta重挫 <span class="num down">-8.55%</span></strong>，资本支出指引大幅上调，投资者忧虑AI回报时间表
+            </li>
+            <li>
+              <strong>英伟达(NVDA)跌 <span class="num down">-4.63%</span></strong>，微软(MSFT)跌 <span class="num down">-3.93%</span>——科技巨头AI支出激增，但市场担忧盈利转化周期过长
+            </li>
+            <li>
+              <strong>半导体指数(SOX)大涨 <span class="num">+2.26%</span></strong>，AMD大涨 <span class="num">+5.16%</span>，逼近历史高点
+            </li>
+            <li>
+              <strong>苹果(AAPL)盘后涨超 <span class="num">+4%</span></strong>——Q1财报与强劲Q2指引双双超预期
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 背景说明：</strong>昨夜（4月29日）美股收涨，四大科技巨头财报集体超预期提振市场。但今日盘前数据（Q1 核心 PCE 4.3%、PCE 同比 3.5% 四年新高）带来滞胀警报，开盘后走势将受通胀数据主导。
+          <strong>💡 解读：</strong>4月美股全面收复失地，以最佳月度表现收官。"财报季 > 地缘风险"主导叙事。但内部分化显著：谷歌凭执行力领跑，Meta/微软因过高资本支出遭惩罚，英伟达承压反映市场对"AI需求能否持续变现"的再定价。<strong>苹果盘后大涨是今晨最重要的增量信号</strong>——本季营收指引 +14-17% 远超预期 +9.1%。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
+          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -841,111 +922,99 @@
             <thead>
               <tr>
                 <th>资产</th>
-                <th>现价</th>
+                <th>价格</th>
                 <th>变动</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,565.02/oz</span></td>
-                <td><span class="tag down">▼ -0.70%</span><span class="asset-note">高位回调</span></td>
+                <td><span class="asset-price">$4,617/oz</span></td>
+                <td><span class="tag up">▲ +1.54%</span><span class="asset-note">4月累跌1%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">⚪ 现货白银</span></td>
+                <td><span class="asset-price">$73.69/oz</span></td>
+                <td><span class="tag up">▲ +3.36%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$103.19/桶</span></td>
-                <td><span class="tag up">▲ +3.26%</span><span class="asset-note">中东风险升温 🔥</span></td>
+                <td><span class="asset-price">$105.07</span></td>
+                <td><span class="tag down">▼ -1.4%</span><span class="asset-note">4月累涨+12.78%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">$114.01</span></td>
+                <td><span class="tag down">▼ 从$124高点回落</span><span class="asset-note">4月内触四年高点</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">98.70</span></td>
-                <td><span class="tag up">▲ +0.07%</span><span class="asset-note">PCE通胀支撑</span></td>
+                <td><span class="asset-price">—</span></td>
+                <td><span class="tag down">▼ -0.8%</span><span class="asset-note">日元干预拖累美元</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1704</span></td>
-                <td><span class="tag down">▼ -0.06%</span></td>
+                <td><span class="asset-name">🔷 10Y 美债</span></td>
+                <td><span class="asset-price">4.38%</span></td>
+                <td><span class="tag down">▼ -5bp</span><span class="asset-note">油价回落带动收益率下行</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">159.84</span></td>
-                <td><span class="tag up">▲ +0.14%</span><span class="asset-note">干预后反弹</span></td>
+                <td><span class="asset-price">—</span></td>
+                <td><span class="tag down">▼ -2.5%</span><span class="asset-note">日本财务省入市干预 ~$900亿</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.8351</span></td>
-                <td><span class="tag down">▼ -0.06%</span><span class="asset-note">人民币小幅走强</span></td>
+                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
+                <td><span class="asset-price">—</span></td>
+                <td><span class="tag up">▲ 随美元走软升值</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>WTI 油价单日 +3.26% 至 $103.19，中东局势再度升温（欧央行警告滞胀风险），叠加美国 PCE 通胀超预期 → 通胀再加速信号明确。黄金从高位小幅回调但仍处 $4,565 高位。美元略微走强，压制非美货币。USD/JPY 在日本干预后回落至 159.84，但整体仍处高位。
+          <strong>💡 解读：</strong>日本财务省宣布外汇干预，买入规模逾900亿美元，创历史最激进干预纪录之一，日元单日飙升2.5%为2022年以来最大涨幅。美元走软推动多资产上行。油价盘中布伦特一度触及 $124.67（四年高点），随后因日元干预引发跨资产重新定价而大幅回落。<strong>WTI仍处 $105，地缘溢价未消</strong>。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
+          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 12px; font-size: 13px; color: var(--accent-cyan); font-weight: 600;">
-            ✅ 已发布数据（美股开盘前）
+          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+            ⚠️ 今日（5月1日劳动节）：A股/港股/中国市场休市；日本、欧洲多国亦放假。美股今晚照常开市。
           </div>
           <div class="timeline">
             <div class="timeline-item important">
               <span class="timeline-label data">数据</span>
-              <strong>美国 Q1 实际 GDP 年化 +2.0%</strong>（预期 +2.3%）— 略低于预期，经济仍在扩张但有放缓迹象
+              <strong>美国4月ISM制造业指数</strong>（含新订单、就业、物价支付分项）→ 最重要的月度制造业健康指标，若物价支付分项大升则通胀预警信号
             </div>
             <div class="timeline-item important">
               <span class="timeline-label data">数据</span>
-              <strong>美国 Q1 核心 PCE 年化 4.3%</strong>（预期 4.1%，前值 2.7%）— ⚠️ 通胀骤升，创近年新高，降息预期被大幅压缩
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>美国 3月 PCE 同比 3.5%</strong>（四年来最高），核心 PCE 同比 3.2%，环比 +0.3% — 全线符合或超预期
+              <strong>美国4月标普全球制造业PMI终值</strong> → 与ISM形成交叉验证，关注新出口订单方向
             </div>
             <div class="timeline-item">
               <span class="timeline-label data">数据</span>
-              <strong>美国首次申请失业救济</strong>（4月25日当周）：18.9万（预期 21.2万）— 大幅低于预期，劳动市场强劲
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">决议</span>
-              <strong>欧洲央行</strong>按兵不动（存款利率 2.0%），拉加德警告中东冲突加剧滞胀风险
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">决议</span>
-              <strong>英国央行</strong>维持 3.75% 不变，罕见发布"三大通胀情景"，预警加息压力
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>中国 4月官方非制造业 PMI：49.4</strong>（前值 50.1）— 跌破荣枯线，服务业意外收缩
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>欧元区 4月 CPI 同比初值 3.0%</strong>（前值 2.6%）— 通胀压力重燃
-            </div>
-          </div>
-          <div class="divider" style="margin: 12px 0"></div>
-          <div style="margin-bottom: 8px; font-size: 13px; color: var(--yellow); font-weight: 600;">
-            🕐 今日美股盘中 / 盘后待关注
-          </div>
-          <div class="timeline">
-            <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>21:45 MYT — 美国 4月 芝加哥 PMI</strong>（预期 54.9，前值 52.8）
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>22:00 MYT — 美国 2月 谘商会领先指标</strong>（预期 -0.2%）
+              <strong>美国5月1日当周石油与天然气钻井数</strong> → 油价高企是否已引发钻探活动加速
             </div>
             <div class="timeline-item important">
               <span class="timeline-label earnings">财报</span>
-              <strong>05:00 MYT (5月1日) — 苹果 (AAPL) 财报电话会</strong>：华尔街紧盯新 CEO 首秀表现 🍎
+              <strong>苹果(AAPL)盘后效应持续发酵</strong> → 盘后指引强劲 (+14-17%)，今晚开盘预计跳涨；关注能否带动整体科技情绪
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">地缘</span>
+              <strong>伊朗局势：</strong>特朗普称已摧毁伊核能力；伊朗称不惧封锁、40%贸易可陆路转移；以色列称"很快"再次行动 → 霍尔木兹风险仍存
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label speech">政策</span>
+              <strong>美联储独立性风险：</strong>哈塞特称鲍威尔继续担任联储理事或影响降息；司法部拟就传票裁定提起上诉 → 美联储政治压力升级
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">央行</span>
+              <strong>欧央行拉加德暗示6月加息</strong> → 交易员预计欧洲年内三次+25bp加息，欧美货币政策分化加剧
             </div>
           </div>
         </div>
@@ -954,210 +1023,252 @@
       <!-- ═══ 4. AI与科技 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
+          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
           <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
-            <strong style="color: var(--purple)">科技巨头财报季</strong> — 四大云/AI 龙头集体超预期，AI 投资迎来丰收季
+            <strong style="color: var(--purple)">科技七巨头指数</strong> 整体跌 <span class="tag down" style="font-size: 13px">-0.07%</span> · 内部分化极大 · <strong style="color: var(--purple)">半导体指数(SOX)</strong> <span class="tag up" style="font-size: 13px">+2.26%</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">GOOGL</span><span class="pct">云 +63%</span>
+              <span class="name">GOOGL</span><span class="pct">+9.96%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MSFT</span><span class="pct">AI $370亿/年</span>
+              <span class="name">TSLA</span><span class="pct">+2.37%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AAPL</span><span class="pct">今夜财报 ⏳</span>
+              <span class="name">AMD</span><span class="pct">+5.16%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">NVDA</span><span class="pct">算力排队</span>
+              <span class="name">AAPL</span><span class="pct">盘后+4%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">NVDA</span><span class="pct down">-4.63%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">META</span><span class="pct down">-8.55%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MSFT</span><span class="pct down">-3.93%</span>
             </div>
           </div>
 
           <div class="divider"></div>
 
           <ul class="bullet-list" style="margin-top: 10px">
-            <li><strong>谷歌云业务"狂飙"</strong>同比 +63%，但 2026 年资本开支预算高达 <span class="num">1,900亿美元</span>，市场担忧回报率</li>
-            <li><strong>微软 AI 年化营收突破 $370亿</strong>，Copilot 企业端渗透率持续提升；同时坦言"后悔去年放缓数据中心建设"，现全速追赶算力产能</li>
-            <li><strong>苹果今夜财报电话会</strong>：华尔街不再关心业绩数字，紧盯新 CEO 首次公开亮相及 AI 产品路线图</li>
-            <li><strong>Claude 定价争议</strong>：Anthropic 多次调整定价策略，"先养熟再收费"模式引发开发者不满</li>
-            <li><strong>GPT-5.6 曝光</strong>：GPT-5.5 出现内容问题，OpenAI 连夜封禁，同时 GPT-5.6 型号代码泄露</li>
-            <li><strong>谷歌宣布对 Cloud/CDN/AI 基础设施服务涨价</strong> → AI 算力成本传导至企业端加速</li>
+            <li>
+              <strong>谷歌暴涨10%创历史新高：</strong>Q1广告收入超预期，云业务增速加速，AI搜索产品初步货币化证明商业模式可行
+            </li>
+            <li>
+              <strong>Meta重挫8.5%：</strong>Q1业绩达标，但2026年资本支出指引大幅上调，投资者对AI回报时间表产生质疑
+            </li>
+            <li>
+              <strong>英伟达跌近5%：</strong>科技巨头AI支出大增本应是利好，但市场担忧——若科技巨头自研芯片能力提升，NVDA供应商地位或遭威胁；叠加估值压力
+            </li>
+            <li>
+              <strong>AI存储爆发：</strong>闪迪(SanDisk)数据中心收入季增 <span class="num">+233%</span>，毛利率从23%飙至78%；西部数据(WDC)营收增长 <span class="num">+45%</span>，毛利率首破50%
+            </li>
+            <li>
+              <strong>四大超大规模数据中心运营商</strong>2026年资本支出总额预计超7000亿美元，2027年将大幅增长——AI基础设施建设高峰尚未到来
+            </li>
+            <li>
+              <strong>苹果研发费用同比增 <span class="num">+34%</span></strong>，AI布局加速；本季营收指引 +14-17% 远超华尔街预期
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>谷歌、微软 Q1 财报验证 AI 商业化进入"兑现期"。但 1,900 亿资本开支是未来增长的"押注"，若营收增速不及预期，AI 泡沫风险将重新被定价。苹果新 CEO 首秀是今夜最大变量——若能展示清晰 AI 战略，苹果有望从科技股"落后者"标签中摘帽。
+          <strong>💡 解读：</strong>市场正在对AI价值链进行精细化定价：能直接变现AI（谷歌广告、云）的公司溢价，"无限投入但暂无明确回报"的公司（Meta、MSFT）被惩罚，芯片供应商(NVDA)则承受估值与竞争双重压力。<strong>真正的赢家是AI存储/基础设施</strong>——闪迪毛利率78%是这个周期最具说服力的盈利验证。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
+          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- LLY -->
+        <!-- AAPL -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">LLY</span>
-              <span class="earnings-name">礼来 Q1 2026</span>
+              <span class="ticker-badge">AAPL</span>
+              <span class="earnings-name">苹果 FY2026 Q2（截至3月）</span>
             </div>
             <span class="beat-badge beat">✓ 全线超预期</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">营收</div>
-              <div class="metric-value">$198.0亿</div>
-              <div class="metric-delta up">预期 $177.7亿 🔥</div>
+              <div class="metric-label">总营收</div>
+              <div class="metric-value">$111.2B</div>
+              <div class="metric-delta up">+16.6% YoY · 超预期+1.4%</div>
             </div>
             <div class="metric">
-              <div class="metric-label">调整后 EPS</div>
-              <div class="metric-value">$8.55</div>
-              <div class="metric-delta up">去年同期 $3.34</div>
+              <div class="metric-label">净利润</div>
+              <div class="metric-value">$29.6B</div>
+              <div class="metric-delta up">+19% YoY</div>
             </div>
             <div class="metric">
-              <div class="metric-label">GLP-1 药物</div>
-              <div class="metric-value">近乎翻倍</div>
-              <div class="metric-delta up">+YoY</div>
+              <div class="metric-label">稀释后EPS</div>
+              <div class="metric-value">$2.01</div>
+              <div class="metric-delta up">+21.8% YoY · 超预期$1.96</div>
             </div>
             <div class="metric">
-              <div class="metric-label">全年营收指引</div>
-              <div class="metric-value">$820-850亿</div>
-              <div class="metric-delta up">上调（前值 $800-830亿）</div>
+              <div class="metric-label">iPhone收入</div>
+              <div class="metric-value">$57.0B</div>
+              <div class="metric-delta up">+22% YoY · 略超预期</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">服务收入</div>
+              <div class="metric-value">$30.98B</div>
+              <div class="metric-delta up">+16.3% · 三年持续创新高</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">大中华区</div>
+              <div class="metric-value">$20.5B</div>
+              <div class="metric-delta up">+28% · 超预期+8.4%</div>
             </div>
           </div>
 
           <ul class="bullet-list">
-            <li>GLP-1 减肥/糖尿病药物（Mounjaro/Zepbound）销售爆发式增长，需求持续超越供给</li>
-            <li>全年 EPS 指引上调至 $35.50-37.00（前值 $33.50-35.00）</li>
-            <li>盘前涨超 <span class="num">+4%</span></li>
+            <li>
+              <strong>毛利率升至49.3%</strong>（去年同期47%），服务业务毛利率高达76.7%
+            </li>
+            <li>
+              <strong>本季(Q3)营收指引：+14%-17%</strong>，大超分析师预期的 +9.1%；毛利率指引 47.5%-48.5%
+            </li>
+            <li>
+              董事会批准 <strong>$1000亿股票回购</strong>，股息提升4%至 $0.27/股
+            </li>
+            <li>
+              盘后股价先跌后拉升，公布指引后一度涨超 <span class="num">+4%</span>；CEO库克9月将卸任
+            </li>
           </ul>
         </div>
 
-        <!-- AAPL upcoming -->
+        <!-- GOOGL -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">AAPL</span>
-              <span class="earnings-name">苹果 Q2 FY2026（今夜发布）</span>
+              <span class="ticker-badge">GOOGL</span>
+              <span class="earnings-name">Alphabet Q1 2026</span>
             </div>
-            <span class="beat-badge" style="background: rgba(245,158,11,0.15); color: var(--yellow); border: 1px solid rgba(245,158,11,0.3);">⏳ 待发布</span>
+            <span class="beat-badge beat">✓ 全线超预期 · 创历史新高</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">股价表现</div>
+              <div class="metric-value">+9.96%</div>
+              <div class="metric-delta up">收盘创历史新高</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">驱动因素</div>
+              <div class="metric-value">广告+云</div>
+              <div class="metric-delta up">AI搜索货币化验证</div>
+            </div>
           </div>
 
           <ul class="bullet-list">
-            <li>财报电话会：北京时间 5月1日 05:00（MYT 05:00）</li>
-            <li><strong>市场最关注：新 CEO 首次公开登场及 AI 产品策略</strong>，而非单季度业绩数字</li>
-            <li>若 AI 路线图具体清晰 → AAPL 有望重新获得机构增持</li>
-            <li>若 CEO 表现平淡或回避 AI 问题 → 盘后可能承压</li>
+            <li>广告收入超预期，AI Overview整合进搜索推动点击率提升</li>
+            <li>Google Cloud增速加快，AI工作负载带动高毛利业务增长</li>
+            <li>资本支出指引虽上调，但市场认可谷歌的<strong>执行力与变现路径</strong></li>
+          </ul>
+        </div>
+
+        <!-- SNDK / WDC -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">SNDK</span>
+              <span class="earnings-name">闪迪 Q3 FY2026</span>
+            </div>
+            <span class="beat-badge beat">✓ 存储业绩爆发</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">数据中心收入</div>
+              <div class="metric-value">季增+233%</div>
+              <div class="metric-delta up">AI存储需求驱动</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">毛利率</div>
+              <div class="metric-value">23% → 78%</div>
+              <div class="metric-delta up">结构性提升</div>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>盘后一度大跌超8%——部分投资者止盈，短期波动放大</li>
+            <li>西部数据(WDC)同期营收增 <span class="num">+45%</span>，毛利率首破50%，AI存储需求持续</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>礼来 Q1 财报显示 GLP-1 需求仍在高速增长轨道上，Healthcare 板块具有独立行情。苹果财报是今夜最大事件驱动；其 AI 战略表态将对科技板块整体情绪产生溢出效应。注意：虽然四大科技巨头已发布靓丽财报，但今日 PCE 通胀数据令市场对"降息→科技估值扩张"的逻辑产生质疑。
+          <strong>💡 解读：</strong>财报季分化格局清晰：<strong>能变现AI的赢（GOOGL、AAPL）</strong>；<strong>纯"投入期"的输（META、MSFT）</strong>；<strong>AI基础设施供应链（存储）盈利超预期但估值已高、短期波动加剧</strong>。苹果强劲指引是今晚开盘的最大正面催化剂。
         </div>
       </section>
 
       <!-- ═══ 6. 宏观指标 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
-            🇺🇸 美国今日关键数据 — 滞胀信号明确
+            🔴 重点观察 #1：地缘溢价 — 伊朗/霍尔木兹
           </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">Q1 核心 PCE 年化（前值 2.7%）</span>
-              <span class="value" style="color: var(--red)">4.3%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 72%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">3月 PCE 同比（前值 2.8%，四年最高）</span>
-              <span class="value" style="color: var(--red)">3.5%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 58%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">Q1 实际 GDP 年化（预期 2.3%）</span>
-              <span class="value" style="color: var(--accent-blue)">+2.0%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 50%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">首次申请失业救济（预期 21.2万）</span>
-              <span class="value" style="color: var(--green)">18.9万</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 38%"></div>
-            </div>
-          </div>
+          <ul class="bullet-list">
+            <li>特朗普称已摧毁伊朗核能力；伊朗称<strong>不惧海上封锁</strong>，40%贸易可转陆路，并称"绝不会失去霍尔木兹"</li>
+            <li>以色列称或"很快"再次采取军事行动；布伦特盘中触及 <strong>$124.67</strong> 四年高点后因日元干预跨资产效应大幅回落至 <strong>$114</strong></li>
+            <li>美国寻求从战略石油储备借出最多 <strong>9250万桶</strong> → 主动压油价信号</li>
+            <li>美防长称对伊60天战争权限已因停火"中止"→ 冲突全面升级概率短期降低，但油价居高不下</li>
+          </ul>
 
           <div class="divider" style="margin: 14px 0"></div>
 
-          <ul class="bullet-list">
-            <li><strong>滞胀组合成立</strong>：GDP 低于预期（+2.0%）+ 核心 PCE 骤升至 4.3%，美联储年内降息概率大幅下降</li>
-            <li><strong>劳动市场仍强韧</strong>：首次申请失业救济 18.9万，大幅低于预期 21.2万 → Fed "不急着降息"理由充分</li>
-            <li><strong>WTI 油价突破 $103</strong>，中东风险溢价叠加通胀 → 能源板块受益，但压制整体风险偏好</li>
-            <li><strong>中国非制造业 PMI 49.4</strong>（跌破荣枯线，前值 50.1）→ 服务业意外收缩，A 股/港股受压</li>
-          </ul>
-        </div>
-
-        <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            🌍 央行决议
+            🔴 重点观察 #2：美联储独立性受威胁
           </div>
           <ul class="bullet-list">
-            <li><strong>欧洲央行</strong>按兵不动（存款利率 2.0%），拉加德警告：中东战事加剧滞胀风险，利率路径"不确定性显著上升"</li>
-            <li><strong>英国央行</strong>维持 3.75%，罕见同时列出三个通胀情景（基准/偏高/超高），警告加息压力存在</li>
-            <li><strong>欧元区 4月 CPI 同比初值 3.0%</strong>（前值 2.6%）— 欧洲通胀重燃，ECB 降息路径受阻</li>
+            <li>哈塞特称<strong>鲍威尔若继续留任联储理事或影响降息决策</strong>；特朗普称"只想确保沃什能当主席"</li>
+            <li>司法部拟就联储传票裁定提起上诉 → 行政权力向货币政策渗透，债市/美元信心指标需密切关注</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
+            🌏 欧洲央行政策转向信号
+          </div>
+          <ul class="bullet-list">
+            <li>ECB拉加德暗示 <strong>6月或考虑加息</strong>；交易员预计年内三次 +25bp</li>
+            <li>德国2年期国债收益率于决议日<strong>跌10bp</strong>（市场存分歧）；欧洲STOXX 600 4月累涨 <span class="num">+4.83%</span></li>
+            <li>美欧货币政策分化加剧：欧洲倾向加息 vs 美国降息预期已被大幅压缩</li>
           </ul>
         </div>
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            🌏 亚太市场今日
+            📊 4月市场数据总结
           </div>
           <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">🇨🇳 中国非制造PMI</span><span class="pct" style="color: var(--red)">49.4</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 制造PMI</span><span class="pct">50.3</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇩🇪 德国Q1 GDP</span><span class="pct">+0.3%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇪🇺 欧元区Q1 GDP</span><span class="pct" style="color: var(--red)">+0.1%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇫🇷 法国Q1 GDP</span><span class="pct" style="color: var(--red)">0%</span>
-            </div>
+            <div class="tech-chip"><span class="name">S&amp;P 500 4月</span><span class="pct">+10%</span></div>
+            <div class="tech-chip"><span class="name">纳指 4月</span><span class="pct">最佳月度</span></div>
+            <div class="tech-chip"><span class="name">WTI 4月</span><span class="pct">+12.78%</span></div>
+            <div class="tech-chip"><span class="name">布伦特 4月</span><span class="pct">+9.56%</span></div>
+            <div class="tech-chip"><span class="name">金龙中国</span><span class="pct">+2.59%</span></div>
+            <div class="tech-chip"><span class="name">欧股STOXX600</span><span class="pct">+4.83%</span></div>
+          </div>
+          <div style="margin-top: 12px; font-size: 13px; color: var(--text-muted)">
+            ⚠️ Tiger Brokers数据源本次无法访问（DNS错误），亚太实时市值与个股数据未能验证，以上数据均来自华尔街见闻。
           </div>
         </div>
       </section>
@@ -1165,50 +1276,50 @@
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
+          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会</div>
+          <div class="alert-title">🟢 重点观察 — 今晚开盘机会</div>
           <div class="alert-text">
-            <strong>① 科技/AI 财报验证期</strong> — 谷歌云 +63%、微软 AI $370亿年化已兑现，苹果今夜若 CEO 发布明确 AI 路线图，将触发板块再评级机会，关注 AAPL 盘后及明早开盘方向<br />
-            <strong>② 医疗/GLP-1 独立行情</strong> — 礼来 Q1 全面超预期、GLP-1 需求持续高速增长，Healthcare 板块具备对冲通胀+科技波动的特性，值得关注 LLY、NVO 等相关标的
+            <strong>① 苹果(AAPL)强劲指引</strong> — 盘后涨超4%，Q3指引+14-17%远超预期；大中华区+28%消除市场对中国需求的担忧。今晚开盘若跳涨可关注是否带动整体科技情绪修复。<br />
+            <strong>② 谷歌(GOOGL)确立AI变现范本</strong> — 股价创历史新高，广告+云双引擎验证AI投资回报路径。与Meta分化形成强烈对比，资金或持续从"纯烧钱AI"向"AI能变现"轮动。
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 警惕</div>
+          <div class="alert-title">🔴 风险提示 — 今晚需警惕</div>
           <div class="alert-text">
-            <strong>① 通胀超预期 → 降息预期崩塌</strong> — Q1 核心 PCE 4.3%（前值 2.7%），PCE 同比 3.5% 创四年新高。美联储年内降息窗口几乎关闭，高估值成长股面临重新定价压力，尤其是 P/E &gt; 40 的科技股<br />
-            <strong>② WTI 油价突破 $103</strong> — 中东局势（欧央行明确警告滞胀风险）+ 通胀预期叠加 → 若油价站稳 $100+，通胀路径将更难控制，联储鹰派表态风险上升<br />
-            <strong>③ 中国服务业 PMI 跌破荣枯线</strong> — 非制造业 PMI 49.4，令中国经济复苏叙事遭受质疑，影响港股及中概股情绪
+            <strong>① ISM制造业物价支付指数</strong> — 若该分项大幅上升，意味滞胀风险升温，降息预期将进一步被压缩，利率敏感型高估值成长股可能大幅下跌。<br />
+            <strong>② 美联储独立性溢价风险</strong> — 白宫对联储施压持续升级，若市场认为货币政策受政治干预，美债收益率可能反常上升、美元走弱，形成不利于股市的组合。<br />
+            <strong>③ 伊朗地缘"黑天鹅"</strong> — 伊朗称绝不会失去霍尔木兹、以色列威胁再次行动，任何升级事件都可能令油价重回$120+，压制风险资产。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
         <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
-          ✅ 三条今晚可执行关注清单
+          ✅ 三条可执行关注清单（针对今晚美股开盘）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">苹果 (AAPL) 财报电话会新 CEO 首秀 — 今夜 05:00 MYT</div>
+            <div class="action-title">苹果(AAPL)开盘跳涨后观察能否守住，并留意科技板块连锁反应</div>
             <div class="action-desc">
-              重点不在业绩数字，在于：① 新 CEO 能否给出具体 AI 产品路线图；② 服务业务增速是否持续。若 AI 战略清晰 → AAPL 盘后可能冲高，考虑顺势入场；若含糊回避 → 提前控制仓位，避免盘后大幅下跌。关注 AAPL 盘后价格超过 $1 的波动方向。
+              盘后指引大超预期（+14-17% vs 预期+9.1%）+ $1000亿回购，是今晚最强正面催化剂。若开盘跳涨后能稳住，科技ETF(QQQ/XLK)或迎来补涨机会；若冲高回落则需警惕"利好兑现"卖压——iPhone收入仅"擦线"超预期，门槛依然极高。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">美联储降息预期重定价 — 减持或对冲利率敏感资产</div>
+            <div class="action-title">ISM制造业数据发布时（约今晚22:00 MYT）紧盯"物价支付"分项</div>
             <div class="action-desc">
-              Q1 核心 PCE 4.3% 令年内降息概率骤降。开盘前评估持仓中利率敏感标的：REITs（VNQ）、高估值成长股（ARK 系列）、长久期债券（TLT）面临估值压力。若今日美股开盘后 10Y 美债收益率向上突破，考虑减仓上述敞口。
+              若物价支付指数高于前值或市场预期（警戒线约65），意味输入性通胀压力升温，市场将重新定价"不降息"甚至"加息"预期。届时应减仓高估值成长股（NVDA、MSFT等），考虑持有短债或能源股对冲通胀。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">原油多头 / 能源板块顺势机会 — WTI $103 关口确认</div>
+            <div class="action-title">密切跟踪谷歌(GOOGL)与Meta(META)今晚的资金流向，判断AI轮动主线</div>
             <div class="action-desc">
-              WTI 今日 +3.26% 至 $103.19，中东风险溢价 + 全球通胀再加速双重驱动。关注能源 ETF（XLE）及综合石油公司（XOM、CVX）在开盘后的表现；若油价盘中继续走强并站稳 $103，可考虑短线跟进；若高位回落，注意止损 $100 关键支撑。
+              谷歌昨晚验证"AI直接变现"逻辑，Meta被惩罚的是"高资本支出、低短期回报"。若今晚谷歌继续强势、Meta继续承压，则AI价值链定价范式已切换——应优先配置有清晰盈利路径的AI受益股（GOOGL、AMD），而非单纯押注算力供应商(NVDA)。
             </div>
           </li>
         </ol>
@@ -1219,8 +1330,10 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers（今日不可用）</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年4月30日 · 夜间版</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers（本次DNS不可达，未能获取数据）</div>
+        <div style="margin-top: 4px">
+          由 AI 助手自动生成 · 2026年5月1日 · 晨间版
+        </div>
       </footer>
     </div>
   </body>
