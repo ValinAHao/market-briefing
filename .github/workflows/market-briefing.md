@@ -22,7 +22,7 @@ network:
     - defaults
     - playwright
     - "wallstreetcn.com"
-    - "tigerbrokers.com"
+    - "www.itiger.com"
 
 safe-outputs:
   create-pull-request:
@@ -41,7 +41,7 @@ You are a senior financial market expert. Produce a **daily stock market briefin
 Two run types. Determine which one is firing **before** writing anything — the framing of the entire briefing depends on it.
 
 - **Morning run** (`0 0 * * 2-6`, 08:00 MYT, → `morning-briefing-template.html`): the US session just **closed** ~3–4 hours ago. This briefing is a **recap + look-ahead**. `隔夜美股` recaps the closed session. `今日关注` covers today's Asian session and the next US open (~13 hours away). `投资者的建议` items target **tonight's** US open.
-- **Night run** (`30 12 * * 1-5`, 20:30 MYT, → `night-briefing-template.html`): the US session opens in ~1 hour (or ~2 hours during US standard time). This briefing is a **tactical pre-open preview**. `隔夜美股` references the *previous* session as context only — do not pad it. `今日关注` is the imminent US open's catalysts. `投资者的建议` items target the session opening **tonight in ~1 hour** — be specific and time-sensitive.
+- **Night run** (`30 12 * * 1-5`, 20:30 MYT, → `night-briefing-template.html`): the US session opens in ~1 hour (or ~2 hours during US standard time). This briefing is a **tactical pre-open preview**. `隔夜美股` references the _previous_ session as context only — do not pad it. `今日关注` is the imminent US open's catalysts. `投资者的建议` items target the session opening **tonight in ~1 hour** — be specific and time-sensitive.
 
 If triggered manually (`workflow_dispatch`), default to morning-run framing.
 
@@ -51,7 +51,8 @@ Use `playwright` browser tools to gather data **only** from these three URLs. No
 
 1. `https://wallstreetcn.com/` — homepage: headlines, brief descriptions, market data.
 2. `https://wallstreetcn.com/calendar` — key scheduled data/events for today/tonight.
-3. `https://www.tigerbrokers.com/news` — market news.
+3. `https://www.itiger.com/hans/news/top` — market top news.
+4. `https://www.itiger.com/hans/news/breaking` — market breaking news.
 
 For each source: open with Playwright, wait for key content to render, scroll once if needed for lazy-loaded content, then extract headlines, descriptions, and key figures from the visible page.
 
