@@ -3,60 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年5月2日</title>
+    <title>财经简报 | 2026年5月4日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
-    <!--
-  ╔══════════════════════════════════════════════════════════════╗
-  ║  MORNING BRIEFING HTML TEMPLATE — LIGHT / SUNRISE THEME     ║
-  ║                                                             ║
-  ║  Palette: warm ivory background, charcoal text, amber +     ║
-  ║  soft sky-blue accents. Same component API as dark version. ║
-  ╚══════════════════════════════════════════════════════════════╝
--->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
-        /* Warm ivory surfaces */
-        --bg-primary: #faf7f2;
-        --bg-card: #ffffff;
-        --bg-card-alt: #f5efe6;
-        --bg-highlight: rgba(234, 138, 62, 0.06);
-        --border: #ece4d6;
-        --border-soft: #f2ead c;
-        --border-accent: #ea8a3e;
-
-        /* Text */
-        --text-primary: #2a2520;
-        --text-secondary: #6b6257;
-        --text-muted: #9a9187;
-
-        /* Accents — sunrise */
-        --accent-amber: #ea8a3e; /* warm primary */
-        --accent-rose: #d97070; /* soft coral */
-        --accent-sky: #5b95c9; /* morning sky */
-        --accent-sky-deep: #3b7aa8;
-
-        /* Semantic */
-        --green: #5a9a6a;
-        --green-bg: rgba(90, 154, 106, 0.1);
-        --green-border: rgba(90, 154, 106, 0.3);
-        --red: #c8574f;
-        --red-bg: rgba(200, 87, 79, 0.08);
-        --red-border: rgba(200, 87, 79, 0.28);
-        --yellow: #c58a2a;
-        --yellow-bg: rgba(234, 179, 62, 0.12);
-        --yellow-border: rgba(234, 179, 62, 0.35);
-        --orange: #e07a3a;
-        --purple: #8a7fc9;
-        --gold: #d9a23a;
-
-        --gradient-brand: linear-gradient(135deg, #ea8a3e, #f4b961);
-        --gradient-sky: linear-gradient(135deg, #ea8a3e, #5b95c9);
-        --gradient-gold: linear-gradient(135deg, #d9a23a, #f4cc6b);
-        --shadow-card:
-          0 1px 2px rgba(64, 48, 28, 0.04), 0 6px 20px rgba(64, 48, 28, 0.05);
-        --shadow-glow: 0 0 48px rgba(234, 138, 62, 0.12);
+        --bg-primary: #0a0e17;
+        --bg-card: #111827;
+        --bg-card-alt: #1a2235;
+        --bg-highlight: rgba(59, 130, 246, 0.08);
+        --border: #1e293b;
+        --border-accent: #2563eb;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --accent-blue: #3b82f6;
+        --accent-cyan: #06b6d4;
+        --green: #10b981;
+        --green-bg: rgba(16, 185, 129, 0.1);
+        --green-border: rgba(16, 185, 129, 0.3);
+        --red: #ef4444;
+        --red-bg: rgba(239, 68, 68, 0.1);
+        --red-border: rgba(239, 68, 68, 0.3);
+        --yellow: #f59e0b;
+        --yellow-bg: rgba(245, 158, 11, 0.08);
+        --yellow-border: rgba(245, 158, 11, 0.3);
+        --orange: #f97316;
+        --purple: #a78bfa;
+        --gold: #fbbf24;
+        --gradient-brand: linear-gradient(135deg, #3b82f6, #06b6d4);
+        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+        --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+        --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.1);
       }
 
       * {
@@ -76,19 +55,6 @@
           sans-serif;
         line-height: 1.7;
         min-height: 100vh;
-        /* subtle sunrise wash top */
-        background-image:
-          radial-gradient(
-            ellipse 1200px 500px at 50% -10%,
-            rgba(244, 185, 97, 0.28) 0%,
-            rgba(244, 185, 97, 0) 60%
-          ),
-          radial-gradient(
-            ellipse 900px 400px at 85% 0%,
-            rgba(217, 112, 112, 0.12) 0%,
-            rgba(217, 112, 112, 0) 55%
-          );
-        background-attachment: fixed;
       }
 
       .container {
@@ -108,15 +74,14 @@
       .header::before {
         content: "";
         position: absolute;
-        top: -40%;
+        top: -60%;
         left: 50%;
         transform: translateX(-50%);
-        width: 640px;
-        height: 640px;
+        width: 600px;
+        height: 600px;
         background: radial-gradient(
           circle,
-          rgba(234, 138, 62, 0.18) 0%,
-          rgba(244, 185, 97, 0.06) 45%,
+          rgba(59, 130, 246, 0.12) 0%,
           transparent 70%
         );
         pointer-events: none;
@@ -134,33 +99,28 @@
         color: var(--text-secondary);
         letter-spacing: 0.5px;
         margin-bottom: 20px;
-        box-shadow: 0 1px 3px rgba(64, 48, 28, 0.04);
-        position: relative;
       }
 
       .header-badge .dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-amber);
+        background: var(--green);
         animation: pulse 2s infinite;
-        box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
       }
 
       @keyframes pulse {
         0%,
         100% {
           opacity: 1;
-          box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
         }
         50% {
-          opacity: 0.55;
-          box-shadow: 0 0 0 6px rgba(234, 138, 62, 0);
+          opacity: 0.4;
         }
       }
 
       .header h1 {
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 700;
         background: var(--gradient-brand);
         -webkit-background-clip: text;
@@ -168,21 +128,18 @@
         background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -0.5px;
-        position: relative;
       }
 
       .header .date {
         font-size: 15px;
         color: var(--text-secondary);
-        font-weight: 500;
-        position: relative;
+        font-weight: 400;
       }
 
       .header .subtitle {
         font-size: 13px;
         color: var(--text-muted);
         margin-top: 6px;
-        position: relative;
       }
 
       /* ── Section ── */
@@ -225,13 +182,11 @@
         padding: 20px;
         margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        transition:
-          border-color 0.2s,
-          transform 0.2s;
+        transition: border-color 0.2s;
       }
 
       .card:hover {
-        border-color: rgba(234, 138, 62, 0.35);
+        border-color: rgba(59, 130, 246, 0.3);
       }
 
       /* ── Index Grid ── */
@@ -299,78 +254,37 @@
         color: var(--red);
       }
 
-      /* ── Bullet List ── */
-      .bullet-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .bullet-list li {
-        position: relative;
-        padding-left: 16px;
-        margin-bottom: 8px;
-        font-size: 14px;
-        color: var(--text-secondary);
-        line-height: 1.7;
-      }
-
-      .bullet-list li::before {
-        content: "·";
-        position: absolute;
-        left: 4px;
-        color: var(--accent-amber);
-        font-weight: 700;
-      }
-
-      .bullet-list li strong {
-        color: var(--text-primary);
-      }
-
-      .num {
-        font-family: "JetBrains Mono", monospace;
-        font-weight: 600;
-        color: var(--accent-amber);
-      }
-
-      /* ── Insight ── */
-      .insight {
-        background: var(--bg-highlight);
-        border-left: 3px solid var(--accent-amber);
-        border-radius: 0 8px 8px 0;
-        padding: 12px 16px;
-        font-size: 13px;
-        color: var(--text-secondary);
-        line-height: 1.7;
-        margin-top: 12px;
-      }
-
       /* ── Asset Table ── */
       .asset-table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0;
         font-size: 14px;
       }
 
       .asset-table thead th {
-        padding: 10px 16px;
         text-align: left;
+        padding: 10px 12px;
         font-size: 11px;
         font-weight: 600;
+        color: var(--text-muted);
         text-transform: uppercase;
         letter-spacing: 0.8px;
-        color: var(--text-muted);
-        background: var(--bg-card-alt);
         border-bottom: 1px solid var(--border);
       }
 
       .asset-table tbody td {
-        padding: 10px 16px;
-        border-bottom: 1px solid var(--border);
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
         vertical-align: middle;
       }
 
       .asset-table tbody tr:last-child td {
         border-bottom: none;
+      }
+
+      .asset-table tbody tr:hover {
+        background: var(--bg-highlight);
       }
 
       .asset-name {
@@ -380,24 +294,19 @@
 
       .asset-price {
         font-family: "JetBrains Mono", monospace;
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .asset-note {
-        font-size: 12px;
-        color: var(--text-muted);
-        margin-left: 6px;
+        font-weight: 500;
+        color: var(--text-secondary);
       }
 
       .tag {
         display: inline-flex;
         align-items: center;
-        padding: 2px 8px;
-        border-radius: 6px;
         font-family: "JetBrains Mono", monospace;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 500;
+        padding: 2px 8px;
+        border-radius: 6px;
+        gap: 3px;
       }
 
       .tag.up {
@@ -410,64 +319,137 @@
         background: var(--red-bg);
       }
 
-      /* ── Timeline ── */
+      .asset-note {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-left: 6px;
+      }
+
+      /* ── Insight Box ── */
+      .insight {
+        background: var(--bg-card-alt);
+        border-left: 3px solid var(--accent-blue);
+        border-radius: 0 8px 8px 0;
+        padding: 14px 16px;
+        margin-top: 12px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .insight strong {
+        color: var(--accent-cyan);
+        font-weight: 600;
+      }
+
+      /* ── Bullet List ── */
+      .bullet-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .bullet-list li {
+        position: relative;
+        padding: 6px 0 6px 20px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .bullet-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-blue);
+      }
+
+      .bullet-list li strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .bullet-list li .num {
+        font-family: "JetBrains Mono", monospace;
+        color: var(--green);
+        font-weight: 500;
+      }
+
+      .bullet-list li .num.down {
+        color: var(--red);
+      }
+
+      /* ── Event Timeline ── */
       .timeline {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-blue),
+          var(--border)
+        );
       }
 
       .timeline-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
+        position: relative;
+        padding: 8px 0;
         font-size: 14px;
         color: var(--text-secondary);
-        padding: 10px 12px;
-        border-radius: 8px;
-        background: var(--bg-card-alt);
-        border: 1px solid var(--border);
       }
 
-      .timeline-item.important {
-        background: var(--bg-highlight);
-        border-color: rgba(234, 138, 62, 0.25);
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 15px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-blue);
+        background: var(--bg-primary);
+      }
+
+      .timeline-item.important::before {
+        background: var(--accent-blue);
+        box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
       }
 
       .timeline-label {
-        display: inline-flex;
-        align-items: center;
-        padding: 2px 8px;
-        border-radius: 5px;
         font-size: 11px;
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 4px;
         font-weight: 600;
-        white-space: nowrap;
-        flex-shrink: 0;
+        margin-right: 6px;
       }
 
       .timeline-label.data {
-        background: rgba(91, 149, 201, 0.15);
-        color: var(--accent-sky-deep);
+        background: rgba(6, 182, 212, 0.15);
+        color: var(--accent-cyan);
       }
-
-      .timeline-label.earnings {
-        background: rgba(217, 162, 58, 0.15);
-        color: var(--gold);
-      }
-
       .timeline-label.speech {
-        background: rgba(138, 127, 201, 0.15);
+        background: rgba(167, 139, 250, 0.15);
         color: var(--purple);
       }
-
-      .timeline-label.event {
-        background: rgba(90, 154, 106, 0.15);
-        color: var(--green);
-      }
-
       .timeline-label.report {
-        background: rgba(200, 87, 79, 0.12);
-        color: var(--red);
+        background: rgba(249, 115, 22, 0.15);
+        color: var(--orange);
+      }
+      .timeline-label.earnings {
+        background: rgba(251, 191, 36, 0.15);
+        color: var(--gold);
       }
 
       /* ── Earnings Card ── */
@@ -494,26 +476,29 @@
       }
 
       .ticker-badge {
-        background: var(--gradient-brand);
-        color: white;
         font-family: "JetBrains Mono", monospace;
         font-size: 13px;
-        font-weight: 700;
+        font-weight: 600;
         padding: 4px 10px;
         border-radius: 6px;
+        background: var(--bg-card-alt);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(6, 182, 212, 0.2);
       }
 
       .earnings-name {
-        font-size: 15px;
         font-weight: 600;
+        font-size: 16px;
         color: var(--text-primary);
       }
 
       .beat-badge {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
-        padding: 4px 10px;
-        border-radius: 6px;
+        padding: 3px 10px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .beat-badge.beat {
@@ -522,24 +507,11 @@
         border: 1px solid var(--green-border);
       }
 
-      .beat-badge.miss {
-        background: var(--red-bg);
-        color: var(--red);
-        border: 1px solid var(--red-border);
-      }
-
-      .beat-badge.mixed {
-        background: var(--yellow-bg);
-        color: var(--yellow);
-        border: 1px solid var(--yellow-border);
-      }
-
-      /* ── Metric Grid ── */
       .metric-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 10px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
 
       .metric {
@@ -551,33 +523,33 @@
       .metric-label {
         font-size: 11px;
         color: var(--text-muted);
+        font-weight: 500;
         text-transform: uppercase;
-        letter-spacing: 0.6px;
-        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
       }
 
       .metric-value {
         font-family: "JetBrains Mono", monospace;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         color: var(--text-primary);
       }
 
       .metric-delta {
-        font-size: 12px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
         font-weight: 500;
-        margin-top: 2px;
       }
 
       .metric-delta.up {
         color: var(--green);
       }
-
       .metric-delta.down {
         color: var(--red);
       }
 
-      /* ── Tech Chips ── */
+      /* ── AI/Tech Chips ── */
       .tech-chips {
         display: flex;
         flex-wrap: wrap;
@@ -604,9 +576,6 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
-      }
-      .tech-chip .pct.down {
-        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -691,7 +660,6 @@
         align-items: center;
         justify-content: center;
         font-family: "JetBrains Mono", monospace;
-        box-shadow: 0 2px 6px rgba(234, 138, 62, 0.28);
       }
 
       .action-title {
@@ -777,17 +745,13 @@
       }
 
       .survey-bar-fill.red {
-        background: linear-gradient(90deg, var(--red), var(--orange));
+        background: linear-gradient(90deg, var(--red), #f97316);
       }
       .survey-bar-fill.blue {
-        background: linear-gradient(
-          90deg,
-          var(--accent-sky),
-          var(--accent-sky-deep)
-        );
+        background: var(--gradient-brand);
       }
       .survey-bar-fill.yellow {
-        background: linear-gradient(90deg, var(--accent-amber), var(--gold));
+        background: linear-gradient(90deg, var(--yellow), var(--gold));
       }
 
       /* ── Responsive ── */
@@ -816,21 +780,7 @@
         }
       }
     </style>
-    <template id="__bundler_thumbnail" data-bg-color="#faf7f2">
-      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="sun" cx="50%" cy="60%" r="50%">
-            <stop offset="0%" stop-color="#f4b961" />
-            <stop offset="100%" stop-color="#ea8a3e" />
-          </radialGradient>
-        </defs>
-        <rect width="1200" height="800" fill="#faf7f2" />
-        <rect x="0" y="520" width="1200" height="2" fill="#ece4d6" />
-        <circle cx="600" cy="520" r="150" fill="url(#sun)" />
-        <rect x="400" y="600" width="400" height="12" rx="6" fill="#ece4d6" />
-        <rect x="460" y="630" width="280" height="8" rx="4" fill="#ece4d6" />
-      </svg>
-    </template>
+
   </head>
   <body>
     <div class="container">
@@ -838,70 +788,64 @@
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 晨间版 · 马来西亚美股投资者专属
+          LIVE · 马来西亚美股投资者专属
         </div>
-        <h1>🌅 财经晨报</h1>
-        <div class="date">2026年5月2日 · 周六 · 数据截至 MYT 08:42</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 老虎资讯</div>
+        <h1>🌙 夜间财经简报</h1>
+        <div class="date">2026年5月4日 · 周一 · MYT 21:05 · 美股约25分钟后开盘</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 新华社</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
+          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
         <div class="index-grid">
           <div class="index-card up">
-            <div class="index-name">道琼斯</div>
-            <div class="index-value">收于新高</div>
-            <div class="index-change up">约 持平 / 微涨</div>
+            <div class="index-name">道琼斯（上周五收）</div>
+            <div class="index-value">41,317</div>
+            <div class="index-change up">+0.85% 周涨</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">纳斯达克</div>
-            <div class="index-value">连创新高</div>
-            <div class="index-change up">+约 1.1%</div>
+            <div class="index-name">纳斯达克（上周五收）</div>
+            <div class="index-value">17,977</div>
+            <div class="index-change up">+1.52% 周涨</div>
           </div>
-          <div class="index-card up">
-            <div class="index-name">S&P 500</div>
-            <div class="index-value">再创新高</div>
-            <div class="index-change up">+约 0.7%</div>
+          <div class="index-card down">
+            <div class="index-name">今日盘前（期货）</div>
+            <div class="index-value">期货跳水</div>
+            <div class="index-change down">伊朗导弹事件冲击</div>
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>科技+存储股主导</strong>：苹果单日涨幅 <span class="num">+5%</span>，创自去年8月以来最大单日涨幅；英特尔续涨 <span class="num">+5%</span>，股价逼近100美元，总市值突破5000亿美元
+              <strong>上周五（5月2日）</strong>：企业盈利韧性压倒战争担忧，美股延续"五月破咒"叙事，AI概念持续领涨
             </li>
             <li>
-              <strong>存储板块爆发</strong>：闪迪（SanDisk）、美光科技（MU）、希捷（STX）齐创历史新高；闪迪、西部数据财报绩后盘初重挫后V形反转
+              <strong>今日盘前突发：</strong>伊朗向霍尔木兹海峡附近美军舰发射导弹，美股期货<span class="num down">短线跳水</span>，国际原油<span class="num">急拉</span>
             </li>
             <li>
-              <strong>AI云算力板块走强</strong>：Nebius涨超 <span class="num">+10%</span>，CoreWeave涨超 <span class="num">+9%</span>，云计算服务商集体拉升
+              美国高级官员随后<strong>否认美船只被击中</strong>；美军称两艘悬挂美国国旗商船已成功通过海峡 → 期货部分回稳
             </li>
             <li>
-              <strong>航空股意外爆发</strong>：捷蓝航空盘中涨超 <span class="num">+12%</span>，联合大陆涨超 <span class="num">+5%</span>
-            </li>
-            <li>
-              <strong>四月收官</strong>：华尔街录得六年来最强四月，标普500创一年半最长周涨纪录
-            </li>
-            <li>
-              <strong>伊朗谈判</strong>：伊朗通过调解方向美国提交新谈判方案，特朗普称"不满意"但同时告知国会"敌对行动已结束" → 地缘风险信号混乱，原油承压
+              eBay盘前<span class="num">+8%</span>（游戏驿站GameStop提出560亿美元收购案）；Circle加密货币股<span class="num">+6%</span>
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>五月第一个交易日延续四月涨势，科技/AI主线重获市场共识。苹果、英特尔双双大涨印证"高估值科技股在情绪修复期的弹性"。伊朗局势微妙——特朗普一边说"不满意"一边宣告停止敌对，市场解读为谈判博弈而非失控升级，因此风险资产未受大幅冲击。
+          <strong>💡 解读：</strong>上周五的正面情绪被今早伊朗-美国军事冲突消息打断。<strong>关键问题</strong>：今晚美股开盘时，市场定价的是"局部施压"还是"全面升级"？官方否认与商船顺利通过令风险溢价边际降温，但油价居高不下持续压制情绪。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
+          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -910,92 +854,92 @@
             <thead>
               <tr>
                 <th>资产</th>
-                <th>价格（MYT 08:42）</th>
-                <th>变动</th>
+                <th>价格/水平</th>
+                <th>变动 · 注</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,574.76/oz</span></td>
-                <td><span class="tag down">▼ -1.01%</span><span class="asset-note">高位回调</span></td>
+                <td><span class="asset-price">近期高位区域</span></td>
+                <td><span class="tag down">▼ -1%+</span><span class="asset-note">伊朗冲突下反常回落（获利盘）</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">急涨</span></td>
+                <td><span class="tag up">▲ +5%</span><span class="asset-note">霍尔木兹导弹事件直接触发</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$104.41</span></td>
-                <td><span class="tag down">▼ -0.63%</span><span class="asset-note">伊朗谈判压制</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">97.92</span></td>
-                <td><span class="tag down">▼ -0.19%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1755</span></td>
-                <td><span class="tag up">▲ +0.21%</span></td>
+                <td><span class="asset-price">同步拉升</span></td>
+                <td><span class="tag up">▲ 大幅上涨</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">156.44</span></td>
-                <td><span class="tag down">▼ -0.08%</span><span class="asset-note">日元全周走强</span></td>
+                <td><span class="asset-price">~156</span></td>
+                <td><span class="tag down">▼ 日元升破156</span><span class="asset-note">避险买盘；高盛称当局可再干预30次</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.8317</span></td>
-                <td><span class="tag down">▼ +0.01%</span><span class="asset-note">基本持平</span></td>
+                <td><span class="asset-name">₿ 比特币</span></td>
+                <td><span class="asset-price">随市波动</span></td>
+                <td><span class="tag up">▲ Circle +6%</span><span class="asset-note">加密概念股盘前上涨</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">📈 2倍做多白银 ETF</span></td>
-                <td><span class="asset-price">—</span></td>
-                <td><span class="tag up">▲ +约5%</span><span class="asset-note">白银题材活跃</span></td>
+                <td><span class="asset-name">🇺🇸 美股期货</span></td>
+                <td><span class="asset-price">盘前</span></td>
+                <td><span class="tag down">▼ 短线跳水后部分回稳</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇰🇷 SK海力士</span></td>
+                <td><span class="asset-price">市值1000万亿韩元+</span></td>
+                <td><span class="tag up">▲ 突破历史里程碑</span><span class="asset-note">AI内存需求驱动</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美元温和走软，配合科技股上涨，呈现典型"风险偏好开启"格局。原油在伊朗谈判信号下受压但仍处$100+高位，地缘溢价尚未完全消退。黄金从历史高位小幅回落，属正常技术性调整。日元全周走强，日本央行前行长黑田东彦表示"2%通胀目标已实现"，加息预期升温。
+          <strong>💡 解读：</strong>原油急涨5%是今日最关键信号。<strong>通胀→美联储→科技估值</strong>传导链被激活：若油价维持高位，Fed今晚鹰派倾向将获强化，高估值成长股受压。金价异常下跌（而非上涨）可能反映投资者平仓黄金以补充其他头寸保证金。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
+          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label event">大事</span>
-              <strong>伯克希尔·哈撒韦股东大会</strong>（奥马哈，全天）— 巴菲特60年来首次退居幕后，格雷格·阿贝尔首秀主持，聚焦新任CEO战略取向与资本配置方向
+              <span class="timeline-label data">数据</span>
+              <strong>美国3月工厂订单 &amp; 耐用品订单终值</strong>（14:00 UTC / 22:00 MYT）→ 今晚开盘前最后一个宏观数据
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label event">地缘</span>
-              <strong>美伊核谈判进展跟踪</strong> — 伊朗已提交新方案，特朗普称"不满意"；本周末谈判结果或影响下周一原油走向
+              <span class="timeline-label speech">讲话</span>
+              <strong>FOMC议息会议结束 + 鲍威尔发布会</strong>（约14:00-14:30 UTC）→ 今晚最大催化剂：维持利率 vs 鸽派信号？
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label speech">讲话</span>
+              FOMC永久票委<strong>威廉姆斯</strong>等多位联储官员发声（16:50 UTC / 00:50 MYT次日）→ 会后首批表态
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label report">地缘</span>
+              <strong>霍尔木兹海峡局势</strong> — 伊朗导弹事件后续：美方是否升级回应？更多商船通行情况
             </div>
             <div class="timeline-item">
-              <span class="timeline-label data">关税</span>
-              <strong>特朗普宣布下周对欧盟汽车征25%关税</strong> — 欧系汽车ADR（梅赛德斯、宝马等）将承压；汽车供应链股需警惕
+              <span class="timeline-label data">数据</span>
+              欧洲央行多位管委讲话（科赫尔、金多斯、内格尔、维勒鲁瓦）→ 6月降息预期确认或动摇
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">央行</span>
-              <strong>美联储内部分歧加剧</strong> — 4月FOMC会议三官员投票反对"暗示下一步降息"，联储鸽派空间进一步收窄
+              <span class="timeline-label report">IPO</span>
+              AI芯片商<strong>Cerebras</strong> 启动IPO路演（定价区间 $115–$125）→ AI芯片市场信心温度计
             </div>
             <div class="timeline-item">
-              <span class="timeline-label event">市场</span>
-              <strong>五月"Sell in May"效应观察</strong> — 历史上五月是美股弱势月，但今年AI叙事强劲，华尔街憧憬打破魔咒
+              <span class="timeline-label data">数据</span>
+              多国4月制造业PMI终值（德国、法国、欧元区、印度）→ 全球制造业景气度
             </div>
-          </div>
-        </div>
-
-        <div class="alert-box yellow">
-          <div class="alert-title">⚠️ 重点观察</div>
-          <div class="alert-text">
-            <strong>① 周一欧盟汽车关税落地风险：</strong>特朗普已宣布下周加征25%，若如期实施将冲击欧元区制造业板块，并引发欧元弱势。<br/>
-            <strong>② 伯克希尔股东大会新CEO首秀：</strong>格雷格·阿贝尔对AI、科技、能源等大仓位的表态，将成为价值投资者的重要参考信号。
           </div>
         </div>
       </section>
@@ -1003,36 +947,32 @@
       <!-- ═══ 4. AI与科技产业动态 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
+          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
           <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
-            <strong style="color: var(--purple)">AI概念板块</strong> 整体走强 ·
-            <strong style="color: var(--purple)">2倍做多Nebius ETF</strong>
-            <span class="tag up" style="font-size: 13px">+23.7%</span> ·
-            <strong style="color: var(--purple)">半导体与科技ETF</strong> 全面上扬
+            <strong style="color: var(--purple)">AI概念今日盘前</strong> 分化：内存股领涨，
+            <span class="tag up" style="font-size: 13px">SK Hynix +4.84%</span> ·
+            <span class="tag up" style="font-size: 13px">美光 MU 盘前上涨</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">AAPL</span><span class="pct">+5.0%</span>
+              <span class="name">eBay</span><span class="pct">+8%盘前</span>
             </div>
             <div class="tech-chip">
-              <span class="name">INTC</span><span class="pct">+5%+</span>
+              <span class="name">Circle (CRCL)</span><span class="pct">+6%盘前</span>
             </div>
             <div class="tech-chip">
-              <span class="name">Nebius</span><span class="pct">+10%+</span>
+              <span class="name">SK Hynix 🇰🇷</span><span class="pct">市值破1000万亿₩</span>
             </div>
             <div class="tech-chip">
-              <span class="name">CoreWeave</span><span class="pct">+9%+</span>
+              <span class="name">Cerebras</span><span class="pct">IPO路演$115-125</span>
             </div>
             <div class="tech-chip">
-              <span class="name">PLTR</span><span class="pct">+3.57%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">META</span><span class="pct">+2.41%</span>
+              <span class="name">Anthropic</span><span class="pct">ARR超OpenAI</span>
             </div>
           </div>
 
@@ -1040,49 +980,61 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>美国防部与7大AI公司签协议</strong>：SpaceX、OpenAI、谷歌、英伟达、微软、AWS共同参与，目标打造"AI主导的作战力量"；五角大楼同步扩大英伟达与微软AI技术在机密网络中的应用
+              <strong>美光CEO桑贾伊·梅赫罗特拉：</strong>"AI才刚开始，但内存已经不够了。" DRAM与NAND需求今年将吞噬超过一半市场供应 → 内存价格上行压力持续
             </li>
             <li>
-              <strong>苹果"躺赢"AI</strong>：知名投资人Mark Cuban炮轰其他科技巨头AI烧钱过头；苹果"没怎么花钱"，坐享AI无缝集成设备之利；Mac Mini因AI热潮耗尽库存，起售价上调200美元
+              <strong>三星 + SK海力士签长约：</strong>锁定AI客户长期供应合同 → 内存价格或被"合同化抬升"，摆脱现货价格波动
             </li>
             <li>
-              <strong>Cerebras IPO</strong>：AI芯片制造商Cerebras目标融资40亿美元，估值约400亿美元，为AI算力IPO热潮再添一把火
+              <strong>Anthropic ARR两个月翻番</strong>，年化收入首次超越OpenAI → B端（企业API）战场正改写大模型竞争格局
             </li>
             <li>
-              <strong>AI扫雷技术实战</strong>：美军与多米诺数据实验室合作，AI技术训练水下无人机在霍尔木兹海峡识别水雷，训练周期从6个月压缩至数日
+              <strong>OpenAI与TPG、贝恩资本</strong>等19家PE签订100亿美元企业部署合资协议（"The Deployment Company"）→ 加速To B商业化
             </li>
             <li>
-              <strong>加密货币立法突破</strong>：美国《清晰法案》稳定币收益条款达成妥协，参议院推进障碍扫清，加密市场立法预期升温
+              <strong>字节跳动豆包</strong>测试付费版：三档订阅（68元/月、200元/月），国内AI付费化加速
+            </li>
+            <li>
+              <strong>谷歌TPU新订单</strong>：分析师郭明錤指出台积电良率优势显著，供应商洗牌或有限
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>国防AI大单叠加消费电子AI落地，双线催化科技板块。英特尔股价突破5000亿市值大关，反映市场对其AI/数据中心转型的重新定价。苹果"低AI资本开支、高AI溢价"逻辑持续兑现。Cerebras IPO将检验投资者对非NVDA算力芯片的容忍度。
+          <strong>💡 解读：</strong>AI内存需求超预期+供应锁定 → 美光、SK Hynix短期受益。Anthropic超越OpenAI企业收入是今日AI板块最大结构性信号：大模型竞争进入<strong>B端收费</strong>阶段，Anthropic Claude企业API市场份额快速扩张。Cerebras IPO路演将检验市场对"AI算力基础设施"股票的估值容忍度。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
+          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- SanDisk / WDC -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">WDC/SNDK</span>
-              <span class="earnings-name">闪迪 / 西部数据</span>
+              <span class="ticker-badge">TSN</span>
+              <span class="earnings-name">泰森食品 Q2（已公布）</span>
             </div>
-            <span class="beat-badge beat">✓ 炸裂财报</span>
+            <span class="beat-badge beat">✓ 优于预期</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">业绩驱动</div>
+              <div class="metric-value">鸡肉业务</div>
+              <div class="metric-delta up">强劲表现</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">整体</div>
+              <div class="metric-value">超预期</div>
+              <div class="metric-delta up">Q2盈利好于市场预估</div>
+            </div>
           </div>
           <ul class="bullet-list">
-            <li>财报业绩超预期，初盘重挫后<strong>盘中V形反转</strong></li>
-            <li>高盛大幅上调目标价，称"股价终将走高"</li>
-            <li>存储板块三巨头（闪迪、美光MU、希捷STX）<strong>齐创历史新高</strong></li>
-            <li>背景：AI热潮持续消耗存储库存，供需格局极为有利</li>
+            <li>鸡肉部门为Q2最大亮点，食品成本压力中仍保持利润率韧性</li>
+            <li>中东冲突推高能源成本正通过供应链向食品企业传导，需关注Q3前瞻指引</li>
           </ul>
         </div>
 
@@ -1090,85 +1042,95 @@
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">GME</span>
-              <span class="earnings-name">GameStop — 战略新动向</span>
+              <span class="earnings-name">游戏驿站（重大公司行动）</span>
             </div>
-            <span class="beat-badge mixed">⚡ 市场事件</span>
+            <span class="beat-badge beat" style="background: rgba(245,158,11,0.1); color: var(--yellow); border-color: rgba(245,158,11,0.3)">⚡ 收购要约</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">收购目标</div>
+              <div class="metric-value">eBay</div>
+              <div class="metric-delta up">+8%盘前</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">要约规模</div>
+              <div class="metric-value">$560亿</div>
+              <div class="metric-delta up">打造"游戏行业亚马逊"</div>
+            </div>
           </div>
           <ul class="bullet-list">
-            <li>GME拟以蛇吞象方式收购eBay，CEO目标锁定<strong>千亿市值</strong></li>
-            <li>散户情绪燃起，Meme股板块再现活跃迹象</li>
-            <li>风险提示：收购基本面存疑，散户推动波动剧烈</li>
+            <li>GameStop持有约40亿美元现金，提出以全现金+股票方式收购eBay</li>
+            <li>eBay盘前飙升约+8%；GME盘前走势需观察市场对并购可行性的判断</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>存储股财报印证AI驱动的硬件升级周期真实存在。"炸裂财报→盘初重挫→V形反转"的走势模式，说明主力在用散户抛售机会低吸优质筹码。下周财报季将继续推进，关注大型科技公司能否延续强势。
+          <strong>💡 解读：</strong>今晚本周财报大戏将逐步展开。当前市场焦点更多在FOMC和地缘事件上，但财报季中企业盈利韧性（如TSN超预期）支撑了"利润增长压倒宏观担忧"的叙事。GameStop-eBay若成真，将是近年最大零售行业并购案。
         </div>
       </section>
 
       <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            📊 4月ISM制造业PMI — 扩张延续但通胀信号升温
+            🔴 地缘风险：伊朗-美国霍尔木兹对峙（今日最大变量）
           </div>
           <ul class="bullet-list">
-            <li>
-              <strong>4月ISM制造业PMI</strong>：扩张区间延续（高于50），但<strong>投入价格分项暴涨</strong>——伊朗战争推动原材料成本快速上行
-            </li>
-            <li>
-              <strong>美联储内部分裂</strong>：4月FOMC三位官员投反对票，反对措辞中任何"暗示下一步降息"的表述 → 降息窗口进一步推远
-            </li>
-            <li>
-              <strong>日本央行前行长黑田</strong>：称2%通胀目标已实现，4月28日不加息是正确的；但市场预期日银年内仍存加息概率，日元全周走强
-            </li>
-            <li>
-              <strong>美国SEC提案</strong>：企业季报改半年报的提案通过白宫审查，若落地将大幅改变美股信息透明度格局（现行54年季报制度面临历史性变革）
-            </li>
+            <li>伊朗伊斯兰革命卫队公布<strong>霍尔木兹海峡新控制范围地图</strong>，明确划定伊方军事管控边界</li>
+            <li>伊朗法尔斯通讯社：2枚导弹击中美军舰 → 美国高级官员否认 → 双方信息战持续</li>
+            <li>美军确认两艘商船顺利通过海峡 → 航运未完全封锁，但<strong>风险溢价上升</strong></li>
+            <li>特朗普被报道对"无协议无战争"僵局感到"厌倦"，主动寻求施压手段</li>
+            <li>阿联酋能源部长：霍尔木兹海峡保持开放"至关重要"，战略储备已消耗需补充</li>
           </ul>
         </div>
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            🌏 亚太股市及外围市场
+            🏦 FOMC议息会议（今日结果公布）
           </div>
-          <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">🛢️ WTI</span><span class="pct down">$104.41 ▼</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🟡 黄金</span><span class="pct down">$4,574 ▼</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">💵 DXY</span><span class="pct down">97.92 ▼</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇯🇵 日元</span><span class="pct">全周走强</span>
-            </div>
-          </div>
-          <ul class="bullet-list" style="margin-top: 10px">
-            <li>
-              <strong>四月美股六年最强月收官</strong>，五月"卖在五月"历史效应受AI叙事挑战
-            </li>
-            <li>
-              <strong>关税新风险</strong>：特朗普宣布下周对欧盟汽车加征25%关税 → 欧元区汽车股及欧元汇率将承压
-            </li>
-            <li>
-              <strong>美国军售</strong>：批准向以色列、阿联酋、卡塔尔、科威特出售逾86亿美元武器 → 中东局势正式进入军备升级阶段
-            </li>
+          <ul class="bullet-list">
+            <li>市场普遍预期<strong>维持利率不变</strong>；鲍威尔发布会措辞是关键</li>
+            <li>油价急涨5%强化通胀担忧 → 鲍威尔或措辞偏鹰 → 降息时间表进一步推后</li>
+            <li>多位联储官员（威廉姆斯等）将于会后发声，提供后续政策信号</li>
           </ul>
         </div>
 
-        <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示</div>
-          <div class="alert-text">
-            <strong>① ISM投入价格暴涨</strong> — 伊朗战争推高原材料成本，若持续将侵蚀企业利润率，通胀二次反弹风险不容忽视。<br/>
-            <strong>② 美联储降息预期再度收窄</strong> — 三官员明确反对降息暗示，叠加ISM价格压力，利率高位持续时间或超预期，高估值成长股承压。
+        <div class="card">
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
+            ⚠️ 达里欧预警 &amp; 结构性风险
+          </div>
+          <ul class="bullet-list">
+            <li>
+              <strong>瑞·达里欧：</strong>未来两年"风险极高"，美债危机 + 地缘冲突 + AI变革构成"合成风暴"
+            </li>
+            <li>建议持有<strong>黄金 + 跨地域多元化</strong>的"全天候"组合，反对市场择时</li>
+            <li><strong>港交所</strong>拟未来数月内重启黄金期货交易，呼应投资者避险需求</li>
+            <li>全球经济学家萨克斯警告全球经济走向"永久性断裂"，亚洲将成最终受益方</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
+            🌏 亚太股市今日表现
+          </div>
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">🇰🇷 SK海力士</span><span class="pct">+4.84%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇰🇷 三星</span><span class="pct">+2.41%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">亚太整体</span><span class="pct">AI内存股领涨</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇯🇵 日元</span><span class="pct">升破156</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1176,33 +1138,53 @@
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
+          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
+        </div>
+
+        <div class="alert-box green">
+          <div class="alert-title">🟢 重点观察 — 机会</div>
+          <div class="alert-text">
+            <strong>① AI内存板块短期强势</strong> —
+            美光CEO确认供需紧张，SK Hynix/三星锁量长约，内存价格上行确定性提升。美股MU、相关ETF（SOXQ/SMH）在FOMC不出意外的前提下，今晚具有阶段性上攻动能。<br />
+            <strong>② eBay并购溢价机会</strong> —
+            GameStop $560亿收购要约推动eBay盘前+8%，若今晚开盘后维持并购套利逻辑，eBay短期有价格支撑。需关注GameStop能否融到足够资金。
+          </div>
+        </div>
+
+        <div class="alert-box red">
+          <div class="alert-title">🔴 风险提示 — 警惕</div>
+          <div class="alert-text">
+            <strong>① 霍尔木兹局势二次升级风险</strong> —
+            今晚伊朗是否进一步行动是首要尾部风险。若美方对导弹事件实施军事回应，油价可能再涨+10%，标普500可能急跌。持有能源股多头对冲是当前最有效的组合防护手段。<br />
+            <strong>② 鲍威尔发布会超预期鹰派</strong> —
+            油价急涨5%已让"降息叙事"更脆弱。若鲍威尔暗示"暂不考虑降息"或提及通胀上行风险，科技/成长股可能遭受估值重定价。今晚高P/E股票（NVDA、MSFT、PLTR）需设定止损位。
+          </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
         <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
-          ✅ 三条可执行关注清单（面向今晚美股开盘）
+          ✅ 三条可执行关注清单（今晚开盘后执行）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">苹果（AAPL）今晚延续动能 vs. 获利了结的临界点</div>
+            <div class="action-title">FOMC结果公布后观察市场初始反应，再决定科技股仓位</div>
             <div class="action-desc">
-              昨日苹果+5%创去年8月以来最大单日涨幅，今晚开盘前观察是否维持溢价。若早盘（美东9:30–10:00）成交量放量持续上行，可考虑持仓或小幅加仓；若开盘即高位滞涨+量能萎缩，则为短期获利了结信号，注意止盈。关税叠加Mac Mini涨价为利好催化剂，但股价已大幅透支短期预期。
+              今晚约14:00–14:30 UTC（22:00–22:30 MYT）鲍威尔发布会是最大催化剂。若措辞中性偏鸽（如"密切监测通胀"但未提加息），可在发布会后30分钟内逢低加仓NVDA/MSFT；若措辞明确偏鹰，考虑减仓高估值成长股至少20%
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">存储股（MU / STX / SNDK）：财报后V形反转后的正确姿势</div>
+            <div class="action-title">能源股多头作为组合对冲，关注XLE/OXY</div>
             <div class="action-desc">
-              闪迪、美光、希捷三巨头同创历史新高，AI驱动存储需求的逻辑已获财报验证。今晚若存储板块开盘回调，可视为二次买入机会——AI训练对HBM/NAND的需求仍处于爆发中期。重点跟踪美光（MU）；其下一次财报将进一步验证需求持续性。
+              布伦特原油+5%已推动能源股盘前走强。在霍尔木兹局势未完全平息前，持有少量XLE或OXY可对冲地缘尾部风险。若美方升级回应，能源股将是今晚唯一方向性上行板块；若局势缓和，油价回落则减仓
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">密切追踪美伊谈判周末进展，准备好原油对冲预案</div>
+            <div class="action-title">AI内存链（MU/LRCX）今晚设好入场区间，把握美光CEO催化的买点</div>
             <div class="action-desc">
-              特朗普称"不满意"新方案但同时宣告"敌对行动结束"，信号矛盾。本周末若传出谈判实质破裂（如伊朗拒绝继续谈判），周一原油可能跳升突破$110+，能源ETF（XLE/USO）将成避险标的。反之若谈判进展积极，油价下行释放通胀压力，利好科技股估值修复。建议持有少量能源仓位作为对冲，同时关注周末伊朗官方媒体表态。
+              美光CEO确认DRAM/NAND全年供不应求，三星/SK Hynix锁量长约，是AI内存涨价的最强支撑。建议在MU今晚开盘后确认站稳5日均线时分批建仓，目标持有至Q3财报季；Cerebras IPO路演启动也可作为AI芯片板块情绪催化的参考指标
             </div>
           </li>
         </ol>
@@ -1213,10 +1195,8 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 老虎资讯</div>
-        <div style="margin-top: 4px">
-          由 AI 助手自动生成 · 2026年5月2日 · 晨间版
-        </div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 新华社</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年5月4日 21:05 MYT</div>
       </footer>
     </div>
   </body>
