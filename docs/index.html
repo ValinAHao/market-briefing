@@ -3,52 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年5月9日</title>
+    <title>财经简报 | 2026年5月11日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
-        /* Warm ivory surfaces */
-        --bg-primary: #faf7f2;
-        --bg-card: #ffffff;
-        --bg-card-alt: #f5efe6;
-        --bg-highlight: rgba(234, 138, 62, 0.06);
-        --border: #ece4d6;
-        --border-soft: #f2ead c;
-        --border-accent: #ea8a3e;
-
-        /* Text */
-        --text-primary: #2a2520;
-        --text-secondary: #6b6257;
-        --text-muted: #9a9187;
-
-        /* Accents — sunrise */
-        --accent-amber: #ea8a3e; /* warm primary */
-        --accent-rose: #d97070; /* soft coral */
-        --accent-sky: #5b95c9; /* morning sky */
-        --accent-sky-deep: #3b7aa8;
-
-        /* Semantic */
-        --green: #5a9a6a;
-        --green-bg: rgba(90, 154, 106, 0.1);
-        --green-border: rgba(90, 154, 106, 0.3);
-        --red: #c8574f;
-        --red-bg: rgba(200, 87, 79, 0.08);
-        --red-border: rgba(200, 87, 79, 0.28);
-        --yellow: #c58a2a;
-        --yellow-bg: rgba(234, 179, 62, 0.12);
-        --yellow-border: rgba(234, 179, 62, 0.35);
-        --orange: #e07a3a;
-        --purple: #8a7fc9;
-        --gold: #d9a23a;
-
-        --gradient-brand: linear-gradient(135deg, #ea8a3e, #f4b961);
-        --gradient-sky: linear-gradient(135deg, #ea8a3e, #5b95c9);
-        --gradient-gold: linear-gradient(135deg, #d9a23a, #f4cc6b);
-        --shadow-card:
-          0 1px 2px rgba(64, 48, 28, 0.04), 0 6px 20px rgba(64, 48, 28, 0.05);
-        --shadow-glow: 0 0 48px rgba(234, 138, 62, 0.12);
+        --bg-primary: #0a0e17;
+        --bg-card: #111827;
+        --bg-card-alt: #1a2235;
+        --bg-highlight: rgba(59, 130, 246, 0.08);
+        --border: #1e293b;
+        --border-accent: #2563eb;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --accent-blue: #3b82f6;
+        --accent-cyan: #06b6d4;
+        --green: #10b981;
+        --green-bg: rgba(16, 185, 129, 0.1);
+        --green-border: rgba(16, 185, 129, 0.3);
+        --red: #ef4444;
+        --red-bg: rgba(239, 68, 68, 0.1);
+        --red-border: rgba(239, 68, 68, 0.3);
+        --yellow: #f59e0b;
+        --yellow-bg: rgba(245, 158, 11, 0.08);
+        --yellow-border: rgba(245, 158, 11, 0.3);
+        --orange: #f97316;
+        --purple: #a78bfa;
+        --gold: #fbbf24;
+        --gradient-brand: linear-gradient(135deg, #3b82f6, #06b6d4);
+        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+        --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+        --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.1);
       }
 
       * {
@@ -68,19 +55,6 @@
           sans-serif;
         line-height: 1.7;
         min-height: 100vh;
-        /* subtle sunrise wash top */
-        background-image:
-          radial-gradient(
-            ellipse 1200px 500px at 50% -10%,
-            rgba(244, 185, 97, 0.28) 0%,
-            rgba(244, 185, 97, 0) 60%
-          ),
-          radial-gradient(
-            ellipse 900px 400px at 85% 0%,
-            rgba(217, 112, 112, 0.12) 0%,
-            rgba(217, 112, 112, 0) 55%
-          );
-        background-attachment: fixed;
       }
 
       .container {
@@ -100,15 +74,14 @@
       .header::before {
         content: "";
         position: absolute;
-        top: -40%;
+        top: -60%;
         left: 50%;
         transform: translateX(-50%);
-        width: 640px;
-        height: 640px;
+        width: 600px;
+        height: 600px;
         background: radial-gradient(
           circle,
-          rgba(234, 138, 62, 0.18) 0%,
-          rgba(244, 185, 97, 0.06) 45%,
+          rgba(59, 130, 246, 0.12) 0%,
           transparent 70%
         );
         pointer-events: none;
@@ -126,33 +99,28 @@
         color: var(--text-secondary);
         letter-spacing: 0.5px;
         margin-bottom: 20px;
-        box-shadow: 0 1px 3px rgba(64, 48, 28, 0.04);
-        position: relative;
       }
 
       .header-badge .dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-amber);
+        background: var(--green);
         animation: pulse 2s infinite;
-        box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
       }
 
       @keyframes pulse {
         0%,
         100% {
           opacity: 1;
-          box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
         }
         50% {
-          opacity: 0.55;
-          box-shadow: 0 0 0 6px rgba(234, 138, 62, 0);
+          opacity: 0.4;
         }
       }
 
       .header h1 {
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 700;
         background: var(--gradient-brand);
         -webkit-background-clip: text;
@@ -160,21 +128,18 @@
         background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -0.5px;
-        position: relative;
       }
 
       .header .date {
         font-size: 15px;
         color: var(--text-secondary);
-        font-weight: 500;
-        position: relative;
+        font-weight: 400;
       }
 
       .header .subtitle {
         font-size: 13px;
         color: var(--text-muted);
         margin-top: 6px;
-        position: relative;
       }
 
       /* ── Section ── */
@@ -217,13 +182,11 @@
         padding: 20px;
         margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        transition:
-          border-color 0.2s,
-          transform 0.2s;
+        transition: border-color 0.2s;
       }
 
       .card:hover {
-        border-color: rgba(234, 138, 62, 0.35);
+        border-color: rgba(59, 130, 246, 0.3);
       }
 
       /* ── Index Grid ── */
@@ -308,12 +271,11 @@
         text-transform: uppercase;
         letter-spacing: 0.8px;
         border-bottom: 1px solid var(--border);
-        background: var(--bg-card-alt);
       }
 
       .asset-table tbody td {
         padding: 10px 12px;
-        border-bottom: 1px solid rgba(236, 228, 214, 0.8);
+        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
         vertical-align: middle;
       }
 
@@ -366,7 +328,7 @@
       /* ── Insight Box ── */
       .insight {
         background: var(--bg-card-alt);
-        border-left: 3px solid var(--accent-amber);
+        border-left: 3px solid var(--accent-blue);
         border-radius: 0 8px 8px 0;
         padding: 14px 16px;
         margin-top: 12px;
@@ -376,7 +338,7 @@
       }
 
       .insight strong {
-        color: var(--accent-sky-deep);
+        color: var(--accent-cyan);
         font-weight: 600;
       }
 
@@ -402,7 +364,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-amber);
+        background: var(--accent-blue);
       }
 
       .bullet-list li strong {
@@ -435,7 +397,7 @@
         width: 1px;
         background: linear-gradient(
           to bottom,
-          var(--accent-amber),
+          var(--accent-blue),
           var(--border)
         );
       }
@@ -455,13 +417,13 @@
         width: 9px;
         height: 9px;
         border-radius: 50%;
-        border: 2px solid var(--accent-amber);
+        border: 2px solid var(--accent-blue);
         background: var(--bg-primary);
       }
 
       .timeline-item.important::before {
-        background: var(--accent-amber);
-        box-shadow: 0 0 0 3px rgba(234, 138, 62, 0.18);
+        background: var(--accent-blue);
+        box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
       }
 
       .timeline-label {
@@ -474,19 +436,19 @@
       }
 
       .timeline-label.data {
-        background: rgba(91, 149, 201, 0.14);
-        color: var(--accent-sky-deep);
+        background: rgba(6, 182, 212, 0.15);
+        color: var(--accent-cyan);
       }
       .timeline-label.speech {
-        background: rgba(138, 127, 201, 0.14);
+        background: rgba(167, 139, 250, 0.15);
         color: var(--purple);
       }
       .timeline-label.report {
-        background: rgba(224, 122, 58, 0.14);
+        background: rgba(249, 115, 22, 0.15);
         color: var(--orange);
       }
       .timeline-label.earnings {
-        background: rgba(217, 162, 58, 0.16);
+        background: rgba(251, 191, 36, 0.15);
         color: var(--gold);
       }
 
@@ -520,8 +482,8 @@
         padding: 4px 10px;
         border-radius: 6px;
         background: var(--bg-card-alt);
-        color: var(--accent-sky-deep);
-        border: 1px solid rgba(91, 149, 201, 0.25);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(6, 182, 212, 0.2);
       }
 
       .earnings-name {
@@ -698,7 +660,6 @@
         align-items: center;
         justify-content: center;
         font-family: "JetBrains Mono", monospace;
-        box-shadow: 0 2px 6px rgba(234, 138, 62, 0.28);
       }
 
       .action-title {
@@ -784,17 +745,13 @@
       }
 
       .survey-bar-fill.red {
-        background: linear-gradient(90deg, var(--red), var(--orange));
+        background: linear-gradient(90deg, var(--red), #f97316);
       }
       .survey-bar-fill.blue {
-        background: linear-gradient(
-          90deg,
-          var(--accent-sky),
-          var(--accent-sky-deep)
-        );
+        background: var(--gradient-brand);
       }
       .survey-bar-fill.yellow {
-        background: linear-gradient(90deg, var(--accent-amber), var(--gold));
+        background: linear-gradient(90deg, var(--yellow), var(--gold));
       }
 
       /* ── Responsive ── */
@@ -830,70 +787,49 @@
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 晨间版 · 马来西亚美股投资者专属
+          LIVE · 马来西亚美股投资者专属
         </div>
-        <h1>🌅 财经晨报</h1>
-        <div class="date">2026年5月9日 · 周六 · 数据截至 EST 05/08 收盘</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers</div>
+        <h1>🌙 财经简报</h1>
+        <div class="date">2026年5月11日 · 周一 · 美股今晚即将开盘（约1小时后）</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 实时盘前数据</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
+          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
-        <div class="index-grid">
-          <div class="index-card up">
-            <div class="index-name">纳斯达克综合</div>
-            <div class="index-value">历史新高</div>
-            <div class="index-change up">+1.71%（本周累涨）</div>
-          </div>
-          <div class="index-card up">
-            <div class="index-name">S&P 500</div>
-            <div class="index-value">历史新高</div>
-            <div class="index-change up">收复全部跌幅</div>
-          </div>
-          <div class="index-card up">
-            <div class="index-name">IT 板块指数</div>
-            <div class="index-value">388.46</div>
-            <div class="index-change up">+4.18%（历史新高）</div>
-          </div>
-        </div>
-
         <div class="card">
+          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
+            ⚠️ 上次美股收盘：2026年5月8日（周五）· 以下为今日（周一）盘前现状，上周五具体收盘数据以实际为准。
+          </div>
           <ul class="bullet-list">
             <li>
-              <strong>4月非农就业</strong> +115,000（大幅超预期），失业率维持 4.3%，创<strong>两年来最大两月增长纪录</strong> → 缓解"滞胀"担忧 → 美股多指数创收盘历史新高
+              <strong>道指期货</strong> 盘前跌近 <span class="num down">-60点</span>，纳指期货 <span class="num down">-0.1%</span> — 开盘情绪略偏谨慎
             </li>
             <li>
-              <strong>存储芯片与硬件供应链指数</strong> 收涨 <span class="num">+8.05%</span>，报 188.37，历史新高；本周累涨 <span class="num">+18.60%</span>
+              <strong>美伊局势升温</strong>：美国中央司令部已使 <span class="num">62艘</span> 商船转向，并击沉4艘，霍尔木兹海峡紧张局面推高油价，令期指承压
             </li>
             <li>
-              <strong>AI赢家指数</strong> 收涨 <span class="num">+3.46%</span>，报 393.07，历史新高；本周累涨 +8.09%
+              <strong>布伦特原油重返100美元上方</strong>，WTI盘中涨 <span class="num">+2.27%</span>，能源板块或成今日领涨板块
             </li>
             <li>
-              <strong>个股亮点：</strong> 英特尔 <span class="num">+13.96%</span>（苹果芯片制造协议）、美光 <span class="num">+15.49%</span>、SanDisk <span class="num">+16.60%</span>、AMD <span class="num">+11.44%</span>、戴尔 <span class="num">+13.11%</span>、高通 <span class="num">+8.17%</span>
-            </li>
-            <li>
-              <strong>Rocket Lab</strong> 绩后涨 <span class="num">+34%</span>；<strong>Moderna</strong> mRNA汉坦病毒疫苗一期临床阳性数据，涨逾 <span class="num">+10%</span>
-            </li>
-            <li>
-              <strong>下跌个股：</strong> HubSpot <span class="num down">-19.03%</span>、Cloudflare <span class="num down">-23.62%</span>、CoreWeave <span class="num down">-11.40%</span>
+              <strong>英特尔（INTC）盘前涨5%</strong>，叠加高通财报超预期（盘前 +7%+），半导体板块有望开盘走强
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>非农就业超预期 → 经济韧性重新定价 → 芯片/存储产业链受益于AI资本支出预期持续升温。英特尔与苹果的制造合作协议由特朗普政府居中撮合，具有战略政策意义，是科技股的中期利好信号。但高盛将当前市场与1999年泡沫进行类比，需谨慎对待估值风险。
+          <strong>💡 背景：</strong>今日为周一，上周五（5月8日）美股收盘为本周首次开盘提供定价基准。当前盘前情绪略偏空但分化——科技半导体盘前跑赢，能源板块受益于油价飙升，但伊朗局势不确定性压制整体指数期货。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
+          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -902,257 +838,308 @@
             <thead>
               <tr>
                 <th>资产</th>
-                <th>价格</th>
+                <th>价格 / 水平</th>
                 <th>变动</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,718.49/oz</span></td>
-                <td><span class="tag up">▲ +0.67%</span><span class="asset-note">连续走强</span></td>
+                <td><span class="asset-price">~$3,308/oz</span></td>
+                <td><span class="tag down">▼ -0.23%</span><span class="asset-note">避险需求回落</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">⚪ 现货白银</span></td>
+                <td><span class="asset-price">$86+/oz</span></td>
+                <td><span class="tag up">▲ +6.35%</span><span class="asset-note">工业需求暴拉</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$95.60</span></td>
-                <td><span class="tag up">▲ +0.83%</span><span class="asset-note">霍尔木兹局势</span></td>
+                <td><span class="asset-price">~$61-63</span></td>
+                <td><span class="tag up">▲ +2.27%</span><span class="asset-note">美伊局势</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">$100+</span></td>
+                <td><span class="tag up">▲ 重返百元</span><span class="asset-note">霍尔木兹风险</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">97.92</span></td>
-                <td><span class="tag down">▼ -0.37%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🔷 10Y 美债收益率</span></td>
-                <td><span class="asset-price">—</span></td>
-                <td><span class="tag up">非农后收益率短升后回落</span></td>
+                <td><span class="asset-price">~100</span></td>
+                <td><span class="tag up">▲ +0.11%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1774</span></td>
-                <td><span class="tag up">▲ +0.42%</span></td>
+                <td><span class="asset-price">~1.1200</span></td>
+                <td><span class="tag down">▼ -0.08%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">156.65</span></td>
-                <td><span class="tag down">▼ -0.17%</span><span class="asset-note">日元小幅走强</span></td>
+                <td><span class="asset-price">~145</span></td>
+                <td><span class="tag up">▲ +0.29%</span><span class="asset-note">美元走强</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7963</span></td>
-                <td><span class="tag down">▼ -0.17%</span><span class="asset-note">人民币走强</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇪🇺 阿斯麦 ASML</span></td>
-                <td><span class="asset-price">创历史新高</span></td>
-                <td><span class="tag up">▲ 首家市值破6000亿美元欧洲公司</span></td>
+                <td><span class="asset-price">~7.22</span></td>
+                <td><span class="tag down">▼ -0.02%</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美元走软 + 股市风险偏好回升，黄金站稳 $4,700+（美银预测今年或涨30%）。WTI 维持 $95+ 反映霍尔木兹局势持续紧张。人民币走强有利于马来西亚投资者的美元资产换算。ASML市值破6000亿美元，半导体设备供应链价值重估。
+          <strong>💡 解读：</strong>白银单日暴涨6%+是今日最大异动——工业金属需求叙事（AI数据中心电气化）正被定价。油价重返$100是另一核心风险点：美元轻微走强 + 油价飙升 = 滞胀预期升温，压制高估值科技股。黄金回调 -0.23%，显示纯避险买盘相对克制。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
+          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>中国4月贸易帐（已公布，今晨04:02）</strong> — 前值出口同比 -0.7%（人民币计），进口 +23.8%；关注贸易顺差方向
+              <span class="timeline-label earnings">财报</span>
+              <strong>高通（QCOM）Q1财报</strong> 盘前已披露，超预期 + AI业务突破 → 盘前 <span style="color: var(--green)">+7%+</span>，今日开盘首要观察标的
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>中国4月社融与信贷数据</strong>（04:02）— M2同比前值 8.5%，M1 前值 5.1%；关注信贷扩张力度
-            </div>
-            <div class="timeline-item">
               <span class="timeline-label report">地缘</span>
-              <strong>美伊霍尔木兹谈判动向</strong> — 特朗普预计周五晚收到伊朗回复；"自由计划升级版"或重启
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">报告</span>
-              <strong>美联储金融稳定报告关注焦点</strong> — 私募信贷、地缘政治、油价冲击列为头号风险
+              <strong>美伊局势</strong>：美军已拦截62艘商船、击沉4艘 → 霍尔木兹海峡封锁风险实质化，关注原油期货反应
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label earnings">下周预期</span>
-              <strong>周一美股开盘（MYT 周一约21:30）</strong> — 非农利好消化后的延续性 + 霍尔木兹谈判结果定价
+              <span class="timeline-label data">数据</span>
+              <strong>中国4月CPI/PPI</strong>（今日发布）：PPI降幅收窄、CPI初步抬升 → 中国通胀回暖信号，关注对大宗商品的影响
             </div>
-          </div>
-        </div>
-
-        <div class="alert-box yellow">
-          <div class="alert-title">⚠️ 重点观察</div>
-          <div class="alert-text">
-            <strong>① 美伊谈判结果：</strong>特朗普称可能收到伊朗回复，若谈判取得突破 → WTI 或下行至 $90 以下 → 风险资产续涨；若破裂 → 霍尔木兹全封锁，油价可能突破 $100，避险情绪急剧回升<br/>
-            <strong>② 非农数据消化：</strong>115,000 就业超预期 → 美联储"按兵不动"预期强化 → 市场焦点转向下周通胀数据（CPI/PPI），降息预期或被进一步定价出局
+            <div class="timeline-item">
+              <span class="timeline-label report">资本市场</span>
+              <strong>SpaceX上市传言升温</strong>：概念基金 DXYZ 盘前 <span style="color: var(--green)">+9%</span>，VCX 盘前 <span style="color: var(--green)">+19%</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label earnings">财报</span>
+              <strong>Circle（CRCL）Q1</strong>：营收6.94亿美元同比+20%但不及预期，净利 -15%，USDC流通量 +28%；盘前跳涨（IPO情绪）
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label speech">讲话</span>
+              <strong>美联储新任主席沃什"首秀"预期</strong>：高盛已将首次降息预期推迟至12月 → 政策路径重新定价风险
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">AI产业</span>
+              <strong>台积电封装格局</strong>：SK海力士联手英特尔测试EMIB技术，挑战台积电CoWoS垄断 → AI芯片供应链重估
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══ 4. AI与科技 ═══ -->
+      <!-- ═══ 4. AI与科技产业动态 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
+          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
-            <strong style="color: var(--purple)">存储芯片指数</strong> 本周累涨
-            <span class="tag up" style="font-size: 13px">+18.60%</span> ·
-            <strong style="color: var(--purple)">信息科技板块</strong>
-            <span class="tag up" style="font-size: 13px">+4.18%（历史新高）</span>
+          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
+            <strong style="color: var(--purple)">半导体板块</strong> 盘前普涨 ·
+            <strong style="color: var(--purple)">美光 MU</strong>
+            <span class="tag up" style="font-size: 13px">+8.6%</span> ·
+            <strong style="color: var(--purple)">高通 QCOM</strong>
+            <span class="tag up" style="font-size: 13px">+7%+</span> ·
+            <strong style="color: var(--purple)">英特尔 INTC</strong>
+            <span class="tag up" style="font-size: 13px">+5%</span>
           </div>
 
           <div class="tech-chips">
-            <div class="tech-chip"><span class="name">INTC（英特尔）</span><span class="pct">+13.96%</span></div>
-            <div class="tech-chip"><span class="name">MU（美光）</span><span class="pct">+15.49%</span></div>
-            <div class="tech-chip"><span class="name">SNDK（SanDisk）</span><span class="pct">+16.60%</span></div>
-            <div class="tech-chip"><span class="name">AMD</span><span class="pct">+11.44%</span></div>
-            <div class="tech-chip"><span class="name">DELL（戴尔）</span><span class="pct">+13.11%</span></div>
-            <div class="tech-chip"><span class="name">QCOM（高通）</span><span class="pct">+8.17%</span></div>
-            <div class="tech-chip"><span class="name">ASML（阿斯麦）</span><span class="pct">历史新高</span></div>
-            <div class="tech-chip"><span class="name">Cerebras</span><span class="pct">IPO $400亿</span></div>
+            <div class="tech-chip">
+              <span class="name">QCOM</span><span class="pct">+7%+ 盘前</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">INTC</span><span class="pct">+5% 盘前</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MU</span><span class="pct">+8.6% 盘前</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">NVDA</span><span class="pct">+0.26%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">AMZN</span><span class="pct">-0.82%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MSFT</span><span class="pct">-1.17%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">TSLA</span><span class="pct" style="color: var(--red)">-1.2%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">SK海力士 🇰🇷</span><span class="pct">净利超三星</span>
+            </div>
           </div>
 
           <div class="divider"></div>
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>英特尔+苹果初步芯片制造协议：</strong>特朗普政府居中撮合，若最终落地将是英特尔代工业务（IFS）历史性订单，重塑美国半导体供应链
+              <strong>高通AI业务突破：</strong>Q1汽车AI加速器 + 手机端侧AI双线爆发，EPS超预期 → 与英伟达形成"边缘AI"主线互补
             </li>
             <li>
-              <strong>DeepSeek首轮融资：</strong>目标500亿元人民币，估值或突破3500亿元，有望创中国AI企业史上最大单笔融资纪录；V4.1模型计划6月发布
+              <strong>台积电封装垄断松动：</strong>SK海力士联手英特尔测试EMIB封装技术 → 如成功量产，CoWoS不再是AI芯片唯一选项，英特尔代工业务估值重估机会
             </li>
             <li>
-              <strong>Cerebras IPO：</strong>目标估值400亿美元，拟挑战英伟达AI芯片垄断地位；阿波罗+黑石同时洽谈为博通提供约350亿美元融资
+              <strong>SK海力士净利润超三星：</strong>HBM内存在AI训练芯片中需求"9倍狂飙"，成全球最赚钱芯片公司 → 强化HBM/存储板块多头逻辑
             </li>
             <li>
-              <strong>百度昆仑芯：</strong>寻求香港上市，目标估值至少1000亿元人民币；同步推进A股上市辅导（科创板）
+              <strong>快手可灵AI拆分：</strong>计划以200亿美元估值独立融资 → 中国AI独角兽估值参照，关注中概AI溢价空间
             </li>
             <li>
-              <strong>ARK凯西·伍德：</strong>AI带来的技术性通缩效应 → 未来6-9个月通胀或低于市场预期 → 若成立，利率路径将重新定价，长久期科技股受益
+              <strong>亚马逊首次进入瑞郎债市场：</strong>低成本融资全力押注AI基础设施 → 科技巨头资本开支军备竞赛持续
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>芯片/存储周期加速共振——英特尔政策背书、AI算力需求膨胀、DeepSeek国内估值爆炸式增长，三条线汇聚。但高盛1999类比提醒：AI投资主题在情绪驱动阶段后需要盈利验证。周末关注Cerebras IPO定价动向及DeepSeek融资进展。
+          <strong>💡 解读：</strong>今日AI主线分化——<strong>半导体硬件</strong>（QCOM/MU/INTC）盘前强势，但<strong>软件/大平台</strong>（MSFT/AMZN/TSLA）盘前偏弱。高通财报是今日"验证AI边缘化落地"的核心催化剂。若开盘后QCOM守住涨幅，将为整个芯片板块提供向上支撑。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
+          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- Jane Street -->
+        <!-- QCOM -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">Jane Street</span>
-              <span class="earnings-name">Jane Street Q1 2026</span>
+              <span class="ticker-badge">QCOM</span>
+              <span class="earnings-name">高通 Q2 FY2026</span>
             </div>
-            <span class="beat-badge beat">✓ 历史纪录</span>
+            <span class="beat-badge beat">✓ 超预期 · AI业务突破</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">Q1 收入</div>
-              <div class="metric-value">$161亿</div>
-              <div class="metric-delta up">历史最高</div>
+              <div class="metric-label">EPS / 营收</div>
+              <div class="metric-value">超预期</div>
+              <div class="metric-delta up">双线跑赢华尔街</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">汽车AI加速器</div>
+              <div class="metric-value">强劲增长</div>
+              <div class="metric-delta up">同比大幅提升</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">手机AI芯片</div>
+              <div class="metric-value">加速渗透</div>
+              <div class="metric-delta up">端侧AI落地</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">盘前反应</div>
+              <div class="metric-value">+7%+</div>
+              <div class="metric-delta up">市场高度认可</div>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>汽车业务与手机AI芯片双双超预期，印证<strong>边缘AI</strong>落地加速</li>
+            <li>AI业务已不再依赖单一大客户（苹果），多元化收入结构获市场溢价</li>
+            <li>盘前涨幅 <span class="num">+7%+</span>，若开盘守住，将成今日半导体板块领涨锚</li>
+          </ul>
+        </div>
+
+        <!-- CRCL -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">CRCL</span>
+              <span class="earnings-name">Circle Q1 2026</span>
+            </div>
+            <span class="beat-badge" style="background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border);">⚠ 营收略低于预期</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">Q1 总营收</div>
+              <div class="metric-value">$6.94亿</div>
+              <div class="metric-delta up">+20% YoY</div>
             </div>
             <div class="metric">
               <div class="metric-label">净利润</div>
-              <div class="metric-value">同比翻番</div>
-              <div class="metric-delta up">+100% YoY</div>
+              <div class="metric-value">同比下降</div>
+              <div class="metric-delta down">-15% YoY</div>
             </div>
-          </div>
-
-          <ul class="bullet-list">
-            <li>Q1收入161亿美元，创历史纪录，净利润同比翻番，领跑华尔街所有交易公司</li>
-            <li>高波动市场环境（霍尔木兹危机+关税波动）成为做市/量化交易的巨大盈利引擎</li>
-          </ul>
-        </div>
-
-        <!-- Rocket Lab -->
-        <div class="earnings-card">
-          <div class="earnings-header">
-            <div class="earnings-ticker">
-              <span class="ticker-badge">RKLB</span>
-              <span class="earnings-name">Rocket Lab Q1 2026</span>
-            </div>
-            <span class="beat-badge beat">✓ 超预期大涨</span>
-          </div>
-
-          <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">绩后涨幅</div>
-              <div class="metric-value">+34%</div>
-              <div class="metric-delta up">财报后单日</div>
+              <div class="metric-label">USDC 流通量</div>
+              <div class="metric-value">同比+28%</div>
+              <div class="metric-delta up">稳定币主导地位</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">盘前表现</div>
+              <div class="metric-value">跳涨</div>
+              <div class="metric-delta down">但营收不及预期</div>
             </div>
           </div>
-          <ul class="bullet-list">
-            <li>Rocket Lab业绩超预期，盘后大涨34%，航天商业化主题持续强势</li>
-          </ul>
-        </div>
 
-        <!-- HubSpot note -->
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            ⚠️ 财报下跌警示
-          </div>
           <ul class="bullet-list">
-            <li><strong>HubSpot (HUBS)</strong>：收跌 <span class="num down">-19.03%</span> — 业绩指引令市场失望</li>
-            <li><strong>Cloudflare (NET)</strong>：收跌 <span class="num down">-23.62%</span> — 营收增速预期下调</li>
-            <li><strong>CoreWeave (CRWV)</strong>：收跌 <span class="num down">-11.40%</span> — AI数据中心估值压力</li>
+            <li>USDC流通量+28%显示稳定币生态扩张，但高利率压缩储备收益 → 净利率承压</li>
+            <li>IPO后首份完整财报，市场情绪主导短期走势；盈利质量需持续观察</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>硬件/芯片财报季表现远优于软件SaaS类股票。Jane Street量化交易历史纪录收入反映高波动带来的做市红利。HubSpot和Cloudflare大跌提示市场对高估值成长股的容忍度正在下降 — 软件SaaS股财报若略低于预期，跌幅将非线性放大。
+          <strong>💡 解读：</strong>本周财报季重心为科技/半导体。高通超预期验证AI芯片需求真实性，为本周其他半导体财报（若有）定下积极基调。Circle营收不及预期但USDC扩张强劲，反映加密稳定币业务的"量增利薄"困境。
         </div>
       </section>
 
-      <!-- ═══ 6. 宏观指标 ═══ -->
+      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            📊 美国4月就业报告关键数字
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
+            美联储政策路径 — 高盛最新判断
           </div>
-
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">非农新增就业（4月）</span>
-              <span class="value" style="color: var(--green)">+115,000</span>
+              <span class="label">市场隐含首次降息时间（原预期：9月）</span>
+              <span class="value" style="color: var(--red)">推迟至12月</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 72%"></div>
+              <div class="survey-bar-fill red" style="width: 80%"></div>
             </div>
           </div>
-
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">失业率</span>
-              <span class="value" style="color: var(--accent-sky-deep)">4.3%（持平）</span>
+              <span class="label">油价（布伦特）重返$100关口风险</span>
+              <span class="value" style="color: var(--red)">已发生</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 43%"></div>
+              <div class="survey-bar-fill red" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">白银日内涨幅（工业金属需求信号）</span>
+              <span class="value" style="color: var(--green)">+6.35%</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill blue" style="width: 63%"></div>
+            </div>
+          </div>
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">WTI原油日内涨幅（美伊局势）</span>
+              <span class="value" style="color: var(--yellow)">+2.27%</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill yellow" style="width: 23%"></div>
             </div>
           </div>
 
@@ -1160,91 +1147,93 @@
 
           <ul class="bullet-list">
             <li>
-              <strong>"新美联储通讯社"Nick Timiraos：</strong>4月非农促使美联储<strong>按兵不动</strong>，政策焦点从"衰退风险"转向<strong>通胀管控</strong>
+              <strong>高盛将降息预期推迟至12月</strong>：沃什接任美联储主席后，政策不确定性上升 → 长端利率可能再次承压
             </li>
             <li>
-              <strong>美国消费者信心</strong>连续两个月创历史新低 — 油价高企 + 关税加剧通胀焦虑，实际购买力承压
+              <strong>中国4月CPI/PPI初步抬升</strong>："怎么看初步抬升的通胀数据" — 若确认回正，大宗商品需求叙事增强，有利资源股
             </li>
             <li>
-              <strong>美联储金融稳定报告：</strong>地缘政治与石油冲击跃升头号系统性风险，私募信贷风险"可控"但需监测
+              <strong>美元指数轻微走强 +0.11%</strong>：新兴市场货币、大宗商品定价承压，马来西亚林吉特持仓者需关注汇率风险
             </li>
             <li>
-              <strong>美银Hartnett：</strong>美股强劲程度历史罕见；黄金今年涨幅有望达到 <span class="num">+30%</span>（当前已接近 $4,720）
+              <strong>三星工会谈判破裂</strong>：周二继续谈判，若僵局延续可能影响半导体产能交付 → 短期HBM供应紧张预期延续
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🏛️ 高盛市场解读：1999类比警告
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
+            🔥 今日盘前热门股票（Tiger Brokers）
           </div>
-          <ul class="bullet-list">
-            <li>高盛Pasquariello：<strong>"这周总是让我想起1999年"</strong> — 纳斯达克100从1991-1998年每年上涨，1999年翻倍后崩溃</li>
-            <li>AI资本支出超级周期 + 国防/供应链支出驱动，<strong>市场或正在为通胀交易主导做准备</strong></li>
-            <li>ARK/木头姐反驳：AI通缩效应 → 未来6-9个月通胀将低于预期，利好长久期股票</li>
-            <li>关键矛盾：通胀预期 vs. AI通缩力量，两套叙事并存，市场方向取决于即将发布的CPI/PPI数据</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🌏 地缘风险：霍尔木兹海峡危机
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">TSLA</span><span class="pct" style="color: var(--red)">$423.23 (-1.2%)</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">NVDA</span><span class="pct">$215.77 (+0.26%)</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">PLTR</span><span class="pct" style="color: var(--red)">$134.94 (-2.08%)</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MU</span><span class="pct">$810.82 (+8.6%)</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MSFT</span><span class="pct" style="color: var(--red)">$410.27 (-1.17%)</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">AMZN</span><span class="pct" style="color: var(--red)">$270.44 (-0.82%)</span>
+            </div>
           </div>
-          <ul class="bullet-list">
-            <li>伊朗哈尔克岛附近发现大规模原油泄漏（约45平方公里），来源争议持续</li>
-            <li>美国务卿鲁比奥敦促"进入严肃谈判进程"；特朗普称可能恢复"自由计划升级版"</li>
-            <li>沙特阿美、阿布扎比国家石油公司秘密通过霍尔木兹海峡运输石油（关应答器操作）</li>
-            <li>高盛调查：霍尔木兹中断或延续至<strong>2026年下半年</strong>，市场偏好"做空原油"对冲</li>
-          </ul>
         </div>
       </section>
 
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
+          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会信号</div>
+          <div class="alert-title">🟢 重点观察 — 机会</div>
           <div class="alert-text">
-            <strong>① 芯片/存储主线：</strong>非农利好 + 英特尔-苹果政策背书 + AI资本支出加速，存储芯片指数本周 +18.60%，动能强劲。美光/AMD/INTC技术面突破，可逢回调布局。<br/>
-            <strong>② 黄金长期多头：</strong>DXY走软 + 美联储暂停 + 地缘持续 + 美银30%年度目标，$4,700+ 站稳，GLD/IAU逢低布局逻辑不变。
+            <strong>① 半导体/芯片板块开盘强势验证</strong> — 高通盘前+7%、美光+8.6%、英特尔+5%。若开盘后三者守住涨幅，半导体ETF（如SOXX）提供顺势进场机会。AI芯片需求端（HBM + 边缘AI）双线被高通财报印证。<br />
+            <strong>② 能源板块受益于油价飙升</strong> — 布伦特重返$100、WTI +2.27%，能源股（如XOM/CVX/XLE ETF）今日存在短期顺势交易机会；但需警惕"利多出尽"的反转风险。
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 谨慎信号</div>
+          <div class="alert-title">🔴 风险提示 — 警惕</div>
           <div class="alert-text">
-            <strong>① 高估值成长股财报风险：</strong>HubSpot -19%、Cloudflare -24%，下周软件SaaS财报季高峰，预期略低即遭重创，避免高估值SaaS重仓<br/>
-            <strong>② 霍尔木兹谈判破裂风险：</strong>若美伊谈判破裂 → WTI 可能快速突破 $100 → 消费股/航空/运输业承压，通胀预期再度飙升将威胁科技股估值
+            <strong>① 美伊局势实质恶化</strong> — 美军已拦截商船、击沉4艘，不再是"谈判预期"而是实质行动。霍尔木兹海峡若进一步封锁，油价破$110不无可能，触发全球供应链成本冲击，高估值成长股将首当其冲。<br />
+            <strong>② 降息预期被继续挤出</strong> — 高盛将降息推迟至12月，若沃什在首次公开讲话中措辞偏鹰，市场可能重新定价利率路径；REITs、高负债科技股、ARKK类资产面临二次杀估值风险。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
-          ✅ 三条可执行关注清单（目标：周一美股开盘）
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+          ✅ 三条可执行关注清单（针对今晚开盘后约1小时内）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">周一开盘盯住英特尔（INTC）与美光（MU）突破后的延续性</div>
+            <div class="action-title">开盘后15分钟观察 QCOM 能否守住盘前涨幅</div>
             <div class="action-desc">
-              INTC单日 +13.96% 是苹果制造协议催化，周一开盘需验证能否持续。若 INTC 开盘不回吐 50% 涨幅、MU 维持在关键价位上方，则半导体主线确认，可加码 SMH/SOXX ETF 或个股。若大幅回吐，等候再次企稳。
+              若高通开盘后 +5% 以上守稳，确认AI芯片需求叙事，可考虑跟进布局 SOXX 或 MU；若开盘后涨幅回吐至 +2% 以下，则为"买预期卖现实"信号，暂观望半导体板块。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">关注美伊谈判周末最新进展，提前设置油价波动对冲</div>
+            <div class="action-title">监控布伦特原油是否突破 $102 — 触发风险对冲</div>
             <div class="action-desc">
-              特朗普称周五晚或收到伊朗回复。若周末有明确突破消息 → WTI 跳空低开，航空/消费ETF（XLY）可能跳涨；若谈判破裂 → 开盘能源ETF（XLE）做多、非必需消费品做空。周一开盘前关注原油期货夜盘价格方向。
+              若布伦特站稳$102上方，滞胀预期将压制高估值科技股（TSLA/PLTR/MSFT）；此时可考虑减仓高PE成长股，同步关注 XLE 或 USO 能源对冲仓位。若油价回落至$98以下，则地缘风险情绪缓解，科技股反弹空间打开。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">回避高估值SaaS类股，下周财报季聚焦硬件/半导体/AI基础设施</div>
+            <div class="action-title">关注 SpaceX 概念（DXYZ/VCX）开盘后的炒作持续性</div>
             <div class="action-desc">
-              HubSpot -19%、Cloudflare -24% 是警告——SaaS估值容错率极低。下周财报重心在 Cisco、Applied Materials、Palo Alto 等硬件/基础设施方向。建议将软件SaaS仓位转向受益AI资本支出的半导体设备或数据中心REITs（如 EQIX），以降低财报风险敞口。
+              DXYZ 盘前+9%、VCX 盘前+19% 属高度情绪性炒作。若开盘后交投量能无法维持，建议不追高；若成交量持续放大且守稳涨幅，可参与小仓位试探，并设置 -8% 止损，切勿重仓高波动概念股。
             </div>
           </li>
         </ol>
@@ -1255,8 +1244,8 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年5月9日 · 晨间版</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers · 财经日历（实时盘前数据）</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年5月11日 21:32 MYT</div>
       </footer>
     </div>
   </body>
