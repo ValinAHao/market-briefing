@@ -17,9 +17,9 @@ jobs:
         run: |
           set -euo pipefail
           prs=$(gh pr list --repo "$REPO" --state open --base main \
-                  --search "head:briefing/ author:app/github-actions" \
-                  --json number,headRefName \
-                  --jq '.[] | select(.headRefName | startswith("briefing/")) | .number')
+                  --search "label:briefing author:app/github-actions" \
+                  --json number \
+                  --jq '.[].number')
           if [ -z "$prs" ]; then
             echo "No open briefing PRs to merge."
             exit 0
