@@ -9,7 +9,7 @@ Twice a weekday, an AI agent scrapes live financial data, synthesizes the key mo
 The workflow runs on two cron schedules (UTC):
 
 - **Morning recap** — `00:00 UTC` Tue–Sat (08:00 MYT), recapping the US session that just closed and looking ahead to tonight's open.
-- **Night preview** — `12:30 UTC` Mon–Fri (20:30 MYT), a tactical pre-open preview ~1 hour before US markets open.
+- **Night preview** — `12:00 UTC` Mon–Fri (20:00 MYT), a tactical pre-open preview ~1 hour before US markets open.
 
 An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline end-to-end:
 
@@ -35,7 +35,7 @@ An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline 
 ┌─────────────────────────────────┐
 │  Cron Triggers (UTC)            │
 │  • 00:00 Tue–Sat → morning      │
-│  • 12:30 Mon–Fri → night        │
+│  • 12:00 Mon–Fri → night        │
 └──────────────┬──────────────────┘
                │
                ▼

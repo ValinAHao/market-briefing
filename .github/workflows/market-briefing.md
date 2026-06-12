@@ -5,8 +5,8 @@ on:
     # Cron times are UTC. Malaysia is UTC+8.
     # Morning run: 00:00 UTC = 08:00 MYT, Tue-Sat MYT recaps Mon-Fri US close.
     - cron: "0 0 * * 2-6"
-    # Night run: 12:30 UTC = 20:30 MYT, Mon-Fri MYT previews Mon-Fri US open.
-    - cron: "30 12 * * 1-5"
+    # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
+    - cron: "0 12 * * 1-5"
 
 engine:
   id: copilot
@@ -41,7 +41,7 @@ You are a senior financial market expert. Produce a **daily stock market briefin
 Two run types. Determine which one is firing **before** writing anything — the framing of the entire briefing depends on it.
 
 - **Morning run** (`0 0 * * 2-6`, 08:00 MYT, → `morning-briefing-template.html`): the US session just **closed** ~3–4 hours ago. This briefing is a **recap + look-ahead**. `隔夜美股` recaps the closed session. `今日关注` covers today's Asian session and the next US open (~13 hours away). `投资者的建议` items target **tonight's** US open.
-- **Night run** (`30 12 * * 1-5`, 20:30 MYT, → `night-briefing-template.html`): the US session opens in ~1 hour (or ~2 hours during US standard time). This briefing is a **tactical pre-open preview**. `隔夜美股` references the _previous_ session as context only — do not pad it. `今日关注` is the imminent US open's catalysts. `投资者的建议` items target the session opening **tonight in ~1 hour** — be specific and time-sensitive.
+- **Night run** (`0 12 * * 1-5`, 20:00 MYT, → `night-briefing-template.html`): the US session opens in ~1 hour (or ~2 hours during US standard time). This briefing is a **tactical pre-open preview**. `隔夜美股` references the _previous_ session as context only — do not pad it. `今日关注` is the imminent US open's catalysts. `投资者的建议` items target the session opening **tonight in ~1 hour** — be specific and time-sensitive.
 
 If triggered manually (`workflow_dispatch`), default to morning-run framing.
 
@@ -103,7 +103,7 @@ Use this exact section order and titles:
 Determine which template to use based on the cron schedule that triggered this run:
 
 - If triggered by `0 0 * * 2-6` (morning run, 8am Malaysia time): read `morning-briefing-template.html`
-- If triggered by `30 12 * * 1-5` (night run, 8:30pm Malaysia time): read `night-briefing-template.html`
+- If triggered by `0 12 * * 1-5` (night run, 8:00pm Malaysia time): read `night-briefing-template.html`
 - If triggered manually (`workflow_dispatch`): default to `morning-briefing-template.html`
 
 Read the chosen template file from the repository root to get the full HTML layout and CSS.
