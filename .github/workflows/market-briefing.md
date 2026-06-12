@@ -1,12 +1,12 @@
 ---
 on:
   workflow_dispatch:
-  schedule:
-    # Cron times are UTC. Malaysia is UTC+8.
-    # Morning run: 00:00 UTC = 08:00 MYT, Tue-Sat MYT recaps Mon-Fri US close.
-    - cron: "0 0 * * 2-6"
-    # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
-    - cron: "0 12 * * 1-5"
+  # schedule:
+  # Cron times are UTC. Malaysia is UTC+8.
+  # Morning run: 00:00 UTC = 08:00 MYT, Tue-Sat MYT recaps Mon-Fri US close.
+  # - cron: "0 0 * * 2-6"
+  # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
+  # - cron: "0 12 * * 1-5"
 
 engine:
   id: copilot
