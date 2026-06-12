@@ -11,7 +11,7 @@ The workflow runs on two cron schedules (UTC):
 - **Morning recap** — `00:00 UTC` Tue–Sat (08:00 MYT), recapping the US session that just closed and looking ahead to tonight's open.
 - **Night preview** — `12:00 UTC` Mon–Fri (20:00 MYT), a tactical pre-open preview ~1 hour before US markets open.
 
-An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline end-to-end:
+An AI agent (OpenAI Codex with GPT-5.5 via an OpenAI API key) performs the entire pipeline end-to-end:
 
 1. **Scrape** — Uses Playwright browser tools to gather real-time data from financial sources (wallstreetcn, Tiger Brokers)
 2. **Analyze** — Synthesizes market data into a structured briefing covering 7 sections, written in Chinese
@@ -46,7 +46,7 @@ An AI agent (Claude Sonnet 4.6 via GitHub Copilot) performs the entire pipeline 
                │
                ▼
 ┌──────────────────────────────────────────────┐
-│  gh-aw Workflow (Claude Sonnet 4.6)          │
+│  gh-aw Workflow (OpenAI Codex / GPT-5.5)     │
 │  Reads: morning- or night-briefing-          │
 │         template.html (per run)              │
 │                                              │
