@@ -19,6 +19,10 @@ engine:
     COPILOT_PROVIDER_TYPE: "openai"
     COPILOT_PROVIDER_WIRE_API: "completions"
 
+# Playwright scraping from 4 URLs + full HTML generation needs more than the
+# 20-minute default. The previous run completed the work but was killed at 21m.
+timeout-minutes: 60
+
 tools:
   playwright:
     mode: cli
@@ -56,6 +60,8 @@ If triggered manually (`workflow_dispatch`), default to morning-run framing.
 
 ## Data collection rules (must follow)
 
+**Time budget:** Complete all data collection within **15 minutes**. Do not linger on any single page — if a page is slow to load or content is sparse, extract what's available and move on. The remaining time is for analysis and HTML generation.
+
 Use `playwright` browser tools to gather data **only** from these three URLs. No other domain, no link-following off these pages, no web search, no "let me verify elsewhere." If information is missing, say so in the briefing rather than substituting another source.
 
 1. `https://wallstreetcn.com/` — homepage: headlines, brief descriptions, market data.
@@ -63,7 +69,22 @@ Use `playwright` browser tools to gather data **only** from these three URLs. No
 3. `https://www.itiger.com/hans/news/top` — market top news.
 4. `https://www.itiger.com/hans/news/breaking` — market breaking news.
 
-For each source: open with Playwright, wait for key content to render, scroll once if needed for lazy-loaded content, then extract headlines, descriptions, and key figures from the visible page.
+**Scrape efficiently:** Use concurrent named browser sessions to open all four URLs in parallel, then snapshot each one. Example pattern:
+
+```bash
+playwright-cli -s=ws-home open https://wallstreetcn.com/ &
+playwright-cli -s=ws-cal open https://wallstreetcn.com/calendar &
+playwright-cli -s=tiger-top open https://www.itiger.com/hans/news/top &
+playwright-cli -s=tiger-break open https://www.itiger.com/hans/news/breaking &
+wait
+playwright-cli -s=ws-home snapshot
+playwright-cli -s=ws-cal snapshot
+playwright-cli -s=tiger-top snapshot
+playwright-cli -s=tiger-break snapshot
+playwright-cli close-all
+```
+
+For each source: wait for key content to render, scroll once if needed for lazy-loaded content, then extract headlines, descriptions, and key figures from the visible page.
 
 **Freshness check:** if the latest visible timestamp on a page is more than 24 hours old, flag it explicitly in the briefing (e.g. "数据来源最新更新为 X 小时前，可能不反映最新情况") rather than presenting stale data as current.
 
