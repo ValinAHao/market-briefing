@@ -3,8 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年6月12日</title>
+    <title>财经简报 | 2026年6月24日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+    <!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  MORNING BRIEFING HTML TEMPLATE — LIGHT / SUNRISE THEME     ║
+  ║                                                             ║
+  ║  Palette: warm ivory background, charcoal text, amber +     ║
+  ║  soft sky-blue accents. Same component API as dark version. ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
@@ -823,11 +831,25 @@
         }
       }
     </style>
-
+    <template id="__bundler_thumbnail" data-bg-color="#faf7f2">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sun" cx="50%" cy="60%" r="50%">
+            <stop offset="0%" stop-color="#f4b961" />
+            <stop offset="100%" stop-color="#ea8a3e" />
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="800" fill="#faf7f2" />
+        <rect x="0" y="520" width="1200" height="2" fill="#ece4d6" />
+        <circle cx="600" cy="520" r="150" fill="url(#sun)" />
+        <rect x="400" y="600" width="400" height="12" rx="6" fill="#ece4d6" />
+        <rect x="460" y="630" width="280" height="8" rx="4" fill="#ece4d6" />
+      </svg>
+    </template>
   </head>
+
   <body>
     <div class="container">
-
       <!-- ═══ Header ═══ -->
       <header class="header">
         <div class="header-badge">
@@ -835,69 +857,84 @@
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年6月12日 · 周五 · 数据截至 MYT 08:56</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 老虎资讯</div>
+        <div class="date">2026年6月24日 · 周二 · 数据截至 MYT 15:40</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
+          <div
+            class="section-icon"
+            style="background: rgba(234, 138, 62, 0.14)"
+          >
+            📊
+          </div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
         <div class="index-grid">
-          <div class="index-card up">
-            <div class="index-name">道琼斯</div>
-            <div class="index-value">+929 pts</div>
-            <div class="index-change up">+2.16% 🔥</div>
-          </div>
-          <div class="index-card up">
-            <div class="index-name">SOX 半导体指数</div>
-            <div class="index-value">+8.0%</div>
-            <div class="index-change up">年内单日最大涨幅之一</div>
+          <div class="index-card down">
+            <div class="index-name">纳斯达克</div>
+            <div class="index-value">-3%</div>
+            <div class="index-change down">▼ 韩股崩盘外溢</div>
           </div>
           <div class="index-card down">
-            <div class="index-name">VIX 恐慌指数</div>
-            <div class="index-value">-12.51%</div>
-            <div class="index-change down">地缘风险骤降</div>
+            <div class="index-name">费城半导体</div>
+            <div class="index-value">-8%</div>
+            <div class="index-change down">▼ 芯片股重挫</div>
+          </div>
+          <div class="index-card down">
+            <div class="index-name">美光 MU</div>
+            <div class="index-value">-13%</div>
+            <div class="index-change down">▼ HBM恐慌蔓延</div>
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>再次"TACO"</strong>（Trump Always Capitulates On…）→ 特朗普几小时内反转，宣布取消对伊朗军事打击计划，美伊核协议"基本定稿、各方批准"，可能本周末在欧洲签署
+              <strong>韩国"黑色星期二"血洗全球科技股</strong> → KOSPI 单日暴跌
+              <span class="num">-10%</span> 触发熔断，三星
+              <span class="num">-12%</span>、SK海力士
+              <span class="num">-13%</span>
             </li>
             <li>
-              地缘风险骤降 → 原油<span class="num down">大跌</span>、VIX暴跌 <span class="num down">-12.51%</span> → 风险资产全线反弹，道指单日狂飙 <span class="num">+929点</span>
+              恐慌数小时内蔓延至美股：费城半导体
+              <span class="num">-8%</span>、美光
+              <span class="num">-13%</span>、纳斯达克
+              <span class="num">-3%</span>，全球科技股一夜蒸发数万亿美元
             </li>
             <li>
-              存储芯片板块领涨：<strong>美光 (MU)</strong> <span class="num">+11%+</span>、<strong>迈威尔 (MRVL)</strong> <span class="num">+11%+</span>、<strong>英特尔 (INTC)</strong> <span class="num">+10%+</span>、<strong>ARM</strong> <span class="num">+6%+</span>
+              <strong>"鬼故事"满天飞：</strong>市场传言AI需求见顶、海力士放缓HBM扩产、韩国散户爆仓、养老金砸盘、账面盈利征税
             </li>
             <li>
-              <strong>NVDA</strong> <span class="num">+2.22%</span>（$204.87）·
-              <strong>TSLA</strong> <span class="num">+4.60%</span>（$399.15）·
-              3倍做多半导体ETF <span class="num">+24%</span>
+              但今日 KOSPI 已反弹
+              <span class="num">+1%</span>，EWY夜盘升逾
+              <span class="num">+3%</span>，南方两倍做多三星电子升
+              <span class="num">+12%</span>
             </li>
             <li>
-              <strong>Adobe (ADBE)</strong> Q2业绩超预期并上调指引，但盘后 CFO 宣布离职，股价盘后 <span class="num down">-5.54%</span>
-            </li>
-            <li>
-              <strong>SpaceX (SPCX) 今日正式在纳斯达克上市</strong>，散户认购超 <span class="num">$1,000亿美元</span>，贝莱德等全球大资管订单"规模惊人"
+              美股科技恐慌指数逼近<strong>20年极值</strong>，一个比VIX更值得警惕的指标正在拉响警报
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>TACO效应再度发威——市场深谙特朗普"雷声大雨点小"规律。地缘缓和释放被压制的风险偏好，半导体+8%验证AI算力需求主线不变。<strong>核心风险点</strong>：Adobe的CFO离职警示"业绩超预期≠股价上涨"，当管理层稳定性与AI替代焦虑叠加，优秀财报也难逃抛售压力。
+          <strong>💡 解读：</strong
+          >韩股崩盘本质是"拥挤交易"集中平仓——HBM/半导体多头过于拥挤，任何利空传言都引发踩踏。隔夜美股的跌幅更多是情绪传导而非基本面恶化。今日韩股反弹说明恐慌有所退潮，但<strong>科技恐慌指数逼近极值</strong>意味着短期波动率仍高。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
+          <div
+            class="section-icon"
+            style="background: rgba(91, 149, 201, 0.14)"
+          >
+            🌍
+          </div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -913,65 +950,51 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">~$4,200/oz</span></td>
+                <td><span class="asset-price">$4,219.32/oz</span></td>
                 <td>
-                  <span class="tag up">▲ 横盘回稳</span>
-                  <span class="asset-note">伊朗协议缓和后维稳</span>
+                  <span class="tag up">▲ +0.20%</span
+                  ><span class="asset-note">纽约期金$4,098.70 -1.2%</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">显著下跌</span></td>
+                <td><span class="asset-price">$84.26</span></td>
                 <td>
-                  <span class="tag down">▼ 大跌</span>
-                  <span class="asset-note">美伊协议压低战争溢价</span>
+                  <span class="tag down">▼ -3.93%</span
+                  ><span class="asset-note">通航信心修复</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">📉 VIX 恐慌指数</span></td>
-                <td><span class="asset-price">~18.5</span></td>
-                <td><span class="tag down">▼ -12.51%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇰🇷 韩国综指 (今日亚市)</span></td>
-                <td><span class="asset-price">亚市大涨</span></td>
+                <td><span class="asset-name">💵 美元指数 DXY</span></td>
+                <td><span class="asset-price">99.81 ~ 101.55</span></td>
                 <td>
-                  <span class="tag up">▲ +7.0%</span>
-                  <span class="asset-note">半导体权重领涨亚太</span>
+                  <span class="tag up">▲ 七个月高位</span
+                  ><span class="asset-note">加息预期催生拥挤多头</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">~1.0970</span></td>
+                <td><span class="asset-price">1.1568</span></td>
+                <td><span class="tag down">▼ 美元走强</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
+                <td><span class="asset-price">160.21</span></td>
                 <td>
-                  <span class="tag up">▲ 走强</span>
-                  <span class="asset-note">欧央行加息推升欧元</span>
+                  <span class="tag up">▲</span
+                  ><span class="asset-note">植田暗示继续加息</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🔷 10Y 美债收益率</span></td>
-                <td><span class="asset-price">~4.45%</span></td>
+                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
+                <td><span class="asset-price">6.7633</span></td>
+                <td><span class="tag neutral">— 0.00%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🛢️ 美国柴油</span></td>
+                <td><span class="asset-price">&lt;$5/加仑</span></td>
                 <td>
-                  <span class="tag up">▲ 维持高位</span>
-                  <span class="asset-note">无降息预期，年末加息被定价</span>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">💵 NVDA</span></td>
-                <td><span class="asset-price">$204.87</span></td>
-                <td><span class="tag up">▲ +2.22%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🚗 TSLA</span></td>
-                <td><span class="asset-price">$399.15</span></td>
-                <td><span class="tag up">▲ +4.60%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🎨 ADBE（盘后）</span></td>
-                <td><span class="asset-price">盘后下跌</span></td>
-                <td>
-                  <span class="tag down">▼ -5.54%</span>
-                  <span class="asset-note">CFO离职冲击</span>
+                  <span class="tag down">▼ 3月以来首次跌破$5</span>
                 </td>
               </tr>
             </tbody>
@@ -979,91 +1002,116 @@
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>亚太今晨风险情绪高涨，韩国+7%领跑。欧元受益于欧央行自伊拉克战争以来首次加息而走强。美债10Y收益率维持高位，反映市场已不再定价任何降息——路透调查显示12月加息开始被纳入定价。<strong>原油下跌</strong>是当前最关键的地缘信号：若美伊协议本周末落地，供给溢价将进一步消化，能源股需要重新评估。
+          <strong>💡 解读：</strong
+          >美元狂飙至七个月高点，加息预期催生多头"拥挤交易"——这与韩股崩盘同源（拥挤交易集中反转）。油价受美伊和谈后油轮公开穿越霍尔木兹海峡而延续跌势，特朗普进一步施压石油公司"油价必须更快下跌"。黄金与标普500异常强烈正相关，被推入$4,000-4,100关键支撑区。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
+          <div
+            class="section-icon"
+            style="background: rgba(224, 122, 58, 0.14)"
+          >
+            🎯
+          </div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label report">IPO 🚀</span>
-              <strong>21:30 MYT — SpaceX (SPCX) 纳斯达克首日完整交易</strong> — 本周最大市场事件。散户认购超$1,000亿，机构订单庞大。加密市场隐含估值$2.2万亿（比IPO高22%）。关键节点：7月7日纳斯达克100被动买入；Q2财报后48小时老股东解禁
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>14:00 MYT — 英国4月GDP / 工业产出 / 制造业产出</strong> → 英镑方向参考，欧洲经济健康度
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>14:00 MYT — 德国5月CPI终值 / 法国5月CPI终值</strong> → 影响欧央行7月加息预期
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              <strong>15:00 MYT — 欧央行管委科赫尔 (Koehl) 发表讲话</strong>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              <strong>16:00 MYT — 欧央行管委雷恩 (Rehn) 发表讲话</strong> → 关注7月欧央行是否连续加息信号
+              <span class="timeline-label earnings">财报</span>
+              <strong>美光 (MU) 财报今晚发布</strong
+              >→ HBM/AI存储需求验证，期权押注财报后股价在$850-1250区间波动
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">数据 ⚠️</span>
-              <strong>02:00 MYT（周六）— 美国6月密歇根大学消费者信心初值</strong>
-              （含1年/5年通胀预期）→ 若通胀预期走高，将加剧"年末加息"预期，直接冲击科技成长股估值
+              <span class="timeline-label speech">央行</span>
+              <strong>日本央行行长植田和男</strong>重申通胀存超2%目标风险，将适时进一步加息
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label report">地缘</span>
+              <strong>美伊技术性谈判将于6月30日恢复</strong
+              >（巴基斯坦外交部确认）→ 油价与风险资产关键变量
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">前瞻</span>
-              <strong>下周重磅 — 美联储新委员"沃什"首次公开亮相</strong>（首秀）→ 政策立场（鹰/鸽）将影响下周市场情绪
+              <span class="timeline-label speech">政策</span>
+              <strong>特朗普施压石油公司</strong>：油价必须更快下跌，否则面临司法部调查
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">报告</span>
+              巴克莱与Stifel：<strong>标普500年底看7,800点</strong
+              >（盈利强劲，抛开科技股暴跌噪音）
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label data">数据</span>
+              <strong>美国能源部</strong>向5个核电项目提供$175亿贷款担保，加速核反应堆建设
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">活动</span>
+              <strong>2026夏季达沃斯论坛</strong>在大连开幕（李强致辞，约1800名全球代表出席）
             </div>
           </div>
         </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong
+          >今晚美光财报是半导体恐慌后的"定心丸"——若HBM需求指引强劲，可直接证伪"AI需求见顶"传言。美伊谈判30日恢复 + 特朗普施压油价 = 能源端持续利空。植田加息信号叠加美元强势，需警惕日元套息交易平仓的连锁效应。
+        </div>
       </section>
 
-      <!-- ═══ 4. AI与科技产业动态 ═══ -->
+      <!-- ═══ 4. AI与科技 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
+          <div
+            class="section-icon"
+            style="background: rgba(138, 127, 201, 0.14)"
+          >
+            🤖
+          </div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
-            <strong style="color: var(--purple)">半导体板块</strong> 昨日大涨
-            <span class="tag up" style="font-size: 13px">+8.0%</span> ·
-            <strong style="color: var(--purple)">韩国综指</strong>（半导体主导）今日
-            <span class="tag up" style="font-size: 13px">+7.0%</span>
+          <div
+            style="
+              margin-bottom: 10px;
+              font-size: 14px;
+              color: var(--text-secondary);
+            "
+          >
+            <strong style="color: var(--red)">半导体板块</strong> 全球回调 ·
+            <strong style="color: var(--green)">韩股反弹</strong> KOSPI
+            <span class="tag up" style="font-size: 13px">+1%</span> ·
+            <strong style="color: var(--green)">恒生科技</strong>
+            <span class="tag up" style="font-size: 13px">+2.5%</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">MU</span><span class="pct">+11%+</span>
+              <span class="name">美光 MU</span><span class="pct down">-13%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MRVL</span><span class="pct">+11%+</span>
+              <span class="name">费城半导体</span><span class="pct down">-8%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">INTC</span><span class="pct">+10%+</span>
+              <span class="name">三星 🇰🇷</span><span class="pct down">-12%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">ARM</span><span class="pct">+6%+</span>
+              <span class="name">SK海力士 🇰🇷</span><span class="pct down">-13%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">NVDA</span><span class="pct">+2.22%</span>
+              <span class="name">腾讯 🇭🇰</span><span class="pct up">+5%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">TSLA</span><span class="pct">+4.60%</span>
+              <span class="name">华虹宏力 🇭🇰</span><span class="pct up">+18%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">3x半导体ETF</span><span class="pct">+24%</span>
+              <span class="name">兆易创新 🇦🇨</span><span class="pct up">涨停</span>
             </div>
             <div class="tech-chip">
-              <span class="name">2x Firefly航天ETF</span><span class="pct">+37%</span>
+              <span class="name">臻宝科技 🇦🇨</span><span class="pct up">+1213%</span>
             </div>
           </div>
 
@@ -1071,132 +1119,158 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>SpaceX (SPCX) 今日上市，散户认购超$1,000亿</strong> — 加密市场隐含$2.2万亿估值（较IPO溢价22%）；两个关键时间点：①7月7日纳斯达克100指数被动买入（可流通股仅约4.3%）；②Q2财报后48小时解禁窗口
+              <strong>SK海力士即将提交美股ADR发行申请</strong
+              >，最快下月挂牌交易 → 恐慌中逆势推进美国上市
             </li>
             <li>
-              <strong>贝索斯AI创业公司 Prometheus 完成$120亿融资</strong>，估值达$410亿 — AI大模型基础设施赛道资金持续涌入
+              <strong>腾讯大涨逾5%</strong>（成交超百亿港元），微信原生AI助手"小微"扩大灰度测试，能点外卖、总结聊天、P图
             </li>
             <li>
-              <strong>OpenAI 收购云环境初创公司 Ona</strong>，强化 Codex AI编程助手竞争力 — 加速To B企业软件渗透
+              <strong>Anthropic发布Claude Tag</strong
+              >（CC进化版），Karpathy称"LLM第三次交互革命"
             </li>
             <li>
-              <strong>高盛预测：2027年科技巨头资本开支达$1.4万亿</strong> — "AI弹药远未耗尽"，算力建设长期主线不变；高盛指出Rubin Ultra服务器量产节点临近
+              <strong>先进封装成AI芯片核心：</strong
+              >台积电主导，味之素ABF基板、金刚石散热等环节受关注
             </li>
             <li>
-              <strong>Google疑虑导致Crusoe退出怀俄明州AI数据中心项目</strong>，但项目并未终止 — 大科技AI数据中心布局正在动态调整
-            </li>
-            <li>
-              <strong>中国人形机器人价格崩塌</strong>：2026年规模量产元年，最低售价已降至9,998元（约$1,400），年产预计突破10万台，国产化率90%；全球制造竞争格局将被重写
-            </li>
-            <li>
-              <strong>CME宣布7月底起推出7×24全天候黄金和原油期货</strong> — 大宗商品交易时间窗口大幅扩展，马来西亚时区投资者受益
+              美银美林：AI需求可见度延伸至<strong>2028年</strong
+              >，存储在此之前不会"供过于求"，半导体设备将大幅增长
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>两条主线并行——<strong>① SpaceX IPO</strong>作为"史上最大IPO"，首日定价将为本轮风险偏好打下基础；<strong>② AI资本开支不可逆</strong>，高盛$1.4万亿预测+Bezos $120亿融资+OpenAI收购，强化算力主线逻辑。但中国人形机器人的价格战暗示：<strong>硬件民主化正在加速</strong>，AI在制造业的实际渗透比市场想象的更快，且来自东方。
+          <strong>💡 解读：</strong
+          >韩股崩盘是拥挤交易平仓而非AI需求证伪——美银美林仍看好需求至2028年。SK海力士逆势推进ADR、腾讯AI助手放量，说明产业资本仍在加码。今晚美光财报将是检验"AI需求见顶"传言真伪的关键。短期科技反弹由情绪驱动，需财报盈利支撑。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
+          <div
+            class="section-icon"
+            style="background: rgba(217, 162, 58, 0.16)"
+          >
+            💼
+          </div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- Adobe -->
+        <!-- MU -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">ADBE</span>
-              <span class="earnings-name">Adobe Q2 2026</span>
+              <span class="ticker-badge">MU</span>
+              <span class="earnings-name">美光科技 · 今晚发布</span>
             </div>
-            <span class="beat-badge beat">✓ 营收超预期 · 指引上调</span>
+            <span class="beat-badge warn">⏳ 盘后财报</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">营收</div>
-              <div class="metric-value">超预期</div>
-              <div class="metric-delta up">Q2 业绩超市场一致预期</div>
+              <div class="metric-label">隔夜股价</div>
+              <div class="metric-value">-13%</div>
+              <div class="metric-delta down">韩股恐慌外溢</div>
             </div>
             <div class="metric">
-              <div class="metric-label">全年指引</div>
-              <div class="metric-value">上调</div>
-              <div class="metric-delta up">管理层维持乐观预期</div>
+              <div class="metric-label">期权押注区间</div>
+              <div class="metric-value">$850-1250</div>
+              <div class="metric-delta up">财报后波动</div>
             </div>
             <div class="metric">
-              <div class="metric-label">CFO 动态</div>
-              <div class="metric-value">宣布离职</div>
-              <div class="metric-delta down">盘后突发负面人事变动</div>
+              <div class="metric-label">核心看点</div>
+              <div class="metric-value">HBM指引</div>
+              <div class="metric-delta up">AI存储需求</div>
             </div>
             <div class="metric">
-              <div class="metric-label">盘后表现</div>
-              <div class="metric-value">-5.54%</div>
-              <div class="metric-delta down">市场将利空定价优先</div>
+              <div class="metric-label">机构观点</div>
+              <div class="metric-value">需求至2028</div>
+              <div class="metric-delta up">美银美林</div>
             </div>
           </div>
 
           <ul class="bullet-list">
-            <li>营收与EPS均超市场预期，全年指引上调 — 基本面本身正面</li>
             <li>
-              但 <strong>CFO突然宣布离职</strong> 引发市场对战略方向与AI转型节奏的担忧，投资者选择"先卖再问"
+              隔夜暴跌
+              <span class="num">-13%</span
+              >主因韩股HBM恐慌传导，非基本面恶化
             </li>
             <li>
-              背景：华尔街已在 Adobe 财报前警告 <strong>"AI焦虑重压软件股"</strong>，任何负面信号均被放大 → 警惕 SaaS 板块 (IGV) 连锁抛售风险
+              期权大单押注财报后股价在
+              <span class="num">$850-1250</span> 区间收敛波动
             </li>
             <li>
-              今日正式开盘后需观察 ADBE 的买卖力度比 — 若买盘能消化盘后跌幅，说明基本面超预期已被重新认可
+              若HBM产能/价格指引强劲 → 直接证伪"AI需求见顶"，半导体板块有望报复性反弹
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>Adobe 提供了本季度最典型的"业绩陷阱"案例——<strong>超预期不等于涨，黑天鹅随时出现</strong>。在 AI 替代焦虑成为市场底层情绪的背景下，C-Suite 人事变动会触发估值重评。这对下周公布业绩的软件/SaaS 公司是重要警示：管理层稳定性与 AI 转型故事缺一不可。
+          <strong>💡 解读：</strong
+          >美光是本轮半导体恐慌的"风暴眼"。隔夜-13%已计入大量悲观预期，今晚财报若超预期，存在轧空反弹机会；若HBM指引疲软，则"AI需求见顶"叙事将被强化，费城半导体或再下一城。这是今晚美股最大单一催化剂。
         </div>
       </section>
 
-      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
+      <!-- ═══ 6. 宏观指标 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">
+            📉
+          </div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            🏦 美联储利率预期：年内降息已被彻底挤出，加息重回定价
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 14px;
+            "
+          >
+            ⚠️ 美元"拥挤多头" + 加息预期升温
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">市场定价：2026年内降息概率</span>
-              <span class="value" style="color: var(--red)">极低</span>
+              <span class="label">美元指数（七个月高位）</span>
+              <span class="value" style="color: var(--red)">~101.5</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 5%"></div>
+              <div class="survey-bar-fill red" style="width: 88%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">12月加息被纳入定价（路透经济学家调查）</span>
-              <span class="value" style="color: var(--red)">是</span>
+              <span class="label">加息预期（今年加息押注升温）</span>
+              <span class="value" style="color: var(--red)">升温</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 35%"></div>
+              <div class="survey-bar-fill red" style="width: 72%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">30年期抵押贷款利率（徘徊）</span>
-              <span class="value" style="color: var(--yellow)">6.6%</span>
+              <span class="label">美股科技恐慌指数（逼近20年极值）</span>
+              <span class="value" style="color: var(--red)">极值</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill yellow" style="width: 66%"></div>
+              <div class="survey-bar-fill red" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">标普500年底目标（巴克莱/Stifel）</span>
+              <span class="value" style="color: var(--green)">7,800</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill blue" style="width: 68%"></div>
             </div>
           </div>
 
@@ -1204,118 +1278,129 @@
 
           <ul class="bullet-list">
             <li>
-              路透调查：<strong>金融市场已不预期美联储2026年降息</strong>，12月加息开始被纳入定价；这是房市复苏的最大阻力（30年贷款利率6.6% vs 历史均值4.3%）
+              <strong>美元多头成"拥挤交易"</strong
+              >：加息预期催生，一旦逆转将引发全球套息平仓
             </li>
             <li>
-              <strong>⚠️ 重点观察</strong>：今晚02:00 MYT密歇根1年通胀预期初值 — 若数字走高，"加息"预期将强化，科技成长股面临估值压缩
+              <strong>黄金与标普500异常强正相关</strong
+              >：金价被推入$4,000-4,100关键支撑区，降息预期被挤出
             </li>
             <li>
-              下周<strong>新Fed委员"沃什"首秀</strong> — 其鹰鸽立场将直接影响市场对利率路径的定价
+              <strong>瑞银坚持不退出中国科技股</strong
+              >：虽现"接近周期顶部"迹象，但为时过早
+            </li>
+            <li>
+              <strong>宁泉资产警告：</strong>A股热门股未来极可能跌八成乃至九成，泡沫崩溃时点"不会很远"
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🌍 地缘政治：美伊协议进入最终冲刺
-          </div>
-          <ul class="bullet-list">
-            <li>
-              <strong>美伊核协议基本定稿</strong>，各方批准，特朗普宣布取消军事打击计划 — 协议可能本周末在欧洲正式签署
-            </li>
-            <li>
-              <strong>阿联酋与伊朗</strong>进行战后首次面对面会谈 — 中东局势缓和的重要外交信号
-            </li>
-            <li>
-              <strong>⚠️ 风险提示</strong>：伊朗内部仍存强硬派，协议若临时破裂，原油将大幅反弹，需保留能源对冲头寸
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🇪🇺 欧央行：伊拉克战争以来首次加息
-          </div>
-          <ul class="bullet-list">
-            <li>
-              欧央行完成自伊拉克战争以来<strong>首次加息</strong> → 欧元走强，欧元区资产重新定价
-            </li>
-            <li>
-              <strong>7月连续加息概率</strong>正被市场讨论 — 今日科赫尔、雷恩讲话是关键风向标
-            </li>
-            <li>
-              欧美利差收窄 → 美元指数受压，利好以美元计价大宗商品
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🌏 亚太股市今晨表现
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🌏 亚太股市今日表现
           </div>
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">🇰🇷 韩国综指</span><span class="pct">+7.0%</span>
+              <span class="name">🇰🇷 KOSPI</span><span class="pct up">+1%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">亚太市场</span><span class="pct">全线大涨</span>
+              <span class="name">🇭🇰 恒生科技</span><span class="pct up">+2.5%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🟡 黄金</span><span class="pct">~$4,200 横盘</span>
+              <span class="name">🇭🇰 腾讯</span><span class="pct up">+5%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇭🇰 华虹宏力</span><span class="pct up">+18%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇦🇨 科创50</span><span class="pct up">+4%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇦🇨 创业板</span><span class="pct up">+1%</span>
             </div>
           </div>
-          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px">
-            美伊谈判前景大幅提振亚太风险偏好，韩国综指（半导体权重主导）领涨全球。黄金在$4,200附近横盘——地缘溢价消退与高利率预期相互制衡，短期方向待密歇根通胀数据明朗后才更清晰。
-          </p>
         </div>
       </section>
 
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
+          <div
+            class="section-icon"
+            style="background: rgba(90, 154, 106, 0.14)"
+          >
+            💡
+          </div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会</div>
+          <div class="alert-title">🟢 值得关注 — 机会</div>
           <div class="alert-text">
-            <strong>① SpaceX IPO首日开盘动能</strong> — 今晚21:30 MYT美股开盘，SPCX完成真实价格发现。散户订单$1,000亿+机构"庞大"认购，首日需求强劲；关联受益：Firefly航天ETF、PLTR（太空+AI概念）、韩美半导体（已宣布500亿韩元投资SpaceX）<br /><br />
-            <strong>② 存储芯片周期动能延续</strong> — MU/MRVL/INTC昨日+11%，韩国今日+7%印证存储复苏跨国扩散。SOX今晚能否守住+8%后的高位是半导体仓位的分水岭
+            <strong>① 韩股恐慌退潮迹象</strong> —
+            KOSPI今日反弹+1%，EWY夜盘升逾+3%，南方两倍做多三星电子升+12%。若今晚美光财报证伪"AI需求见顶"，半导体板块存在报复性反弹机会<br />
+            <strong>② 油价下行利好</strong> —
+            美伊和谈后更多油轮公开穿越霍尔木兹海峡，WTI跌至$84.26(-3.93%)，特朗普施压油价。能源成本下降利好消费/运输/航空板块
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 警惕</div>
+          <div class="alert-title">🔴 需要警惕 — 风险</div>
           <div class="alert-text">
-            <strong>① 密歇根通胀预期"地雷"</strong> — 今晚02:00 MYT是本周最后重大风险事件。1年/5年通胀预期若走高，市场将强化"年末加息"定价，科技/成长股面临估值重压；建议数据公布前适当降低高PE仓位<br /><br />
-            <strong>② Adobe效应蔓延SaaS软件板块</strong> — ADBE盘后-5.54%的CFO离职冲击，叠加AI替代焦虑，可能导致整个软件板块(IGV)今日承压。短期内避免在Adobe同类型公司财报前大仓位追高
+            <strong>① 美元"拥挤多头"逆转风险</strong> —
+            美元狂飙至七个月高位，加息预期催生拥挤交易。一旦加息预期松动，美元急跌将引发全球套息交易平仓，新兴市场与科技股首当其冲<br />
+            <strong>② 科技恐慌指数逼近20年极值</strong> —
+            一个比VIX更值得警惕的指标正在拉响警报。隔夜费城半导体-8%、美光-13%已是情绪极端，但若美光财报疲软，恐慌或二次探底<br />
+            <strong>③ 美伊谈判仍有变数</strong> —
+            技术性谈判6月30日才恢复，期间任何冲突升级都可能逆转油价跌势，WTI若反弹回$90+将重燃通胀担忧
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
-          ✅ 三条可执行关注清单（针对今晚美股开盘）
+        <div
+          style="
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          ✅ 三条可执行关注清单
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">21:30 MYT — 观察 SpaceX (SPCX) 首日开盘溢价</div>
+            <div class="action-title">今晚紧盯美光 (MU) 盘后财报</div>
             <div class="action-desc">
-              开盘价相对IPO定价溢价若超过30%，说明情绪过热，建议观察而非追高。真正的确定性买点在：①7月7日纳斯达克100指数被动买入前布局；②Q2财报后48小时解禁前判断供需。今日可先观察SpaceX概念ETF（2x、3x杠杆版本周一上市）的预购溢价作为情绪温度计。
+              这是半导体恐慌后的"定心丸"。若HBM产能/价格指引超预期 →
+              直接证伪"AI需求见顶"，可逢低布局半导体ETF
+              (SOXX/SMH)；若指引疲软 → 减仓存储/芯片股，等待企稳信号
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">02:00 MYT（周六）— 密歇根大学通胀预期数据前减仓高PE成长股</div>
+            <div class="action-title">观察美元指数与日元套息平仓信号</div>
             <div class="action-desc">
-              1年通胀预期若超4.0%、5年预期超3.5%，"年末加息"概率将大幅上升，建议在数据公布前将高估值AI/SaaS仓位降至70%以下。若数据温和（1年低于3.8%），则科技多头过周末信心充足，可在密歇根数据后顺势加仓NVDA/SOX ETF。
+              美元处七个月高位、植田暗示继续加息。若USD/JPY突破160后回落 +
+              日股走弱，预示套息交易平仓启动，需降低新兴市场与高估值成长股敞口
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">周末前确认美伊协议状态，动态调整能源对冲</div>
+            <div class="action-title">跟踪美伊谈判与油价走势对冲</div>
             <div class="action-desc">
-              协议若周末如期在欧洲签署 → 原油进一步下跌，风险资产情绪续涨，半导体/AI多头逻辑更顺，可择机减少能源对冲（USO/XLE）。协议若出现变数或推迟 → 油价反弹可能带动通胀预期上行，建议保留能源头寸作为对冲，同时减持利率敏感的长久期成长股。
+              技术性谈判6月30日恢复。若WTI续跌破$80 →
+              增持消费/运输/航空；若因地缘冲突反弹回$90+ →
+              减仓周期股，增持能源股或黄金对冲通胀风险
             </div>
           </li>
         </ol>
@@ -1326,12 +1411,11 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 老虎资讯</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers</div>
         <div style="margin-top: 4px">
-          由 AI 助手自动生成 · 2026年6月12日 · 晨间版 · MYT 08:56
+          由 AI 助手自动生成 · 2026年6月24日 · 晨间版
         </div>
       </footer>
-
     </div>
   </body>
 </html>
