@@ -3,39 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年7月2日</title>
+    <title>财经简报 | 2026年7月3日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+    <!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  MORNING BRIEFING HTML TEMPLATE — LIGHT / SUNRISE THEME     ║
+  ║                                                             ║
+  ║  Palette: warm ivory background, charcoal text, amber +     ║
+  ║  soft sky-blue accents. Same component API as dark version. ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
-        --bg-primary: #0a0e17;
-        --bg-card: #111827;
-        --bg-card-alt: #1a2235;
-        --bg-highlight: rgba(59, 130, 246, 0.08);
-        --border: #1e293b;
-        --border-accent: #2563eb;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --text-muted: #64748b;
-        --accent-blue: #3b82f6;
-        --accent-cyan: #06b6d4;
-        --green: #10b981;
-        --green-bg: rgba(16, 185, 129, 0.1);
-        --green-border: rgba(16, 185, 129, 0.3);
-        --red: #ef4444;
-        --red-bg: rgba(239, 68, 68, 0.1);
-        --red-border: rgba(239, 68, 68, 0.3);
-        --yellow: #f59e0b;
-        --yellow-bg: rgba(245, 158, 11, 0.08);
-        --yellow-border: rgba(245, 158, 11, 0.3);
-        --orange: #f97316;
-        --purple: #a78bfa;
-        --gold: #fbbf24;
-        --gradient-brand: linear-gradient(135deg, #3b82f6, #06b6d4);
-        --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
-        --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
-        --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.1);
+        /* Warm ivory surfaces */
+        --bg-primary: #faf7f2;
+        --bg-card: #ffffff;
+        --bg-card-alt: #f5efe6;
+        --bg-highlight: rgba(234, 138, 62, 0.06);
+        --border: #ece4d6;
+        --border-soft: #f2ead c;
+        --border-accent: #ea8a3e;
+
+        /* Text */
+        --text-primary: #2a2520;
+        --text-secondary: #6b6257;
+        --text-muted: #9a9187;
+
+        /* Accents — sunrise */
+        --accent-amber: #ea8a3e; /* warm primary */
+        --accent-rose: #d97070; /* soft coral */
+        --accent-sky: #5b95c9; /* morning sky */
+        --accent-sky-deep: #3b7aa8;
+
+        /* Semantic */
+        --green: #5a9a6a;
+        --green-bg: rgba(90, 154, 106, 0.1);
+        --green-border: rgba(90, 154, 106, 0.3);
+        --red: #c8574f;
+        --red-bg: rgba(200, 87, 79, 0.08);
+        --red-border: rgba(200, 87, 79, 0.28);
+        --yellow: #c58a2a;
+        --yellow-bg: rgba(234, 179, 62, 0.12);
+        --yellow-border: rgba(234, 179, 62, 0.35);
+        --orange: #e07a3a;
+        --purple: #8a7fc9;
+        --gold: #d9a23a;
+
+        --gradient-brand: linear-gradient(135deg, #ea8a3e, #f4b961);
+        --gradient-sky: linear-gradient(135deg, #ea8a3e, #5b95c9);
+        --gradient-gold: linear-gradient(135deg, #d9a23a, #f4cc6b);
+        --shadow-card:
+          0 1px 2px rgba(64, 48, 28, 0.04), 0 6px 20px rgba(64, 48, 28, 0.05);
+        --shadow-glow: 0 0 48px rgba(234, 138, 62, 0.12);
       }
 
       * {
@@ -55,6 +76,19 @@
           sans-serif;
         line-height: 1.7;
         min-height: 100vh;
+        /* subtle sunrise wash top */
+        background-image:
+          radial-gradient(
+            ellipse 1200px 500px at 50% -10%,
+            rgba(244, 185, 97, 0.28) 0%,
+            rgba(244, 185, 97, 0) 60%
+          ),
+          radial-gradient(
+            ellipse 900px 400px at 85% 0%,
+            rgba(217, 112, 112, 0.12) 0%,
+            rgba(217, 112, 112, 0) 55%
+          );
+        background-attachment: fixed;
       }
 
       .container {
@@ -74,14 +108,15 @@
       .header::before {
         content: "";
         position: absolute;
-        top: -60%;
+        top: -40%;
         left: 50%;
         transform: translateX(-50%);
-        width: 600px;
-        height: 600px;
+        width: 640px;
+        height: 640px;
         background: radial-gradient(
           circle,
-          rgba(59, 130, 246, 0.12) 0%,
+          rgba(234, 138, 62, 0.18) 0%,
+          rgba(244, 185, 97, 0.06) 45%,
           transparent 70%
         );
         pointer-events: none;
@@ -99,28 +134,33 @@
         color: var(--text-secondary);
         letter-spacing: 0.5px;
         margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(64, 48, 28, 0.04);
+        position: relative;
       }
 
       .header-badge .dot {
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--green);
+        background: var(--accent-amber);
         animation: pulse 2s infinite;
+        box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
       }
 
       @keyframes pulse {
         0%,
         100% {
           opacity: 1;
+          box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
         }
         50% {
-          opacity: 0.4;
+          opacity: 0.55;
+          box-shadow: 0 0 0 6px rgba(234, 138, 62, 0);
         }
       }
 
       .header h1 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 700;
         background: var(--gradient-brand);
         -webkit-background-clip: text;
@@ -128,18 +168,21 @@
         background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -0.5px;
+        position: relative;
       }
 
       .header .date {
         font-size: 15px;
         color: var(--text-secondary);
-        font-weight: 400;
+        font-weight: 500;
+        position: relative;
       }
 
       .header .subtitle {
         font-size: 13px;
         color: var(--text-muted);
         margin-top: 6px;
+        position: relative;
       }
 
       /* ── Section ── */
@@ -182,11 +225,13 @@
         padding: 20px;
         margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        transition: border-color 0.2s;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
       }
 
       .card:hover {
-        border-color: rgba(59, 130, 246, 0.3);
+        border-color: rgba(234, 138, 62, 0.35);
       }
 
       /* ── Index Grid ── */
@@ -222,6 +267,9 @@
       }
       .index-card.down::after {
         background: var(--red);
+      }
+      .index-card.flat::after {
+        background: var(--text-muted);
       }
 
       .index-name {
@@ -271,11 +319,12 @@
         text-transform: uppercase;
         letter-spacing: 0.8px;
         border-bottom: 1px solid var(--border);
+        background: var(--bg-card-alt);
       }
 
       .asset-table tbody td {
         padding: 10px 12px;
-        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        border-bottom: 1px solid rgba(236, 228, 214, 0.8);
         vertical-align: middle;
       }
 
@@ -328,7 +377,7 @@
       /* ── Insight Box ── */
       .insight {
         background: var(--bg-card-alt);
-        border-left: 3px solid var(--accent-blue);
+        border-left: 3px solid var(--accent-amber);
         border-radius: 0 8px 8px 0;
         padding: 14px 16px;
         margin-top: 12px;
@@ -338,7 +387,7 @@
       }
 
       .insight strong {
-        color: var(--accent-cyan);
+        color: var(--accent-sky-deep);
         font-weight: 600;
       }
 
@@ -364,7 +413,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--accent-blue);
+        background: var(--accent-amber);
       }
 
       .bullet-list li strong {
@@ -397,7 +446,7 @@
         width: 1px;
         background: linear-gradient(
           to bottom,
-          var(--accent-blue),
+          var(--accent-amber),
           var(--border)
         );
       }
@@ -417,13 +466,13 @@
         width: 9px;
         height: 9px;
         border-radius: 50%;
-        border: 2px solid var(--accent-blue);
+        border: 2px solid var(--accent-amber);
         background: var(--bg-primary);
       }
 
       .timeline-item.important::before {
-        background: var(--accent-blue);
-        box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+        background: var(--accent-amber);
+        box-shadow: 0 0 0 3px rgba(234, 138, 62, 0.18);
       }
 
       .timeline-label {
@@ -436,20 +485,24 @@
       }
 
       .timeline-label.data {
-        background: rgba(6, 182, 212, 0.15);
-        color: var(--accent-cyan);
+        background: rgba(91, 149, 201, 0.14);
+        color: var(--accent-sky-deep);
       }
       .timeline-label.speech {
-        background: rgba(167, 139, 250, 0.15);
+        background: rgba(138, 127, 201, 0.14);
         color: var(--purple);
       }
       .timeline-label.report {
-        background: rgba(249, 115, 22, 0.15);
+        background: rgba(224, 122, 58, 0.14);
         color: var(--orange);
       }
       .timeline-label.earnings {
-        background: rgba(251, 191, 36, 0.15);
+        background: rgba(217, 162, 58, 0.16);
         color: var(--gold);
+      }
+      .timeline-label.holiday {
+        background: rgba(200, 87, 79, 0.12);
+        color: var(--red);
       }
 
       /* ── Earnings Card ── */
@@ -482,8 +535,8 @@
         padding: 4px 10px;
         border-radius: 6px;
         background: var(--bg-card-alt);
-        color: var(--accent-cyan);
-        border: 1px solid rgba(6, 182, 212, 0.2);
+        color: var(--accent-sky-deep);
+        border: 1px solid rgba(91, 149, 201, 0.25);
       }
 
       .earnings-name {
@@ -505,6 +558,12 @@
         background: var(--green-bg);
         color: var(--green);
         border: 1px solid var(--green-border);
+      }
+
+      .beat-badge.miss {
+        background: var(--red-bg);
+        color: var(--red);
+        border: 1px solid var(--red-border);
       }
 
       .metric-grid {
@@ -576,6 +635,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -660,6 +722,7 @@
         align-items: center;
         justify-content: center;
         font-family: "JetBrains Mono", monospace;
+        box-shadow: 0 2px 6px rgba(234, 138, 62, 0.28);
       }
 
       .action-title {
@@ -745,13 +808,17 @@
       }
 
       .survey-bar-fill.red {
-        background: linear-gradient(90deg, var(--red), #f97316);
+        background: linear-gradient(90deg, var(--red), var(--orange));
       }
       .survey-bar-fill.blue {
-        background: var(--gradient-brand);
+        background: linear-gradient(
+          90deg,
+          var(--accent-sky),
+          var(--accent-sky-deep)
+        );
       }
       .survey-bar-fill.yellow {
-        background: linear-gradient(90deg, var(--yellow), var(--gold));
+        background: linear-gradient(90deg, var(--accent-amber), var(--gold));
       }
 
       /* ── Responsive ── */
@@ -780,64 +847,119 @@
         }
       }
     </style>
-
+    <template id="__bundler_thumbnail" data-bg-color="#faf7f2">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sun" cx="50%" cy="60%" r="50%">
+            <stop offset="0%" stop-color="#f4b961" />
+            <stop offset="100%" stop-color="#ea8a3e" />
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="800" fill="#faf7f2" />
+        <rect x="0" y="520" width="1200" height="2" fill="#ece4d6" />
+        <circle cx="600" cy="520" r="150" fill="url(#sun)" />
+        <rect x="400" y="600" width="400" height="12" rx="6" fill="#ece4d6" />
+        <rect x="460" y="630" width="280" height="8" rx="4" fill="#ece4d6" />
+      </svg>
+    </template>
   </head>
   <body>
     <div class="container">
-
       <!-- ═══ Header ═══ -->
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 美股约40分钟后开盘 · 马来西亚投资者专属
+          LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
-        <h1>🌃 财经简报</h1>
-        <div class="date">2026年7月2日 · 周三 · 数据截至 MYT 20:50（EST 08:50）</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 盘前实时数据</div>
+        <h1>🌅 财经晨报</h1>
+        <div class="date">2026年7月3日 · 周五 · 数据截至 MYT 09:42（独立日假期前）</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 华尔街见闻快讯</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
+          <div
+            class="section-icon"
+            style="background: rgba(234, 138, 62, 0.14)"
+          >
+            📊
+          </div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
-        <div class="card">
-          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
-            ⚠️ 昨日收盘（7月1日）快速回顾 — 当前焦点为今日盘前
+        <!-- 7月2日（周四）收盘数据 -->
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">道琼斯</div>
+            <div class="index-value">52,900</div>
+            <div class="index-change up">+594.83 (+1.14%) 🏆历史新高</div>
           </div>
+          <div class="index-card down">
+            <div class="index-name">纳斯达克</div>
+            <div class="index-value">25,833</div>
+            <div class="index-change down">-207.36 (-0.80%)</div>
+          </div>
+          <div class="index-card flat">
+            <div class="index-name">S&P 500</div>
+            <div class="index-value">7,483</div>
+            <div class="index-change" style="color: var(--text-muted)">+0.01 (0.00%) 几乎持平</div>
+          </div>
+        </div>
+
+        <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>Meta"卖算力"言论引爆AI硬件抛售</strong> →
-              科技板块遭遇集中减持，<strong>存储股重挫</strong>：美光（MU）、闪迪（SNDK）单日跌幅均超
-              <span class="num down">-4%</span>
+              <strong>⚠️ 美国市场今日（7月3日）休市</strong>
+              ——独立日（7月4日）为周六，NYSE 提前一天于7月3日休市，下周一（7月7日）恢复交易
             </li>
             <li>
-              <strong>英伟达与Meta同步入局AI算力赛道</strong>，但路径迥异 →
-              市场将Meta"自建算力租赁"解读为潜在算力过剩信号，打压AI硬件估值
+              <strong>6月非农仅新增5.7万人</strong>（远低于预期）→ 鹰派叙事瞬间瓦解 → 美元单日跌
+              <span class="num down">-0.87%</span>（两个月最大单日跌幅），2年期美债收益率降
+              <span class="num down">-4bp</span>至<span class="num">4.14%</span>
             </li>
             <li>
-              <strong>美元兑日元</strong> 一度跌破161关口，报160.98，
-              <span class="num down">-1%</span>，日元延续走强趋势
+              <strong>指数大分化</strong>：道指创历史新高（+1.14%），资金轮动至金融与消费传统板块；纳斯达克/标普承压，科技与芯片股全面溃败
             </li>
             <li>
-              韩国综合指数（KOSPI）重挫约
-              <span class="num down">-8%</span>，韩概念股盘前同步下挫
+              <strong>芯片股两连跌</strong>：费城半导体指数两日累跌
+              <span class="num down">-11.38%</span>，高盛数据显示存储股两日跌幅创12年来最大；
+              动能因子两日跌幅超<span class="num down">-18%</span>，为2020年11月以来最差
+            </li>
+            <li>
+              主要芯片个股（7月2日收盘）：SanDisk <span class="num down">-14%</span>、
+              Marvell <span class="num down">-9.84%</span>、ARM <span class="num down">-6.58%</span>、
+              美光 <span class="num down">-5.49%</span>、AMD <span class="num down">-4.26%</span>、
+              英伟达 <span class="num down">-1.39%</span>
+            </li>
+            <li>
+              <strong>特斯拉Q2交付480万辆（+25% YoY，创历史纪录）</strong>，但股价反跌
+              <span class="num down">-7%+</span>——典型"买预期卖事实"
+            </li>
+            <li>
+              欧洲股市全线创收盘历史新高：STOXX 600
+              <span class="num">+1.41%</span>（648.35点），DAX
+              <span class="num">+2.16%</span>（25,581点），FTSE 100
+              <span class="num">+1.67%</span>（10,653点）
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 背景：</strong>算力过剩担忧与AI需求叙事的裂痕在昨日集中爆发。
-          但今晨非农数据大幅不及预期，宏观叙事骤然转向，科技股情绪面临重新定价。
+          <strong>💡 解读：</strong>
+          非农超预期疲弱（57K vs 预期~190K）彻底改变了市场对"美联储夏季加息"的押注，推动美元和短端利率下行。<strong>但这并未拯救科技板块</strong>——AI基础设施支出合理性的质疑叠加对冲基金强制去杠杆，令芯片/AI概念股遭遇历史级别抛售。道指创新高背后是传统板块的结构性轮动，而非市场整体乐观。<strong>关键一周</strong>：下周美国CPI是重置叙事的窗口。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(6, 182, 212, 0.12)">🌍</div>
+          <div
+            class="section-icon"
+            style="background: rgba(91, 149, 201, 0.14)"
+          >
+            🌍
+          </div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -847,157 +969,192 @@
               <tr>
                 <th>资产</th>
                 <th>价格</th>
-                <th>变动</th>
+                <th>变动（7月2日收盘）</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,219.32/oz</span></td>
+                <td><span class="asset-price">$4,120/oz（收）→ $4,190（亚盘）</span></td>
                 <td>
-                  <span class="tag up">▲ +0.20%</span>
-                  <span class="asset-note">非农数据引避险买盘</span>
+                  <span class="tag up">▲ +2.2%</span
+                  ><span class="asset-note">亚盘续涨 +1.56%</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$84.26</span></td>
+                <td><span class="asset-price">$68.48/桶</span></td>
                 <td>
-                  <span class="tag down">▼ -3.93%</span>
-                  <span class="asset-note">经济放缓忧虑打压需求预期</span>
+                  <span class="tag down">▼ -0.1%</span
+                  ><span class="asset-note">霍尔木兹重开后供给持续压价</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">99.81</span></td>
+                <td><span class="asset-price">~99.83（收）→ 99.81（亚盘）</span></td>
                 <td>
-                  <span class="tag down">▼ 跌至两周低点</span>
-                  <span class="asset-note">非农后加速下行</span>
+                  <span class="tag down">▼ -0.87%</span
+                  ><span class="asset-note">两月最大单日跌幅</span>
                 </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🔷 2Y 美债收益率</span></td>
+                <td><span class="asset-price">4.14%</span></td>
+                <td><span class="tag down">▼ -4bp</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">₿ 比特币</span></td>
+                <td><span class="asset-price">$61,392</span></td>
+                <td><span class="tag up">▲ +2.2%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">⟠ 以太坊</span></td>
+                <td><span class="asset-price">—</span></td>
+                <td><span class="tag up">▲ +5.5%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
                 <td><span class="asset-price">1.1568</span></td>
-                <td><span class="tag up">▲ 欧元走强</span></td>
+                <td><span class="tag up">▲ 美元走弱</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">160.21</span></td>
+                <td><span class="asset-price">161.10（收）→ 161.00（亚盘）</span></td>
                 <td>
-                  <span class="tag down">▼ 跌破161关口</span>
-                  <span class="asset-note">日元持续升值</span>
+                  <span class="tag down">▼ 日元走强</span
+                  ><span class="asset-note">日财相发声警告</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7633</span></td>
-                <td><span class="tag up">▲ 美元走软，人民币获支撑</span></td>
+                <td><span class="asset-price">USD/CNH 6.7633</span></td>
+                <td>
+                  <span class="tag up">人民币走强</span
+                  ><span class="asset-note">中间价6.8047</span>
+                </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🔷 10Y 美债</span></td>
-                <td><span class="asset-price">收益率急降</span></td>
+                <td><span class="asset-name">🇭🇰 恒生指数</span></td>
+                <td><span class="asset-price">23,241（亚盘开盘）</span></td>
+                <td><span class="tag up">▲ +0.81%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇰🇷 韩国综指</span></td>
+                <td><span class="asset-price">—</span></td>
                 <td>
-                  <span class="tag down">▼ 非农数据引爆买盘</span>
-                  <span class="asset-note">加息预期大幅退潮</span>
+                  <span class="tag up">▲ +1.0%</span
+                  ><span class="asset-note">此前一度跌3%，V形反弹</span>
                 </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇦🇺 ASX 200</span></td>
+                <td><span class="asset-price">8,812</span></td>
+                <td><span class="tag up">▲ +1.0%</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>非农数据深度不及预期 → 美债收益率急跌、美元走软、黄金上涨，
-          形成"避险+宽松预期"组合拳。WTI原油大跌<strong>-3.93%</strong>，
-          反映市场对经济增长放缓的忧虑超越供给端逻辑。大宗商品结构性分化明显：
-          <strong>黄金上涨 ↔ 原油下跌</strong>，说明市场选择"价值储藏"而非"经济复苏"逻辑。
+          <strong>💡 解读：</strong>非农疲弱 → 美元走软 → 黄金/加密货币同步走强（黄金+2.2%收于$4,120，亚盘续涨至$4,190）。原油方向独立：霍尔木兹海峡重开后7月1日单日流量达1400万桶/日，JPMorgan大宗商品主管称"一波原油即将涌入，而市场并不需要它"，WTI承压在$68-69区间。欧洲股市罕见全线创历史新高，成为全球资金轮动的受益者之一。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
+          <div
+            class="section-icon"
+            style="background: rgba(224, 122, 58, 0.14)"
+          >
+            🎯
+          </div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
-            🚨 非农超预期缺口已发布 — 现在等待市场开盘定价
-          </div>
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label data">重磅数据</span>
-              <strong>美国6月非农新增就业 +5.7万人</strong>（已发布）→ 仅为市场预期~12万的一半；
-              失业率却<strong>意外降至一年最低</strong>，形成"就业双面数据"
+              <span class="timeline-label holiday">休市</span>
+              <strong>美国股市今日全天休市</strong>（独立日前置假期）— 下周一（7月7日）恢复正常交易，期货盘前缩量运行
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">实时反应</span>
-              <strong>S&amp;P 500期货 +0.4%</strong>，触及盘中高点 →
-              美债收益率直线走低 → 美元跌至两周低点 → 黄金涨幅扩大
+              <span class="timeline-label data">数据</span>
+              <strong>中国6月综合PMI 53.6</strong>（前值54）· 服务业PMI 54.1（前值54.4）— 略降但仍处扩张区间，亚太情绪支撑
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">加息预期</span>
-              <strong>10月加息预期从26bp → 21bp</strong> → 远期联邦基金期货大幅调整，
-              市场押注10月加息确定性显著下降
+              <span class="timeline-label data">亚盘</span>
+              <strong>纳斯达克100期货 +0.4%</strong>（截至09:25 MYT）— 美国休市前最后期货信号；恒指 +0.81%，快手 +6%，比亚迪 +3%
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">警示</span>
-              Bianco Research创始人Jim Bianco警告：<strong>若美联储拒绝加息，
-              债券市场将"自发"推高利率</strong> → 倒逼利率反弹风险仍存
+              <span class="timeline-label speech">汇率</span>
+              日本财务大臣<strong>片山皋月</strong>发声：随时可采取外汇行动 → 日元盘中升破161
             </div>
             <div class="timeline-item">
-              <span class="timeline-label report">制度风险</span>
-              <strong>参议员叫停Fed理事沃勒改革方案</strong> →
-              美联储内部权力博弈浮现，政策路径不确定性上升
+              <span class="timeline-label data">下周重磅</span>
+              <strong>美国6月CPI数据</strong>（具体日期待定，预计7月中旬）— 文章明确指出这是"下一个关键时间窗口"：若CPI继续降温 → 巩固夏季按兵不动预期；若超预期 → NFP叙事遭挑战
             </div>
             <div class="timeline-item">
-              <span class="timeline-label report">盘前板块</span>
-              存储股（<strong>MU、SNDK</strong>）盘前拉升，收复昨日超
-              <span class="num">-4%</span> 跌幅；算力租赁股（
-              <strong>Nebius +2%、CoreWeave +1%</strong>）小幅反弹
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label earnings">苹果消息</span>
-              折叠屏iPhone备货目标上调至<strong>1,000万部</strong>（+30%），
-              AAPL盘前涨 <span class="num">+0.9%</span>
+              <span class="timeline-label report">策略</span>
+              高盛AI配对交易两日累跌<strong>-16%</strong>（历史最差），对冲基金VIP多头组合年内回报跌至 <strong>-21%</strong>；强制去杠杆压力是否持续进入下周是关键
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══ 4. AI与科技产业动态 ═══ -->
+      <!-- ═══ 4. AI与科技 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(167, 139, 250, 0.12)">🤖</div>
+          <div
+            class="section-icon"
+            style="background: rgba(138, 127, 201, 0.14)"
+          >
+            🤖
+          </div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
-            <strong style="color: var(--purple)">盘前科技概念</strong>
-            存储股、算力股双线反弹 ·
-            <strong style="color: var(--purple)">Apple</strong>
-            <span class="tag up" style="font-size: 13px">+0.9%</span>
+          <div
+            style="
+              margin-bottom: 10px;
+              font-size: 14px;
+              color: var(--text-secondary);
+            "
+          >
+            <strong style="color: var(--red)">芯片板块两连跌</strong>
+            <span class="tag down" style="font-size: 13px">SOX 两日 -11.38%</span>
+            ·
+            <strong style="color: var(--purple)">反向ETF大涨</strong>
+            <span class="tag up" style="font-size: 13px">2x做空SanDisk ETF +28%</span>
+            ·
+            <span class="tag up" style="font-size: 13px">3x做空半导体ETF +17%</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">MU（美光）</span><span class="pct">盘前收复 -4%</span>
+              <span class="name">SNDK</span><span class="pct down">-14%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">SNDK（闪迪）</span><span class="pct">盘前收复 -4%</span>
+              <span class="name">MRVL</span><span class="pct down">-9.84%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">Nebius</span><span class="pct">+2%</span>
+              <span class="name">ARM</span><span class="pct down">-6.58%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">CoreWeave</span><span class="pct">+1%</span>
+              <span class="name">MU</span><span class="pct down">-5.49%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AAPL</span><span class="pct">+0.9%</span>
+              <span class="name">AMD</span><span class="pct down">-4.26%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">康宁 CORNING</span><span class="pct">+3%</span>
+              <span class="name">NVDA</span><span class="pct down">-1.39%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">TSLA</span><span class="pct down">-7%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">铠侠🇯🇵</span><span class="pct down">-12%→±0</span>
             </div>
           </div>
 
@@ -1005,129 +1162,159 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>英伟达推出"AI工厂"收益分成新模式</strong> →
-              不再只卖芯片，转型为算力基础设施运营商，
-              与Meta"自建算力出租"形成商业模式对冲
+              <strong>微软宣布斥资25亿美元成立 Microsoft Frontier 部门</strong>
+              —— 全球部署6000名AI专家协助企业客户设计和部署大规模AI系统；逆势表态AI企业需求强劲
             </li>
             <li>
-              <strong>Meta"卖算力"言论解读：</strong>华尔街多家机构快速澄清 —
-              这<u>不等于</u>算力过剩，也不是行业拐点；
-              Meta实质是从买家转为卖家，英伟达受益于双边需求
+              <strong>Meta CEO扎克伯格：AI智能体发展未达预期</strong>
+              —— 此前对"过剩算力"的表态已加剧AI基础设施支出疑虑，成为本轮芯片抛售导火索之一
             </li>
             <li>
-              <strong>苹果折叠屏iPhone备货目标提升至1,000万部</strong>，
-              较原计划增加约30%，供应链受益，光通信股同步走高
+              <strong>黑石（Blackstone）意外退出"全球最大数据中心园区"</strong>
+              —— 老牌PE头部机构收缩AI基础设施押注，市场解读为AI"鬼故事"续集
             </li>
             <li>
-              <strong>软银计划在美国推出AI云服务</strong>，
-              下一财年开始出租算力 → 算力租赁赛道竞争进一步升温
+              <strong>Palantir CEO狂喷大模型巨头：</strong>商业模式存在巨大问题，不顾企业风险向企业"收税"，AI商业化落地路径仍存争议
             </li>
             <li>
-              <strong>SpaceX两万亿估值大考将至：</strong>
-              下周22家投行静默期解除、集体"开麦"，
-              分析师覆盖报告或引发$2T估值重新定价
+              <strong>"大空头" Michael Burry 周三在 $1,051.87 做空美光（MU）</strong>
+              —— 并加仓房利美、房地美；次日MU跌5.49%，做空信号引发跟风
             </li>
             <li>
-              <strong>谷歌败诉：</strong>欧盟最高法院驳回上诉，
-              41亿欧元Android反垄断罚款终审确认 → 监管风险估值折价持续
+              <strong>韩国考虑购买约1万个英伟达 Vera Rubin GPU 模块</strong>，动用5万亿韩元增量税收推进自主AI模型开发
             </li>
             <li>
-              <strong>AI自主进化新阶段：</strong>AI实验室Prime Intellect研究认为，
-              下一步AI将从"被编排"转向"自我指挥"，
-              类似2022年思维链带来的范式突破
+              <strong>可灵AI（Kling，快手旗下）：投资者同意注资20亿美元</strong>
+              —— 亚洲视频生成AI赛道吸引大资金，快手港股今日开盘涨超6%
+            </li>
+            <li>
+              <strong>亚马逊 Kuiper 在轨卫星突破390颗</strong>，四年追赶后成为 Starlink 的真正竞争者
+            </li>
+            <li>
+              <strong>马斯克：特斯拉 Optimus 量产初期"极其缓慢"</strong>
+              —— 晒量产团队合照但坦承速度低于造车，机器人量产时间表存疑
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>昨日Meta引发的算力过剩叙事经一夜消化后，
-          机构已快速澄清为"误读"。存储股盘前全面收复失地，
-          印证机构对AI基础设施需求长期判断未变。
-          <strong>非农数据走弱→降息预期升温→高估值科技股受益</strong>，
-          今日开盘科技板块有望领涨。关键变量：英伟达AI工厂新模式能否重燃市场叙事。
+          <strong>💡 解读：</strong>
+          AI板块正经历叙事分裂。一端：微软/韩国政府仍在加码AI投资，显示企业和主权级需求真实存在。另一端：Meta"过剩算力"言论 + 黑石撤出数据中心 + Burry做空存储股，令高度拥挤的动能交易遭遇历史级清仓。<strong>重点观察</strong>：Q2半导体指数累涨88%（有史以来最佳季度），连Q2 EPS超预期也难以抵御动能去化浪潮——下周CPI和银行业财报才是能否止血的关键。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(251, 191, 36, 0.12)">💼</div>
+          <div
+            class="section-icon"
+            style="background: rgba(217, 162, 58, 0.16)"
+          >
+            💼
+          </div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">
-            📅 本周财报较为清淡 · 下周大型机构扎堆发布
+        <!-- Tesla Q2 Deliveries -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">TSLA</span>
+              <span class="earnings-name">特斯拉 Q2 交付数据</span>
+            </div>
+            <span class="beat-badge beat">✓ 交付量历史最强</span>
           </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">Q2 交付量</div>
+              <div class="metric-value">48万辆</div>
+              <div class="metric-delta up">+25% YoY 创历史纪录</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">当日股价反应</div>
+              <div class="metric-value">-7%~-8%</div>
+              <div class="metric-delta down">一年最大单日跌幅</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">市场逻辑</div>
+              <div class="metric-value">买预期</div>
+              <div class="metric-delta down">卖事实</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">二季度半导体</div>
+              <div class="metric-value">+88%</div>
+              <div class="metric-delta down">季度历史纪录后遭抛售</div>
+            </div>
+          </div>
+
           <ul class="bullet-list">
             <li>
-              <strong>今日（7月2日）无主要S&amp;P 500成份股财报</strong> →
-              市场定价将由宏观数据主导（非农余震效应）
+              交付量大超预期（480K vs Q1季度性走弱），但<strong>"完美数据"无法抵御整体科技股抛售浪潮</strong>
             </li>
             <li>
-              <strong>下周静默期解除：22家投行集体"开麦"</strong> →
-              分析师覆盖报告密集发布，SpaceX等新上市公司将迎来首批目标价设定，
-              有望带动板块轮动
+              Optimus量产初期"极其缓慢"—— 硬件执行难度比造车更高，AI/机器人叙事短期贡献有限
             </li>
             <li>
-              <strong>SpaceX两万亿美元估值压力测试：</strong>
-              机构覆盖启动后，市场将首次获得系统性的买卖评级参考，
-              估值分歧将浮出水面
-            </li>
-            <li>
-              <strong>Q2财报季预热：</strong>盈利预测修订压力已经存在 —
-              非农就业持续不及预期，企业营收增速预测面临下调风险，
-              尤其是消费端周期性行业
+              Q2正式财报预计7月下旬发布，盈利率（Margin）是否被促销/降价侵蚀是关注焦点
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>今日财报真空期，市场注意力100%集中在非农数据解读和盘前动能上。
-          下周机构开麦+SpaceX首次分析师覆盖将成为催化剂集中窗口，
-          <strong>本周末持仓须预判下周流动性冲击风险</strong>。
+          <strong>💡 解读：</strong>
+          Q2美股财报季正式开始前，目前唯一可量化的是交付数据。特斯拉Q2交付480K创历史，但在整体科技情绪崩溃的背景下，好消息也被当成出货窗口。<strong>下周银行季报开幕</strong>（高盛、摩根大通等预计7月中旬），将是财报季的真实信号弹——交易收入/投行收入能否如上季度大幅超预期，是判断美股盈利周期是否健康的关键。
         </div>
       </section>
 
-      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
+      <!-- ═══ 6. 宏观指标 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(239, 68, 68, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">
+            📉
+          </div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
-            🔴 美国6月非农就业报告 — 重磅冲击
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 14px;
+            "
+          >
+            🇺🇸 6月非农就业：爆冷 —— 鹰派叙事终结
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">新增非农就业（市场预期 ~12万）</span>
-              <span class="value" style="color: var(--red)">5.7万</span>
+              <span class="label">实际新增就业 (6月)</span>
+              <span class="value" style="color: var(--red)">5.7万人</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 48%"></div>
+              <div class="survey-bar-fill red" style="width: 30%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">10月加息预期（前值 26bp）</span>
-              <span class="value" style="color: var(--accent-blue)">21bp</span>
+              <span class="label">市场预期（约）</span>
+              <span class="value" style="color: var(--accent-sky-deep)">~190万人</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 21%"></div>
+              <div class="survey-bar-fill blue" style="width: 100%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">WTI原油跌幅（经济增长忧虑驱动）</span>
-              <span class="value" style="color: var(--red)">-3.93%</span>
+              <span class="label">失业率（劳动力减少驱动）</span>
+              <span class="value" style="color: var(--yellow)">4.2%</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 39%"></div>
+              <div class="survey-bar-fill yellow" style="width: 42%"></div>
             </div>
           </div>
 
@@ -1135,130 +1322,174 @@
 
           <ul class="bullet-list">
             <li>
-              <strong>非农就业+57K，仅为预期的一半</strong> →
-              就业市场骤然降温，世界杯效应、基数失真等均遭质疑
+              前两个月数据合计下修，非农连续走弱；<strong>25至34岁劳动参与率单月骤降70万</strong>，反映真实就业市场降温，而非统计噪音
             </li>
             <li>
-              <strong>失业率意外降至一年最低</strong> → 就业报告内部矛盾信号，
-              市场需等待更多数据交叉验证
+              互换市场迅速下调加息押注，美联储主席沃什虽称通胀风险下降，但重申将通胀推回2%目标的承诺 —— 市场解读为"整个夏天按兵不动"
             </li>
             <li>
-              <strong>美债收益率直线走低</strong> →
-              债市已在抢跑美联储暂停加息甚至转向降息的预期
-            </li>
-            <li>
-              <strong>Bianco Research警告：</strong>若Fed坚持不收紧，
-              债市自发抛售将倒逼利率走高 → 降息交易存在双向风险
-            </li>
-            <li>
-              <strong>美联储内部政治博弈：</strong>参议员叫停沃勒改革方案，
-              联储内部权力架构面临重新洗牌，政策预期稳定性下降
+              <strong>下一关键节点</strong>：下周美国6月CPI。若CPI降温 → 巩固宽松预期；若超预期 → NFP"利好"逻辑瓦解
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            🌏 亚太及全球市场参考
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            ⚠️ 动能交易历史性清仓 —— 高盛数据
+          </div>
+          <ul class="bullet-list">
+            <li>
+              存储股两日跌幅超<strong>-18%</strong>，为<strong>至少12年来最大</strong>
+            </li>
+            <li>
+              高盛"AI受益股 vs AI冲击股"配对组合两日累跌<strong>-16%</strong>，<strong>创有记录以来最差</strong>
+            </li>
+            <li>
+              对冲基金VIP多头对冲组合年内回报跌至<strong>-21%</strong>，同期标普500年内仍涨约9%，对冲基金跑输大盘情况严峻
+            </li>
+            <li>
+              动能因子两日表现为<strong>2020年11月辉瑞疫苗日</strong>以来最差，当时同样是高成长崩溃+传统板块大反弹
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🌏 7月3日亚太股市开盘表现（今晨）
           </div>
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">🇰🇷 韩国KOSPI</span>
-              <span class="pct" style="color: var(--red)">-8%</span>
+              <span class="name">🇭🇰 恒指</span><span class="pct">+0.81%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇯🇵 USD/JPY</span>
-              <span class="pct" style="color: var(--red)">160.21 ↓</span>
+              <span class="name">🇭🇰 恒科指数</span><span class="pct">+0.76%→+2%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🟡 黄金</span>
-              <span class="pct">$4,219</span>
+              <span class="name">🇨🇳 上证</span><span class="pct">+0.06%·4031</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🛢️ WTI</span>
-              <span class="pct" style="color: var(--red)">$84.26</span>
+              <span class="name">🇰🇷 综指</span><span class="pct">V反 +1%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">💵 DXY</span>
-              <span class="pct" style="color: var(--red)">99.81 ↓</span>
+              <span class="name">🇦🇺 ASX 200</span><span class="pct">+1.0%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇺🇸 NQ期货</span><span class="pct">+0.4%</span>
             </div>
           </div>
-          <div style="margin-top: 10px; font-size: 13px; color: var(--text-secondary);">
-            ⚠️ 韩国KOSPI单日大跌约8%，韩概念股（三星、SK海力士等ADR）昨日已承压，需关注今日美股是否跟随调整
+          <ul class="bullet-list" style="margin-top: 8px">
+            <li>中国6月综合PMI 53.6（前值54），服务业PMI 54.1（前值54.4）—— 略有降温但仍强劲扩张</li>
+            <li>韩国综指此前一度跌3%（随SanDisk/存储股拖累），后V形反弹至+1%</li>
+            <li>日本铠侠（Kioxia）早盘一度跌12%后回平，存储链条全球承压但开始企稳信号</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🛢️ 能源市场结构性转变：霍尔木兹重开 → 供给洪峰
           </div>
+          <ul class="bullet-list">
+            <li>
+              霍尔木兹海峡重开后，7月1日单日流量已达<strong>1400万桶</strong>，沙特、阿联酋同时绕行出口恢复
+            </li>
+            <li>
+              原油期货曲线升水结构（Contango）扩至<strong>2022年12月以来最大</strong>，市场对近期供过于求定价清晰
+            </li>
+            <li>
+              WTI从4月中旬$97+ 回落至$68，接近50%的波动幅度在5月至7月发生，能源成本大幅降低对经济通胀有降温效果
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(16, 185, 129, 0.12)">💡</div>
+          <div
+            class="section-icon"
+            style="background: rgba(90, 154, 106, 0.14)"
+          >
+            💡
+          </div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点关注 — 机会窗口</div>
+          <div class="alert-title">🟢 重点观察 — 机会窗口</div>
           <div class="alert-text">
-            <strong>① 非农弱势→降息预期升温→高倍率成长股受益</strong> —
-            加息预期骤降，债券收益率下行，科技/成长板块历史上在此环境下表现强劲。
-            盘前S&amp;P 500期货+0.4%已在定价这一逻辑。关注QQQ、NVDA、AAPL开盘走势。<br /><br />
-            <strong>② 存储股情绪反转</strong> —
-            MU、SNDK在昨日AI算力过剩误读引发的-4%+超跌后，盘前已全面收复，
-            反转动能强劲。DRAM涨价周期仍在持续，基本面支撑存在。
+            <strong>① 下周CPI决定芯片股命运</strong> ——
+            若6月CPI降温确认NFP"弱就业"叙事，市场将定价美联储整个夏天暂停，科技/半导体超卖后有反弹窗口。Q2半导体+88%背后的AI资本开支未消失，Microsoft Frontier $25亿+韩国万张GPU采购等企业端需求仍实在。<br /><br />
+            <strong>② 欧洲股市创历史新高 + 美元走弱</strong> ——
+            STOXX600、DAX双创历史新高，资金从美国科技"暂时出走"欧洲。若美元继续因美联储"夏季暂停"预期走软，欧元区及新兴市场资产受益明显。
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 需要警惕 — 风险提示</div>
+          <div class="alert-title">🔴 风险提示 — 警惕信号</div>
           <div class="alert-text">
-            <strong>① 非农数据"内部矛盾"隐患</strong> —
-            就业新增远低预期 vs 失业率降至一年低点，方向相反。
-            市场可能在消化后逆转反应，若投资者重新解读为"就业市场韧性"，
-            债券/科技涨势可能回吐。<br /><br />
-            <strong>② 韩国KOSPI暴跌-8%溢出风险</strong> —
-            KOSPI连接亚太科技产业链（三星、SK海力士），
-            韩概念ADR/相关ETF今日可能出现开盘大幅波动，
-            需警惕情绪传导至美国半导体板块。<br /><br />
-            <strong>③ Fed政策不确定性升级</strong> —
-            参议员叫停沃勒改革、Bianco"市场自发加息"警告双重叠加，
-            降息预期一旦被颠覆，今日的债券/科技上涨将面临快速回撤风险。
+            <strong>① 动能去杠杆尚未结束</strong> ——
+            高盛数据显示对冲基金强制平仓规模历史罕见。VIP多头组合年内-21%，基金赎回压力可能在下周一开盘延续抛压，芯片股短期无法排除二次探底。<br /><br />
+            <strong>② 下周一开盘流动性真空</strong> ——
+            今日美国休市，期权到期/周末持仓清理后，周一（7/7）开盘跳空风险提升。非农后的"情绪交易"需等到周一实际价格才能确认方向。<br /><br />
+            <strong>③ CPI超预期则全部逻辑逆转</strong> ——
+            若下周CPI超预期，NFP利好荡然无存，市场将重新定价加息风险，美元反弹、科技股/黄金双杀。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
-          ✅ 三条今晚开盘可执行关注清单
+        <div
+          style="
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          ✅ 三条可执行关注清单（针对下周一7月7日美股开盘）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">开盘前10分钟：布局MU / SNDK 盘前反转延续</div>
+            <div class="action-title">观察周一开盘NVDA/MRVL/MU走势，判断动能去化是否收尾</div>
             <div class="action-desc">
-              美光（MU）与闪迪（SNDK）昨日因AI算力过剩"误读"超跌超4%，
-              盘前已全面收复。若9:30正式开盘后价格站稳昨收盘价上方，
-              可考虑顺势做多短线动能；若开盘即跳水回落至昨收盘价下方，
-              则信号失效，等待二次确认再行入场。
+              SOX指数两日累跌-11.38%，Q2曾历史性大涨+88%。若周一开盘30分钟内NVDA从-1.39%收盘位稳住并反弹，代表强制去杠杆结束；若MRVL、MU继续破位下跌，则空头仍占主导。<strong>入场信号：上述芯片股周一跌不破周四低点且量能收缩。</strong>
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">开盘后30分钟：观察QQQ / NVDA 是否有效突破</div>
+            <div class="action-title">黄金当前$4,190亚盘续涨，关注$4,200阻力及下周CPI</div>
             <div class="action-desc">
-              非农数据弱势叠加降息预期升温，利好高成长科技板块（纳指）。
-              英伟达AI工厂新模式提供额外正向催化。
-              若QQQ开盘高于昨日收盘2%+、NVDA放量上涨，
-              可加仓科技ETF（如TQQQ）；若纳指开高后走弱（涨不住），
-              则警惕"利好出尽"或内部矛盾重新解读引发的快速反转。
+              黄金7月2日收+2.2%（$4,120），亚盘已涨至$4,190。非农弱势+美元跌+美联储暂停预期构成结构性利好。<strong>策略：持有/轻仓追多黄金，但若下周CPI超预期美元反弹，则止损$4,050以下。</strong>下周CPI发布前，黄金可作为"弱美元/避险"对冲持仓。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">全天：盯紧10Y美债收益率方向，作为科技仓位风险阀</div>
+            <div class="action-title">密切追踪下周美国6月CPI数据——这是整个夏季最重要的宏观信号</div>
             <div class="action-desc">
-              10Y美债收益率是今日定价的核心锚。若收益率在开盘后继续下行，
-              维持降息预期叙事，科技/成长头寸可持有；
-              若收益率在早盘出现V形反弹（降息交易被逆转），
-              需快速削减高倍率成长股暴露，转移至防御型资产（GLD黄金、公用事业ETF）。
-              参考触发线：10Y收益率单日反弹超+10bp为警戒信号。
+              WSJ/华尔街见闻均指出CPI是"下一个关键时间窗口"。若CPI同比继续降温（低于3.3%）→ 美联储夏季暂停坐实 → 科技股止血反弹、美元继续走软、债市走强。若CPI反弹超预期 → 逻辑全面逆转，应提前减仓科技成长股，做多美元、减持黄金。<strong>不要在CPI公布前大举单边押注。</strong>
             </div>
           </li>
         </ol>
@@ -1269,8 +1500,10 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 实时盘前数据</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年7月2日 20:50 MYT</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers · 华尔街见闻快讯</div>
+        <div style="margin-top: 4px">
+          由 AI 助手自动生成 · 2026年7月3日 · 晨间版 · 美国独立日假期前特辑
+        </div>
       </footer>
     </div>
   </body>
