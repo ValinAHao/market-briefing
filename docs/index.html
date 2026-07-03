@@ -553,12 +553,6 @@
         border: 1px solid var(--green-border);
       }
 
-      .beat-badge.miss {
-        background: var(--red-bg);
-        color: var(--red);
-        border: 1px solid var(--red-border);
-      }
-
       .metric-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -628,9 +622,6 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
-      }
-      .tech-chip .pct.down {
-        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -865,8 +856,8 @@
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年7月3日 · 周五 · 数据截至 MYT 10:50 ⚠️ 美股今日全日休市</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 老虎证券</div>
+        <div class="date">2026年7月3日 · 周四 · 美股独立纪念日休市 · 数据截至 MYT 16:47</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 亚太市场实时行情</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
@@ -881,57 +872,58 @@
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
-        <div class="alert-box yellow">
-          <div class="alert-title">🇺🇸 重要提醒：美国独立纪念日假期</div>
-          <div class="alert-text">
-            因7月4日（周六）为美国独立纪念日，<strong>美股7月3日（今日）全日休市</strong>。贵金属、能源期货合约提前于北京时间7月4日01:00收盘，布伦特原油提前于01:30收盘。<br />
-            本节回顾最后交易日：<strong>7月2日（周四）美股收盘数据</strong>。
+        <!-- 美股休市提示 + 期货状态 -->
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">S&P 500 期货</div>
+            <div class="index-value">+1.0%</div>
+            <div class="index-change up">假日盘 AI情绪反转</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">纳斯达克 期货</div>
+            <div class="index-value">+1.2%</div>
+            <div class="index-change up">算力过剩论遭驳斥</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">道琼斯 期货</div>
+            <div class="index-value">+0.8%</div>
+            <div class="index-change up">非农弱势 降息预期升温</div>
           </div>
         </div>
 
-        <div class="index-grid">
-          <div class="index-card down">
-            <div class="index-name">费城半导体 SOX</div>
-            <div class="index-value">—</div>
-            <div class="index-change down">连跌两日 -5%+</div>
-          </div>
-          <div class="index-card down">
-            <div class="index-name">科技/成长股</div>
-            <div class="index-value">—</div>
-            <div class="index-change down">整体承压</div>
-          </div>
-          <div class="index-card up">
-            <div class="index-name">贵金属</div>
-            <div class="index-value">$4,182</div>
-            <div class="index-change up">黄金 +1.42%</div>
+        <!-- 休市说明 -->
+        <div class="alert-box yellow" style="margin-bottom: 12px;">
+          <div class="alert-title">🏖️ 休市提示</div>
+          <div class="alert-text">
+            因美国独立纪念日（7月4日），美股<strong>7月3日（周四）及7月4日（周五）全日休市</strong>。
+            上一个完整交易日为<strong>7月2日（周三）</strong>。下一个交易日为<strong>7月7日（周一）</strong>。
+            上方指数为假日期货盘数据，反映市场对7月7日开盘的预期。
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>费城半导体指数（SOX）连跌逾5%</strong> — 芯片股已连续两个交易日下跌，AI题材遭重新评估
+              <strong>AI算力过剩叙事</strong> → 7月2日半导体板块承压 → "大空头"Burry 周三在
+              <span class="num">$1,051.87</span> 狙空美光（MU），预言30%回调至~$736
             </li>
             <li>
-              <strong>存储/数据中心供应链重挫</strong>：WD/闪迪盘后 <span class="num down">-3%+</span>，希捷科技 <span class="num down">-3%</span>，迈威尔科技 <span class="num down">-3%+</span>，康宁 <span class="num down">-4%+</span>
+              花旗策略师同步<strong>下调半导体评级</strong>，削减韩国Kospi多头仓位，将亚洲新兴市场超配降至中性
             </li>
             <li>
-              <strong>3倍做空半导体ETF涨近17%</strong>，2倍做空闪迪ETF涨逾28%，反映沽空获利盘明显
+              <strong>苹果（AAPL）</strong>强势大涨，远期<span class="num">$330</span> 看涨期权被大量买入，期权多头情绪占绝对主动
             </li>
             <li>
-              <strong>6月非农就业仅新增5.7万人</strong>（大幅低于预期） → 劳动市场显著降温 → 降息预期升温，但"新美联储通讯社"称就业没通胀重要，联储暂不急于行动
+              <strong>特斯拉（TSLA）</strong>：大单布局近 <span class="num">$2,000万</span> 合成多头期权，多头信心显著
             </li>
             <li>
-              特朗普：新任联储主席沃什"身不由己"，受美联储理事会制约，"掌控美联储"计划受阻
-            </li>
-            <li>
-              今晨亚太市场情绪回暖：日本日经225转涨 <span class="num">+0.7%</span>，韩国综指 <span class="num">+3%</span>，美股期货走高 —— 科技抛售初现趋缓信号
+              7月3日假日盘：<strong>AI情绪逆转</strong> — SemiAnalysis发布强力反驳报告，美股期货全线反弹约 <span class="num">+1%</span>，金铜拉涨，美元走软
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>7月2日美股受AI题材降温与弱非农双重压制，半导体板块领跌。但弱就业数据本身对成长股有"利空利好"两面性——降息预期升温对长久期成长股是支撑。关键分歧在于：<strong>美联储会否在通胀未达标前就因就业疲软提前降息？</strong>下周一（7月7日）是节后首个交易日，市场将重新为这一路径定价。
+          <strong>💡 解读：</strong>7月2日美股收盘受AI算力过剩叙事及Burry做空信号压制，半导体板块分化；但假日期间SemiAnalysis深度报告揭示Meta实际算力扩张规模远超市场预期，叠加铠侠/三星需求强劲信号，市场情绪快速反转。<strong>关键试金石</strong>：7月7日美股重开首日AI板块能否延续反弹动能。
         </div>
       </section>
 
@@ -959,67 +951,75 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,182.49/oz</span></td>
+                <td><span class="asset-price">$4,219.32/oz</span></td>
                 <td>
-                  <span class="tag up">▲ +1.42%</span>
-                  <span class="asset-note">港股黄金股大涨12-14%</span>
+                  <span class="tag up">▲ +0.20%</span
+                  ><span class="asset-note">紧缩预期降温支撑</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$69.03</span></td>
-                <td><span class="tag up">▲ +0.49%</span></td>
+                <td><span class="asset-price">$84.26</span></td>
+                <td>
+                  <span class="tag down">▼ -3.93%</span
+                  ><span class="asset-note">年内最大单日跌幅</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">100.79</span></td>
-                <td><span class="tag down">▼ -0.07%</span></td>
+                <td><span class="asset-price">~100.7</span></td>
+                <td>
+                  <span class="tag down">▼ -0.20%</span
+                  ><span class="asset-note">非农弱势压制</span>
+                </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🔷 EUR/USD</span></td>
-                <td><span class="asset-price">1.1441</span></td>
-                <td><span class="tag up">▲ +0.10%</span></td>
+                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
+                <td><span class="asset-price">1.1568</span></td>
+                <td><span class="tag up">▲ 美元走软</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">161.17</span></td>
+                <td><span class="asset-price">160.21</span></td>
                 <td>
-                  <span class="tag up">▲ +0.05%</span>
-                  <span class="asset-note">⚠️ 日本干预警报</span>
+                  <span class="tag down">▼ 日元仍弱</span
+                  ><span class="asset-note">日央行政策分歧持续</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币 (USD/CNH)</span></td>
-                <td><span class="asset-price">6.7845</span></td>
+                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
+                <td><span class="asset-price">6.7633</span></td>
                 <td>
-                  <span class="tag down">▼ -0.05%</span>
-                  <span class="asset-note">人民币微升</span>
+                  <span class="tag up">▲ 人民币偏强</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">📈 MSCI 亚太指数</span></td>
-                <td><span class="asset-price">272.83</span></td>
-                <td><span class="tag up">▲ +1.0%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇯🇵 日经225</span></td>
-                <td><span class="asset-price">—</span></td>
+                <td><span class="asset-name">🇭🇰 恒生指数</span></td>
+                <td><span class="asset-price">收涨</span></td>
                 <td>
-                  <span class="tag up">▲ +0.7%</span>
-                  <span class="asset-note">早盘曾跌超1%后反弹</span>
+                  <span class="tag up">▲ +1.28%</span
+                  ><span class="asset-note">机器人+黄金股引领</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇰🇷 韩国综指</span></td>
-                <td><span class="asset-price">—</span></td>
-                <td><span class="tag up">▲ +3.0%</span></td>
+                <td><span class="asset-name">🇨🇳 恒生科技</span></td>
+                <td><span class="asset-price">收涨</span></td>
+                <td><span class="tag up">▲ +1.00%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇨🇳 A股综合</span></td>
+                <td><span class="asset-price">三大指数</span></td>
+                <td>
+                  <span class="tag up">▲ 小幅收涨</span
+                  ><span class="asset-note">机器人+黄金带动</span>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>黄金持续走强，港股黄金开采股单日涨逾12%，反映市场正加大对抗通胀/滞胀的避险配置。油价回落至$69/桶（较本年高位大幅下降），有助降低通胀压力但也暗示需求预期转弱。美元温和走软，亚太股市全面反弹，市场情绪由科技恐慌切换至"弱数据→降息预期"逻辑。<strong>⚠️ 重点关注：USD/JPY 已升至161水平</strong>，星展集团分析师警告日本可能采取"隐蔽外汇干预"策略，流动性稀薄的假期环境将放大干预效果。
+          <strong>💡 解读：</strong>WTI原油单日暴跌<strong>-3.93%</strong>至$84，创年内最大降幅，中国同步启动年内最大幅度成品油价格下调（汽油-¥0.75/升）。油价下行叠加非农弱势令美元承压，黄金受益紧缩预期降温。USD/JPY维持160高位，日元弱势结构未变，需关注日央行干预风险。
         </div>
       </section>
 
@@ -1038,33 +1038,40 @@
         <div class="card">
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label report">休市</span>
-              <strong>美股全日休市（独立纪念日）</strong> — 7月3日及4日无美国股市交易。下一个交易日：7月7日（周一）
+              <span class="timeline-label data">数据</span>
+              <strong>美国6月非农就业</strong>（已公布）→ 仅及预期约50%，就业爆冷；NFP下行利好降息预期
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>中国6月服务业PMI：54.1</strong>（前值54.4）— 温和扩张，略有放缓；叠加中国A股今日上涨，表明内需尚具韧性
+              <span class="timeline-label report">市场</span>
+              <strong>美股全日休市</strong>（7月3日–4日，独立纪念日）→ 下一交易日：<strong>7月7日周一</strong>
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>美国6月非农就业：+5.7万人</strong>（重大低于预期）— 已于昨日收盘前发布，今日市场将在亚洲时段消化此数据。7月7日美股反应是关键
+              <span class="timeline-label report">亚太</span>
+              <strong>恒生指数</strong>收涨 <span style="color: var(--green)">+1.28%</span>，科指 +1%；机器人产业链掀涨停潮；黄金股全线走强（赤峰黄金 +19%）
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">亚太</span>
+              <strong>A股三大指数小幅收涨</strong>：宇树科技科创板IPO注册生效，机器人板块大涨
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label report">AI</span>
+              <strong>SemiAnalysis 深度报告</strong>：Meta 明年算力资本开支将"高得惊人"，驳斥过剩论；铠侠第十代NAND送样，三星DRAM Q3涨价
             </div>
             <div class="timeline-item">
               <span class="timeline-label speech">讲话</span>
-              美国财长<strong>贝森特</strong>：工资与通胀之间的差异是"短期波动"，暗示政策层面不急于应对通胀压力
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label report">干预</span>
-              <strong>日本外汇干预警报</strong> — 星展集团：日本可能转向"隐蔽干预"策略。USD/JPY=161，假期流动性稀薄环境下波动风险显著放大
+              <strong>Nick Timiraos（新美联储通讯社）</strong>：非农对Fed几乎无影响 → Fed只盯通胀，非就业
             </div>
             <div class="timeline-item">
-              <span class="timeline-label report">市场</span>
-              <strong>香港</strong>：恒指开盘 +0.8%；黄金股板块领涨（紫金黄金国际+14%，灵宝黄金+13%）；快手旗下可灵AI拟引入约30亿美元外部融资
+              <span class="timeline-label report">下周展望</span>
+              7月7日（周一）美股重开 → 密切关注开盘AI板块情绪；下周重点数据：<strong>6月CPI / PPI / 密歇根信心</strong>
             </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">提早收市</span>
-              贵金属/能源期货合约提前于<strong>北京时间7月4日01:00</strong>收盘（布伦特原油01:30）
-            </div>
+          </div>
+        </div>
+
+        <div class="alert-box yellow">
+          <div class="alert-title">⚠️ 日历数据注意</div>
+          <div class="alert-text">
+            华尔街见闻日历页面抓取时显示为历史周（6月14日），实时日历数据未能完整加载。以上日历内容来源于新闻报道综合整理，仅供参考。
           </div>
         </div>
       </section>
@@ -1089,30 +1096,31 @@
               color: var(--text-secondary);
             "
           >
-            <strong style="color: var(--red)">⚠️ 半导体板块</strong> 费城半导体指数
-            <span class="tag down" style="font-size: 13px">-5%+</span> ·
-            <strong style="color: var(--purple)">韩国综指</strong>
-            <span class="tag up" style="font-size: 13px">+3.0%</span>（今日反弹）
+            <strong style="color: var(--purple)">AI情绪反转</strong> ·
+            美股期货假日盘
+            <span class="tag up" style="font-size: 13px">+1%</span> ·
+            <strong style="color: var(--purple)">亚太半导体</strong>
+            V型反弹 · 日韩股市强势回升
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">铠侠(Kioxia)</span><span class="pct">+9% ↑</span>
+              <span class="name">铠侠 NAND 🇯🇵</span><span class="pct">深V反弹</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MRVL</span><span class="pct down">-3%+</span>
+              <span class="name">ASMPT 🇭🇰</span><span class="pct">+8%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">GLW 康宁</span><span class="pct down">-4%+</span>
+              <span class="name">赤峰黄金</span><span class="pct">+19%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">WD/SanDisk</span><span class="pct down">-3%+</span>
+              <span class="name">优必选 🤖</span><span class="pct">+17%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">STX 希捷</span><span class="pct down">-3%</span>
+              <span class="name">芯碁微装</span><span class="pct">+10%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">快手(HK)</span><span class="pct">+6%→转跌</span>
+              <span class="name">中国有色矿业</span><span class="pct">+11%</span>
             </div>
           </div>
 
@@ -1120,34 +1128,37 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>AI叙事两大分歧并存：</strong>黑石意外退出"全球最大数据中心园区"，暗示超大规模AI资本开支出现动摇；同时SemiAnalysis驳斥"算力过剩论"，称Meta算力扩张"远超想象"，明年CapEx将"高得惊人"
+              <strong>SemiAnalysis 驳斥"算力过剩论"：</strong>Meta 算力扩张规模"远超想象"，明年资本开支将"高得惊人"，过剩叙事失据
             </li>
             <li>
-              <strong>Meta云服务双轨战略：</strong>美银分析师称Meta计划同时提供AI模型托管（类AWS Bedrock按访问量收费）与裸GPU算力租赁；美银维持<strong>买入评级，目标价$835</strong>
+              <strong>铠侠（Kioxia）第十代NAND送样：</strong>CEO喊话"需求依然旺盛，或增加资本支出"，股价深V反弹
             </li>
             <li>
-              <strong>快手可灵AI（Kling AI）拟重组引入外部融资，金额最多30亿美元</strong> — 快手港股开盘涨+6%后转跌，盘中波动剧烈；AI资本化正在提速
+              <strong>三星电子：</strong>报道称 Q3 DRAM 价格将上调最多 <span class="num">+20%</span>；SK海力士计划大幅提前晶圆厂竣工时间，设备厂商订单将快速扩张
             </li>
             <li>
-              <strong>亚马逊Kuiper"星链杀手"亮剑：</strong>在轨卫星超390颗，四年追赶SpaceX Starlink迎来破局时刻
+              <strong>Tesla Optimus：</strong>VP Lars Moravy宣布弗里蒙特工厂首条Optimus产线已就绪，后续约 <strong>40余条</strong> 细分产线等待建设；五年内自动驾驶与人形机器人"将彻底融入日常生活"
             </li>
             <li>
-              <strong>英伟达剑指万亿级实体AI：</strong>具身AI（Physical AI）平台变现尚存时差，但三大零部件赛道开始迎抢单潮
+              <strong>阿里内部：7月10日起全面禁用 Claude Code</strong>（因安全后门风险），推荐使用自研 Qoder 替代；阿里云同日发布 <strong>Qoder 企业版</strong>
             </li>
             <li>
-              <strong>韩国AI大跃进：</strong>拟动用5万亿韩元增量税收，讨论购买约1万个英伟达Vera Rubin GPU模块，集中资源组建顶尖AI团队
+              <strong>微软CEO纳德拉：</strong>AI时代护城河不在模型能力，而在"公司独有的学习回路"
             </li>
             <li>
-              <strong>Palantir CEO狂攻大模型巨头：</strong>批评其商业模式"不顾企业风险向企业收税"，有巨大结构性问题
+              <strong>OpenAI / Anthropic</strong> 双双布局自研芯片，目的不仅是降成本，更涉及数据控制权
             </li>
             <li>
-              Box CEO Aaron Levie：企业收紧Token预算并非AI需求降温，而是进入<strong>精细化管理阶段</strong>，AI Agent渗透知识工作的需求远没见顶
+              <strong>北美电网告急：</strong>多家科技巨头警告 2027 年北美电网容量转负，数据中心扩张或面临电力硬约束
+            </li>
+            <li>
+              <strong>快手·可灵AI：</strong>获近 <span class="num">$30亿</span> 融资（含腾讯、阿里等），分拆独立运营，AI视频赛道再升温
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>AI板块正处"多空焦灼"关键节点。黑石撤出数据中心 vs SemiAnalysis算力扩张论 — 市场无法在假期三天内得出结论。铠侠（Kioxia）先跌12%后拉升至+9%，反映存储赛道自有结构逻辑，不应与SOX混为一谈。<strong>重点观察：</strong>快手可灵AI $30亿融资是否能顺利落地 — 若成功，将验证AI独角兽的估值逻辑，支撑同类资产；若流产，则压制节后AI情绪。
+          <strong>💡 解读：</strong>本周AI板块最大叙事博弈 — "算力过剩论" vs "算力仍然稀缺"。SemiAnalysis + 铠侠/三星/SK海力士三连发站在供给需求强劲一侧，基本面支撑充足。<strong>真正的风险</strong>在下游：电网容量2027年转负、AI实际ROI尚待验证。Tesla Optimus量产化明显加速，机器人产业链为中短期新的布局主线。
         </div>
       </section>
 
@@ -1163,67 +1174,99 @@
           <h2 class="section-title">美股财报</h2>
         </div>
 
+        <!-- AAPL -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">MRVL</span>
-              <span class="earnings-name">迈威尔科技 盘后动态</span>
+              <span class="ticker-badge">AAPL</span>
+              <span class="earnings-name">苹果 · 期权大单信号</span>
             </div>
-            <span class="beat-badge miss">⚠️ 承压</span>
+            <span class="beat-badge beat">📈 强烈多头信号</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">盘后表现</div>
-              <div class="metric-value">-3%+</div>
-              <div class="metric-delta down">继7月2日大盘后续跌</div>
+              <div class="metric-label">目标价期权</div>
+              <div class="metric-value">$330</div>
+              <div class="metric-delta up">远期 Call 大量涌入</div>
             </div>
             <div class="metric">
-              <div class="metric-label">板块背景</div>
-              <div class="metric-value">SOX -5%+</div>
-              <div class="metric-delta down">两连跌压制估值</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">AI数据中心敞口</div>
-              <div class="metric-value">高</div>
-              <div class="metric-delta down">短期叙事受压</div>
+              <div class="metric-label">多空情绪</div>
+              <div class="metric-value">多头</div>
+              <div class="metric-delta up">绝对主导</div>
             </div>
           </div>
+
           <ul class="bullet-list">
-            <li>迈威尔在AI网络芯片领域深度绑定超大规模云厂商，对AI需求叙事转向敏感</li>
-            <li>盘后跌幅与康宁（-4%+）、闪迪（-3%）、希捷（-3%）同步，反映整个数据中心硬件链受压</li>
+            <li>
+              期权大单数据显示苹果股价近期大涨，机构投资者押注股价进一步上行至 <span class="num">$330</span> 区域
+            </li>
+            <li>
+              下季度财报（预计7月下旬发布）为下一个重要催化剂，关注iPhone Q3出货量及服务收入增速
+            </li>
           </ul>
         </div>
 
+        <!-- TSLA -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">LGE</span>
-              <span class="earnings-name">LG电子 Q2 前瞻</span>
+              <span class="ticker-badge">TSLA</span>
+              <span class="earnings-name">特斯拉 · 期权大单信号</span>
             </div>
-            <span class="beat-badge beat">✓ 预期超预期</span>
+            <span class="beat-badge beat">🤖 Optimus 催化剂</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">营业利润（预期）</div>
-              <div class="metric-value">₩1.44万亿</div>
-              <div class="metric-delta up">+38% vs 普遍预期</div>
+              <div class="metric-label">合成多头</div>
+              <div class="metric-value">~$2,000万</div>
+              <div class="metric-delta up">大单入场</div>
             </div>
             <div class="metric">
-              <div class="metric-label">驱动因素</div>
-              <div class="metric-value">关税退税</div>
-              <div class="metric-delta up">成本转嫁</div>
+              <div class="metric-label">产线进展</div>
+              <div class="metric-value">40+条</div>
+              <div class="metric-delta up">Optimus产线建设中</div>
             </div>
           </div>
+
           <ul class="bullet-list">
-            <li>韩亚证券分析师预测LG电子Q2合并营业利润₩1.441万亿，远高于普遍预期₩1.040万亿，主要受益于美国关税退税及提价措施</li>
-            <li>LG Innotek（苹果供应商）强劲业绩也提振母公司</li>
+            <li>
+              大额合成多头期权入场，反映机构对Optimus量产进展高度乐观
+            </li>
+            <li>
+              第一条 Optimus 产线已完成现场验收测试（FAT），后续40余条产线等待部署，机器人业务进入规模化制造新阶段
+            </li>
+          </ul>
+        </div>
+
+        <!-- 本周无财报 说明 -->
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            📅 本周财报动态
+          </div>
+          <ul class="bullet-list">
+            <li>
+              美股7月3–4日休市，本周<strong>无重大美股财报发布</strong>
+            </li>
+            <li>
+              <strong>下周关注（7月7日起）：</strong>消费类与科技类企业逐步进入Q2财报季，关注 MSFT / META 等科技龙头正式财报时间窗口
+            </li>
+            <li>
+              <strong>Palantir（PLTR）：</strong>CEO Alex Karp接受采访强调企业AI核心诉求是"数据控制权"，非模型能力本身 — 这是PLTR核心竞争力叙事的重申
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>本周美国公司财报数据较少（假期前静默）。核心看点集中在科技硬件链的盘后动态。本周Q2财报季将于7月7日后正式启动，届时大型科技公司（MSFT、GOOGL、META等）将陆续披露业绩，届时AI算力的真实需求将得到财务数字的验证。
+          <strong>💡 解读：</strong>本周美股无财报，但期权大单已对 AAPL 和 TSLA 定价出强烈多头信号。Q2财报季将于7月下旬进入高潮，关注Mag-7能否通过实际盈利支撑当前估值。
         </div>
       </section>
 
@@ -1245,26 +1288,36 @@
               margin-bottom: 14px;
             "
           >
-            🔴 美国6月非农就业报告 — 重大冲击
+            🇺🇸 美国6月非农就业（NFP）⚠️ 就业爆冷
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">6月新增非农就业（实际 vs 预期~150K）</span>
-              <span class="value" style="color: var(--red)">5.7万</span>
+              <span class="label">实际值（约为预期的50%）</span>
+              <span class="value" style="color: var(--red)">~半数</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 38%"></div>
+              <div class="survey-bar-fill red" style="width: 50%"></div>
             </div>
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">市场降息预期（弱就业→利好宽松）</span>
-              <span class="value" style="color: var(--accent-sky-deep)">升温</span>
+              <span class="label">花旗：10月降息概率</span>
+              <span class="value" style="color: var(--accent-sky-deep)">明显上升</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 70%"></div>
+              <div class="survey-bar-fill blue" style="width: 65%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">到12月仍有加息预期（荷兰国际：>25bp）</span>
+              <span class="value" style="color: var(--accent-amber)">仍存在</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill yellow" style="width: 45%"></div>
             </div>
           </div>
 
@@ -1272,16 +1325,16 @@
 
           <ul class="bullet-list">
             <li>
-              <strong>+5.7万远低于预期</strong>，为近年最弱非农之一 — 劳动市场降温信号明确，失业率或随之走高
+              <strong>6月NFP仅及预期约一半</strong>，就业市场明显降温；但"新美联储通讯社" Nick Timiraos 直言：这份数据对美联储<strong>"几乎没有影响"</strong>
             </li>
             <li>
-              特朗普：新联储主席沃什知道该降息，但受理事会"敌对"制约 — 政治压力对联储独立性构成新风险变量
+              美联储当前核心关注点已从就业切换至<strong>通胀</strong>；就业弱势本身不足以触发政策转向
             </li>
             <li>
-              "新美联储通讯社"：报告对联储判断<strong>几乎没有影响</strong>，"就业没通胀重要"，联储仍以通胀为首要目标
+              <strong>花旗：</strong>加息理由已不复存在，预计<strong>10月或重启降息</strong>
             </li>
             <li>
-              财长贝森特：工资与通胀差异属"短期波动"，暗示政策层面尚无需紧急宽松
+              <strong>荷兰国际：</strong>NFP弱势后美元不太可能进入持续下行，预计DXY近期稳定于 100.0–101.5 区间
             </li>
           </ul>
         </div>
@@ -1295,17 +1348,17 @@
               margin-bottom: 10px;
             "
           >
-            ⚠️ 美股杠杆与流动性警报
+            🛢️ 能源：油价骤跌 + 中国成品油创年内最大降幅
           </div>
           <ul class="bullet-list">
             <li>
-              <strong>保证金债务同比增长53%</strong>（截至5月底），市场杠杆水平接近2000年3月/2007年7月/2021年3月峰值 — 这三次峰值之后市场均在一年内出现重大顶部
+              WTI原油跌至 <span class="num down">$84.26</span>，单日跌幅 <span class="num down">-3.93%</span>，本轮调价周期（6月18日–7月3日）内国际油价震荡下降
             </li>
             <li>
-              货币基金余额+融资账户余额/标普市值 比率已接近<strong>2000年科技泡沫峰值极端水平</strong>（华尔街见闻"一张图"分析）
+              <strong>中国成品油：</strong>7月3日24时起，年内最大降幅 — 汽油 <span class="num down">-¥0.75/升</span>，柴油 <span class="num down">-¥0.78/升</span>，每吨分别下调 950 元、915 元
             </li>
             <li>
-              <strong>私募信贷赎回压力不退：</strong>Blue Owl连续两个季度面临巨额赎回并限制提款，私募流动性危机隐患上升
+              油价下行有利于控制通胀 → 间接支持降息预期，利好制造业及航运成本
             </li>
           </ul>
         </div>
@@ -1319,33 +1372,41 @@
               margin-bottom: 10px;
             "
           >
-            🌏 亚太及全球数据
+            🌏 亚太市场今日表现
           </div>
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">🇨🇳 中国服务业PMI</span><span class="pct">54.1</span>
+              <span class="name">🇭🇰 恒指</span><span class="pct">+1.28%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇯🇵 日经225</span><span class="pct">+0.7%</span>
+              <span class="name">🇭🇰 科指</span><span class="pct">+1.00%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇨🇳 创业板指</span><span class="pct">+2%+</span>
+              <span class="name">🇨🇳 A股三大指数</span><span class="pct">小幅收涨</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇨🇳 沪指</span><span class="pct">+0.67%</span>
+              <span class="name">🇭🇰 ASMPT</span><span class="pct">+8%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">🇰🇷 韩国综指</span><span class="pct">+3%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇮🇩 印尼股指</span><span class="pct">+2%</span>
+              <span class="name">🇨🇳 赤峰黄金</span><span class="pct">+19%</span>
             </div>
           </div>
-          <ul class="bullet-list" style="margin-top: 10px">
-            <li>中国6月服务业PMI 54.1（前值54.4），温和扩张，轻微放缓，表明内需具备韧性</li>
-            <li>亚太市场全面走强，MSCI亚太指数 <span class="num">+1%</span> 至272.83，反映假日前"弱美元+降息预期"的交叉驱动</li>
-            <li>德国宣布"全面经济改革计划"：提高退休年龄、放宽裁员管制，欧洲结构性改革加速</li>
-          </ul>
+          <div style="margin-top: 12px;">
+            <ul class="bullet-list">
+              <li>
+                <strong>重点观察①</strong> — 机器人产业链掀涨停潮：宇树科技科创板IPO注册生效，产业链整体情绪高涨
+              </li>
+              <li>
+                <strong>重点观察②</strong> — 黄金股领涨：招金矿业 +13%、赤峰黄金 +19%，受益于国际金价回升 + 加息预期降温；金价 $4,219/oz
+              </li>
+              <li>
+                <strong>风险提示①</strong> — 以色列曝光曾策划暗杀伊朗谈判代表（议长卡利巴夫、外长阿拉格齐）→ 中东紧张局势再度升温，油价存在向上跳升风险
+              </li>
+              <li>
+                <strong>风险提示②</strong> — 花旗下调亚洲新兴市场至中性，理由是半导体板块或见顶 → 东北亚科技股短期承压，马股及东南亚相关资产注意溢出效应
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -1361,32 +1422,25 @@
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
-        <div class="alert-box yellow">
-          <div class="alert-title">⏰ 时间窗口提示</div>
-          <div class="alert-text">
-            美股今日及明日（7月3-4日）全日休市。下一个交易日为<strong>7月7日（周一）</strong>。本节建议均针对<strong>周一美股开盘</strong>前的布局与准备。
-          </div>
-        </div>
-
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会</div>
+          <div class="alert-title">🟢 值得关注 — 机会</div>
           <div class="alert-text">
-            <strong>① 弱非农→降息预期升温→利好利率敏感资产</strong> —
-            +5.7万非农为近年最弱，若10年期美债收益率在节后延续下行，利率敏感的成长/科技板块可能获得支撑。特别关注债券代理类（REITs受益）与高估值软件SaaS<br />
-            <strong>② 亚太科技修复信号</strong> —
-            韩国综指+3%、铠侠反弹至+9%（此前跌12%），显示假日流动性稀薄环境下，亚洲科技买盘仍有支撑。若周末无重大AI负面新闻，周一纳指期货可能跳空高开
+            <strong>① AI/半导体情绪反转</strong> —
+            SemiAnalysis驳斥过剩论、铠侠/三星/SK海力士三重需求信号，叠加非农走弱令资金回流成长股，期货盘已定价 +1% 反弹。7月7日开盘若延续，半导体ETF（SOXX）及龙头NVDA、MU有望走强<br />
+            <strong>② 降息预期开窗：AAPL / 高估值科技</strong> —
+            花旗预测10月降息，DXY走软趋势利好高估值成长。苹果期权大单显示机构押注$330，可关注Q2财报季前布局时机
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 警惕</div>
+          <div class="alert-title">🔴 需要警惕 — 风险</div>
           <div class="alert-text">
-            <strong>① AI叙事双面风险</strong> —
-            黑石退出数据中心园区 + Meta/Anthropic令市场疑虑，若周末有进一步AI需求放缓信号，芯片/AI板块周一可能迎来第三跌；SOX已连跌两日，技术面超卖但基本面尚未出清<br />
-            <strong>② 日本隐形干预风险</strong> —
-            USD/JPY=161，星展集团警告日本可能采取隐蔽汇市干预。假日流动性稀薄，若干预落地，日元可能单日急升2-3%，引发日本股市（特别是出口股）大幅波动，联动冲击全球科技配置<br />
-            <strong>③ 市场杠杆处于极端水平</strong> —
-            保证金债务+53%，流动性比率接近2000年/2007年/2021年峰值，任何外部冲击均可能触发杠杆清仓
+            <strong>① Burry做空Micron（MU）信号</strong> —
+            "大空头"在$1,051.87入场，预言30%回调。若AI过剩叙事在7月7日卷土重来、半导体股高开后遭砸盘，MU首当其冲；追高MU需设置明确止损<br />
+            <strong>② 中东地缘风险骤升</strong> —
+            以色列暗杀伊朗谈判代表曝光，中东紧张局势进入新的不确定期。WTI $84+若因此反弹，通胀降温叙事将遭冲击，Fed降息空间收窄<br />
+            <strong>③ Fed只盯通胀，降息不保险</strong> —
+            非农弱势不足以触发降息，Timiraos明确表态。下周CPI若高于预期，10月降息预期将被重新定价出局，利率敏感型资产（REITs、长期债券）面临双重压力
           </div>
         </div>
 
@@ -1403,26 +1457,26 @@
             gap: 8px;
           "
         >
-          ✅ 三条可执行关注清单（针对7月7日周一美股开盘）
+          ✅ 三条可执行关注清单（目标：7月7日周一美股重开）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">盯紧10年期美债收益率与纳指期货走势</div>
+            <div class="action-title">7月7日开盘30分钟：观察AI/半导体情绪延续性</div>
             <div class="action-desc">
-              周一开盘前先看国债期货：若10年期美债收益率因弱非农进一步回落（向4.0%以下靠拢），成长/科技股将得到估值支撑，可考虑逢低布局QQQ或ARKK等科技ETF。若收益率反弹，则暂缓。
+              假日期货 +1% 反弹由 SemiAnalysis 报告驱动，需验证真实买盘支撑。若纳斯达克开盘后 NVDA / MU / AMAT 稳健走强且无大量抛盘，可逢低布局 SOXX；若高开后震荡走弱，则需警惕 Burry 做空逻辑兑现，建议观望或缩仓
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">观察半导体板块（SOX）能否于周一止跌反弹</div>
+            <div class="action-title">苹果（AAPL）：机构押注 $330，Q2财报前关注布局时机</div>
             <div class="action-desc">
-              SOX连跌两日累计-5%+，技术面处于超卖区间。若周一开盘NVDA、AMD、MRVL无新负面催化剂，短线反弹概率较高。关键位：SOX若能守住前低并出现放量反弹，可轻仓参与半导体ETF（SOXX/SMH）；若继续破位下跌则观望。
+              期权大单显示机构看涨至 $330，加息预期降温利好高估值科技。DXY 下破 100 若成立，AAPL 有望迎来估值修复行情。关注 7 月中旬财报前积累期，参考 Q2 iPhone 出货量及 Apple Intelligence（AI功能）渗透率数据
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">追踪快手可灵AI融资进展及周末AI重大公告</div>
+            <div class="action-title">下周三 CPI 数据是真正的关键节点</div>
             <div class="action-desc">
-              快手可灵AI拟融资约30亿美元，若周末官宣落地，将为AI估值逻辑提供重要数据点，同类AI独角兽（OpenAI、Anthropic等）估值受益，周一AI板块情绪可能修复。同时留意Meta/Anthropic的任何周末声明，以判断AI叙事是否已触底或将继续恶化。
+              非农已弱，但 Timiraos 明确美联储核心矛盾在通胀。若下周 6 月 CPI 环比超 +0.3%，10月降息预期将大幅收缩，成长股估值将承压；若 CPI 符合或低于预期，花旗降息叙事得到强化，科技+黄金双线受益。现在是"等数据"窗口，不宜重仓追高
             </div>
           </li>
         </ol>
@@ -1433,9 +1487,9 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 老虎证券</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 亚太市场实时行情</div>
         <div style="margin-top: 4px">
-          由 AI 助手自动生成 · 2026年7月3日 · 晨间版
+          由 AI 助手自动生成 · 2026年7月3日 · 晨间版 · 美股独立纪念日特刊
         </div>
       </footer>
     </div>
