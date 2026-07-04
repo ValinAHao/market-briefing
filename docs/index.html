@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年7月3日</title>
+    <title>财经简报 | 2026年7月4日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
     <!--
   ╔══════════════════════════════════════════════════════════════╗
@@ -268,6 +268,9 @@
       .index-card.down::after {
         background: var(--red);
       }
+      .index-card.neutral::after {
+        background: var(--text-muted);
+      }
 
       .index-name {
         font-size: 12px;
@@ -497,6 +500,10 @@
         background: rgba(217, 162, 58, 0.16);
         color: var(--gold);
       }
+      .timeline-label.holiday {
+        background: rgba(200, 87, 79, 0.12);
+        color: var(--red);
+      }
 
       /* ── Earnings Card ── */
       .earnings-card {
@@ -551,6 +558,18 @@
         background: var(--green-bg);
         color: var(--green);
         border: 1px solid var(--green-border);
+      }
+
+      .beat-badge.miss {
+        background: var(--red-bg);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+
+      .beat-badge.pending {
+        background: var(--yellow-bg);
+        color: var(--yellow);
+        border: 1px solid var(--yellow-border);
       }
 
       .metric-grid {
@@ -622,6 +641,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -804,6 +826,9 @@
       .survey-bar-fill.yellow {
         background: linear-gradient(90deg, var(--accent-amber), var(--gold));
       }
+      .survey-bar-fill.green {
+        background: linear-gradient(90deg, var(--green), #7ec491);
+      }
 
       /* ── Responsive ── */
       @media (max-width: 640px) {
@@ -856,74 +881,79 @@
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年7月3日 · 周五（NFP日）· 数据截至 MYT 22:27</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 新华社</div>
+        <div class="date">2026年7月4日 · 周六 · 美国独立日 🇺🇸（美股全天休市）</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 数据截至 MYT 10:40</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
+          <div
+            class="section-icon"
+            style="background: rgba(234, 138, 62, 0.14)"
+          >
+            📊
+          </div>
           <h2 class="section-title">隔夜美股</h2>
+        </div>
+
+        <div class="alert-box yellow" style="margin-bottom: 14px;">
+          <div class="alert-title">🇺🇸 特别提示：今日美股休市</div>
+          <div class="alert-text">7月4日为美国独立日（Independence Day），美股全天休市。本节回顾上一交易日（7月3日，周四）Q2收官表现，并附今日假日期货及亚太市场动态。</div>
         </div>
 
         <div class="index-grid">
           <div class="index-card up">
-            <div class="index-name">道琼斯</div>
-            <div class="index-value">~44,600</div>
-            <div class="index-change up">全球反弹</div>
+            <div class="index-name">NQ100期货（今日）</div>
+            <div class="index-value">+1.2%</div>
+            <div class="index-change up">假日薄量反弹</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">纳斯达克</div>
-            <div class="index-value">~20,400</div>
-            <div class="index-change up">AI情绪逆转领涨</div>
+            <div class="index-name">STOXX 600（7月3日）</div>
+            <div class="index-value">652.77</div>
+            <div class="index-change up">+0.68% · 周涨+2.66%</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">韩国综指 KOSPI</div>
-            <div class="index-value">V型大反弹</div>
-            <div class="index-change up">+5.8% 🔥</div>
+            <div class="index-name">上证指数（今日）</div>
+            <div class="index-value">4,043.64</div>
+            <div class="index-change up">+0.37%</div>
           </div>
-        </div>
-
-        <div class="insight" style="background: rgba(234, 138, 62, 0.06); border-left-color: var(--accent-amber); margin-bottom: 12px;">
-          ⚠️ <strong>数据说明：</strong>美股三大指数具体收盘价未见于本次抓取数据源（wallstreetcn实时行情仅显示外汇与大宗商品）。以上为基于新闻背景的方向性参考，请以正式收盘数据为准。
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>AI情绪大逆转</strong>：SemiAnalysis发布报告驳斥"算力过剩论"——
-              Meta明年AI算力资本开支将"高得惊人"，彻底逆转市场悲观情绪
+              <strong>Q2收官日（7月3日，周四）</strong>：AI焦虑暂退，科技股整体反弹；欧股连续两日创新高，泛欧STOXX 600全周
+              <span class="num">+2.66%</span>，为一个多月来最佳单周，连涨四周
             </li>
             <li>
-              <strong>SK海力士爆炸性消息</strong>：宣布$290亿ADR计划，
-              引爆韩元与存储双雄（三星、SK海力士）股价，韩国综指单日暴涨
-              <span class="num">+5.8%</span>，三星谈合作、铠侠NAND送样，日韩股市V型反弹
+              欧股科技板块单日 <span class="num">+1%</span>+；ASML <span class="num">+3.6%</span>，Aixtron <span class="num">+6%</span>；工业板块全周
+              <span class="num">+5.6%</span>，军工股表现抢眼
             </li>
             <li>
-              <strong>全球风险资产全线回暖</strong>：黄金
-              <span class="num">+0.20%</span> 至 $4,219，铜价随风险偏好回升，
-              美元指数小幅走软，离岸人民币稳定在 6.7633
+              <strong>芯片股：连续两天承压</strong>（算力过剩担忧发酵）；但今日（周五，假日）日韩存储股
+              <strong>V型反弹</strong>，SK海力士、三星电子带动亚洲股市 <span class="num">+2%</span>
             </li>
             <li>
-              <strong>WTI原油大跌 <span class="num down">-3.93%</span></strong>：
-              霍尔木兹风险溢价消退，花旗预计油价或进一步跌向 $60，通胀压力缓解
-            </li>
-            <li>
-              <strong>Palantir获华尔街上调至"买入"</strong>，联手英伟达构建AI安全护城河，股价强劲反弹
+              特朗普今日发言：「<strong>股市刚刚创下自我上一个任期以来最佳季度表现</strong>，标普500、纳斯达克、道琼斯全面大涨，美国401(k)退休账户持续增值。美国黄金时代已开启。」
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>算力过剩论是近期压制AI股的最大叙事阴云。SemiAnalysis的反驳报告 + SK海力士巨额ADR = 双重利好催化，市场重拾AI牛市信心。本周美股整体出现近四个月最大单周资金净流出，但涨势在存量资金博弈中持续，需警惕情绪驱动后的回调风险。
+          <strong>💡 解读：</strong>Q2正式收官，美股交出亮眼成绩单。但芯片股两日急跌折射出市场对「AI资本支出能否转化为盈利」的焦虑——这将是即将启动的<strong>Q2财报季的核心命题</strong>。今日假日NQ期货+1.2%显示市场整体偏乐观；重点观察下周一（7月7日）美股复市后能否延续升势。
         </div>
       </section>
 
       <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
+          <div
+            class="section-icon"
+            style="background: rgba(91, 149, 201, 0.14)"
+          >
+            🌍
+          </div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
@@ -939,89 +969,127 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,219.32/oz</span></td>
-                <td><span class="tag up">▲ +0.20%</span><span class="asset-note">+$8.43，风险偏好回升</span></td>
+                <td><span class="asset-price">$4,176.94/oz</span></td>
+                <td>
+                  <span class="tag up">▲ +1.3%</span
+                  ><span class="asset-note">结束四周连跌，全周+2.2%</span>
+                </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$84.26</span></td>
-                <td><span class="tag down">▼ -3.93%</span><span class="asset-note">-$3.45，霍尔木兹风险退潮</span></td>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">$72.12/桶</span></td>
+                <td>
+                  <span class="tag up">▲ +0.45%</span
+                  ><span class="asset-note">两日小幅反弹，但全周-0.66%，连跌四周创近两年最长</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">99.81</span></td>
-                <td><span class="tag up">▲ +0.11%</span><span class="asset-note">弱非农后小幅走强</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1568</span></td>
-                <td><span class="tag" style="color:var(--text-muted);background:var(--bg-card-alt)">— 0.00%</span></td>
+                <td><span class="asset-price">~99-100</span></td>
+                <td>
+                  <span class="tag down">▼ 盘中触两周低</span
+                  ><span class="asset-note">后抹平跌幅企稳</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">160.21</span></td>
-                <td><span class="tag" style="color:var(--text-muted);background:var(--bg-card-alt)">— 0.00%</span><span class="asset-note">日元疲软，日银政策分歧持续</span></td>
+                <td><span class="asset-price">~161</span></td>
+                <td>
+                  <span class="tag down">▼ 日元触两周高</span
+                  ><span class="asset-note">后转跌，重新失守161</span>
+                </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币 (USD/CNH)</span></td>
-                <td><span class="asset-price">6.7633</span></td>
-                <td><span class="tag" style="color:var(--text-muted);background:var(--bg-card-alt)">— 0.00%</span></td>
+                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
+                <td><span class="asset-price">~6.79</span></td>
+                <td>
+                  <span class="tag up">▲ 盘中涨破6.79</span
+                  ><span class="asset-note">逾一周新高</span>
+                </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇰🇷 韩国综指 KOSPI</span></td>
-                <td><span class="asset-price">V型大反弹</span></td>
-                <td><span class="tag up">▲ +5.8%</span><span class="asset-note">SK海力士ADR触发</span></td>
+                <td><span class="asset-name">₿ 比特币</span></td>
+                <td><span class="asset-price">~$62,000</span></td>
+                <td>
+                  <span class="tag up">▲ +2%</span
+                  ><span class="asset-note">盘中涨破6.2万，扭转近期暴跌</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">Ξ 以太坊</span></td>
+                <td><span class="asset-price">—</span></td>
+                <td>
+                  <span class="tag up">▲ 全周+10%</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🥈 LME 期锡</span></td>
+                <td><span class="asset-price">$52,628/吨</span></td>
+                <td><span class="tag up">▲ +3.27%（周+4.1%）</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🔷 LME 期铝</span></td>
+                <td><span class="asset-price">$3,090/吨</span></td>
+                <td><span class="tag down">▼ 全周-2.83%</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>油价大跌（-3.93%）是本日全球资产最显著信号——霍尔木兹风险溢价消退，若花旗预测成真（$60），能源通胀压力将显著缓解，为美联储降息打开空间。黄金维持高位（$4,219）体现"弱美元预期+不确定性对冲"双重属性。USD/JPY停留在160高位，日本央行政策走向仍是亚洲市场的结构性变量。
+          <strong>💡 解读：</strong>三大主线同步——①<strong>油价空头</strong>：霍尔木兹海峡复航 + OPEC 6月大幅增产，布伦特跌至$72，花旗押注目标价$60；②<strong>黄金触底回升</strong>：结束四周连跌，货币市场下调美联储加息预期起关键作用；③<strong>比特币与黄金「久别重逢」</strong>：芯片股崩跌推动「配对交易」资金涌向加密与贵金属，两者重回同向交易。
         </div>
       </section>
 
       <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
+          <div
+            class="section-icon"
+            style="background: rgba(224, 122, 58, 0.14)"
+          >
+            🎯
+          </div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 13px; color: var(--red); background: var(--red-bg); border-radius: 6px; padding: 8px 12px;">
-            ⚠️ <strong>注：</strong>华尔街见闻日历页显示为2026年6月14日（旧周数据），页面未能正确导航至今日（7月3日）。以下事件基于新闻背景梳理。
-          </div>
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label data">已发布</span>
-              <strong>美国6月非农就业报告（NFP）</strong> →
-              数据偏弱，招商宏观称"恰到好处"；市场正在判断是否为短期扰动
+              <span class="timeline-label holiday">休市</span>
+              <strong>美股全天休市</strong>（独立日）→ 下周一7月7日复市，Q2财报季正式启动
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label report">市场</span>
-              <strong>SpaceX即将纳入纳斯达克100指数</strong> →
-              被动基金大规模买入触发；历史规律显示纳入前相关个股超额收益明显
+              <span class="timeline-label data">亚太</span>
+              <strong>日韩存储股V型反弹</strong>：SK海力士、三星主导，带动亚洲股市整体 <span style="color:var(--green);font-weight:600">+2%</span>；算力过剩恐慌暂缓
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label earnings">财报季</span>
-              <strong>下周（7月7日起）Q2财报季正式开启</strong> →
-              摩根大通、富国银行、花旗、高盛率先报告，AI牛市迎来最大盈利验证
+              <span class="timeline-label data">A股</span>
+              <strong>A股今日收盘</strong>：上证 <span style="color:var(--green);font-weight:600">+0.37%</span> = 4043.64；深证 <span style="color:var(--green);font-weight:600">+0.64%</span> = 15597.51；创业板 <span style="color:var(--green);font-weight:600">+0.07%</span> = 4019.93
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label report">能源</span>
+              <strong>中国国内成品油价格下调</strong>：今年第13次调价，幅度为年内最大（汽油-950元/吨，柴油-915元/吨），今年首次「三连跌」——霍尔木兹复航 + OPEC增产双重压制
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">A股</span>
+              <strong>宇树科技科创板IPO注册生效</strong> → A股机器人板块大涨，逾40只个股涨停
             </div>
             <div class="timeline-item">
               <span class="timeline-label data">宏观</span>
-              <strong>欧元区6月综合PMI重返50</strong> →
-              德国意外救场，欧洲经济"止跌"，欧央行降息节奏微调预期
+              <strong>中国6月服务业PMI 54.1</strong>（略低于5月，仍处近三年第三高位）→ 新业务出口创年内新高，就业连续两月扩张
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              <strong>下周（7月7日起）Q2财报季启动</strong> → AI牛市最大考验：资本支出→盈利转化率？预计大型科技/银行7月中下旬陆续发布
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">重点观察</span>
-              <strong>美联储官员对弱非农的公开表态</strong> →
-              鸽派信号 = 科技股续涨；鹰派坚持 = 降息预期压制
+              <span class="timeline-label speech">外交</span>
+              <strong>莫迪访新西兰</strong>（7月10日）→ 40年来印度总理首次访问新西兰，中印太外交动态值得关注
             </div>
             <div class="timeline-item">
-              <span class="timeline-label data">下周</span>
-              <strong>ISM服务业PMI + FOMC会议纪要（6月会议）</strong> →
-              确认经济软着陆路径与降息节奏
+              <span class="timeline-label data">AI</span>
+              <strong>DeepSeek 7月中旬起实施高峰时段API涨价</strong>（至非高峰价格2倍）→ 国内大模型竞争从价格战转向效率驱动
             </div>
           </div>
         </div>
@@ -1030,36 +1098,41 @@
       <!-- ═══ 4. AI与科技 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
+          <div
+            class="section-icon"
+            style="background: rgba(138, 127, 201, 0.14)"
+          >
+            🤖
+          </div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
-            <strong style="color: var(--purple)">AI概念板块</strong> 情绪大逆转 ·
-            <strong style="color: var(--purple)">日韩科技</strong>
-            <span class="tag up" style="font-size: 13px">V型反弹</span> ·
-            韩国综指 <span class="tag up" style="font-size: 13px">+5.8%</span>
+          <div
+            style="
+              margin-bottom: 10px;
+              font-size: 14px;
+              color: var(--text-secondary);
+            "
+          >
+            <strong style="color: var(--purple)">AI算力主题重燃</strong>：资金重返AI算力方向，半导体设备引领欧股再创新高；日韩存储股今日强势回升
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">PLTR</span><span class="pct">升级至买入 🔥</span>
+              <span class="name">ASML 🇳🇱</span><span class="pct">+3.6%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">SK Hynix 🇰🇷</span><span class="pct">$290亿ADR爆炸</span>
+              <span class="name">Aixtron 🇩🇪</span><span class="pct">+6.0%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">Samsung 🇰🇷</span><span class="pct">V型反弹</span>
+              <span class="name">SK Hynix 🇰🇷</span><span class="pct">V型反弹</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AMZN</span><span class="pct">AI硬件战略披露</span>
+              <span class="name">三星电子 🇰🇷</span><span class="pct">V型反弹</span>
             </div>
             <div class="tech-chip">
-              <span class="name">MSFT</span><span class="pct">$25亿AI投入</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">MU</span><span class="pct">AI算力核心受益</span>
+              <span class="name">江波龙 🇨🇳</span><span class="pct">H1净利+74394%</span>
             </div>
           </div>
 
@@ -1067,310 +1140,298 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>SemiAnalysis驳斥"算力过剩论"</strong>：
-              Meta明年AI资本开支将"高得惊人"，"AI算力即资本"周期论重回主导叙事，
-              NVDA/AMD/MU等算力股受益最直接
+              <strong>三星晶圆代工：4nm近售罄，8nm接近满载</strong>；开始选择性接单，优先服务现有客户；积压订单达50万亿韩元（来自特斯拉、Meta、Anthropic等）
             </li>
             <li>
-              <strong>SK海力士宣布$290亿ADR</strong>：韩国存储业巨额融资，
-              三星谈合作、铠侠NAND送样，存储产业链供给侧信心大幅修复
+              <strong>瑞银上调存储价格预期</strong>：DRAM/NAND涨价周期明确延续至2027年；SemiAnalysis补充：英伟达AI系统中内存支出占比将于2026年底超30%，2027年超40%
             </li>
             <li>
-              <strong>亚马逊AI硬件战略首次披露</strong>：
-              拟打造"无屏AI生态"，首次公布消费电子自研芯片路线图，
-              云+端一体化布局加速
+              <strong>AI电力危机</strong>：极端高温 + AI算力需求叠加 → 美国最大电网（PJM）启动二级紧急警报；北弗吉尼亚（核心数据中心集群）电价飙升至<span class="num">$2,500/MWh</span>（约为正常水平60倍）
             </li>
             <li>
-              <strong>微软砸$25亿+6,000专家</strong>：
-              押注企业AI"前线部署+持续优化"模式，
-              从Meta云化到英伟达"算力分成"，超级用户端AI商业化路径愈发清晰
+              <strong>Meta AI芯片大单</strong>：媒体报道Meta拟向三星定制65亿美元AI芯片，台积电独家代工格局或面临变局
             </li>
             <li>
-              <strong>Palantir升级至买入</strong>：联手英伟达构建AI安全护城河，
-              政府+国防合同为收入提供强力背书，防御性AI概念受到追捧
+              <strong>DeepSeek涨价 → 竞争理性化</strong>：高峰时段API价格上调至非高峰2倍；高盛解读：国内大模型激进价格战进入尾声，竞争重心转向成本控制与商业化能力
             </li>
             <li>
-              <strong>腾讯云：DeepSeek-V4正式版7月中旬上线</strong>，
-              引入峰谷定价机制；Claude Code提示词大幅精简新模式带来部署效率革命
+              <strong>AI消费降温信号</strong>：AI Token支出指数近期跌近20%，用户边际付费意愿出现降温迹象
             </li>
             <li>
-              <strong>⚠️ 风险提示：AI Token支出指数跌近20%</strong>——
-              用户边际付费意愿降温，AI商业化变现节奏仍存不确定性
+              <strong>Alibaba封禁Claude Code</strong>：7月10日起内部全面禁用，理由为存在后门风险；Anthropic vs 中国科技公司冲突升级
+            </li>
+            <li>
+              <strong>特朗普AI监管立场</strong>：「需要护栏，但越少越好」；同时传OpenAI正与政府就出让5%股权谈判（Anthropic、谷歌、Meta或同被纳入）
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>算力过剩担忧被SemiAnalysis数据打脸，叠加SK海力士ADR与三星/铠侠供给端积极动作，存储+算力板块信心修复迅速。然而AI Token支出指数下滑说明需求侧仍有软肋。下周Q2财报季将检验AI资本开支能否真正转化为营收盈利，是最大催化剂，也是最大风险点。
+          <strong>💡 解读：</strong>两大关键分歧正在浮现——①<strong>供给侧强劲</strong>：三星代工满载、存储涨价延续、Meta大客户验证 → 算力基础设施需求真实；②<strong>需求侧警告</strong>：AI Token消费指数跌近20%、苹果AI功能未能拉动换机（瑞银）→ 终端变现尚未兑现。<strong>Q2财报将是裁判员</strong>，验证哪一方叙事更接近现实。
         </div>
       </section>
 
       <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
+          <div
+            class="section-icon"
+            style="background: rgba(217, 162, 58, 0.16)"
+          >
+            💼
+          </div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- Q2 Season Kickoff -->
+        <!-- Q2启动 -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">Q2 2026</span>
-              <span class="earnings-name">财报季开启在即</span>
+              <span class="earnings-name">财报季启动预告</span>
             </div>
-            <span class="beat-badge" style="background: rgba(91,149,201,0.14); color: var(--accent-sky-deep); border: 1px solid rgba(91,149,201,0.25);">⚡ AI牛市最大考验</span>
+            <span class="beat-badge pending">⏳ 即将开始</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">银行先行日期</div>
-              <div class="metric-value" style="font-size:14px">7月7日起</div>
-              <div class="metric-delta up">JPM / WFC / C / GS</div>
+              <div class="metric-label">复市日期</div>
+              <div class="metric-value">7月7日</div>
+              <div class="metric-delta up">下周一美股复市</div>
             </div>
             <div class="metric">
-              <div class="metric-label">科技巨头</div>
-              <div class="metric-value" style="font-size:14px">7月下旬</div>
-              <div class="metric-delta up">MSFT / AMZN / META / NVDA</div>
+              <div class="metric-label">核心命题</div>
+              <div class="metric-value">Capex→利润</div>
+              <div class="metric-delta up">AI投入能否兑现</div>
             </div>
             <div class="metric">
-              <div class="metric-label">核心问题</div>
-              <div class="metric-value" style="font-size:13px">AI投入→盈利</div>
-              <div class="metric-delta" style="color:var(--yellow);">能否兑现？</div>
+              <div class="metric-label">资金信号</div>
+              <div class="metric-value">流出3M高</div>
+              <div class="metric-delta down">美股基金3月最大流出</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Q2整体</div>
+              <div class="metric-value">史上最强</div>
+              <div class="metric-delta up">特朗普：最佳季度</div>
             </div>
           </div>
 
           <ul class="bullet-list">
             <li>
-              <strong>华尔街下周前瞻</strong>：投资者关注美联储政策信号和财报表现，
-              科技股震荡将成为市场焦点
+              <strong>多空极度分化</strong>：「大空头」伯里（Michael Burry）做空美光（MU），警告半导体周期高点已超越互联网泡沫时期
             </li>
             <li>
-              <strong>AI牛市最大盈利考验</strong>：科技巨头大规模AI资本开支，
-              Q2能否真正转化为营收增长和EPS超预期，是上半年涨幅能否被巩固的关键
-            </li>
-          </ul>
-        </div>
-
-        <!-- PEP -->
-        <div class="earnings-card">
-          <div class="earnings-header">
-            <div class="earnings-ticker">
-              <span class="ticker-badge">PEP</span>
-              <span class="earnings-name">百事公司 Q2 前瞻</span>
-            </div>
-            <span class="beat-badge" style="background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border);">⚠️ 分析师谨慎</span>
-          </div>
-
-          <ul class="bullet-list">
-            <li>
-              <strong>Evercore ISI提前"泼冷水"</strong>：
-              消费疲软 + 通胀逆风恐令Q2盈利承压，维持"与大盘持平"评级
+              另一面：江波龙存储H1净利预增<span class="num">+62,204%~+74,394%</span>，瑞银上调DRAM/NAND至2027，存储涨价派有据可查
             </li>
             <li>
-              消费必需品板块面临<strong>成本转嫁能力减弱</strong>与<strong>消费者降级趋势</strong>双重压力，
-              PEP走弱预示资金将进一步向科技/AI倾斜
-            </li>
-          </ul>
-        </div>
-
-        <!-- MU -->
-        <div class="earnings-card">
-          <div class="earnings-header">
-            <div class="earnings-ticker">
-              <span class="ticker-badge">MU</span>
-              <span class="earnings-name">美光科技 — AI算力核心企业</span>
-            </div>
-            <span class="beat-badge beat">📈 正面叙事强化</span>
-          </div>
-
-          <ul class="bullet-list">
-            <li>
-              <strong>美光崛起故事获关注</strong>：从爱达荷州地下室到AI算力浪潮核心企业；
-              HBM存储需求快速放量，为SK海力士ADR利好的直接受益者之一
+              <strong>苹果换机周期叙事受挫</strong>：瑞银调查显示苹果AI功能未能点燃新一轮换机热潮，AAPL估值支撑削弱
             </li>
             <li>
-              存储产业链三星/SK海力士/铠侠积极动作 →
-              MU估值修复机会，Q2业绩将验证HBM出货量加速
+              预期重磅：<strong>大型银行（摩根大通等）、台积电（约7月17日）、科技巨头（微软/Alphabet/Amazon/Meta）</strong>将于7月中下旬集中发布Q2业绩
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>本周无重大美股财报，但下周Q2财报季是全年最关键验证窗口。银行先行检验利率环境下的盈利韧性，科技巨头月底验证AI资本回报。消费类（PEP）已显现疲态，资金轮动明确指向AI/科技主线。
+          <strong>💡 解读：</strong>Q2财报季开启前市场多空分歧为近年最大。看多派依靠「AI基础设施需求不可逆」，看空派担忧「估值高企 + 消费端未见回报」。<strong>重点关注大科技公司是否上调或下修2026年资本支出指引</strong>——这将是整个AI叙事的关键锚点。
         </div>
       </section>
 
       <!-- ═══ 6. 宏观指标 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
+          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">
+            📉
+          </div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
-            🇺🇸 美国6月非农就业报告 — 今日已发布（数据偏弱）
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 14px;
+            "
+          >
+            🛢️ 霍尔木兹复航 → 原油供给冲击逆转
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">就业市场强度（市场解读：偏软）</span>
-              <span class="value" style="color: var(--accent-sky-deep)">低于预期</span>
+              <span class="label">布伦特原油当前价格（$72.12/桶）</span>
+              <span class="value" style="color: var(--red)">$72</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 40%"></div>
+              <div class="survey-bar-fill red" style="width: 72%"></div>
             </div>
           </div>
+
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">招商宏观解读：数据"恰到好处"</span>
-              <span class="value" style="color: var(--green)">Goldilocks</span>
+              <span class="label">花旗目标价（$60/桶，大幅下调空间）</span>
+              <span class="value" style="color: var(--orange)">$60</span>
             </div>
             <div class="survey-bar-track">
               <div class="survey-bar-fill yellow" style="width: 60%"></div>
             </div>
           </div>
 
-          <ul class="bullet-list" style="margin-top: 12px">
-            <li>
-              <strong>"短期扰动"还是趋势转折？</strong>：若接下来就业数据持续走弱，
-              将推动美联储提前降息预期，科技/成长股受益
-            </li>
-            <li>
-              弱非农 + 油价大跌组合 → <strong>通胀压力减弱 → 降息窗口或提前至9月</strong>
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            ⚠️ 美银 Hartnett "卖出信号"依然闪烁
-          </div>
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">美股周度资金净流出（近四个月最大）</span>
-              <span class="value" style="color: var(--red)">最大净流出</span>
+              <span class="label">OPEC 6月产量激增（+234万桶/日）</span>
+              <span class="value" style="color: var(--accent-sky-deep)">供应过剩</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 85%"></div>
+              <div class="survey-bar-fill blue" style="width: 85%"></div>
             </div>
           </div>
-          <ul class="bullet-list" style="margin-top: 12px">
+
+          <div class="divider" style="margin: 14px 0"></div>
+
+          <ul class="bullet-list">
             <li>
-              <strong>美股遭遇近四个月最大单周资金净流出</strong>：
-              机构资金在股价反弹中持续撤离，涨势与资金面背离
+              美伊签署谅解备忘录 → 霍尔木兹海峡陆续恢复正常通航；沙特超级油轮已开始驶离海峡
             </li>
             <li>
-              Hartnett坚持"卖出信号"：涨势由情绪驱动，缺乏资金面支撑，
-              短期波动加剧风险高
+              <strong>通胀尾部风险下降</strong>：霍尔木兹复航削弱最危险的通胀上行尾部风险，降低美联储进一步加息的紧迫性；货币市场已下调美联储加息预期 → 利好成长股
             </li>
             <li>
-              <strong>SpaceX纳入纳斯达克100</strong>：历史规律显示被纳入标的短期超额收益明显，
-              但被动买入驱动的涨幅可持续性有限
+              中国国内成品油今年首次「三连跌」：年内最大降幅（第13次调价），直接受益于国际油价走软
+            </li>
+            <li>
+              伊朗外交：伊朗议长提「霍尔木兹共管」方案（伊朗+阿曼）；沙特代表团「意外」现身伊朗前最高领袖葬礼 → 地缘关系微妙缓和
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            🌏 全球宏观信号速览
-          </div>
-          <div class="tech-chips" style="margin-bottom: 12px">
-            <div class="tech-chip">
-              <span class="name">🇪🇺 欧元区综合PMI</span><span class="pct" style="color:var(--green)">50.0 重返荣枯线</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇩🇪 德国PMI</span><span class="pct" style="color:var(--green)">意外救场</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">WTI原油</span><span class="pct" style="color:var(--red)">$84.26 (-3.93%)</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇰🇷 KOSPI</span><span class="pct" style="color:var(--green)">+5.8%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇯🇵 日经225</span><span class="pct" style="color:var(--green)">跟涨（存储概念）</span>
-            </div>
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            📊 资金流向与经济数据
           </div>
           <ul class="bullet-list">
             <li>
-              <strong>欧元区经济6月"止跌"</strong>：综合PMI重返50，
-              德国数据意外救场；欧洲经济底部信号初现，欧央行降息预期小幅延后
+              <strong>美股：3个月最大资金流出</strong> → 资金从美股转向日本（7周最大流入）；财报季开启前投资者选择观望
             </li>
             <li>
-              <strong>花旗：霍尔木兹风险消退后，油价或跌向$60</strong>——
-              地缘风险溢价彻底退潮，能源通胀压力大幅减弱
+              <strong>中国6月服务业PMI 54.1</strong>：新业务出口分项创年内新高，销售价格强势重返扩张（逾一年最强），就业连续两月扩张
             </li>
             <li>
-              ⚑ <strong>重点观察1</strong>：弱非农 + 弱油价组合能否持续 →
-              若是，美联储9月降息概率大幅上升
+              <strong>欧元区6月综合PMI重返50荣枯线</strong>：德国数据意外改善，欧元区「止跌」信号
             </li>
             <li>
-              ⚑ <strong>重点观察2</strong>：Q2财报季能否验证AI资本开支回报 →
-              下周大行先行，科技巨头月底集中报告，是全年最大催化剂
+              <strong>特朗普Q2成绩单</strong>：标普500、纳斯达克、道琼斯全面大涨；美国贸易逆差收窄，出口额连续数月创历史新高；401(k)账户持续增值
+            </li>
+            <li>
+              <strong>中国「十五五」美丽中国规划发布</strong>：2030年生态环境全面改善目标；电动车税收优惠政策将于2027年1月调整（部分优惠到期）→ EV板块短期关注
             </li>
           </ul>
+        </div>
+
+        <div class="card">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🌏 亚太今日市场表现
+          </div>
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">🇨🇳 上证指数</span><span class="pct">+0.37% = 4043</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 深证成指</span><span class="pct">+0.64% = 15597</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 创业板</span><span class="pct">+0.07% = 4019</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇰🇷 韩国综指</span><span class="pct">V型反弹</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇯🇵 日经225</span><span class="pct">V型反弹</span>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">
+            ⚠️ 注：华尔街见闻日历页面当日数据显示异常（页面停留在六月）。亚太及中国A股数据来源为早餐FM-Radio报道（07:18），宏观市场数据以华尔街见闻正文文章为准。
+          </p>
         </div>
       </section>
 
       <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
+          <div
+            class="section-icon"
+            style="background: rgba(90, 154, 106, 0.14)"
+          >
+            💡
+          </div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 值得关注 — 机会</div>
+          <div class="alert-title">🟢 重点观察 — 机会方向</div>
           <div class="alert-text">
-            <strong>① 算力/存储板块情绪修复</strong>——
-            SemiAnalysis + SK Hynix ADR双重催化打散算力过剩论，NVDA、MU、PLTR情绪面全面回暖；若下周Q2银行财报超预期，将进一步强化风险偏好回升，AI/科技全线受益<br/>
-            <strong>② 弱非农→降息预期升温</strong>——
-            6月就业偏弱，油价大幅回落（-3.93%），双重利好成长/科技股；若美联储官员发出鸽派信号，纳斯达克100（QQQ）将成为最直接受益标的
+            <strong>① 存储/内存涨价周期仍在延续</strong> — 瑞银确认DRAM/NAND涨价至2027年；三星4nm代工接近售罄；SK海力士/三星今日V型反弹。日韩存储股经两日急跌后具备短线反弹动能<br />
+            <strong>② 油价下行 → 通胀尾部风险消退</strong> — 霍尔木兹复航 + OPEC增产压制油价；降低美联储加息紧迫性 → 利好利率敏感型成长股（科技/REITs）；同时关注能源板块空头机会（XLE/油价ETF）
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 需要警惕 — 风险</div>
+          <div class="alert-title">🔴 风险提示 — 需要警惕</div>
           <div class="alert-text">
-            <strong>① 近四个月最大单周资金净流出</strong>——
-            Hartnett"卖出信号"持续闪烁，机构资金在反弹中撤离，股价上涨缺乏资金面支撑；短期若无催化剂，波动率将快速放大<br/>
-            <strong>② AI商业化变现节奏存疑</strong>——
-            AI Token支出指数跌近20%，用户边际付费意愿降温；若下周科技巨头Q2收入指引保守，AI高估值将面临系统性重新定价
+            <strong>① 芯片股两日急跌 + 伯里做空美光</strong> — 算力过剩担忧浮现；伯里警告半导体周期高点超越互联网泡沫水平；AI Token消费指数跌近20%（需求端降温），MU等纯存储股需选择性对待<br />
+            <strong>② Q2财报季「盈利兑现」压力</strong> — 科技巨头资本支出已飙升，市场期待Q2业绩验证投资回报率；若营收指引低于预期，高估值AI股面临较大调整风险<br />
+            <strong>③ 地缘与政策不确定性</strong> — 霍尔木兹「共管」方案尚未落定，伊朗态度仍存变数；OpenAI政府持股谈判若成真，将深度重塑AI行业IPO格局与监管生态
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
-          ✅ 三条可执行关注清单（今晚美股收盘前）
+        <div
+          style="
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          "
+        >
+          ✅ 三条可执行关注清单（针对7月7日周一美股复市）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">关注弱非农后美联储官员表态 + 10年期美债收益率走向</div>
+            <div class="action-title">监控Q2财报季开局信号（7月7日复市首日）</div>
             <div class="action-desc">
-              若下午有Fed官员讲话且语气偏鸽（强调就业放缓），10Y美债收益率将下行，
-              科技/成长ETF（QQQ、QQQM）可逢低介入；若官员坚持鹰派立场，
-              则适度减少利率敏感型仓位（REITs、高估值成长股）
+              周一美股复市即进入财报季倒计时。关注市场对Q2业绩预期的定价：若大型银行/科技股盘前预告乐观，可布局算力供应链ETF（SOXL、NVDA周边）；若有大公司下修AI投入指引，则规避高估值成长股（尤其是P/E超100的AI纯概念股）
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">布局存储/AI芯片板块：MU / NVDA / AMD 今日最后入场窗口</div>
+            <div class="action-title">评估能源板块旋转机会（油价下行叙事验证）</div>
             <div class="action-desc">
-              SK Hynix ADR + SemiAnalysis报告彻底打消算力过剩疑虑，
-              MU（美光）/ NVDA / AMD 在算力信心修复叙事下仍有上行空间。
-              今日（周五）收盘前若无进一步利空，可逢低建立或加仓，
-              以备下周Q2财报季被动做多动能（尤其MU月底报告前）
+              霍尔木兹复航 + OPEC激增 + 花旗目标价$60 → 布伦特当前$72，若油价继续下行，可考虑能源股减持（XLE）和降息受益的消费/科技板块增持；同时关注中国加油价下调对消费板块（航空、快递、零售）的成本利好
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">SpaceX纳入纳斯达克100 — 密切追踪正式纳入时间</div>
+            <div class="action-title">选择性布局日韩存储股，避开美国MU</div>
             <div class="action-desc">
-              历史规律：被动纳入Nasdaq 100前数日至纳入当日，标的往往出现超额收益。
-              密切关注正式纳入日期公告，纳入前可小仓位参与；
-              纳入当日准备止盈，"买预期卖事实"效应在指数纳入事件中尤为显著
+              瑞银确认DRAM/NAND涨价延续至2027年，三星/SK海力士今日V型反弹验证市场信心；但伯里已做空MU，美光估值与供给节奏存争议。策略建议：可通过海外存储ETF（如KRX半导体）或直接持有三星/SK海力士敞口，同时对MU持审慎观望态度，等待Q2财报指引再作决定
             </div>
           </li>
         </ol>
@@ -1382,7 +1443,9 @@
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
         <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 新华社</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年7月3日 · 晨间版（workflow_dispatch）</div>
+        <div style="margin-top: 4px">
+          由 AI 助手自动生成 · 2026年7月4日 · 晨间版（独立日特别版）
+        </div>
       </footer>
     </div>
   </body>
