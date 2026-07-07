@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>财经简报 | 2026年7月7日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
-        <style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
@@ -507,6 +507,12 @@
         border: 1px solid var(--green-border);
       }
 
+      .beat-badge.miss {
+        background: var(--red-bg);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+
       .metric-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -576,6 +582,9 @@
       .tech-chip .pct {
         color: var(--green);
         font-weight: 600;
+      }
+      .tech-chip .pct.down {
+        color: var(--red);
       }
 
       /* ── Alert Boxes ── */
@@ -788,11 +797,11 @@
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
-          LIVE · 马来西亚美股投资者专属 · 夜市版
+          LIVE · 马来西亚美股投资者专属
         </div>
         <h1>🌙 财经简报</h1>
-        <div class="date">2026年7月7日 · 周一 · 美股已于 21:30 MYT 开盘</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers (SG) · 新华社 · 截至 21:51 MYT</div>
+        <div class="date">2026年7月7日 · 周一 · 美股盘中 EST 10:56</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 盘中实时快报</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
@@ -802,17 +811,52 @@
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">道琼斯</div>
+            <div class="index-value">~49,700</div>
+            <div class="index-change up">上周收涨（估）</div>
+          </div>
+          <div class="index-card down">
+            <div class="index-name">纳斯达克100</div>
+            <div class="index-value">盘中 -2%</div>
+            <div class="index-change down">存储/半导体拖累</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">S&amp;P 500</div>
+            <div class="index-value">历史新高</div>
+            <div class="index-change up">机构持仓1年低位</div>
+          </div>
+        </div>
+
         <div class="card">
           <ul class="bullet-list">
-            <li><strong>上一交易日（7月3日/2日）背景：</strong> 存储/AI股经历一轮急涨后开始降温——闪迪（SanDisk）三日累跌 <span class="num down">-23%</span>，存储板块整体回落</li>
-            <li><strong>AI风险溢价预警：</strong> 纳指风险溢价创<strong>互联网泡沫以来新高</strong>，市场对AI概念估值过度定价引发警惕</li>
-            <li><strong>盘前触发因素：</strong> 三星Q2财报低于预期 → 市场"提前定价了完美"却收到平庸业绩，美光（MU）盘前跌约 <span class="num down">-5%</span></li>
-            <li><strong>Rivian（RIVN）公告：</strong> 拟增发7,500万股，筹资约15亿美元，盘前承压</li>
+            <li>
+              上周美股以<strong>标普500历史新高</strong>收盘，本周一（7/7）开盘后三大指数即出现分化
+            </li>
+            <li>
+              <strong>纳斯达克100早盘跌幅扩大至 -2%</strong>：三星Q2财报未及预期，拖累存储/HBM板块；
+              DeepSeek自研AI推理芯片消息同步压制半导体情绪
+            </li>
+            <li>
+              <strong>道琼斯/S&P 500相对稳健</strong>：云计算、金融服务类股逆势走强，
+              赛富时 <span class="num">+2%</span>、Meta <span class="num">+2%</span>、阿里巴巴 <span class="num">+2%</span>
+            </li>
+            <li>
+              <strong>油价突涨 <span class="num">+2%</span></strong>：卡塔尔LNG货轮疑遭导弹袭击，
+              霍尔木兹海峡地缘风险再度升温
+            </li>
+            <li>
+              华尔街见闻（7/7 22:31）指出：<strong>「史上最受质疑的市场新高」</strong>——
+              S&P 创新高但机构持仓接近一年最低水平，散户与机构情绪背离
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>本轮存储股回调并非基本面恶化，而是前期涨幅过大后的技术性修正叠加三星财报预期落空。<strong>重点看</strong>：今日美股是否形成超卖反弹，或进一步扩大跌势。
+          <strong>💡 解读：</strong>上周S&P新高是「无机构背书的新高」——机构持仓处年内低位意味着大资金对这轮涨势半信半疑。
+          今日周一开盘三条利空同时袭来（三星财报差、DeepSeek自研芯片、霍尔木兹风险），Nasdaq 100首当其冲。
+          <strong>关键问题：</strong>半导体跌势会否蔓延至Mag-7？若英伟达也跟跌，则AI主题降温信号更明确。
         </div>
       </section>
 
@@ -836,12 +880,18 @@
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
                 <td><span class="asset-price">$4,219.32/oz</span></td>
-                <td><span class="tag up">▲ +0.20%</span><span class="asset-note">避险需求支撑</span></td>
+                <td>
+                  <span class="tag up">▲ +0.20%</span>
+                  <span class="asset-note">避险买盘支撑</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">~$84+</span></td>
-                <td><span class="tag up">▲ 今日开盘涨近+2%</span><span class="asset-note">霍尔木兹风险</span></td>
+                <td><span class="asset-price">~$86/bbl</span></td>
+                <td>
+                  <span class="tag up">▲ +2%</span>
+                  <span class="asset-note">霍尔木兹风险升温</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
@@ -851,24 +901,35 @@
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
                 <td><span class="asset-price">1.1568</span></td>
-                <td><span class="tag down">▼ 持平</span></td>
+                <td><span class="tag up">▲ 0.00%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
                 <td><span class="asset-price">160.21</span></td>
-                <td><span class="tag down">▼ 持平</span><span class="asset-note">日元仍弱</span></td>
+                <td>
+                  <span class="tag up">▲ 0.00%</span>
+                  <span class="asset-note">日元维持弱势</span>
+                </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
                 <td><span class="asset-price">6.7633</span></td>
-                <td><span class="tag down">▼ 持平</span></td>
+                <td><span class="tag up">▲ 0.00%</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🔷 10Y 美债</span></td>
+                <td><span class="asset-price">数据未获取</span></td>
+                <td><span class="asset-note">请参考交易平台</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>⚠️ 数据说明：</strong>华尔街见闻日历页面日期异常（显示6月14日），资产价格变动百分比可能不反映今日最新行情。油价以今日新闻报道为准（涨近+2%）。黄金、汇率数据仅供参考。
+          <strong>⚠️ 数据说明：</strong>华尔街见闻日历页面当前显示6月14日的历史事件数据，
+          侧边栏报价（黄金、美元、汇率）系页面实时组件数据，WTI原油侧边栏显示$84.26（-3.93%），
+          但7月7日盘中新闻报道因霍尔木兹事件油价<strong>+2%</strong>，此处采用新闻隐含价格约$86。
+          建议以实际券商平台数据为准。
         </div>
       </section>
 
@@ -880,30 +941,44 @@
         </div>
 
         <div class="card">
+          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+            📍 美股今日（7月7日周一）开盘后盘中催化因素 · 当前 EST 10:56
+          </div>
           <div class="timeline">
             <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              <strong>三星 Q2 财报已出炉（昨晚）</strong> — HBM存储未达预期 → 
+              闪迪(SNDK) <span style="color: var(--red)">-12%</span>、西部数据(WDC) <span style="color: var(--red)">-10%</span>、AMD <span style="color: var(--red)">-7%</span>、英特尔 <span style="color: var(--red)">-5%</span>
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label report">重磅</span>
+              <strong>DeepSeek 据悉自研 AI 推理芯片</strong> — 大客户自制芯片压力再度升温，
+              英伟达盘前跌近 -2%，AI算力供应链逻辑承压
+            </div>
+            <div class="timeline-item important">
               <span class="timeline-label data">数据</span>
-              <strong>ADP就业：+2.1万</strong>（前值 +3.075万）→ 劳动力市场降温信号，低于预期利好联储降息预期
+              <strong>美国上周 ADP 就业人数：2.1万人</strong>（前值 3.075万人）—
+              就业降温幅度超预期，有助于支撑美联储降息预期
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">公告</span>
+              <strong>亚马逊拟发行至少 250 亿美元债券</strong>（最长期限40年）—
+              全力加码 AI 基础设施，AI capex 叙事持续强化
             </div>
             <div class="timeline-item important">
               <span class="timeline-label report">地缘</span>
-              <strong>霍尔木兹海峡风险重燃</strong>：卡塔尔LNG货轮遭导弹袭击 → 能源通道安全受威胁 → 油价拉升近+2%
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label earnings">债市</span>
-              <strong>亚马逊拟发行≥250亿美元债券</strong>（最长40年期）→ 资金全部用于AI基础设施建设，利率敏感度高
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label report">指数</span>
-              <strong>SpaceX纳入纳斯达克100</strong>：被动资金将被迫买入 → 潜在买盘催化剂
+              <strong>霍尔木兹海峡风险重燃</strong> — 卡塔尔 LNG 货轮疑遭导弹袭击，
+              油价盘中拉升 +2%，能源/避险资产受提振
             </div>
             <div class="timeline-item">
-              <span class="timeline-label earnings">公司</span>
-              <strong>Rivian（RIVN）增发7,500万股</strong>，筹资约15亿美元 → 稀释股权，盘初跌超<span style="color:var(--red)">-14%</span>
+              <span class="timeline-label earnings">指数</span>
+              <strong>SpaceX 正式纳入纳斯达克100指数</strong>（今日生效）—
+              高盛、Raymond James 同步启动覆盖，但股价反跌约 -5%（买入预期兑现）
             </div>
             <div class="timeline-item">
-              <span class="timeline-label data">盘口</span>
-              三大指数开盘<strong>涨跌不一</strong>；存储/芯片板块领跌：WDC <span style="color:var(--red)">-8%+</span>、SanDisk <span style="color:var(--red)">-6%+</span>、AMD <span style="color:var(--red)">-7%</span>、Intel <span style="color:var(--red)">-5%</span>
+              <span class="timeline-label report">并购</span>
+              <strong>Crinetics 暴涨 +99%</strong> — 福泰制药（Vertex）拟以约 100亿美元现金收购，
+              医药并购活跃度持续提升
             </div>
           </div>
         </div>
@@ -917,28 +992,42 @@
         </div>
 
         <div class="card">
-          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
-            <strong style="color: var(--purple)">今日重点关注</strong> — 存储/芯片板块重挫 · DeepSeek芯片新动向 · SpaceX上指
+          <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary);">
+            <strong style="color: var(--purple)">今日盘中</strong> · 科技板块两极分化
+            <span class="tag down" style="font-size: 13px; margin-left: 6px;">存储/半导体 ↓</span>
+            <span class="tag up" style="font-size: 13px; margin-left: 4px;">云计算/软件 ↑</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">WDC</span><span class="pct" style="color:var(--red)">-8%+</span>
+              <span class="name">SNDK</span><span class="pct down">-12%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AMD</span><span class="pct" style="color:var(--red)">-7%</span>
+              <span class="name">WDC</span><span class="pct down">-10%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">INTC</span><span class="pct" style="color:var(--red)">-5%</span>
+              <span class="name">AMD</span><span class="pct down">-7%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">NVDA</span><span class="pct" style="color:var(--red)">-2%盘前</span>
+              <span class="name">INTC</span><span class="pct down">-5%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">RIVN</span><span class="pct" style="color:var(--red)">-14%+</span>
+              <span class="name">NVDA</span><span class="pct down">~-2%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">AMZN</span><span class="pct">+($250亿债)</span>
+              <span class="name">SPCE/SpaceX</span><span class="pct down">-5%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">RIVN</span><span class="pct down">-14%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">CRM</span><span class="pct">+2%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">META</span><span class="pct">+2%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">BABA</span><span class="pct">+2%</span>
             </div>
           </div>
 
@@ -946,28 +1035,42 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>DeepSeek据悉开发AI推理芯片</strong>：中国AI大模型公司自研推理专用芯片，大客户自研趋势加速 → 英伟达（NVDA）盘前跌近<span class="num down">-2%</span>，芯片自研压力升温
+              <strong>DeepSeek 自研 AI 推理芯片</strong>：继大模型之后，DeepSeek 转向芯片端自研，
+              若成功将直接威胁英伟达在推理侧的垄断地位；
+              AMD、英特尔因此遭受双重压制
             </li>
             <li>
-              <strong>SpaceX纳入纳斯达克100：</strong>华尔街大行静默期结束，集体唱多——摩根士丹利目标价<strong>$300</strong>；高盛首次覆盖，评级"买入"；SpaceX IPO预期推动Q2交易业务飙升
+              <strong>亚马逊 $250亿债券加码 AI 基础设施</strong>：最长期限40年，
+              彰显 Mega-cap 对 AI 长期资本支出的坚定承诺；
+              云计算/数据中心板块获提振
             </li>
             <li>
-              <strong>亚马逊AI债券：</strong>拟发行250亿美元债券（最长40年期），全数用于AI基础设施。是迄今美科技公司最大单笔债券融资之一
+              <strong>高盛首次覆盖 SpaceX</strong>：定性为「垂直整合打通三大万亿美元级市场的巨无霸」；
+              Raymond James 给出「强烈买入」评级、目标价 $800；
+              但纳入 NDX 当日股价下跌——典型的「卖新闻」行情
             </li>
             <li>
-              <strong>AI风险溢价突破：</strong>纳指风险溢价创<strong>互联网泡沫以来新高</strong>，市场对AI主题过度定价；德银"WOW图表"警告：AI狂飙背后，多项变化值得警惕
+              <strong>纳指风险溢价创互联网泡沫以来新高</strong>：AI 狂热推高科技股波动率，
+              投资者开始为潜在的估值修正定价
             </li>
             <li>
-              <strong>特斯拉Token限流：</strong>特斯拉开始对AI服务实施Token"限流"，与行业整体趋势一致（算力成本管控）
+              <strong>Rivian 增发稀释</strong>：拟增发 7,500 万股筹资约 $15亿，
+              股价跌超 <span class="num down">-14%</span>，创 2024年11月以来最大跌幅
             </li>
             <li>
-              <strong>字节Seedance：</strong>AI视频生成成为全球AI的"第二大商业机会"，字节AI布局持续深化
+              <strong>高盛2026下半年宏观路线图</strong>：「资本的竞争将决定市场走向」——
+              AI 投资回报率分化将成为下半年核心主题
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>DeepSeek自研推理芯片是<strong>结构性威胁</strong>还是短期噪音？若更多中国AI企业跟进自研，英伟达的垄断溢价将面临压力。短期看，SpaceX纳入纳指为指数ETF提供催化剂，但AI估值整体过高已是市场共识。
+          <strong>💡 解读：</strong>AI 投资叙事发生内部分裂——
+          亚马逊 $250亿债券显示 Hyperscaler 对 AI capex 毫不动摇；
+          但 DeepSeek 自研推理芯片的消息暗示<strong>「算力民主化」趋势加速</strong>，
+          英伟达的高端 GPU 定价权面临长期挑战。
+          短期内存储板块（三星 + NAND）的暴跌是市场「提前交易 AI 降温」的信号，
+          需密切观察英伟达是否跟随下行——这将是本周最关键的风向标。
         </div>
       </section>
 
@@ -982,63 +1085,119 @@
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">Samsung</span>
+              <span class="ticker-badge">005930.KS</span>
               <span class="earnings-name">三星电子 Q2 2026</span>
             </div>
-            <span class="beat-badge" style="background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)">⚠️ 低于预期</span>
+            <span class="beat-badge miss">✗ 未及预期</span>
           </div>
+
           <div class="metric-grid">
             <div class="metric">
+              <div class="metric-label">HBM存储</div>
+              <div class="metric-value">未达标</div>
+              <div class="metric-delta down">交付质量问题</div>
+            </div>
+            <div class="metric">
               <div class="metric-label">市场反应</div>
-              <div class="metric-value">韩股承压</div>
-              <div class="metric-delta down">估值已"定价完美"</div>
+              <div class="metric-value">存储股崩跌</div>
+              <div class="metric-delta down">SNDK -12%, WDC -10%</div>
             </div>
             <div class="metric">
-              <div class="metric-label">板块影响</div>
-              <div class="metric-value">MU 盘前</div>
-              <div class="metric-delta down">-5%</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">存储/半导体</div>
-              <div class="metric-value">集体降温</div>
-              <div class="metric-delta down">WDC -8%+</div>
+              <div class="metric-label">分析师观点</div>
+              <div class="metric-value">「已定价完美」</div>
+              <div class="metric-delta down">再好也不够好</div>
             </div>
           </div>
+
           <ul class="bullet-list">
-            <li>三星Q2 营收/利润数据细节暂未披露，但<strong>市场反应印证"预期差"逻辑</strong>：即使业绩不差，也无法取悦已大幅提前定价的市场</li>
-            <li>存储芯片涨价周期已被市场消化，需要新的超预期叙事才能推动板块进一步走高</li>
+            <li>
+              三星HBM（高带宽存储）出货量及质量未达英伟达认证要求，AI训练芯片配套存储供应仍存短板
+            </li>
+            <li>
+              市场此前已充分定价「三星HBM交付正常化」预期，<strong>实际业绩低于高预期</strong> → 超预期抛压
+            </li>
+            <li>
+              存储降温传导链：三星 → 闪迪/WDC → 美光(MU) → 广泛NAND/DRAM产业链
+            </li>
           </ul>
         </div>
 
-        <!-- Rivian -->
+        <!-- Crinetics -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">RIVN</span>
-              <span class="earnings-name">Rivian 增发公告</span>
+              <span class="ticker-badge">CRNX</span>
+              <span class="earnings-name">Crinetics 并购公告</span>
             </div>
-            <span class="beat-badge" style="background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)">📉 -14%+ 创2024年11月以来最大跌幅</span>
+            <span class="beat-badge beat">✓ +99% 暴涨</span>
           </div>
+
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">增发规模</div>
-              <div class="metric-value">7,500万股</div>
-              <div class="metric-delta down">股权稀释</div>
+              <div class="metric-label">收购方</div>
+              <div class="metric-value">Vertex</div>
+              <div class="metric-delta up">福泰制药</div>
             </div>
             <div class="metric">
-              <div class="metric-label">筹资目标</div>
-              <div class="metric-value">~$15亿</div>
-              <div class="metric-delta down">低价增发</div>
+              <div class="metric-label">收购金额</div>
+              <div class="metric-value">~$100亿</div>
+              <div class="metric-delta up">全现金交易</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">CRNX 涨幅</div>
+              <div class="metric-value">+99%</div>
+              <div class="metric-delta up">盘中接近翻倍</div>
             </div>
           </div>
+
           <ul class="bullet-list">
-            <li>Rivian以市场折价增发筹资，反映<strong>资金消耗仍大</strong>，短期股价承压</li>
-            <li>电动车赛道融资困难加剧，需关注亚马逊（AMZN为Rivian大客户）的后续支持</li>
+            <li>
+              福泰制药（Vertex）以约 100亿美元全现金收购 Crinetics，溢价巨大
+            </li>
+            <li>
+              信号意义：大型制药公司并购小型创新药企的热度持续，<strong>生物科技并购季节未结束</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Inspur/AI servers context -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">浪潮信息</span>
+              <span class="earnings-name">H1 2026 预增公告</span>
+            </div>
+            <span class="beat-badge beat">✓ 大幅超预期</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="metric-label">H1 净利润</div>
+              <div class="metric-value">26～31亿元</div>
+              <div class="metric-delta up">同比 +226%～+288%</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">核心驱动</div>
+              <div class="metric-value">AI 服务器</div>
+              <div class="metric-delta up">国内算力需求爆发</div>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>
+              AI服务器（GPU服务器）需求在国内持续爆发，AI基础设施建设景气度高企
+            </li>
+            <li>
+              与美股英伟达/AMD盘中走弱形成对比：国内 AI 基础设施需求与美股半导体估值逻辑出现短暂背离
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>今日无美国主要大行财报。三星Q2表现揭示<strong>"业绩天花板"风险</strong>：当市场已完全定价乐观预期，即使超预期都难以产生正向惊喜。对持有存储相关美股（WDC, MU）的投资者，需谨慎评估现有仓位。
+          <strong>💡 解读：</strong>本周财报焦点高度集中于<strong>AI半导体供应链</strong>。
+          三星Q2的「好业绩不够好」现象揭示：AI主题股已在历史高估值水平，任何预期差都会被放大为暴跌。
+          Crinetics的并购溢价则提醒：创新药并购仍是独立正收益来源。
+          关注下周美光(MU)如何解读存储周期——这将是对本周三星利空的重要校准。
         </div>
       </section>
 
@@ -1050,17 +1209,27 @@
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            📊 今日关键宏观数据
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px;">
+            就业数据 · ADP 7月7日公布
           </div>
 
           <div class="survey-bar">
             <div class="survey-bar-label">
-              <span class="label">ADP 周度就业增量（前值 +3.075万）</span>
-              <span class="value" style="color: var(--yellow)">+2.1万</span>
+              <span class="label">ADP 就业新增人数（本周）</span>
+              <span class="value" style="color: var(--yellow)">2.1万人</span>
             </div>
             <div class="survey-bar-track">
-              <div class="survey-bar-fill yellow" style="width: 35%"></div>
+              <div class="survey-bar-fill yellow" style="width: 28%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">ADP 就业新增人数（前值）</span>
+              <span class="value" style="color: var(--accent-blue)">3.075万人</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill blue" style="width: 41%"></div>
             </div>
           </div>
 
@@ -1068,38 +1237,57 @@
 
           <ul class="bullet-list">
             <li>
-              <strong>ADP就业弱于前值：</strong>+2.1万人 vs 前值+3.075万人，降幅约<span class="num down">-32%</span>。劳动力市场降温 → 支持联储维持宽松偏向
+              <strong>ADP 就业大幅弱于前值</strong>：2.1万 vs 前值 3.075万，降幅约 -32%；
+              就业市场降温有助于美联储维持或前移降息预期
             </li>
             <li>
-              <strong>高盛下半年宏观路线图：</strong>"资本的竞争将决定市场走向"——AI算力投入、债务融资等资本分配效率成为H2主轴
-            </li>
-            <li>
-              <strong>霍尔木兹地缘风险：</strong>卡塔尔LNG货轮遭导弹袭击，油价应声上涨约+2%；若局势升级，能源通道受阻影响全球供应链
-            </li>
-            <li>
-              <strong>纳指估值警告：</strong>AI狂热推高科技股波动率，纳指风险溢价<strong>创互联网泡沫以来新高</strong>，历史性高位估值需基本面支撑
+              配合ADP数据，<strong>本周五（7/10）非农就业</strong>将是下一关键验证节点
             </li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🌏 亚太市场参考
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
+            🔴 重点观察 — S&P新高的双重悖论
           </div>
-          <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">🇰🇷 韩国综指</span><span class="pct" style="color:var(--red)">三星拖累</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 A股</span><span class="pct">浪潮信息H1+226%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">DXY</span><span class="pct">99.81 (+0.11%)</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">黄金</span><span class="pct">$4,219 (+0.20%)</span>
-            </div>
+          <ul class="bullet-list">
+            <li>
+              <strong>史上最受质疑的市场新高</strong>：S&P 500 创历史新高，但机构持仓接近一年最低水平 → 散户/被动资金驱动的脆弱新高
+            </li>
+            <li>
+              <strong>纳指风险溢价创互联网泡沫以来新高</strong>：AI 狂热引发的估值溢价已达极端水平，市场为潜在回调定价
+            </li>
+            <li>
+              <strong>高盛：对冲基金持续减持科技股</strong>，特别是存储/NAND相关标的，机构不信任这轮科技高位
+            </li>
+            <li>
+              <strong>德银「WOW图表」</strong>：AI狂飙背后的变化正在积累——更值得警惕的是AI投资回报率极低的现实
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
+            🌐 宏观政策与地缘动态
           </div>
+          <ul class="bullet-list">
+            <li>
+              <strong>特朗普或将优化关税政策</strong>：据报道可能对关税进行结构性调整，
+              若落实将利好受关税压制的亚洲出口板块
+            </li>
+            <li>
+              <strong>高盛2026下半年宏观路线图</strong>：「资本的竞争将决定市场走向」——
+              AI差异化回报率将导致科技股内部出现显著分化
+            </li>
+            <li>
+              <strong>霍尔木兹地缘升温</strong>：卡塔尔LNG货轮疑遭导弹袭击，
+              能源运输安全风险重新进入市场定价
+            </li>
+            <li>
+              <strong>汇丰扩大香港黄金储存至200吨</strong>：目标支持香港2000吨黄金储存能力，
+              离岸人民币黄金交易体系持续完善
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -1111,45 +1299,64 @@
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察 — 机会</div>
+          <div class="alert-title">🟢 重点观察 — 机会窗口</div>
           <div class="alert-text">
-            <strong>① SpaceX纳斯达克100纳入效应</strong> — 被动资金（QQQ等）被迫买入SpaceX相关概念；华尔街大行唱多，摩根士丹利目标价$300；SpaceX IPO进程推动银行Q2交易收入<br />
-            <strong>② ADP就业走弱 → 降息预期回温</strong> — +2.1万大幅弱于前值，劳动力降温支持联储宽松，利好成长股/科技股估值回升
+            <strong>① 云计算/SaaS 逆势走强</strong> — 今日 CRM、META、BABA 均涨约 +2%，
+            在存储/半导体恐慌性下跌中展现相对强势；若AI capex（亚马逊 $250亿债券）确实落地，
+            算力消耗端（云服务商）受益逻辑更清晰<br />
+            <strong>② 就业降温 → 降息预期升温</strong> — ADP 仅 2.1万人（前值 3.075万），
+            若本周五非农同步弱化，利率敏感型成长股（高倍数SaaS）有望获得喘息空间
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示 — 需要警惕</div>
+          <div class="alert-title">🔴 风险提示 — 今日盘中需警惕</div>
           <div class="alert-text">
-            <strong>① DeepSeek自研推理芯片</strong> — 中国AI企业自研趋势若扩散，英伟达（NVDA）的AI算力垄断溢价面临长期压力；盘前NVDA已跌-2%，需观察是否扩大跌势<br />
-            <strong>② AI估值泡沫风险</strong> — 纳指风险溢价创互联网泡沫以来新高，三星财报"定价完美"陷阱已验证；本周任何宏观数据不及预期都可能触发科技股集体回调<br />
-            <strong>③ 霍尔木兹地缘尾部风险</strong> — 卡塔尔LNG货轮遭袭，若风险升级、航道受阻，能源价格大涨将压制消费和企业利润
+            <strong>① 存储/半导体跌势蔓延风险</strong> — SNDK -12%、WDC -10%、AMD -7%
+            若继续扩大，可能引发对英伟达的连锁抛售；一旦NVDA单日跌幅超 -3%，
+            AI主题全面降温信号确立，仓位需及时应对<br />
+            <strong>② 霍尔木兹地缘风险升级</strong> — 卡塔尔LNG货轮被袭，若冲突升级至航道封锁，
+            WTI可能从$86冲击$90+；能源成本飙升将通过通胀压力延缓美联储降息，
+            科技高估值标的首当其冲<br />
+            <strong>③ S&P新高「机构不信任」悖论</strong> — 机构持仓接近年内低位、
+            对冲基金减持科技，市场靠被动资金/散户维持；一旦数据走弱触发获利了结，
+            缺乏机构承接的行情回调速度会更快
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
-          ✅ 三条可执行关注清单（针对今晚开盘后两小时）
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+          ✅ 三条可执行关注清单（针对今日盘中剩余时段）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">监控 WDC / AMD / MU 跌幅是否稳定</div>
+            <div class="action-title">实时监控英伟达（NVDA）盘中走势</div>
             <div class="action-desc">
-              存储半导体板块今日大跌（WDC -8%+、AMD -7%）——若跌幅在开盘后30分钟内收窄并稳定，可能形成技术性超卖反弹机会；若持续扩大，则避免接飞刀，等待下一个支撑位确认后再考虑建仓
+              NVDA 是今日最关键的风向标。若 NVDA 盘中跌幅守在 -3% 以内 →
+              表明 AI 基础设施需求逻辑仍完好，存储跌势属于三星个股利空；
+              若 NVDA 跌幅扩大超过 -5% → 则半导体全线降温信号确立，
+              建议减持高PE科技持仓、转向防御性云计算/SaaS标的。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">关注 QQQ / NVDA 对 SpaceX 纳指利好的反应</div>
+            <div class="action-title">关注亚马逊（AMZN）$250亿债券发行定价结果</div>
             <div class="action-desc">
-              SpaceX纳入纳斯达克100为被动资金提供买入理由；若QQQ今日逆势表现（相对存储板块跌幅更小或走强），说明市场情绪仍在轮动而非全面恐慌，可持有纳斯达克ETF头寸；同时关注NVDA盘中稳定情况，跌幅是否收窄（目前盘前-2%）
+              亚马逊拟发行至少 $250亿美元债券（含最长40年期），若认购顺利且利率合理 →
+              说明机构投资者仍认可 AI 基础设施的长期价值，AMZN 及云计算ETF（WCLD/XLK）
+              可逢低布局；若发行遇阻或条款恶化 →
+              市场对 AI capex 可持续性的信心已出现裂缝，需谨慎。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">设置原油/能源对冲预案：WTI $87 为预警线</div>
+            <div class="action-title">密切追踪霍尔木兹海峡局势与油价动向</div>
             <div class="action-desc">
-              霍尔木兹局势存在尾部风险——若WTI突破$87（今日已在$84+），考虑增加能源多头（XLE/UCO）或降低科技/消费股头寸；若WTI维持$84-86区间则按兵不动；LNG货轮事件进展将是今晚重要观察点
+              卡塔尔 LNG 货轮被袭是否为孤立事件，还是伊朗/代理武装升级信号。
+              若油价在 $86 以上稳住且本周内无进一步袭击 →
+              市场将把地缘风险定价为可控，能源股（XLE）有短期交易机会；
+              若油价持续突破 $88–90 → 通胀预期回升将压制降息预期，
+              成长股估值承压，建议增加能源/大宗商品对冲头寸。
             </div>
           </li>
         </ol>
@@ -1160,8 +1367,8 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 新华社 | 🌙 夜市版</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年7月7日 · 21:51 MYT</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 盘中新闻快讯</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年7月7日 · 美股盘中版</div>
       </footer>
     </div>
   </body>
