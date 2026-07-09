@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>财经简报 | 2026年7月9日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
-    <!-- 
-  ╔══════════════════════════════════════════════════════════════╗
-  ║  MORNING BRIEFING HTML TEMPLATE                             ║
-  ║                                                             ║
-  ║  Instructions:                                              ║
-  ║  1. Keep ALL CSS unchanged (the <style> block is fixed)     ║
-  ║  2. Replace data values in the <body> with real scraped data║
-  ║  3. Update: date, timestamps, index values, asset prices,   ║
-  ║     event timeline, earnings data, analysis text            ║
-  ║  4. Follow the component patterns shown below               ║
-  ║  5. Save as: morning-briefing-YYYY-MM-DD.html               ║
-  ╚══════════════════════════════════════════════════════════════╝
--->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
@@ -796,43 +783,63 @@
   </head>
   <body>
     <div class="container">
+
       <!-- ═══ Header ═══ -->
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
           LIVE · 马来西亚美股投资者专属
         </div>
-        <h1>🌙 夜间财经简报</h1>
-        <div class="date">2026年7月9日 · 周三 · 20:22 MYT · 美股约1小时后开盘</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 老虎证券</div>
+        <h1>🌙 财经简报</h1>
+        <div class="date">2026年7月9日 · 周三 · 美股已开盘 21:30 MYT</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 今日晚间简报</div>
       </header>
 
       <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(59, 130, 246, 0.12)">📊</div>
-          <h2 class="section-title">隔夜美股（7月8日收盘 · 背景参考）</h2>
+          <h2 class="section-title">隔夜美股</h2>
+        </div>
+
+        <!-- 注：来源未提供7月8日具体收盘数据；以盘前动态及今日开盘作参考 -->
+        <div class="index-grid">
+          <div class="index-card up">
+            <div class="index-name">道琼斯</div>
+            <div class="index-value">开盘+</div>
+            <div class="index-change up">+0.12% 小幅高开</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">纳斯达克</div>
+            <div class="index-value">开盘+</div>
+            <div class="index-change up">+0.18% 小幅高开</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">S&P 500</div>
+            <div class="index-value">开盘+</div>
+            <div class="index-change up">+0.15% 小幅高开</div>
+          </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
             <li>
-              <strong>中东局势骤然升温</strong> → 美军7月8日扩大打击范围，伊朗媒体报道<strong>布什尔核电站周边遭袭</strong>，停火终结第2日 → 地缘风险溢价重新入场
+              <strong>注：</strong>来源中未提供7月8日（周二）具体收盘指数数值；以下为今日（7月9日）盘前及开盘动态作参考背景。
             </li>
             <li>
-              <strong>韩国股市崩溃</strong> → KOSPI两天暴跌逾10%，自历史高点跌超20%，正式进入<strong>技术性熊市</strong>；三星破纪录财报反遭市场砸盘 <span class="num down">-10%</span>，散户恐慌蔓延
+              <strong>SK海力士ADR</strong>本周五将在纳斯达克上市，定价149美元（较韩股溢价 <span class="num">+3.1%</span>），AI/存储主题情绪高涨，美光盘前曾涨 <span class="num">+3%</span>、康宁盘前涨 <span class="num">+5%</span>
             </li>
             <li>
-              <strong>半导体去杠杆</strong> → 美韩半导体同步承压，分析师追问风险是否已充分释放；高盛反向喊话「是时候买中国AI了」
+              <strong>韩国KOSPI</strong>两日跌超 <span class="num down">-10%</span>，从历史高点累跌逾 <span class="num down">-20%</span>，进入技术性熊市；三星电子破纪录财报发布后股价反跌 <span class="num down">-10%</span>
             </li>
             <li>
-              <strong>黄金承压</strong> → 现货金盘中触及 <span class="num down">4,100</span> 美元/盎司，较历史高点显著回落；人民银行连续第20个月增持黄金，「越跌越买」
+              <strong>黄金触及 $4,100</strong>，地缘风险持续支撑贵金属；人行已连续20个月增持黄金
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>⚠️ 数据提示：</strong>上述为推断背景，抓取数据源未提供7月8日美股收盘具体指数点位。美股7月8日收盘约4小时后（凌晨4:00 MYT），盘前已呈现存储股强势反弹信号。
+          <strong>💡 背景解读：</strong>前一交易日美股整体情绪受韩股崩跌拖累，但AI/存储板块在SK海力士IPO叙事驱动下独立强势；今日开盘三大指数小幅高开，费城半导体指数开盘大涨 <strong>+5%</strong>，为今日主线。
         </div>
       </section>
 
@@ -849,82 +856,64 @@
               <tr>
                 <th>资产</th>
                 <th>价格</th>
-                <th>变动</th>
+                <th>变动 / 备注</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,219/oz</span></td>
+                <td><span class="asset-price">~$4,100/oz</span></td>
                 <td>
-                  <span class="tag up">▲ +0.20%</span>
-                  <span class="asset-note">盘中触及4,100后反弹</span>
+                  <span class="tag up">▲ 高位</span><span class="asset-note">地缘避险 + 央行买盘支撑；人行连续20月增持</span>
                 </td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$84.26</span></td>
+                <td><span class="asset-price">价格待确认</span></td>
                 <td>
-                  <span class="tag down">▼ -3.93%</span>
-                  <span class="asset-note">需求忧虑压制地缘溢价</span>
+                  <span class="tag down">⚠️ 波动</span><span class="asset-note">霍尔木兹仅恢复50%；伊朗导弹袭击扩大中东风险</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">99.81</span></td>
-                <td><span class="tag up">▲ +0.11%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1568</span></td>
+                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
+                <td><span class="asset-price">价格待确认</span></td>
                 <td>
-                  <span class="tag up">—</span>
-                  <span class="asset-note">数据可能滞后</span>
+                  <span class="tag down">⚠️ 波动</span><span class="asset-note">卡塔尔暂停LNG扩产计划；高盛预计供应复苏被拖延</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">160.21</span></td>
+                <td><span class="asset-name">🇰🇷 韩国KOSPI</span></td>
+                <td><span class="asset-price">熊市区间</span></td>
                 <td>
-                  <span class="tag up">—</span>
-                  <span class="asset-note">日央行承压</span>
+                  <span class="tag down">▼ -20%+</span><span class="asset-note">2日跌超10%；技术熊市；高盛建议转向中国AI</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7633</span></td>
+                <td><span class="asset-name">🇨🇳 恒生中国企业</span></td>
+                <td><span class="asset-price">数月最大涨幅</span></td>
                 <td>
-                  <span class="tag up">—</span>
-                  <span class="asset-note">数据可能滞后</span>
+                  <span class="tag up">▲ 强势</span><span class="asset-note">阿里+13%，腾讯+4%+；高盛喊话"是时候买中国AI"</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 沪深：科创50</span></td>
-                <td><span class="asset-price">今日</span></td>
+                <td><span class="asset-name">🔷 费城半导体 SOX</span></td>
+                <td><span class="asset-price">开盘 +5%</span></td>
                 <td>
-                  <span class="tag up">▲ +8%</span>
-                  <span class="asset-note">中芯国际创历史新高</span>
+                  <span class="tag up">▲ +5%</span><span class="asset-note">SK海力士IPO + 美光投资公告点燃存储板块</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 创业板</span></td>
-                <td><span class="asset-price">今日</span></td>
-                <td><span class="tag up">▲ +4%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇭🇰 阿里巴巴</span></td>
-                <td><span class="asset-price">今日</span></td>
+                <td><span class="asset-name">💵 美元指数</span></td>
+                <td><span class="asset-price">价格待确认</span></td>
                 <td>
-                  <span class="tag up">▲ +13%</span>
-                  <span class="asset-note">高盛推中国AI</span>
+                  <span class="tag">—</span><span class="asset-note">来源未提供具体报价</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇰🇷 KOSPI</span></td>
-                <td><span class="asset-price">—</span></td>
+                <td><span class="asset-name">🔷 10Y 美债</span></td>
+                <td><span class="asset-price">价格待确认</span></td>
                 <td>
-                  <span class="tag down">▼ 熊市</span>
-                  <span class="asset-note">两天跌超10%，距高点-20%</span>
+                  <span class="tag">—</span><span class="asset-note">威廉姆斯: 未见通胀第二轮效应；债市情绪谨慎</span>
                 </td>
               </tr>
             </tbody>
@@ -932,7 +921,7 @@
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美元小幅走强，油价反直觉地大跌 → 市场对美伊冲突的解读是「精准打击+快速谈判」而非全面战争。黄金盘中触及4,100（央行买盘支撑后反弹）。韩国股市崩溃与中国科技股暴涨同日发生 → 资金明显从韩国科技流向中国AI资产。<strong>高盛正式喊话买中国AI</strong>，恒生中国企业指数创数月最大单日涨幅。
+          <strong>💡 解读：</strong>本轮资产格局分化明显——黄金（地缘 + 央行买盘）与中国科技股双强；韩国半导体在三星财报超预期后反跌入熊市，而美国存储股（MU、WDC）借SK海力士IPO叙事大涨，显示"美股更安全"的资金偏好。中东局势持续升级，油价风险偏上行。
         </div>
       </section>
 
@@ -940,39 +929,52 @@
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(249, 115, 22, 0.12)">🎯</div>
-          <h2 class="section-title">今日关注（美股约1小时后开盘）</h2>
+          <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
           <div class="timeline">
-            <div class="timeline-item important">
-              <span class="timeline-label earnings">财报</span>
-              <strong>百事可乐 PEP Q2</strong>（已发布）→ 营收小幅超预期，每股盈利<strong>不及预期</strong>，盘前承压
-            </div>
+
             <div class="timeline-item important">
               <span class="timeline-label earnings">IPO</span>
-              <strong>SK海力士 ADR 美股明日首秀（7月10日）</strong>→ 今日为最后关键建仓窗口；存储板块情绪已点火，美光盘前涨逾5%
+              <strong>SK海力士 ADR 本周五（7/10）纳斯达克挂牌</strong> — 定价 $149，溢价 +3.1%；今日存储股是核心交易主线
             </div>
+
+            <div class="timeline-item important">
+              <span class="timeline-label report">财报</span>
+              <strong>百事可乐 Q2 业绩</strong>（已公布）— 有机销售额与EPS双双不及预期，北美需求疲软；PEP 开盘 <span style="color:var(--red)">-4.6%</span>
+            </div>
+
             <div class="timeline-item important">
               <span class="timeline-label data">地缘</span>
-              <strong>美伊冲突第2日</strong>：美军扩大打击范围，伊朗报复波及卡塔尔基地；约旦多地响起警报。<strong>霍尔木兹海峡局势是否升级</strong>为油价与风险情绪关键变量
+              <strong>伊朗导弹袭击美军基地</strong> — 宣称发射10枚弹道导弹，击中约旦阿兹拉克空军基地；约旦多地响起警报；中东局势急剧升级
             </div>
-            <div class="timeline-item important">
-              <span class="timeline-label report">声明</span>
-              美国贸易代表<strong>格里尔</strong>：赞扬苹果、美光的制造公告；与巴西<strong>「仍有很大距离」</strong>，将对巴西采取最终行动
-            </div>
+
             <div class="timeline-item">
-              <span class="timeline-label report">行业</span>
-              <strong>Meta AI芯片「Iris」</strong>消息持续发酵 → 盘前跌3.6%；市场担忧Meta降低英伟达采购依赖
+              <span class="timeline-label data">数据</span>
+              <strong>美国上周初请失业金 21.5万</strong>（低于预期）— 劳动市场仍具韧性，支撑"经济软着陆"叙事
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-label data">机构</span>
-              高盛报告：<strong>霍尔木兹海峡局势再起</strong>，中东石油供应复苏恐推迟 → 原油多头需重估
+              <span class="timeline-label speech">讲话</span>
+              美联储威廉姆斯：<strong>暂未见通胀第二轮效应</strong> — 短期内降息路径维持不变
             </div>
+
             <div class="timeline-item">
-              <span class="timeline-label data">宏观</span>
-              <strong>6月通胀追踪</strong>：国联民生分析师报告指通胀或已处于「峰值下的轨迹」 → 为降息预期提供支撑
+              <span class="timeline-label report">科技</span>
+              <strong>Meta AI芯片"Iris"</strong>计划9月量产；2027年算力目标 14 GW（翻倍）→ META 开盘 <span style="color:var(--red)">-3.8%</span>，市场担忧大规模资本开支
             </div>
+
+            <div class="timeline-item">
+              <span class="timeline-label report">科技</span>
+              <strong>星巴克开发内部AI工具</strong>替代微软/IBM软件 → MSFT <span style="color:var(--red)">-2.5%</span>，IBM <span style="color:var(--red)">-5.6%</span>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-label data">能源</span>
+              <strong>霍尔木兹海峡</strong>通行能力恢复至战前 50%；卡塔尔暂停快速扩大LNG产量计划
+            </div>
+
           </div>
         </div>
       </section>
@@ -986,30 +988,48 @@
 
         <div class="card">
           <div style="margin-bottom: 10px; font-size: 14px; color: var(--text-secondary)">
-            <strong style="color: var(--purple)">今日盘前异动（20:22 MYT）</strong>
+            <strong style="color: var(--purple)">费城半导体指数</strong>
+            <span class="tag up" style="font-size: 13px">+5.0% 开盘</span> ·
+            <strong style="color: var(--purple)">存储/HBM板块</strong>
+            <span class="tag up" style="font-size: 13px">+6~7%</span>
           </div>
 
           <div class="tech-chips">
             <div class="tech-chip">
-              <span class="name">MU</span><span class="pct">+5%</span>
+              <span class="name">MU</span><span class="pct">+6.64%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">STX</span><span class="pct">+5%</span>
+              <span class="name">WDC</span><span class="pct">+7%+</span>
             </div>
             <div class="tech-chip">
-              <span class="name">RKLB</span><span class="pct">+4%</span>
+              <span class="name">STX</span><span class="pct">+7%+</span>
             </div>
             <div class="tech-chip">
-              <span class="name">CRBR</span><span class="pct">+7%</span>
+              <span class="name">AVGO</span><span class="pct">+3.15%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">FCEL</span><span class="pct">+11%</span>
+              <span class="name">AMD</span><span class="pct">+4.88%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">META</span><span class="pct down" style="color:var(--red)">-3.6%</span>
+              <span class="name">AMAT</span><span class="pct">+8.29%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">阿里巴巴</span><span class="pct">+13%</span>
+              <span class="name">ASML 🇳🇱</span><span class="pct">+4.06%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">TSMC ADR</span><span class="pct">+1.98%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">INTC</span><span class="pct">+4.2%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">META</span><span class="pct" style="color:var(--red)">-3.8%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">MSFT</span><span class="pct" style="color:var(--red)">-2.5%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">IBM</span><span class="pct" style="color:var(--red)">-5.6%</span>
             </div>
           </div>
 
@@ -1017,34 +1037,31 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>Meta AI芯片「Iris」</strong> → 计划9月量产，2027年算力从7吉瓦翻倍至14吉瓦。短期利空英伟达（降低GPU依赖叙事）→ Meta盘前跌3.6%（市场担忧资本开支转向内化）
+              <strong>Meta "Iris" 自研AI芯片：</strong>计划2026年9月量产；2027年算力拟翻倍至14吉瓦。市场解读为"减少对英伟达GPU依赖"，META股价跌超4%；但长期看或是算力自建正轨
             </li>
             <li>
-              <strong>SK海力士美股ADR明日首秀</strong>：掌门崔泰源期间寻求会见英伟达、特斯拉高管。华尔街辩论：套利台积电「老剧本」是否适用 → 历史数据缺失+高波动率成最大拦路虎
+              <strong>美光 $2,500亿美国投资计划：</strong>目标40% DRAM在美生产；另追加 $30亿支持美国本土供应链（含5亿融资给环球晶圆300mm晶圆厂），签订10年供应协议
             </li>
             <li>
-              <strong>特斯拉 Optimus Gen 3 初步定型</strong>：供应链收到9月1000台/周订单，年底目标2000-2500台/周 → 机器人概念股今日盘前受到关注
+              <strong>SK海力士ADR本周五上市：</strong>定价 $149（溢价 +3.1%），募资约 $280亿，或成史上最大IPO之一；承销行（GS/C/JPM/BofA）佣金约 $1.4亿
             </li>
             <li>
-              <strong>星巴克开启「自研软件」</strong>：正开发AI工具替代微软、IBM部分软件 → 企业AI内化趋势加速；IBM、MSFT企业软件业务面临压力
+              <strong>Tesla Optimus Gen3定型：</strong>供应商已收到8月数百台具体订单；目标9月产能1000台/周，年底2000-2500台/周
             </li>
             <li>
-              <strong>AI核电融合加速</strong>：微软、谷歌疯狂抢购核电；小型模块化反应堆（SMR）成华尔街新宠
+              <strong>Cerebras扩建欧洲AI基础设施：</strong>投入数十亿美元；2027年底算力规模达200兆瓦；股价开盘前涨 +7%
             </li>
             <li>
-              <strong>Rocket Lab</strong>：吞下铱星（Iridium）补齐通信拼图，大摩上调目标价至<strong>$293</strong>，评级「增持」→ 正复刻SpaceX一体化航天路径
+              <strong>星巴克自研AI软件工具：</strong>替代微软和IBM部分软件应用 → 大型企业"AI去供应商化"趋势浮现，软件巨头面临新挑战
             </li>
             <li>
-              <strong>Cerebras</strong>：计划数十亿美元扩建欧洲AI基础设施，2027年底算力规模200兆瓦 → 盘前+7%
-            </li>
-            <li>
-              <strong>华为OPEN NPO</strong>：联合中国移动、京东云、百度等20+合作伙伴发起国内首个近封装光学互连标准 → AI算力基础设施国产化提速
+              <strong>华为 OPEN NPO 项目：</strong>联合中移动研究院、百度、京东云等20余家机构，启动国内首个近封装光学（NPO）光互连MSA，推动AI算力基础设施国产标准体系建设
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>Meta自研芯片消息是今日最大科技变量 → 短期拖累Meta股价，但长期反映AI算力需求确实存在。<strong>「英伟达依赖叙事」正被解构</strong>：Meta、微软、谷歌均在自研或外购替代方案。SK海力士ADR明日首秀将是<strong>存储板块最关键的催化剂</strong>，美光（MU）、康宁（GLW）盘前涨幅直接响应这一情绪。
+          <strong>💡 解读：</strong>今日AI板块出现明显分化——<strong>存储/半导体</strong>（MU、SOX）受SK海力士IPO驱动强势，<strong>基础软件/云</strong>（MSFT、IBM）遭"大公司自建AI工具"叙事拖累。Meta自研芯片的资本开支信号短期压制股价，但若2027算力目标实现，对HBM/光模块需求将是长期利好。
         </div>
       </section>
 
@@ -1060,61 +1077,80 @@
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">PEP</span>
-              <span class="earnings-name">百事可乐 Q2 2026</span>
+              <span class="earnings-name">百事可乐 Q2</span>
             </div>
-            <span class="beat-badge" style="background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); font-size:11px; font-weight:600; padding:3px 10px; border-radius:100px; text-transform:uppercase; letter-spacing:0.5px">营收小胜 · EPS 未达</span>
+            <span class="beat-badge" style="background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border)">✗ 盈利不及预期</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
               <div class="metric-label">净营收</div>
-              <div class="metric-value">略超预期</div>
-              <div class="metric-delta up">小幅超预期</div>
+              <div class="metric-value">略高于预期</div>
+              <div class="metric-delta up">+收入小超</div>
             </div>
             <div class="metric">
-              <div class="metric-label">每股盈利</div>
+              <div class="metric-label">有机销售额</div>
               <div class="metric-value">不及预期</div>
-              <div class="metric-delta down">未达市场预期</div>
+              <div class="metric-delta down">北美需求疲软</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">每股盈利 EPS</div>
+              <div class="metric-value">不及预期</div>
+              <div class="metric-delta down">盈利承压</div>
             </div>
           </div>
 
           <ul class="bullet-list">
-            <li>营收表现略强，但盈利端受成本压力拖累，未能兑现预期</li>
-            <li>消费品板块需求韧性尚存，但利润率压缩值得关注</li>
+            <li>
+              <strong>北美消费疲软</strong>是关键拖累：北美饮料/零食需求下滑，海外市场相对强劲
+            </li>
+            <li>
+              PEP股价开盘跌 <span class="num down">-4.6%</span>，为2025年4月以来最大单日跌幅
+            </li>
+            <li>
+              财报信号：<strong>美国消费降级压力</strong>持续，关注麦当劳、可口可乐等后续消费品报告
+            </li>
           </ul>
         </div>
 
-        <!-- AZN + IONS -->
+        <!-- ALNY -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">AZN</span>
-              <span class="earnings-name">阿斯利康 + Ionis (IONS)</span>
+              <span class="ticker-badge">ALNY</span>
+              <span class="earnings-name">阿尔尼拉姆制药 — 竞争对手失利受益</span>
             </div>
-            <span class="beat-badge" style="background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); font-size:11px; font-weight:600; padding:3px 10px; border-radius:100px; text-transform:uppercase; letter-spacing:0.5px">✗ 临床失败</span>
+            <span class="beat-badge beat">▲ +16% 受益</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">事件</div>
-              <div class="metric-value">III期失败</div>
-              <div class="metric-delta down">心脏药物主要终点未达</div>
+              <div class="metric-label">触发事件</div>
+              <div class="metric-value">AZN/IONS</div>
+              <div class="metric-delta down">Wainua III期失败</div>
             </div>
             <div class="metric">
-              <div class="metric-label">股价反应</div>
-              <div class="metric-value">暴跌</div>
-              <div class="metric-delta down">AZN + IONS 双双大跌</div>
+              <div class="metric-label">ALNY 开盘涨幅</div>
+              <div class="metric-value">+16.17%</div>
+              <div class="metric-delta up">竞争壁垒打开</div>
             </div>
           </div>
 
           <ul class="bullet-list">
-            <li>联合开发心脏药物III期临床未达主要终点 → 双方股价盘前双双暴跌</li>
-            <li>生物医药板块今日需注意临床数据风险</li>
+            <li>
+              <strong>阿斯利康（AZN）与Ionis（IONS）</strong>联合开发的神经疾病心脏药物 Wainua 在关键III期临床试验中未达主要终点，两股大跌
+            </li>
+            <li>
+              ALNY拥有同类适应症的在研药物，<strong>竞争威胁被消除或推迟</strong>，市场迅速重估其估值
+            </li>
+            <li>
+              生物医药事件驱动型交易特点：单一竞争数据可触发 +15%+ 价格波动
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>PEP营收小胜+EPS未达的「双面数据」是消费品当前困境的缩影：收入有韧性但利润率受压。AZN/IONS临床失败属于事件驱动型冲击，对大盘影响有限，但提醒我们财报季临床结果的尾部风险。
+          <strong>💡 财报季展望：</strong>百事Q2盈利不及预期，显示美国本土消费品面临压力；生物医药板块的ALNY异动则属竞争动态而非基本面改善。<strong>重点观察</strong>：下周将陆续公布的大型银行、科技公司Q2财报，将检验"AI资本开支兑现"能力。
         </div>
       </section>
 
@@ -1127,72 +1163,90 @@
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px">
-            🌏 亚太市场今日表现（7月9日）
+            📊 本周关键宏观数据（7月9日）
           </div>
-          <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">🇨🇳 科创50</span><span class="pct">+8%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 创业板</span><span class="pct">+4%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 中芯国际</span><span class="pct">创历史新高</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇭🇰 智谱AI</span><span class="pct">+11%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇭🇰 MiniMax</span><span class="pct down" style="color:var(--red)">-18%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇰🇷 KOSPI</span><span class="pct down" style="color:var(--red)">熊市 -20%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇯🇵 日央行</span><span class="pct down" style="color:var(--red)">承压</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🔑 关键宏观信号
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">初请失业金人数（预期偏高）</span>
+              <span class="value" style="color: var(--green)">21.5万（低于预期）✓</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill blue" style="width: 72%"></div>
+            </div>
           </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">霍尔木兹海峡通行能力（战前水平）</span>
+              <span class="value" style="color: var(--yellow)">50%</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill yellow" style="width: 50%"></div>
+            </div>
+          </div>
+
+          <div class="survey-bar">
+            <div class="survey-bar-label">
+              <span class="label">韩国KOSPI较历史峰值回撤</span>
+              <span class="value" style="color: var(--red)">-20%+（熊市）</span>
+            </div>
+            <div class="survey-bar-track">
+              <div class="survey-bar-fill red" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="divider" style="margin: 14px 0"></div>
+
           <ul class="bullet-list">
             <li>
-              <strong>6月通胀：峰值下的轨迹</strong> — 国联民生宏观分析指通胀已处「峰值轨迹下行」阶段 → 支持降息预期持续存在
+              <strong>美联储威廉姆斯：</strong>暂未见通胀第二轮效应 → 当前货币政策立场不变；短期降息预期维持稳定
             </li>
             <li>
-              <strong>人行连续20个月增持黄金</strong> — 「金价越跌，央行越买」→ 官方买家持续在4,100附近托底
+              <strong>芝商所"国债连接"平台：</strong>预计2026年Q4推出（待监管批准），将增强美国国债现货与期货跨市场套利能力
             </li>
             <li>
-              <strong>韩国会重演1996/亚洲金融危机吗？</strong> — 分析师警示KOSPI暴跌格局与1996年韩国惊人相似 → 若韩元出现贬值压力，亚洲风险情绪将进一步恶化
+              <strong>黄金 ~$4,100：</strong>人行连续20个月增持黄金；可可价格较3月暴涨100%（El Niño + 西非减产危机）
             </li>
             <li>
-              <strong>日本央行无法打赢的战争</strong> — USD/JPY 160+，日央行处于干预两难困境：加息则压制经济，不加息则日元持续走弱
-            </li>
-            <li>
-              <strong>高盛：霍尔木兹海峡再起波澜</strong> — 中东石油供应复苏恐延迟，但油价仍大跌3.93% → 需求侧忧虑（美国增产）压过地缘溢价
-            </li>
-            <li>
-              <strong>US-巴西贸易：USTR格里尔施压</strong> — 将对巴西采取「最终行动」，与巴西达协议「仍有很大距离」→ 农产品/大宗商品关税风险
+              <strong>"七姐妹"开盘分化：</strong>特斯拉 +0.13% / 英伟达 -0.31% / 苹果 -1.33% / 谷歌 -1.44% / 亚马逊 -1.54% / 微软 -2.26% / Meta -3.83%
             </li>
           </ul>
         </div>
 
         <div class="card">
           <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px">
-            🏦 机构动向
+            🌏 全球股市今日表现
           </div>
+          <div class="tech-chips">
+            <div class="tech-chip">
+              <span class="name">🇰🇷 KOSPI</span><span class="pct" style="color:var(--red)">熊市区间</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 恒生</span><span class="pct">月内最大涨幅</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇺🇸 SOX</span><span class="pct">+5.0%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 阿里</span><span class="pct">+13%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">🇨🇳 腾讯</span><span class="pct">+4%+</span>
+            </div>
+          </div>
+
+          <div class="divider" style="margin: 10px 0"></div>
+
           <ul class="bullet-list">
             <li>
-              <strong>高盛正式喊话买中国AI</strong> — 「中国AI进入我们的视野，是时候买了！」→ 阿里巴巴单日+13%，腾讯+4%，恒生中国企业指数数月最大涨幅
+              <strong>高盛建议：</strong>"是时候买中国AI"；KOSPI进熊市后资金流向中国科技，恒生中国企业指数创数月来最大涨幅
             </li>
             <li>
-              <strong>摩根士丹利上调RKLB目标价至$293</strong>（增持）→ Rocket Lab正复刻SpaceX一体化路径
+              <strong>Samsung 怪象：</strong>三星电子Q2史上最佳业绩 → 股价跌 -10%，市场对"三星在HBM竞争中落后于SK海力士"的担忧大于财报本身
             </li>
             <li>
-              紫金矿业预计上半年净利润同比增约68% → 黄金公司盈利随金价持续受益
+              <strong>重点观察：</strong>芝加哥联储主席古尔斯比等联储官员近期讲话是否改变降息预期路径
             </li>
           </ul>
         </div>
@@ -1208,43 +1262,43 @@
         <div class="alert-box green">
           <div class="alert-title">🟢 重点观察 — 机会</div>
           <div class="alert-text">
-            <strong>① 存储板块今晚可能是主线</strong> — MU/STX盘前均涨5%，SK海力士ADR明日首秀前仓位还在建立中，今晚开盘后存储股可能是最活跃板块。HBM（高带宽内存）需求叙事被强化。<br />
-            <strong>② 中国AI/科技股美股标的间接受益</strong> — 阿里巴巴、百度、京东等在港股暴涨（阿里+13%），美股ADR可能跟进；高盛推荐中国AI的节奏意味着机构资金可能持续布局。
+            <strong>① 存储/半导体板块：SK海力士IPO驱动</strong> — 本周五 $HKS.O（纳斯达克）正式挂牌，定价溢价 +3.1%，今日MU +6.6%、AMAT +8.3%、SOX +5%，AI/HBM叙事是近期最强主线。<br />
+            <strong>② 中国AI的高盛加持</strong> — KOSPI崩跌资金外流 + 高盛喊话，阿里 +13%、腾讯 +4%，中国AI板块短期动能强劲，持有港股中概可待观察。
           </div>
         </div>
 
         <div class="alert-box red">
           <div class="alert-title">🔴 风险提示 — 警惕</div>
           <div class="alert-text">
-            <strong>① 美伊冲突升级尾部风险</strong> — 今日约旦多地响起警报，伊朗报复波及卡塔尔基地（美军Al Udeid基地区域）。若局势超预期升级，油价可能骤反弹同时股市承压，目前油价定价「精准打击」假设仍有变数。<br />
-            <strong>② Meta下跌对纳指的拖累</strong> — META市值巨大，盘前-3.6%对Nasdaq100有1-2%的指数级负贡献。若大市情绪本已脆弱（韩国熊市、地缘风险），Meta可能成为今晚空头的着力点。<br />
-            <strong>③ PEP财报提示消费品盈利压缩</strong> — 若今晚开盘后消费类资产对「盈利未达」定价更悲观，可能引发防御性板块轮动，警惕高估值消费品股承压。
+            <strong>① 伊朗导弹袭击美军基地 — 中东突发升级</strong> — 伊朗宣称击毁约旦美军空军基地，约旦警报响起；若美军反击扩大，油价将暴涨，波及全球风险情绪与能源板块。<br />
+            <strong>② 美国消费疲软信号</strong> — 百事Q2北美销售不及预期，-4.6%创年内新低；若消费品板块财报普遍疲软，将挑战"软着陆"叙事，增加市场不确定性。<br />
+            <strong>③ Meta / 大科技资本开支隐忧</strong> — Iris芯片宣布后META -4%，市场担忧大规模AI资本开支挤压自由现金流；MSFT/IBM受"企业去供应商化"打压，软件板块防御性减弱。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
         <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px">
-          ✅ 三条可执行关注清单（今晚开盘后约1小时内）
+          ✅ 三条可执行关注清单（今晚美股已开盘）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">开盘后关注 MU / STX 涨势能否延续，判断存储板块强度</div>
+            <div class="action-title">关注MU/AMAT/WDC等存储板块能否守住开盘涨幅</div>
             <div class="action-desc">
-              MU + STX 盘前均+5%。若开盘后5-10分钟内维持涨幅或继续走高 → 今晚存储板块动能确认，可短线追涨或持有相关标的（如SOXS对冲放空反向操作）。若开盘即遭回调 → 盘前涨幅多为情绪，谨慎追高。
+              SOX开盘 +5%，MU +6.6%，驱动来自SK海力士IPO情绪。若今日收盘能守住 +4%以上，是存储/HBM主线成立的信号；若拉升后回落，则警惕短期情绪耗散，避免追高。SK海力士 ADR 本周五定价，今日是最后前置布局窗口。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">观察 META 盘前跌势在开盘后是否企稳或继续扩大</div>
+            <div class="action-title">密切追踪伊朗导弹事件后续 → 能源仓位管理</div>
             <div class="action-desc">
-              META盘前-3.6%，是今晚纳指最大下拉因子之一。若开盘后META在$570-580区域止跌企稳 → 市场消化AI芯片消息，纳指不继续承压；若META进一步下跌超5% → Nasdaq100或面临更大技术性回调，应考虑减仓高估值成长股。
+              伊朗刚宣布用10枚弹道导弹打击美军约旦基地，中东局势为今晚最大地缘风险变量。若美方宣布扩大打击或伊朗进一步封锁霍尔木兹，油价将急涨，黄金（$4,100附近）和能源股（XLE）将受益；手持风险资产需准备好对冲，可考虑小仓位持有黄金ETF(GLD)作保护。
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">盯住新闻面：美伊局势在开盘后1小时内是否有新突发</div>
+            <div class="action-title">观察Meta -4% 走势是否拖累大盘科技，评估NVDA/AVGO是否出现错杀</div>
             <div class="action-desc">
-              今晚是美伊冲突第2天，约旦/卡塔尔基地已有报警。若开盘后1小时内有伊朗官方反击声明或新轮袭击报道 → 立即减持风险资产，逢高布局能源ETF（XLE）及黄金（GLD）对冲。若局势无明显升级 → 地缘溢价将继续压缩，油价可能跌破$83，有利科技股。
+              Meta Iris芯片宣布引发"大科技减少外购算力"担忧，但英伟达今日仅跌 -0.3%，说明市场尚未恐慌。若NVDA跌幅扩大至 -2%以上，可能是短期错杀，因AI算力需求长期无减；若AVGO（+3.2%）继续上涨，反映市场认可"Meta芯片仍需代工/封装配套"逻辑。保持观察，不要在开盘前30分钟追涨NVDA。
             </div>
           </li>
         </ol>
@@ -1255,8 +1309,8 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 老虎证券 7×24快讯</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年7月9日 20:22 MYT</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG) · 2026年7月9日</div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 晚间简报版 · 21:39 MYT</div>
       </footer>
     </div>
   </body>
