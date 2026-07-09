@@ -11,17 +11,6 @@ on:
 engine:
   id: copilot
   model: "claude-sonnet-4.6"
-  # env:
-  #   # Copilot BYOK mode — route requests to Z.ai (OpenAI-compatible endpoint)
-  #   COPILOT_PROVIDER_BASE_URL: "https://api.z.ai/api/paas/v4"
-  #   COPILOT_MODEL: "glm-5.2"
-  #   COPILOT_PROVIDER_API_KEY: ${{ secrets.ZAI_API_KEY }}
-  #   COPILOT_PROVIDER_TYPE: "openai"
-  #   COPILOT_PROVIDER_WIRE_API: "completions"
-
-# Playwright scraping from 4 URLs + full HTML generation needs more than the
-# 20-minute default. The previous run completed the work but was killed at 21m.
-# timeout-minutes: 60
 
 tools:
   playwright:
@@ -35,7 +24,6 @@ network:
     - playwright
     - "wallstreetcn.com"
     - "www.itiger.com"
-    # - "api.z.ai"
 
 safe-outputs:
   create-pull-request:
