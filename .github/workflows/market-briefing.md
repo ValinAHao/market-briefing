@@ -8,7 +8,7 @@ on:
     # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
     - cron: "0 12 * * 1-5"
 
-model: "mai-code"
+model: "claude-sonnet-5"
 engine:
   id: copilot
 tools:
@@ -35,24 +35,6 @@ safe-outputs:
 # Market Briefing
 
 You are a senior financial market expert. Produce a **daily stock market briefing** for **Malaysian investors focused on US stocks**.
-
-## Workspace bootstrap (must do before any other work)
-
-Before reading or editing any briefing files, verify that the repository checkout contains the required briefing assets in the repository root:
-
-- `morning-briefing-template.html`
-- `night-briefing-template.html`
-- `docs/`
-- `README.md`
-
-If any of those are missing, restore them from the current commit before continuing:
-
-```bash
-git checkout -- docs morning-briefing-template.html night-briefing-template.html README.md
-mkdir -p docs
-```
-
-Do not assume the current checkout already contains the template files. This bootstrap step is required because sparse checkout can omit the repository-root briefing assets even when the workflow run itself succeeds.
 
 ## Run context (read this first)
 
