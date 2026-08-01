@@ -8,7 +8,7 @@ on:
     # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
     - cron: "0 12 * * 1-5"
 
-model: "claude-sonnet-5"
+model: "gpt-5.6"
 engine:
   id: copilot
 tools:
@@ -54,7 +54,7 @@ Use `playwright` browser tools to gather data **only** from the URLs below **onl
 2. `https://wallstreetcn.com/calendar` — key scheduled data/events for today/tonight.
 3. `https://www.itiger.com/hans/news/top` — market top news.
 4. `https://www.itiger.com/hans/news/breaking` — market breaking news.
-5. `https://www.investing.com/` — US top 3 indices data, US index futures (Dow/S&P/Nasdaq futures, pre-market or after-hours %), and the CBOE Volatility Index (VIX).
+5. `https://www.itiger.com/hans/quote/us` — US top 3 indices data, US index futures (Dow/S&P/Nasdaq futures, pre-market or after-hours %), and the CBOE Volatility Index (VIX).
 
 **Scrape efficiently:** Use concurrent named browser sessions to open all five URLs in parallel, then snapshot each one. Example pattern:
 
@@ -63,13 +63,13 @@ playwright-cli -s=ws-home open https://wallstreetcn.com/ &
 playwright-cli -s=ws-cal open https://wallstreetcn.com/calendar &
 playwright-cli -s=tiger-top open https://www.itiger.com/hans/news/top &
 playwright-cli -s=tiger-break open https://www.itiger.com/hans/news/breaking &
-playwright-cli -s=investing open https://www.investing.com/ &
+playwright-cli -s=tiger-quote open https://www.itiger.com/hans/quote/us &
 wait
 playwright-cli -s=ws-home snapshot
 playwright-cli -s=ws-cal snapshot
 playwright-cli -s=tiger-top snapshot
 playwright-cli -s=tiger-break snapshot
-playwright-cli -s=investing snapshot
+playwright-cli -s=tiger-quote snapshot
 playwright-cli close-all
 ```
 
