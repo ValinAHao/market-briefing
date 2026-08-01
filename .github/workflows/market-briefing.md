@@ -46,8 +46,6 @@ Determine the run type **before** writing anything — it drives the framing of 
 
 ## Data collection rules (must follow)
 
-**Time budget:** Complete all data collection within **15 minutes**. Do not linger on any single page — if a page is slow to load or content is sparse, extract what's available and move on. The remaining time is for analysis and HTML generation.
-
 Use `playwright` browser tools to gather data **only** from the URLs below **only**. No other domain, no link-following off these pages, no web search, no "let me verify elsewhere." If information is missing, say so in the briefing rather than substituting another source.
 
 1. `https://wallstreetcn.com/` — homepage: headlines, brief descriptions, market data.
