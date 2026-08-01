@@ -146,4 +146,4 @@ Then produce `docs/index.html` by:
 4. Populating all 7 sections in order: 隔夜美股 / 全球资产 / 今日关注 / AI与科技产业动态 / 美股财报 / 宏观指标与市场数据 / 投资者的建议.
 5. Following the HTML component patterns shown in the template comments for each section.
 
-Save the result as `docs/index.html` (always overwrite — this is always the latest briefing).
+Save the result as `docs/index.html` and create a PR (always overwrite — this is always the latest briefing).
