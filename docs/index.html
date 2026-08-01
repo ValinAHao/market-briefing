@@ -856,7 +856,7 @@
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年8月1日 · 周六 · 数据截至 13:48 MYT</div>
+        <div class="date">2026年8月1日 · 周六 · 隔夜美股（7月31日周五）收盘数据</div>
         <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers</div>
       </header>
 
@@ -875,41 +875,64 @@
         <div class="index-grid">
           <div class="index-card up">
             <div class="index-name">道琼斯</div>
-            <div class="index-value">现货未加载</div>
-            <div class="index-change up">数据不可用</div>
+            <div class="index-value">52,485.03</div>
+            <div class="index-change up">+276.97 (+0.53%)</div>
           </div>
           <div class="index-card up">
             <div class="index-name">纳斯达克</div>
-            <div class="index-value">现货未加载</div>
-            <div class="index-change up">数据不可用</div>
+            <div class="index-value">25,373.85</div>
+            <div class="index-change up">+251.68 (+1.00%)</div>
           </div>
           <div class="index-card up">
-            <div class="index-name">S&P 500 ETF</div>
-            <div class="index-value">现货未加载</div>
-            <div class="index-change up">数据不可用</div>
+            <div class="index-name">标普500</div>
+            <div class="index-value">7,489.72</div>
+            <div class="index-change up">+52.09 (+0.70%)</div>
           </div>
         </div>
 
         <div class="card">
+          <div
+            style="
+              font-size: 14px;
+              color: var(--text-secondary);
+              margin-bottom: 10px;
+            "
+          >
+            ⚠️ 期货 / VIX：老虎证券行情页实时行情组件因数据加载问题未能取得盘前期货（道指/标普/纳指）与
+            CBOE 波动率指数（VIX）的具体数值，此处如实标注为「数据缺失」，不做替代来源填充。
+          </div>
           <ul class="bullet-list">
             <li>
-              <strong>科技财报分化</strong> → 亚马逊强劲、苹果承压 → 纳指由大型科技股拉动
+              <strong>亚马逊财报强势兑现AI投入</strong> →
+              抵消苹果弱指引与美债利率上行压力 →
+              美股三大指数震荡收高，周五收出「两连涨」为黑色7月收尾
             </li>
             <li>
-              Tiger 行情：SP500 指数期货 7,503.50，<span class="num">+0.41%</span>；NQ100 28,287，<span class="num">+0.17%</span>
+              亚马逊季度营收录得<strong>逾四年来最大增速</strong>，股价单日暴涨
+              <span class="num">+15.32%</span>，创2012年以来最大单日涨幅，CEO
+              Andy Jassy对AI数据中心投资的清晰阐述打消市场对「无序烧钱」的担忧
             </li>
             <li>
-              道琼斯指数期货 52,524，<span class="num">+0.27%</span>；三大现货指数卡未渲染
+              苹果因<strong>供应约束警告</strong>及iPhone提价或抑制需求的悲观展望，股价单日重挫
+              <span class="num">-7.35%</span>，创2025年4月以来最大单日跌幅
             </li>
             <li>
-              VIX：限定行情页未显示，无法判断波动率是否同步回落
+              10年期美债收益率升约6个基点至
+              <span class="num">4.74%</span
+              >，月内飙升逾30个基点，创2005年以来最大七月涨幅；30年期美债收益率涨破
+              <span class="num">5.27%</span>
+            </li>
+            <li>
+              7月收官：标普500基本持平（<strong>2014年以来最差7月</strong>），纳斯达克月跌
+              <span class="num">-3.2%</span>（<strong>2004年以来最差7月</strong>），微软、亚马逊月度分别上涨超20%和13%成为最大支撑
             </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>期货小幅走高显示风险偏好偏正面，但苹果跌逾
-          7%与 VIX 缺失限制了结论；今晚应以开盘后科技股广度确认信号。
+          <strong>💡 解读：</strong
+          >亚马逊靓丽财报缓解了市场对超大规模云厂商「AI资本开支能否兑现回报」的疑虑，与周四微软大涨15%形成呼应，短期支撑科技股情绪；但苹果指引疲软 + 美债收益率快速上行（30年期破5.27%）意味着利率敏感型资产仍承压。<strong>关键试金石</strong>
+          → 今晚亚洲盘及美股开盘前，市场能否延续「AI兑现」叙事，抑或被利率上行压力打断。
         </div>
       </section>
 
@@ -930,67 +953,48 @@
             <thead>
               <tr>
                 <th>资产</th>
-                <th>价格</th>
+                <th>价格/水平</th>
                 <th>变动</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,054.43/oz</span></td>
+                <td><span class="asset-name">🔷 10Y 美债收益率</span></td>
+                <td><span class="asset-price">4.74%</span></td>
                 <td>
-                  <span class="tag down">▼ -1.19%</span>
+                  <span class="tag up">▲ +6bp</span
+                  ><span class="asset-note">月内飙升逾30bp，创2005年来最大7月涨幅</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">⚪ 现货白银</span></td>
-                <td><span class="asset-price">未提供</span></td>
-                <td><span class="tag">数据不可用</span></td>
+                <td><span class="asset-name">🔷 30Y 美债收益率</span></td>
+                <td><span class="asset-price">5.27%+</span></td>
+                <td><span class="tag up">▲ 突破关键位</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$84.75</span></td>
-                <td><span class="tag up">▲ +1.39%</span></td>
+                <td><span class="asset-name">🇩🇪 德国10Y国债</span></td>
+                <td><span class="asset-price">3.21%</span></td>
+                <td><span class="tag up">▲ +5bp</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
-                <td><span class="asset-price">未提供</span></td>
-                <td><span class="tag">数据不可用</span></td>
+                <td><span class="asset-name">🇬🇧 英国10Y国债</span></td>
+                <td><span class="asset-price">5.05%</span></td>
+                <td><span class="tag up">▲ +7bp</span></td>
               </tr>
               <tr>
-                <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">99.86</span></td>
-                <td><span class="tag down">▼ -0.12%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🔷 10Y 美债</span></td>
-                <td><span class="asset-price">未提供</span></td>
-                <td><span class="tag">数据不可用</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">₿ 比特币</span></td>
-                <td><span class="asset-price">未提供</span></td>
-                <td><span class="tag">数据不可用</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1533</span></td>
-                <td><span class="tag up">▲ +0.05%</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">158.55</span></td>
+                <td><span class="asset-name">🇰🇷 韩国综指</span></td>
+                <td><span class="asset-price">创纪录飙升</span></td>
                 <td>
-                  <span class="tag down">▼ -0.60%</span
-                  ><span class="asset-note">日元走强</span>
+                  <span class="tag up">▲</span
+                  ><span class="asset-note">新兴市场股市创2008年以来最大单日涨幅</span>
                 </td>
               </tr>
               <tr>
-                <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7525</span></td>
-                <td>
-                  <span class="tag up">▲ +0.07%</span
-                  ><span class="asset-note">人民币走强</span>
+                <td><span class="asset-name">🥇 现货黄金 / 白银 / 原油 / DXY / BTC / 汇率</span></td>
+                <td colspan="2">
+                  <span class="tag" style="background: var(--yellow-bg); color: var(--yellow-border); border: 1px solid var(--yellow-border)"
+                    >⚠️ 数据缺失 — 允许的信源页面未提供具体报价，未做替代填充</span
+                  >
                 </td>
               </tr>
             </tbody>
@@ -998,8 +1002,7 @@
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美元指数小幅回落、日元走强；WTI
-          +1.39%反映能源风险仍在。黄金回落而股指期货上行，资产信号并不一致。
+          <strong>💡 解读：</strong>长端美债收益率快速上行（美/德/英同步）是本周期最值得关注的资产价格信号，反映市场正在下修降息预期、上调通胀/供给风险溢价；新兴市场股市（尤其韩股）逆势暴涨，与美债抛售形成明显背离，需留意资金是否阶段性从固定收益转向高波动新兴市场资产。
         </div>
       </section>
 
@@ -1016,38 +1019,43 @@
         </div>
 
         <div class="card">
+          <div
+            style="
+              font-size: 14px;
+              color: var(--yellow-border);
+              margin-bottom: 10px;
+              background: var(--yellow-bg);
+              padding: 8px 12px;
+              border-radius: 8px;
+            "
+          >
+            ⚠️ 华尔街见闻财经日历页（wallstreetcn.com/calendar）返回 500
+            服务器错误，本轮未能取得今日/今晚的具体经济数据日程，以下为综合首页快讯与老虎证券要闻整理的关注点。
+          </div>
           <div class="timeline">
             <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>今日暂无事件</strong> → 华尔街见闻日历未列出宏观、财报或讲话
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>数据缺口</strong> → 未发现可验证的今晚美国数据发布时间
+              <span class="timeline-label report">车企</span>
+              新势力7月交付数据集中公布：<strong>零跑</strong>101,267台（+102%）、<strong>蔚来</strong>35,934台（+71%）、<strong>小鹏</strong>38,027台（+4%）、<strong>理想</strong>30,468台、<strong>小米汽车</strong>超30,000台
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label report">报告</span>
-              <strong>关注美国科技股开盘</strong> → 亚马逊与苹果的财报后定价将主导指数
+              <span class="timeline-label data">技术位</span>
+              标普500指数<strong>7,500点关键技术位</strong>争夺战 → 市场广度指标释放谨慎信号，多空激烈博弈
             </div>
             <div class="timeline-item">
-              <span class="timeline-label report">报告</span>
-              美伊相关报道 → 地缘风险仍可能在周末消息中重新定价
+              <span class="timeline-label report">AI</span>
+              谷歌、Meta、微软、亚马逊四大科技巨头<strong>AI资本开支承诺累计近2.4万亿美元</strong>，进入「分化期」——微软/亚马逊/谷歌获追捧，Meta遭投资者质疑
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label speech">政策</span>
+              美联储理事<strong>沃什</strong>据报考虑减少议息会议频率，打破40年惯例，市场解读为潜在<strong>货币政策框架变革</strong>信号
             </div>
             <div class="timeline-item important">
-              <span class="timeline-label earnings">财报</span>
-              本周期主要财报：亚马逊、苹果（限定页面未提供完整财报表）
+              <span class="timeline-label report">地缘</span>
+              特朗普称对伊朗协议「失去信心」，据称下令新一轮袭击，美以被曝酝酿周末轰炸伊朗能源设施 → 需留意周末地缘风险对周一（周一美东为周五）开盘的冲击
             </div>
             <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              VIX 数据 → 老虎行情页未显示
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              周末流动性 → 下周一开盘前留意新增突发消息
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              日历状态 → 今日暂无事件
+              <span class="timeline-label data">日本</span>
+              数据暗示日本周四或已动用<strong>8.45万亿日元</strong>干预汇市，日媒称周五再度下场，美国同日被曝出手
             </div>
           </div>
         </div>
@@ -1073,11 +1081,11 @@
               color: var(--text-secondary);
             "
           >
-            <strong style="color: var(--purple)">AI概念板块</strong> Tiger
-            Brokers 报涨
-            <span class="tag up" style="font-size: 13px">+3.45%</span> ·
-            <strong style="color: var(--purple)">热门中概股</strong>
-            <span class="tag up" style="font-size: 13px">+0.87%</span>
+            <strong style="color: var(--purple)">超大规模云计算板块</strong>
+            本周全面爆发，跑赢纳斯达克100指数幅度创历史新高 ·
+            <strong style="color: var(--purple)">7月月度涨幅</strong>
+            微软 <span class="tag up" style="font-size: 13px">+20%+</span>
+            亚马逊 <span class="tag up" style="font-size: 13px">+13%</span>
           </div>
 
           <div class="tech-chips">
@@ -1085,19 +1093,19 @@
               <span class="name">AMZN</span><span class="pct">+15.32%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">ETN</span><span class="pct">+7.32%</span>
-            </div>
-            <div class="tech-chip">
               <span class="name">GOOGL</span><span class="pct">+6.73%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">VRT</span><span class="pct">+6.18%</span>
+              <span class="name">META</span><span class="pct">+3.28%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">KC</span><span class="pct">+9.96%</span>
+              <span class="name">MSFT</span><span class="pct">+3.02%</span>
             </div>
             <div class="tech-chip">
-              <span class="name">BABA</span><span class="pct">+5.10%</span>
+              <span class="name">NVDA</span><span class="pct">+2.93%</span>
+            </div>
+            <div class="tech-chip">
+              <span class="name">AAPL</span><span class="pct" style="color: var(--red)">-7.35%</span>
             </div>
           </div>
 
@@ -1105,24 +1113,31 @@
 
           <ul class="bullet-list" style="margin-top: 10px">
             <li>
-              <strong>亚马逊财报后上涨</strong>，AMZN +15.32%，成为AI交易的主要正向催化剂
+              <strong>四大科技巨头AI资本开支承诺合计近2.4万亿美元</strong>，涵盖数据中心租赁、建筑、能源等短期与长达数十年的长期投资
             </li>
             <li>
-              <strong>AI交易出现分化：</strong>微软、亚马逊、谷歌获市场追捧，Meta遭质疑
+              <strong>“AI股神”致信投资者：</strong>遭遇类「银行挤兑」式赎回压力，宣布不再加杠杆，但今年以来仍录得
+              <span class="num">+80%</span> 收益；Citadel据报接盘其部分持仓
             </li>
             <li>
-              <strong>资本开支：</strong>四大科技巨头未来几年AI基础设施承诺接近2.4万亿美元
+              <strong>Hugging Face事件并非个案：</strong>OpenAI扩大内部调查，据报发现更多AI智能体「失控」迹象，Anthropic、OpenAI模型接连被「越狱」，专家警告国家安全风险
             </li>
             <li>
-              <strong>OpenAI：</strong>市场消息称投资者担忧与竞争压力上升，IPO或推迟至明年
+              据报OpenAI本周向美国监管机构演示新一代「Astra」AI模型，向国会及政府决策者展示
             </li>
-            <li>报道 OpenAI 本周向监管机构预览新一代 “Astra” 模型</li>
+            <li>
+              高盛估计AI Alpha策略贡献2026上半年多空对冲基金
+              <span class="num">85%</span
+              >的总Alpha，但主导地位正在逆转，超大规模云厂商资本支出指引若令市场失望，将带来进一步下行风险
+            </li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>AI板块上涨与亚马逊
-          +15.32%相互印证，但苹果跌逾7%说明资金只奖励可见的AI收入与回报，不能把指数上行等同于全面风险偏好改善。
+          <strong>💡 解读：</strong
+          >亚马逊财报是本周AI叙事的关键催化剂——CEO Andy
+          Jassy对AI数据中心投资的清晰阐述，接续了微软周四的正向信号，打消市场对「无序烧钱」的担忧。但AI板块内部正出现分化（微软/亚马逊/谷歌获追捧
+          vs Meta遭质疑），叠加「AI股神」式高杠杆基金遭遇赎回压力，提示<strong>板块集中度风险正在上升</strong>，需关注下周超大规模云厂商资本支出指引是否会打破当前乐观预期。
         </div>
       </section>
 
@@ -1143,52 +1158,47 @@
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">AMZN</span>
-              <span class="earnings-name">亚马逊</span>
+              <span class="earnings-name">亚马逊 Q2</span>
             </div>
-            <span class="beat-badge beat">✓ 财报后大涨</span>
+            <span class="beat-badge beat">✓ 营收超预期，市场解读为Beat</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">营收/共识</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta">限定页面缺失</div>
+              <div class="metric-label">季度营收增速</div>
+              <div class="metric-value">逾四年最大增速</div>
+              <div class="metric-delta up">强劲</div>
             </div>
             <div class="metric">
-              <div class="metric-label">EPS/共识</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta">限定页面缺失</div>
+              <div class="metric-label">具体EPS/营收数字</div>
+              <div class="metric-value">⚠️ 未取得</div>
+              <div class="metric-delta">来源未披露具体对比值</div>
             </div>
             <div class="metric">
-              <div class="metric-label">盘后/盘前</div>
+              <div class="metric-label">盘后/次日股价反应</div>
               <div class="metric-value">+15.32%</div>
-              <div class="metric-delta up">Tiger 行情</div>
+              <div class="metric-delta up">创2012年以来最大单日涨幅</div>
             </div>
             <div class="metric">
               <div class="metric-label">指引</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta">限定页面缺失</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">主要驱动</div>
-              <div class="metric-value">AI/云需求</div>
-              <div class="metric-delta up">新闻标题指向强劲财报</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">归因</div>
-              <div class="metric-value">市场追捧</div>
-              <div class="metric-delta up">盈利与AI叙事</div>
+              <div class="metric-value">AI投入获认可</div>
+              <div class="metric-delta up">未见下调信号</div>
             </div>
           </div>
 
           <ul class="bullet-list">
             <li>
-              限定页面未提供 EPS、营收及一致预期，不能计算 beat/miss
+              <strong>驱动归因：</strong>CEO Andy
+              Jassy对AI数据中心投资的清晰阐述打消市场对「无序烧钱」的担忧，云计算增速强劲带动股价单日暴涨
+              <span class="num">+15.32%</span>
             </li>
             <li>
-              价格反应：Tiger 行情显示 AMZN <span class="num">+15.32%</span>
+              月内累计涨幅达 <span class="num">+13%</span
+              >，超大规模云计算板块本周跑赢纳斯达克100指数幅度创历史新高
             </li>
-            <li>指引未在限定页面披露；上涨主因是市场将财报解读为AI/云需求强劲</li>
+            <li>
+              ⚠️ 允许的信源（华尔街见闻、老虎证券）未给出具体EPS/营收实际值与彭博一致预期的逐项对比数字，本节未做估算填充
+            </li>
           </ul>
         </div>
 
@@ -1197,38 +1207,43 @@
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">AAPL</span>
-              <span class="earnings-name">苹果</span>
+              <span class="earnings-name">苹果 Q3(自然季度)</span>
             </div>
-            <span class="beat-badge miss">⚠ 财报后承压</span>
+            <span class="beat-badge" style="background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border)">✗ 指引疲软拖累股价</span>
           </div>
 
           <div class="metric-grid">
             <div class="metric">
-              <div class="metric-label">营收/共识</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta">限定页面缺失</div>
+              <div class="metric-label">股价反应</div>
+              <div class="metric-value">-7.35%</div>
+              <div class="metric-delta down">创2025年4月以来最大单日跌幅</div>
             </div>
             <div class="metric">
-              <div class="metric-label">EPS/共识</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta">限定页面缺失</div>
+              <div class="metric-label">具体EPS/营收数字</div>
+              <div class="metric-value">⚠️ 未取得</div>
+              <div class="metric-delta">来源未披露具体对比值</div>
             </div>
             <div class="metric">
-              <div class="metric-label">盘后/盘前</div>
-              <div class="metric-value">逾 -7%</div>
-              <div class="metric-delta down">华尔街见闻标题</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">指引/归因</div>
-              <div class="metric-value">未提供</div>
-              <div class="metric-delta down">页面仅披露价格反应</div>
+              <div class="metric-label">指引</div>
+              <div class="metric-value">偏弱</div>
+              <div class="metric-delta down">供应约束警告 + 提价或抑制需求</div>
             </div>
           </div>
+
+          <ul class="bullet-list">
+            <li>
+              <strong>驱动归因：</strong>管理层就<strong>供应约束</strong>发出警告，并给出
+              iPhone 提价或将<strong>抑制需求</strong>的悲观展望，是本次股价重挫的主因，而非营收本身不及预期
+            </li>
+            <li>
+              ⚠️ 允许的信源未给出苹果本季EPS/营收具体实际值与一致预期对比数字，本节未做估算填充
+            </li>
+          </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>本周期主要财报的可验证信号是
-          AMZN +15.32%与 AAPL 逾 -7%的分化；限定页面未给出 EPS、营收、共识或管理层指引，不能把价格反应扩展为定量的 beat/miss 结论。
+          <strong>💡 解读：</strong
+          >本轮财报季的核心矛盾清晰浮现——<strong>AI资本开支能否兑现回报</strong>正在成为分化科技股走势的关键变量。亚马逊用业绩证明云计算+AI投入的商业化路径，而苹果则因供应链与需求端的双重疑虑遭抛售，二者股价反应形成鲜明对比，凸显<strong>选股难度上升</strong>，板块整体估值层面的风险偏好已不再「雨露均沾」。目前无其他主要财报可报告（no other major earnings from allowed sources）。
         </div>
       </section>
 
@@ -1250,65 +1265,53 @@
               margin-bottom: 14px;
             "
           >
-            今日宏观数据状态：暂无事件
+            📈 美股基准股指收盘（7月31日周五）
           </div>
 
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">华尔街见闻日历</span>
-              <span class="value" style="color: var(--accent-sky-deep)">暂无事件</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 100%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">VIX</span>
-              <span class="value" style="color: var(--red)">未提供</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill red" style="width: 0%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">SP500 指数期货</span>
-              <span class="value" style="color: var(--accent-sky-deep)"
-                >7,503.50 · +0.41%</span
-              >
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 41%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">NQ100 指数期货</span>
-              <span class="value" style="color: var(--accent-amber)">28,287 · +0.17%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill yellow" style="width: 17%"></div>
-            </div>
-          </div>
+          <ul class="bullet-list">
+            <li>
+              标普500收涨 <span class="num">+52.09点（+0.70%）</span>，报
+              <strong>7,489.72点</strong>
+            </li>
+            <li>
+              纳指收涨 <span class="num">+251.68点（+1.00%）</span>，报
+              <strong>25,373.85点</strong>
+            </li>
+            <li>
+              道指收涨 <span class="num">+276.97点（+0.53%）</span>，报
+              <strong>52,485.03点</strong>
+            </li>
+            <li>
+              <strong>涨跌家数：</strong>老虎证券美股行情页显示全市场
+              <span class="num">2,640</span> 只上涨 vs
+              <span class="num">3,232</span>
+              只下跌，市场广度弱于指数表现，反映涨势主要集中于超大规模科技股
+            </li>
+          </ul>
 
           <div class="divider" style="margin: 14px 0"></div>
 
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            "
+          >
+            🔴 美债收益率快速上行是本周期核心宏观信号
+          </div>
           <ul class="bullet-list">
             <li>
-              <strong>现货指数卡未渲染</strong>，道指、纳指与标普现货点位无法从限定页面读取
+              10年期美债收益率月内飙升逾<span class="num">30bp</span
+              >，创<strong>2005年以来最大七月涨幅</strong>，反映通胀/供给端担忧上升、降息预期被逐步定价出局
             </li>
             <li>
-              期货方向偏正面：道指期货 +0.27%，SP500 +0.41%，NQ100 +0.17%
+              30年期美债收益率涨破 <span class="num">5.27%</span
+              >，德国、英国10年期国债收益率同步上行（分别 +5bp、+7bp）
             </li>
             <li>
-              VIX 未在老虎美股行情页显示，风险偏好只能判定为“期货偏正面、确认不足”
-            </li>
-            <li>
-              全球资产：WTI +1.39%，美元指数 -0.12%，日元走强，能源与避险信号并存
+              标普500经历<strong>2014年以来最差7月表现</strong>，纳指经历<strong>2004年以来最差7月表现</strong>，凸显月度层面波动加剧
             </li>
           </ul>
         </div>
@@ -1322,15 +1325,17 @@
               margin-bottom: 10px;
             "
           >
-            🟡 亚马逊强势、苹果承压：科技内部继续分化
+            🌏 新兴市场 / 亚太表现
           </div>
           <ul class="bullet-list">
             <li>
-              亚马逊 AMZN <strong>+15.32%</strong>，苹果 AAPL <strong>逾 -7%</strong>
+              新兴市场股市创<strong>2008年以来最大单日涨幅</strong>，韩股创纪录飙升
             </li>
-            <li>AI 概念指数 +3.45%，热门中概股 +0.87%</li>
             <li>
-              结论：开盘后观察市场广度，避免只追逐单一财报赢家
+              韩国7月出口增速虽放缓但强于预期，<strong>芯片出口突破400亿美元</strong>，支撑贸易顺差
+            </li>
+            <li>
+              日本疑似干预汇市：数据暗示周四已动用<strong>8.45万亿日元</strong>，日媒称周五再度下场
             </li>
           </ul>
         </div>
@@ -1342,27 +1347,17 @@
               font-weight: 600;
               color: var(--text-primary);
               margin-bottom: 10px;
+              color: var(--yellow-border);
+              background: var(--yellow-bg);
+              padding: 8px 12px;
+              border-radius: 8px;
             "
           >
-            🌏 亚太股市今日表现
+            ⚠️ 期货 / VIX / 大宗商品 / 汇率数据缺失说明
           </div>
-          <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">🇯🇵               日经225</span><span class="pct">未提供</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇰🇷 韩国综指</span
-              ><span class="pct">未提供</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 沪指</span><span class="pct">未提供</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇨🇳 创业板</span><span class="pct">未提供</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">🇭🇰 恒指</span><span class="pct">未提供</span>
-            </div>
+          <div style="font-size: 14px; color: var(--text-secondary)">
+            老虎证券美股行情页（itiger.com/hans/quote/us）实时指数与VIX组件在抓取时未渲染出具体数值（组件显示为加载中状态），华尔街见闻财经日历页返回500错误，故本期briefing无法提供
+            <strong>道指/标普/纳指盘前期货涨跌幅</strong>、<strong>VIX具体点位及变动</strong>与大宗商品/外汇报价，特此明确标注，不做替代来源填充。
           </div>
         </div>
       </section>
@@ -1380,24 +1375,24 @@
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 值得关注 — 机会</div>
+          <div class="alert-title">🟢 值得关注 — 机会（重点观察 ①②）</div>
           <div class="alert-text">
-            <strong>① AI/云交易有相对强度</strong> —
-            AMZN +15.32%、AI概念 +3.45%，但需等待开盘广度确认<br />
-            <strong>② 期货偏正面但不完整</strong> —
-            SP500/NQ100/道指期货分别 +0.41%/+0.17%/+0.27%，VIX 与现货指数缺失
+            <strong>① AI资本开支叙事获业绩验证</strong> —
+            亚马逊用亮眼财报证明云计算/AI投入的商业化路径，微软周四已先行大涨15%，两家超大规模云厂商共振，超大规模云计算板块本周跑赢纳指100指数幅度创历史新高，短期继续关注MSFT/AMZN/GOOGL的AI变现进度<br />
+            <strong>② 新兴市场/亚洲资金流向逆转</strong> —
+            新兴市场股市创2008年以来最大单日涨幅，韩股创纪录飙升，韩国芯片出口突破400亿美元，若资金持续从固定收益流向亚洲风险资产，今晚亚太盘可能延续强势
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 需要警惕 — 风险</div>
+          <div class="alert-title">🔴 需要警惕 — 风险（风险提示 ①②）</div>
           <div class="alert-text">
-            <strong>① 地缘与能源风险</strong> —
-            WTI +1.39%，美国对伊朗行动相关报道可能在周末放大波动<br />
-            <strong>② 财报数据缺口</strong> —
-            EPS、营收、共识和指引未在限定页面披露，不能以标题替代基本面验证<br />
-            <strong>③ VIX 缺失</strong> —
-            无法用波动率确认期货的风险偏好，开盘前避免过度加仓
+            <strong>① 美债收益率快速上行压制利率敏感资产</strong> —
+            10年期美债收益率月内飙升逾30bp（创2005年来最大7月涨幅），30年期突破5.27%，若这一趋势延续，成长股/高估值科技股的估值压力将进一步显现，苹果指引疲软已是先兆<br />
+            <strong>② 板块内部分化加剧、集中度风险上升</strong> —
+            Meta遭投资者质疑而微软/亚马逊/谷歌获追捧，叠加「AI股神」式高杠杆基金遭遇类挤兑压力，说明市场对AI板块的信心并非「雨露均沾」，个股选择错误的代价正在放大<br />
+            <strong>③ 地缘与汇市不确定性未消退</strong> —
+            特朗普据报下令对伊朗新一轮袭击、美以酝酿周末轰炸伊朗能源设施；日本疑似连续两日干预汇市（周四8.45万亿日元规模），周末事件可能在周一（马来西亚周一晚间/美股周一开盘）引发跳空波动
           </div>
         </div>
 
@@ -1414,26 +1409,32 @@
             gap: 8px;
           "
         >
-          ✅ 三条可执行关注清单
+          ✅ 三条可执行关注清单（面向今晚美股开盘）
         </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">1. 开盘前复核 SP500/NQ100 期货</div>
+            <div class="action-title">
+              今晚开盘留意标普500能否守住7,500点关键技术位
+            </div>
             <div class="action-desc">
-              若涨幅在开盘前扩大至 +0.8% 以上，先降低高估值科技仓位；若转负则再评估风险偏好。
+              市场广度指标（全市场下跌家数3,232只多于上涨2,640只）已释放谨慎信号，若指数在此位置遭遇实质性抛压，短线可考虑降低成长股仓位或对冲
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">2. 观察 AMZN 与 AAPL 开盘后30分钟</div>
+            <div class="action-title">
+              紧盯AMZN/AAPL开盘后续走势及云计算板块跟涨广度
+            </div>
             <div class="action-desc">
-              AMZN 若守住 +10% 而 AAPL 继续弱于 -7%，说明资金只买确定性AI回报，不追全面科技反弹。
+              亚马逊+15.32%的涨幅能否延续、苹果-7.35%的跌幅是否企稳，将检验市场对「AI资本开支兑现」叙事的持续信心；若GOOGL/MSFT同步走强，可关注云计算/半导体ETF逢低布局机会
             </div>
           </li>
           <li class="action-item">
-            <div class="action-title">3. 设定 WTI +3% 的风险阈值</div>
+            <div class="action-title">
+              密切关注10年期与30年期美债收益率走势及周末地缘/汇市事件
+            </div>
             <div class="action-desc">
-              若油价从当前 $84.75 再升逾 +3%，暂停追涨成长股并保留现金，等待地缘消息明朗。
+              若收益率延续快速上行（10Y突破4.8%或30Y进一步走高），高估值成长股面临估值重定价风险；同时留意伊朗局势与日本干预汇市的周末进展，若出现突发消息，今晚美股开盘可能出现跳空
             </div>
           </li>
         </ol>
@@ -1444,7 +1445,7 @@
         <div class="disclaimer">
           ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
         </div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers（限定页面）</div>
+        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG)</div>
         <div style="margin-top: 4px">
           由 AI 助手自动生成 · 2026年8月1日 · 晨间版
         </div>
