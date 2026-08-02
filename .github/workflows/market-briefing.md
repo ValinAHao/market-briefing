@@ -8,7 +8,7 @@ on:
     # Night run: 12:00 UTC = 20:00 MYT, Mon-Fri MYT previews Mon-Fri US open.
     - cron: "0 12 * * 1-5"
 
-model: "claude-sonnet-5"
+model: "kimi"
 engine:
   id: copilot
 tools:
