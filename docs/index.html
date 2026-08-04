@@ -13,7 +13,7 @@
   ║  soft sky-blue accents. Same component API as dark version. ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
-<style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
       :root {
@@ -100,211 +100,315 @@
       /* ── Header ── */
       .header {
         text-align: center;
-        padding: 40px 0 28px;
-        margin-bottom: 28px;
+        padding: 48px 24px 40px;
         position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 640px;
+        height: 640px;
+        background: radial-gradient(
+          circle,
+          rgba(234, 138, 62, 0.18) 0%,
+          rgba(244, 185, 97, 0.06) 45%,
+          transparent 70%
+        );
+        pointer-events: none;
       }
 
       .header-badge {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 7px 14px;
+        gap: 6px;
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 999px;
+        border-radius: 100px;
+        padding: 6px 16px;
         font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.04em;
         color: var(--text-secondary);
-        box-shadow: var(--shadow-card);
-        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(64, 48, 28, 0.04);
+        position: relative;
       }
 
-      .dot {
-        width: 8px;
-        height: 8px;
+      .header-badge .dot {
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background: var(--accent-amber);
-        box-shadow: 0 0 10px var(--accent-amber);
-        animation: pulse 2s ease-in-out infinite;
+        animation: pulse 2s infinite;
+        box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
       }
 
       @keyframes pulse {
-        0%, 100% {
+        0%,
+        100% {
           opacity: 1;
-          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(234, 138, 62, 0.5);
         }
         50% {
-          opacity: 0.7;
-          transform: scale(1.15);
+          opacity: 0.55;
+          box-shadow: 0 0 0 6px rgba(234, 138, 62, 0);
         }
       }
 
       .header h1 {
-        font-size: 42px;
+        font-size: 34px;
         font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 8px;
-        background: var(--gradient-sky);
+        background: var(--gradient-brand);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+        position: relative;
       }
 
-      .date {
+      .header .date {
         font-size: 15px;
         color: var(--text-secondary);
         font-weight: 500;
-        margin-bottom: 4px;
+        position: relative;
       }
 
-      .subtitle {
+      .header .subtitle {
         font-size: 13px;
         color: var(--text-muted);
-        font-weight: 400;
+        margin-top: 6px;
+        position: relative;
       }
 
       /* ── Section ── */
       .section {
-        margin-bottom: 36px;
+        margin-top: 32px;
       }
 
       .section-header {
         display: flex;
         align-items: center;
-        gap: 12px;
-        margin-bottom: 18px;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
       }
 
       .section-icon {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 18px;
-        background: rgba(234, 138, 62, 0.12);
-        color: var(--accent-amber);
+        flex-shrink: 0;
       }
 
       .section-title {
-        font-size: 22px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 600;
         color: var(--text-primary);
+        letter-spacing: -0.3px;
       }
 
+      /* ── Cards ── */
       .card {
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 18px 20px;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        margin-bottom: 14px;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
       }
 
-      .card:last-child {
-        margin-bottom: 0;
-      }
-
-      .divider {
-        height: 1px;
-        background: var(--border);
-        margin: 14px 0;
-        border: none;
+      .card:hover {
+        border-color: rgba(234, 138, 62, 0.35);
       }
 
       /* ── Index Grid ── */
       .index-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 14px;
-        margin-bottom: 18px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 16px;
       }
 
       .index-card {
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 18px;
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
         box-shadow: var(--shadow-card);
         position: relative;
         overflow: hidden;
       }
 
-      .index-card::before {
-        content: '';
+      .index-card::after {
+        content: "";
         position: absolute;
-        left: 0;
         top: 0;
-        bottom: 0;
-        width: 4px;
-        background: var(--border);
+        left: 0;
+        right: 0;
+        height: 2px;
       }
 
-      .index-card.up::before {
-        background: var(--green);
+      .index-card.up::after {
+        background: var(--gradient-brand);
       }
-
-      .index-card.down::before {
+      .index-card.down::after {
         background: var(--red);
       }
 
       .index-name {
-        font-size: 13px;
+        font-size: 12px;
         color: var(--text-muted);
         font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
         margin-bottom: 6px;
       }
 
       .index-value {
-        font-size: 28px;
-        font-weight: 700;
-        font-family: "Inter", sans-serif;
-        letter-spacing: -0.02em;
+        font-family: "JetBrains Mono", "Inter", monospace;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-primary);
         margin-bottom: 4px;
       }
 
       .index-change {
-        font-size: 14px;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        font-weight: 500;
       }
 
       .index-change.up {
         color: var(--green);
       }
-
       .index-change.down {
         color: var(--red);
+      }
+
+      /* ── Asset Table ── */
+      .asset-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 14px;
+      }
+
+      .asset-table thead th {
+        text-align: left;
+        padding: 10px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-card-alt);
+      }
+
+      .asset-table tbody td {
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(236, 228, 214, 0.8);
+        vertical-align: middle;
+      }
+
+      .asset-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .asset-table tbody tr:hover {
+        background: var(--bg-highlight);
+      }
+
+      .asset-name {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .asset-price {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 500;
+        color: var(--text-secondary);
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 2px 8px;
+        border-radius: 6px;
+        gap: 3px;
+      }
+
+      .tag.up {
+        color: var(--green);
+        background: var(--green-bg);
+      }
+
+      .tag.down {
+        color: var(--red);
+        background: var(--red-bg);
+      }
+
+      .asset-note {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-left: 6px;
+      }
+
+      /* ── Insight Box ── */
+      .insight {
+        background: var(--bg-card-alt);
+        border-left: 3px solid var(--accent-amber);
+        border-radius: 0 8px 8px 0;
+        padding: 14px 16px;
+        margin-top: 12px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .insight strong {
+        color: var(--accent-sky-deep);
+        font-weight: 600;
       }
 
       /* ── Bullet List ── */
       .bullet-list {
         list-style: none;
+        padding: 0;
       }
 
       .bullet-list li {
         position: relative;
-        padding-left: 18px;
-        margin-bottom: 10px;
-        font-size: 14.5px;
+        padding: 6px 0 6px 20px;
+        font-size: 14px;
         color: var(--text-secondary);
         line-height: 1.7;
       }
 
-      .bullet-list li:last-child {
-        margin-bottom: 0;
-      }
-
       .bullet-list li::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
-        top: 9px;
-        width: 7px;
-        height: 7px;
+        top: 14px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background: var(--accent-amber);
       }
@@ -314,233 +418,101 @@
         font-weight: 600;
       }
 
-      .num {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        color: var(--accent-amber);
-      }
-
-      /* ── Insight Box ── */
-      .insight {
-        background: var(--bg-card-alt);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 14px 18px;
-        font-size: 14px;
-        color: var(--text-secondary);
-        line-height: 1.7;
-      }
-
-      .insight strong {
-        color: var(--text-primary);
-      }
-
-      /* ── Asset Table ── */
-      .asset-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-      }
-
-      .asset-table th,
-      .asset-table td {
-        padding: 13px 18px;
-        text-align: left;
-      }
-
-      .asset-table th {
-        font-weight: 600;
-        color: var(--text-muted);
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        background: var(--bg-card-alt);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .asset-table tr:not(:last-child) td {
-        border-bottom: 1px solid var(--border-soft);
-      }
-
-      .asset-name {
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .asset-price {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .asset-note {
-        margin-left: 8px;
-        font-size: 12px;
-        color: var(--text-muted);
-      }
-
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        padding: 4px 9px;
-        border-radius: 6px;
-        font-size: 13px;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
-      }
-
-      .tag.up {
-        background: var(--green-bg);
+      .bullet-list li .num {
+        font-family: "JetBrains Mono", monospace;
         color: var(--green);
-        border: 1px solid var(--green-border);
+        font-weight: 500;
       }
 
-      .tag.down {
-        background: var(--red-bg);
+      .bullet-list li .num.down {
         color: var(--red);
-        border: 1px solid var(--red-border);
       }
 
-      .tag.neutral {
-        background: var(--bg-card-alt);
-        color: var(--text-secondary);
-        border: 1px solid var(--border);
-      }
-
-      .tag.hot {
-        background: var(--yellow-bg);
-        color: var(--yellow);
-        border: 1px solid var(--yellow-border);
-      }
-
-      /* ── Timeline ── */
+      /* ── Event Timeline ── */
       .timeline {
         position: relative;
+        padding-left: 24px;
       }
 
       .timeline::before {
-        content: '';
+        content: "";
         position: absolute;
-        left: 9px;
-        top: 6px;
-        bottom: 6px;
-        width: 2px;
-        background: var(--border);
+        left: 7px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-amber),
+          var(--border)
+        );
       }
 
       .timeline-item {
         position: relative;
-        padding-left: 32px;
-        margin-bottom: 16px;
+        padding: 8px 0;
         font-size: 14px;
         color: var(--text-secondary);
-        line-height: 1.6;
-      }
-
-      .timeline-item:last-child {
-        margin-bottom: 0;
       }
 
       .timeline-item::before {
-        content: '';
+        content: "";
         position: absolute;
-        left: 0;
-        top: 5px;
-        width: 20px;
-        height: 20px;
+        left: -20px;
+        top: 15px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%;
+        border: 2px solid var(--accent-amber);
         background: var(--bg-primary);
-        border: 2px solid var(--border);
-        box-shadow: 0 0 0 3px var(--bg-card);
       }
 
       .timeline-item.important::before {
-        border-color: var(--accent-amber);
         background: var(--accent-amber);
+        box-shadow: 0 0 0 3px rgba(234, 138, 62, 0.18);
       }
 
       .timeline-label {
-        display: inline-block;
-        padding: 2px 8px;
-        border-radius: 4px;
         font-size: 11px;
-        font-weight: 700;
-        margin-right: 8px;
-        letter-spacing: 0.02em;
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+        margin-right: 6px;
       }
 
       .timeline-label.data {
-        background: rgba(91, 149, 201, 0.12);
+        background: rgba(91, 149, 201, 0.14);
         color: var(--accent-sky-deep);
       }
-
-      .timeline-label.report {
-        background: rgba(217, 162, 58, 0.15);
-        color: var(--gold);
-      }
-
-      .timeline-label.earnings {
-        background: rgba(138, 127, 201, 0.12);
+      .timeline-label.speech {
+        background: rgba(138, 127, 201, 0.14);
         color: var(--purple);
       }
-
-      .timeline-label.speech {
-        background: rgba(234, 138, 62, 0.12);
-        color: var(--accent-amber);
+      .timeline-label.report {
+        background: rgba(224, 122, 58, 0.14);
+        color: var(--orange);
       }
-
-      /* ── Tech Chips ── */
-      .tech-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .tech-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 14px;
-        background: var(--bg-card-alt);
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        font-size: 13px;
-      }
-
-      .tech-chip .name {
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .tech-chip .pct {
-        color: var(--green);
-        font-weight: 700;
-        font-family: "Inter", sans-serif;
-      }
-
-      .tech-chip.down .pct {
-        color: var(--red);
+      .timeline-label.earnings {
+        background: rgba(217, 162, 58, 0.16);
+        color: var(--gold);
       }
 
       /* ── Earnings Card ── */
       .earnings-card {
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 18px 20px;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 12px;
         box-shadow: var(--shadow-card);
-        margin-bottom: 18px;
-      }
-
-      .earnings-card:last-of-type {
-        margin-bottom: 0;
       }
 
       .earnings-header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-bottom: 16px;
+        justify-content: space-between;
+        margin-bottom: 14px;
       }
 
       .earnings-ticker {
@@ -550,33 +522,29 @@
       }
 
       .ticker-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 6px 10px;
-        background: var(--bg-card-alt);
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", monospace;
         font-size: 13px;
-        font-weight: 700;
-        color: var(--text-primary);
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 6px;
+        background: var(--bg-card-alt);
+        color: var(--accent-sky-deep);
+        border: 1px solid rgba(91, 149, 201, 0.25);
       }
 
       .earnings-name {
-        font-size: 15px;
         font-weight: 600;
+        font-size: 16px;
         color: var(--text-primary);
       }
 
       .beat-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        padding: 5px 11px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .beat-badge.beat {
@@ -585,855 +553,602 @@
         border: 1px solid var(--green-border);
       }
 
-      .beat-badge.miss {
-        background: var(--red-bg);
-        color: var(--red);
-        border: 1px solid var(--red-border);
-      }
-
-      .beat-badge.inline {
-        background: var(--bg-card-alt);
-        color: var(--text-secondary);
-        border: 1px solid var(--border);
-      }
-
       .metric-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 12px;
-        margin-bottom: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
       }
 
       .metric {
         background: var(--bg-card-alt);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        padding: 13px;
+        border-radius: 8px;
+        padding: 10px 12px;
       }
 
       .metric-label {
-        font-size: 12px;
+        font-size: 11px;
         color: var(--text-muted);
-        margin-bottom: 5px;
         font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
       }
 
       .metric-value {
-        font-size: 17px;
-        font-weight: 700;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 16px;
+        font-weight: 600;
         color: var(--text-primary);
-        font-family: "Inter", sans-serif;
-        margin-bottom: 4px;
       }
 
       .metric-delta {
-        font-size: 12px;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
       }
 
       .metric-delta.up {
         color: var(--green);
       }
-
       .metric-delta.down {
         color: var(--red);
       }
 
-      /* ── Survey Bars ── */
-      .survey-bar {
-        margin-bottom: 14px;
-      }
-
-      .survey-bar:last-child {
-        margin-bottom: 0;
-      }
-
-      .survey-bar-label {
+      /* ── AI/Tech Chips ── */
+      .tech-chips {
         display: flex;
-        justify-content: space-between;
-        font-size: 13px;
-        margin-bottom: 6px;
-        color: var(--text-secondary);
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
       }
 
-      .survey-bar-label .label {
+      .tech-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--bg-card-alt);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .tech-chip .name {
+        color: var(--text-primary);
         font-weight: 500;
       }
-
-      .survey-bar-label .value {
-        font-weight: 700;
-        font-family: "Inter", sans-serif;
-      }
-
-      .survey-bar-track {
-        width: 100%;
-        height: 8px;
-        background: var(--bg-card-alt);
-        border-radius: 999px;
-        overflow: hidden;
-      }
-
-      .survey-bar-fill {
-        height: 100%;
-        border-radius: 999px;
-      }
-
-      .survey-bar-fill.red {
-        background: linear-gradient(90deg, var(--accent-rose), var(--red));
-      }
-
-      .survey-bar-fill.blue {
-        background: linear-gradient(90deg, var(--accent-sky), var(--accent-sky-deep));
-      }
-
-      .survey-bar-fill.yellow {
-        background: linear-gradient(90deg, var(--gold), var(--accent-amber));
-      }
-
-      .survey-bar-fill.green {
-        background: linear-gradient(90deg, var(--green), #7bbf8a);
+      .tech-chip .pct {
+        color: var(--green);
+        font-weight: 600;
       }
 
       /* ── Alert Boxes ── */
       .alert-box {
         border-radius: 12px;
         padding: 16px 18px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        border: 1px solid;
       }
 
       .alert-box.green {
         background: var(--green-bg);
-        border: 1px solid var(--green-border);
+        border-color: var(--green-border);
       }
 
       .alert-box.red {
         background: var(--red-bg);
-        border: 1px solid var(--red-border);
+        border-color: var(--red-border);
       }
 
       .alert-box.yellow {
         background: var(--yellow-bg);
-        border: 1px solid var(--yellow-border);
+        border-color: var(--yellow-border);
       }
 
       .alert-title {
         font-size: 14px;
-        font-weight: 700;
-        margin-bottom: 8px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
 
       .alert-box.green .alert-title {
         color: var(--green);
       }
-
       .alert-box.red .alert-title {
         color: var(--red);
       }
-
       .alert-box.yellow .alert-title {
         color: var(--yellow);
       }
 
       .alert-text {
-        font-size: 14px;
-        line-height: 1.8;
+        font-size: 13px;
         color: var(--text-secondary);
-      }
-
-      .alert-text strong {
-        color: var(--text-primary);
+        line-height: 1.7;
       }
 
       /* ── Action List ── */
       .action-list {
-        list-style: none;
         counter-reset: action;
+        list-style: none;
+        padding: 0;
       }
 
       .action-item {
-        display: flex;
-        gap: 14px;
-        padding: 16px;
+        position: relative;
+        padding: 16px 16px 16px 56px;
+        margin-bottom: 10px;
         background: var(--bg-card);
         border: 1px solid var(--border);
         border-radius: 12px;
-        margin-bottom: 12px;
         box-shadow: var(--shadow-card);
+        counter-increment: action;
       }
 
       .action-item::before {
-        counter-increment: action;
         content: counter(action);
-        flex-shrink: 0;
+        position: absolute;
+        left: 16px;
+        top: 16px;
         width: 28px;
         height: 28px;
+        border-radius: 8px;
+        background: var(--gradient-brand);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--gradient-brand);
-        color: #fff;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 700;
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", monospace;
+        box-shadow: 0 2px 6px rgba(234, 138, 62, 0.28);
       }
 
       .action-title {
-        font-size: 15px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 600;
         color: var(--text-primary);
         margin-bottom: 4px;
       }
 
       .action-desc {
-        font-size: 13.5px;
+        font-size: 13px;
         color: var(--text-secondary);
         line-height: 1.7;
       }
 
       /* ── Footer ── */
       .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
         text-align: center;
         font-size: 12px;
         color: var(--text-muted);
-        padding: 28px 0 10px;
-        border-top: 1px solid var(--border);
-        margin-top: 12px;
+        line-height: 1.8;
       }
 
-      .disclaimer {
+      .footer .disclaimer {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--yellow-bg);
+        border: 1px solid var(--yellow-border);
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-bottom: 12px;
+        color: var(--yellow);
+        font-weight: 500;
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--border),
+          transparent
+        );
+        margin: 8px 0;
+      }
+
+      /* ── Survey Bar Chart ── */
+      .survey-bar {
+        margin: 10px 0;
+      }
+
+      .survey-bar-label {
+        display: flex;
+        justify-content: space-between;
         font-size: 12px;
-        color: var(--text-muted);
-        margin-bottom: 8px;
-        line-height: 1.6;
+        margin-bottom: 4px;
+      }
+
+      .survey-bar-label .label {
+        color: var(--text-secondary);
+      }
+      .survey-bar-label .value {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .survey-bar-track {
+        height: 6px;
+        background: var(--bg-card-alt);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+
+      .survey-bar-fill {
+        height: 100%;
+        border-radius: 3px;
+        transition: width 1s ease;
+      }
+
+      .survey-bar-fill.red {
+        background: linear-gradient(90deg, var(--red), var(--orange));
+      }
+      .survey-bar-fill.blue {
+        background: linear-gradient(
+          90deg,
+          var(--accent-sky),
+          var(--accent-sky-deep)
+        );
+      }
+      .survey-bar-fill.yellow {
+        background: linear-gradient(90deg, var(--accent-amber), var(--gold));
       }
 
       /* ── Responsive ── */
-      @media (max-width: 680px) {
-        .header h1 {
-          font-size: 32px;
+      @media (max-width: 640px) {
+        .container {
+          padding: 16px 12px 40px;
         }
-
-        .index-grid,
-        .metric-grid {
+        .header h1 {
+          font-size: 24px;
+        }
+        .index-grid {
           grid-template-columns: 1fr;
         }
-
-        .asset-table th,
-        .asset-table td {
-          padding: 10px 12px;
+        .metric-grid {
+          grid-template-columns: 1fr 1fr;
         }
-
-        .earnings-header {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
+        .index-value {
+          font-size: 18px;
         }
-
-        .tech-chips {
-          gap: 8px;
+        .asset-table {
+          font-size: 13px;
         }
-
-        .action-item {
-          flex-direction: column;
-          gap: 10px;
+        .asset-table thead th,
+        .asset-table tbody td {
+          padding: 8px;
         }
-
-        .section-title {
-          font-size: 20px;
-        }
-      }
-
-      /* extra tight cards for assets */
-      .asset-table tr:nth-child(even) td {
-        background: rgba(245, 239, 230, 0.35);
-      }
-
-      /* subtle hover on index cards */
-      .index-card,
-      .action-item,
-      .tech-chip,
-      .metric {
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-      }
-
-      .index-card:hover,
-      .action-item:hover,
-      .metric:hover {
-        transform: translateY(-1px);
-        box-shadow:
-          0 1px 2px rgba(64, 48, 28, 0.04), 0 8px 28px rgba(64, 48, 28, 0.08);
       }
     </style>
-  </head>
   <body>
     <div class="container">
-      <!-- ═══ Header ═══ -->
+      <!-- Header -->
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年8月4日 · 周二 · 数据截至 MYT 10:14 / 美东收盘</div>
-        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers · 新华社</div>
+        <div class="date">2026年08月04日 · 周二 · 数据截至 MYT 22:50</div>
+        <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers (SG)</div>
       </header>
 
-      <!-- ═══ 1. 隔夜美股 ═══ -->
+      <!-- 1. 隔夜美股 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(234, 138, 62, 0.14)"
-          >
-            📊
-          </div>
+          <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
           <h2 class="section-title">隔夜美股</h2>
         </div>
 
         <div class="index-grid">
           <div class="index-card up">
-            <div class="index-name">S&P 500</div>
-            <div class="index-value">7,600.50</div>
-            <div class="index-change up">+110.78 (+1.48%)</div>
-          </div>
-          <div class="index-card up">
             <div class="index-name">道琼斯</div>
-            <div class="index-value">53,178.41</div>
-            <div class="index-change up">+693.38 (+1.32%)</div>
+            <div class="index-value">53900.81</div>
+            <div class="index-change up">+724.48 (+1.36%)</div>
           </div>
           <div class="index-card up">
             <div class="index-name">纳斯达克</div>
-            <div class="index-value">25,913.90</div>
-            <div class="index-change up">+540.04 (+2.13%)</div>
+            <div class="index-value">26323.05</div>
+            <div class="index-change up">+409.14 (+1.58%)</div>
+          </div>
+          <div class="index-card up">
+            <div class="index-name">S&P 500</div>
+            <div class="index-value">7676.54</div>
+            <div class="index-change up">+76.42 (+1.00%)</div>
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
-            <li>
-              <strong>风险资产强势反弹</strong>：美股三大指数全线大涨，纳指领涨 <span class="num">+2.13%</span>，科技_ALPHA 买盘回流。
-            </li>
-            <li>
-              <strong>霍尔木兹缓和信号</strong>：特朗普称最迟周二可重开霍尔木兹海峡，伊朗随后否认，但市场仍按"封锁不可持续"定价，油价单日大跌约 <span class="num">-5%</span>。
-            </li>
-            <li>
-              <strong>美联储路径重估</strong>：ISM制造业 PMI 55.6 远超预期的 53.9，叠加美债收益率曲线长端回落，9月加息25bp概率升至 <span class="num">64.5%</span>。
-            </li>
-            <li>
-              <strong>VIX</strong>：15.86（<span class="num">-0.81%</span>），避险情绪继续回落，但高于前低点；风险偏好处于 <strong>risk-on 偏中性</strong> 区间。
-            </li>
+            <li><strong>三大指数全线收涨</strong>：道指、标普500再创历史新高，科技股领涨。</li>
+            <li><strong>Palantir（PLTR）绩后飙涨逾26%</strong>：Q2美国商业收入同比飙升149%，上调全年营收指引，带动AI与软件板块情绪高涨。</li>
+            <li><strong>半导体板块普涨</strong>：迈威尔科技（MRVL）涨超11%，ARM涨超9%，英特尔涨超9%，市场对AI算力需求保持乐观。</li>
+            <li><strong>地缘风险缓和</strong>：美财长贝森特称明日美伊或达成协议以开放霍尔木兹海峡，油气股普跌，市场风险偏好回升。</li>
+            <li><strong>较早数据来源</strong>：tiger-break 22:20 MYT 快照；VIX及期货数据在允许来源中未成功获取。</li>
           </ul>
         </div>
 
-        <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 10px;
-            "
-          >
-            🌐 股指期货盘前动向
-          </div>
-          <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">S&P 500 期货</span><span class="pct">7,646.00 +0.23%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">Nasdaq-100 期货</span><span class="pct">29,033.50 +0.49%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">Dow 期货</span><span class="pct">53,462.00 +0.24%</span>
-            </div>
-          </div>
-        </div>
-
         <div class="insight">
-          <strong>💡 解读：</strong
-          >隔夜走势由"地缘缓和 + 增长数据超预期 + AI财报催化"三重因素推动。油价大跌若持续，通胀预期降温会强化市场的软着陆假设；但伊朗否认谈判也保留了谈判反复的尾部风险。<strong>关键试金石</strong> → 周二能否看到霍尔木兹实质通航。
+          <strong>💡 解读：</strong>美伊谈判预期升温+AI财报亮眼形成双重利好，资金重新拥抱成长股。但午后数据仍属盘中快照，地缘协议尚未落地，<strong>今晚若PPI/伊朗消息反转，市场可能快速回吐涨幅</strong>。
         </div>
       </section>
 
-      <!-- ═══ 2. 全球资产 ═══ -->
+      <!-- 2. 全球资产 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(91, 149, 201, 0.14)"
-          >
-            🌍
-          </div>
+          <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
           <h2 class="section-title">全球资产</h2>
         </div>
 
         <div class="card" style="padding: 0; overflow: hidden">
           <table class="asset-table">
-            <thead>
-              <tr>
-                <th>资产</th>
-                <th>价格</th>
-                <th>变动</th>
-              </tr>
-            </thead>
+            <thead><tr><th>资产</th><th>价格</th><th>变动</th></tr></thead>
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,066.84/oz</span></td>
-                <td>
-                  <span class="tag up">▲ +0.50%</span
-                  ><span class="asset-note">守稳4000关口</span>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">⚪ 现货白银</span></td>
-                <td><span class="asset-price">$57.67/oz</span></td>
-                <td><span class="tag up">▲ +0.13%</span></td>
+                <td><span class="asset-price">$4,078.51/oz</span></td>
+                <td><span class="tag up">▲ +0.57%</span><span class="asset-note">地缘缓和削弱避险需求</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$80.34</span></td>
-                <td>
-                  <span class="tag down">▼ -5.11%</span
-                  ><span class="asset-note">霍尔木兹协议预期主导</span>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🛢️ 布伦特原油</span></td>
-                <td><span class="asset-price">$83.77</span></td>
-                <td><span class="tag down">▼ -4.73%</span></td>
+                <td><span class="asset-price">$76.64</span></td>
+                <td><span class="tag down">▼ -4.61%</span><span class="asset-note">美伊协议预期重创油价</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
-                <td><span class="asset-price">99.65</span></td>
-                <td>
-                  <span class="tag down">▼ -0.14%</span
-                  ><span class="asset-note">三日创逾月新低</span>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">🔷 10Y 美债</span></td>
-                <td><span class="asset-price">4.68%</span></td>
-                <td><span class="tag down">▼ -5bp</span><span class="asset-note">长端优于短端</span></td>
-              </tr>
-              <tr>
-                <td><span class="asset-name">₿ 比特币</span></td>
-                <td><span class="asset-price">~$64,000</span></td>
-                <td><span class="tag up">▲ +~3%</span></td>
+                <td><span class="asset-price">99.89</span></td>
+                <td><span class="tag down">▼ -0.07%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1549</span></td>
-                <td><span class="tag up">▲ +0.19%</span></td>
+                <td><span class="asset-price">1.1525</span></td>
+                <td><span class="tag up">▲ +0.16%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">157.21</span></td>
-                <td>
-                  <span class="tag down">▼ -0.23%</span
-                  ><span class="asset-note">美日干预效果消退</span>
-                </td>
+                <td><span class="asset-price">157.55</span></td>
+                <td><span class="tag up">▲ +0.25%</span><span class="asset-note">日元涨势暂停</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7470</span></td>
-                <td>
-                  <span class="tag up">▲ +0.08%</span
-                  ><span class="asset-note">逼近6.76</span>
-                </td>
+                <td><span class="asset-price">6.7475</span></td>
+                <td><span class="tag down">▼ -0.16%</span><span class="asset-note">人民币小幅走强</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美元与美债收益率同步走低，释放"增长软着陆+通胀降温"的双重信号；油价大跌压低输入性通胀预期。黄金在4000美元上方企稳，但VIX回落意味着避险买盘边际减弱。日元回落至157附近，表明上周五美日联合干预大概率难以单独扭转套利交易方向。
+          <strong>💡 解读：</strong>油价大跌释放通胀压力缓解信号，利于风险资产；但油价跌破$80是否持续取决于真签协议。美元持稳，黄金失去部分避险溢价，后续需看今晚数据确认。
         </div>
       </section>
 
-      <!-- ═══ 3. 今日关注 ═══ -->
+      <!-- 3. 今日关注 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(224, 122, 58, 0.14)"
-          >
-            🎯
-          </div>
+          <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
         <div class="card">
-          <div class="timeline">
-            <div class="timeline-item important">
-              <span class="timeline-label data">数据</span>
-              <strong>美国7月ISM制造业PMI</strong> 55.6，超预期 53.9，创四年新高 → 制造业扩张确认，支撑风险情绪
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label data">数据</span>
-              <strong>本周将公布美国7月非农与ISM服务业</strong> → 决定9月加息路径
-            </div>
-            <div class="timeline-item important">
-              <span class="timeline-label report">事件</span>
-              <strong>霍尔木兹海峡通航进展</strong> → 特朗普周二重开预期能否兑现，伊朗否认与美谈判
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label report">央行</span>
-              <strong>日元干预后续</strong> → 美日联合干预后日元回落至157，套利交易逆转风险仍高悬
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-label speech">讲话</span>
-              <strong>美国财政部发债指引</strong> → 预计维持不变以平稳长端收益率
-            </div>
-          </div>
+          <ul class="bullet-list">
+            <li><strong> tonight US open catalysts：</strong>（距离下次开盘约13小时）——重点观察美伊协议进展、7月PPI/CPI预期变化、以及美股早盘延续性。</li>
+            <li><strong>VIX及股指期货</strong>：允许来源中未成功获取实时数据，将在简报中标注为“数据缺失”。</li>
+            <li><strong>重点观察 ① 油价联动</strong>：WTI若守稳$75，股市风险偏好或延续；若跌破$73，可能触发能源板块财报下修。</li>
+            <li><strong>重点观察 ② AI财报余波</strong>：PLTR、ARM、MRVL领涨后，今晚关注台积电ADR、英伟达供应链（如AVGO、AVGO？）是否跟随。</li>
+            <li><strong>风险提示 ① 协议不及预期</strong>：卡塔尔称“目前尚无美伊直接对话安排”，贝森特表态可能只是试探，油价随时可能反抽。</li>
+            <li><strong>风险提示 ② 利率路径</strong>：美联储票委Paulson称对利率路径持“开放态度”，核心通胀趋势仍是关键；若PPI超预期，降息预期或再被压缩。</li>
+          </ul>
         </div>
 
-        <div class="insight">
-          <strong>💡 解读：</strong>亚洲时段的核心变量是"霍尔木兹能否通航"与"日韩台股市对AI财报的反馈"。若航运重开，油价和风险资产可能继续同步走强；若伊朗反击或谈判破裂，风险溢价将快速回升。
+        <div class="alert-box yellow">
+          <div class="alert-title">⚠️ 数据缺失说明</div>
+          <div class="alert-text">
+            Tiger Brokers 美股行情页（https://www.itiger.com/hans/quote/us）在快照中指数卡片显示为骨架（skeleton），未渲染出实际指数/期货价格及VIX数据。上述VIX/期货部分未能从允许来源获取，已如实标注，未使用外部来源补全。
+          </div>
         </div>
       </section>
 
-      <!-- ═══ 4. AI与科技产业动态 ═══ -->
+      <!-- 4. AI与科技产业动态 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(138, 127, 201, 0.14)"
-          >
-            🤖
-          </div>
+          <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
           <h2 class="section-title">AI与科技产业动态</h2>
         </div>
 
         <div class="card">
-          <div
-            style="
-              margin-bottom: 10px;
-              font-size: 14px;
-              color: var(--text-secondary);
-            "
-          >
-            <strong style="color: var(--purple)">AI概念/科技板块</strong> 隔夜领涨
-            <span class="tag up" style="font-size: 13px">+3.30%</span> ·
-            <strong style="color: var(--purple)">Mag7 成交占比</strong>
-            再度回升
-          </div>
-
           <div class="tech-chips">
-            <div class="tech-chip">
-              <span class="name">ORCL</span><span class="pct">+9.22%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">VRT</span><span class="pct">+8.89%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">CRWD</span><span class="pct">+6.12%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">META</span><span class="pct">+6.02%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">BABA</span><span class="pct">+4.13%</span>
-            </div>
-            <div class="tech-chip">
-              <span class="name">AI(C3.ai)</span><span class="pct">+5.99%</span>
-            </div>
+            <div class="tech-chip"><span class="name">PLTR</span><span class="pct">+26.51%</span></div>
+            <div class="tech-chip"><span class="name">ARM</span><span class="pct">+12.47%</span></div>
+            <div class="tech-chip"><span class="name">MRVL</span><span class="pct">+10.51%</span></div>
+            <div class="tech-chip"><span class="name">INTC</span><span class="pct">+9.29%</span></div>
+            <div class="tech-chip"><span class="name">TER</span><span class="pct">+9.45%</span></div>
+            <div class="tech-chip"><span class="name">AI概念</span><span class="pct">+2.04%</span></div>
           </div>
 
           <div class="divider"></div>
 
           <ul class="bullet-list" style="margin-top: 10px">
-            <li>
-              <strong>Palantir Q2业绩爆发</strong>：营收同比 <span class="num">+93%</span>、美国商业收入同比 <span class="num">+149%</span>，盘后大涨 <span class="num">+13%</span>，强化"AI主权"叙事。
-            </li>
-            <li>
-              <strong>亚马逊市值首破3万亿美元</strong>：云业务AWS五年长约锁定需求，CEO称已被预订至2028年；贝索斯拟售股 <span class="num">41亿美元</span> 引发盘后短暂承压。
-            </li>
-            <li>
-              <strong>阿里发布Qwen 3.8-MAX</strong>：发布仅几天后即进入聊天机器人榜单前列，或继续推动中国科技股估值修复。
-            </li>
-            <li>
-              <strong>韩国KOSPI监管新规</strong>：拟将单股杠杆ETF倍数从2倍调低至1倍，短期释放杠杠资金但可能压制波动。
-            </li>
+            <li><strong>Palantir业绩引爆AI软件股</strong>：美国商业收入同比+149%，上调全年营收指引；市场对政府与商业端AI平台付费意愿信心大增。</li>
+            <li><strong>半导体全线走强</strong>：MRVL、ARM、INTC、TER涨幅领先，反映市场对AI算力资本开支仍偏乐观。</li>
+            <li><strong>Anthropic 100亿美元押注算力</strong>：由英伟达支持的新贵接单，显示超大规模AI训练需求未减。</li>
+            <li><strong>CoreWeave进军亚洲</strong>：拟在印尼投资数十亿美元建设三座数据中心，AI算力军备竞赛向东南亚延伸。</li>
+            <li><strong>消费级显卡涨价</strong>：RTX 50系列国内价格跳涨，硬件优先流向AI算力，终端供应吃紧。</li>
+            <li><strong>谷歌AI豪赌争议</strong>：报道称谷歌AI累计投入接近2000亿美元，市场关注巨额资本开支能否转化为收入。</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>AI板块的核心逻辑从"算力短缺"切换到"软件/云变现加速"。Palantir与亚马逊同日报喜，说明企业级AI需求已进入落地期。但二者估值均处高位，财报后的关键看今晚盘前是否有足够资金承接。
+          <strong>💡 解读：</strong>AI主题从“硬件囤货”扩展到“软件变现”，PLTR是情绪核心。但英伟达/台积电等上游仍未摆脱估值挤压风险，若宏观数据转差，高估值科技股更易波动。
         </div>
       </section>
 
-      <!-- ═══ 5. 美股财报 ═══ -->
+      <!-- 5. 美股财报 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(217, 162, 58, 0.16)"
-          >
-            💼
-          </div>
+          <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- PLTR -->
+        <!-- Palantir -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
               <span class="ticker-badge">PLTR</span>
-              <span class="earnings-name">Palantir Technologies Q2 FY26</span>
+              <span class="earnings-name">Palantir Q2</span>
             </div>
-            <span class="beat-badge beat">✓ 盈利与营收全线超预期</span>
+            <span class="beat-badge beat">✓ 业绩超预期 + 上调指引</span>
           </div>
-
-          <div class="metric-grid">
-            <div class="metric">
-              <div class="metric-label">EPS（经调整）</div>
-              <div class="metric-value">$0.41</div>
-              <div class="metric-delta up">vs est. $0.35，beat +~17%</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">营收</div>
-              <div class="metric-value">$19.40亿</div>
-              <div class="metric-delta up">同比 +93% · vs est. $18亿</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">美国商业收入</div>
-              <div class="metric-value">$7.64亿</div>
-              <div class="metric-delta up">同比 +149% 🔥 最大亮点</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">美国政府收入</div>
-              <div class="metric-value">$8.09亿</div>
-              <div class="metric-delta up">同比 +90%</div>
-            </div>
-          </div>
-
           <ul class="bullet-list">
-            <li>
-              <strong>价格反应</strong>：盘后/夜盘大涨 <span class="num">+13%–15%</span>。
-            </li>
-            <li>
-              <strong>前瞻指引</strong>：全年营收指引上调至 <span class="num">81.5–81.58亿美元</span>；美国商业营收预期上调至超过 <span class="num">$34.24亿</span>；Q3营收指引 <span class="num">21.60–21.64亿美元</span>，高于市场预期的20亿美元。
-            </li>
-            <li>
-              <strong>归因</strong>：政府和大型企业客户对"AI主权"的强烈需求推动业绩；CEO Karp 成功化解市场对AI模型替代与海外政府转向本土科技的两重担忧。海外收入增速仅 <span class="num">+33%</span>，存在地缘政治压力。
-            </li>
+            <li><strong>关键指标</strong>：Q2美国商业收入同比飙升 <span class="num">+149%</span>；公司上调全年营收指引。</li>
+            <li><strong>股价反应</strong>：盘中大涨 <span class="num">+26.51%</span>（best-of-breed AI软件情绪）。</li>
+            <li><strong>归因</strong>：政府与商业AI平台需求强劲，且管理层对全年增长更有信心；即便估值偏高，增长叙事仍吸引资金回流。</li>
           </ul>
         </div>
 
-        <!-- AMZN -->
+        <!-- Caterpillar -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">AMZN</span>
-              <span class="earnings-name">亚马逊 Q2 FY26</span>
+              <span class="ticker-badge">CAT</span>
+              <span class="earnings-name">卡特彼勒 Q2</span>
             </div>
-            <span class="beat-badge beat">✓ AWS加速增长 + 上调预期</span>
+            <span class="beat-badge beat">✓ 营收首破200亿美元</span>
           </div>
-
-          <div class="metric-grid">
-            <div class="metric">
-              <div class="metric-label">股价反应</div>
-              <div class="metric-value">+4.60%</div>
-              <div class="metric-delta up">市值首次突破3万亿美元</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">AWS消息</div>
-              <div class="metric-value">签五年长约</div>
-              <div class="metric-delta up">需求远超当前产能</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">内部人动向</div>
-              <div class="metric-value">贝索斯拟售股</div>
-              <div class="metric-delta down">$41亿美元 · 盘后曾跌1.9%</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">订单能见度</div>
-              <div class="metric-value">至2028年</div>
-              <div class="metric-delta up">云计算AI需求强劲</div>
-            </div>
-          </div>
-
           <ul class="bullet-list">
-            <li>
-              <strong>催化</strong>：AWS负责人称AI订单已被预订至2028年，云计算不再是"增长放缓"而是"产能瓶颈"。
-            </li>
-            <li>
-              <strong>风险</strong>：贝索斯计划减持 <span class="num">41亿美元</span> 股份，可能对短期股价形成情绪面压制。
-            </li>
+            <li><strong>关键指标</strong>：Q2营收首次突破 <span class="num">200亿美元</span>；EPS同比大增 <span class="num">+68%</span>。</li>
+            <li><strong>股价反应</strong>：盘中涨超 <span class="num">+11%</span>。</li>
+            <li><strong>归因</strong>：订单与积压订单持续增长，反映基建与能源资本开支需求仍稳健；关税不确定性尚未显著冲击业绩。</li>
+          </ul>
+        </div>
+
+        <!-- ON Semi -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">ON</span>
+              <span class="earnings-name">安森美半导体 Q2</span>
+            </div>
+            <span class="beat-badge beat">✓ 业绩符合/超预期</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>关键指标</strong>：Q2业绩超市场预期。</li>
+            <li><strong>前瞻指引</strong>：预计Q3 AI数据中心收入翻倍。</li>
+            <li><strong>股价反应</strong>：盘中涨超 <span class="num">+3%</span>。</li>
+            <li><strong>归因</strong>：AI数据中心电源/功率器件需求上行，抵消了传统车用/工业芯片的疲软。</li>
+          </ul>
+        </div>
+
+        <!-- Spotify caution -->
+        <div class="earnings-card">
+          <div class="earnings-header">
+            <div class="earnings-ticker">
+              <span class="ticker-badge">SPOT</span>
+              <span class="earnings-name">Spotify Q2</span>
+            </div>
+            <span class="beat-badge" style="background: rgba(200,87,79,0.12); color: var(--red); border: 1px solid rgba(200,87,79,0.28)">✗ 用户增长放缓</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>关键指标</strong>：北美和欧洲用户增长放缓。</li>
+            <li><strong>前瞻指引</strong>：预测Q3利润将疲软。</li>
+            <li><strong>股价反应</strong>：盘中跌超 <span class="num down">-4%</span>。</li>
+            <li><strong>归因</strong>：增长引擎减速引发市场对高估值消费科技股的获利回吐。</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>AI财报季开局火热。Palantir验证软件变现，亚马逊验证云产能。业绩后的涨幅能否持续，取决于今晚盘前资金是否愿意继续追高估值。财报后提升指引的公司将跑赢，单纯"符合预期"的标的反而有回调压力。
+          <strong>💡 解读：</strong>本日财报主线是“AI相关企业强者恒强”。PLTR上调指引、ON预计数据中心收入翻倍，均验证AI需求；而SPOT因增长放缓遭抛售，显示资金对“非AI成长”容忍度下降。
         </div>
       </section>
 
-      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
+      <!-- 6. 宏观指标与市场数据 -->
       <section class="section">
         <div class="section-header">
-          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">
-            📉
-          </div>
+          <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
           <h2 class="section-title">宏观指标与市场数据</h2>
         </div>
 
         <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 14px;
-            "
-          >
-            美东周一宏观信号
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">7月ISM制造业PMI（预期 53.9）</span>
-              <span class="value" style="color: var(--green)">55.6</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill green" style="width: 80%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">9月加息25bp概率（CME FedWatch）</span>
-              <span class="value" style="color: var(--accent-sky-deep)">64.5%</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill blue" style="width: 64.5%"></div>
-            </div>
-          </div>
-
-          <div class="survey-bar">
-            <div class="survey-bar-label">
-              <span class="label">10Y-3M 收益率利差</span>
-              <span class="value" style="color: var(--accent-amber)">倒挂收窄</span>
-            </div>
-            <div class="survey-bar-track">
-              <div class="survey-bar-fill yellow" style="width: 55%"></div>
-            </div>
-          </div>
-
-          <div class="divider" style="margin: 14px 0"></div>
-
           <ul class="bullet-list">
-            <li>
-              <strong>制造业重新扩张</strong>：PMI 55.6 创四年新高，一扫衰退担忧，与服务业强劲形成共振。
-            </li>
-            <li>
-              <strong>美债曲线长端回落</strong>：10Y收益率 <span class="num">-5bp</span> 至 4.68%，显示市场对增长放缓的担忧下降，通胀预期短暂降温。
-            </li>
-            <li>
-              <strong>美日汇率干预风险</strong>：美日联手将USD/JPY从164推至157，但利差仍支撑套利交易。若日本央行不收紧政策，干预效果料将消退。
-            </li>
+            <li><strong>美国6月JOLTS职位空缺</strong>：736万，低于前值754万与预期745万；招聘人数增加，裁员持平 → 劳动力市场边际降温但仍具韧性。</li>
+            <li><strong>美联储票委Paulson</strong>：对利率路径持“开放态度”，重点关注核心通胀趋势；未明确降息时点。</li>
+            <li><strong>日本10年期国债标售</strong>：市场需求疲软，收益率逼近2.90%警戒线，日债波动可能外溢至全球利率市场。</li>
           </ul>
         </div>
 
         <div class="card">
-          <div
-            style="
-              font-size: 15px;
-              font-weight: 600;
-              color: var(--text-primary);
-              margin-bottom: 10px;
-            "
-          >
-            ⚠️ 数据源提示
+          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">🌏 亚太股市今日表现</div>
+          <div class="tech-chips">
+            <div class="tech-chip"><span class="name">🇰🇷 韩国综指</span><span class="pct">+3.4%</span></div>
+            <div class="tech-chip"><span class="name">🇯🇵 日经225</span><span class="pct">+2.5%</span></div>
+            <div class="tech-chip"><span class="name">🇭🇰 恒指</span><span class="pct">+1%</span></div>
           </div>
-          <ul class="bullet-list">
-            <li>
-              华尔街见闻日历页面今日显示"今日暂无事件"，且页面返回 HTTP 500；数据主要来自华尔街见闻市场收评、Tiger Brokers 行情及详情页。
-            </li>
-            <li>
-              行情与新闻时间戳均在最近24小时内，日历功能受限未影响核心价格数据。
-            </li>
-          </ul>
+        </div>
+
+        <div class="insight">
+          <strong>💡 解读：</strong>职位空缺回落削弱“就业过热”叙事，但裁员有限意味着衰退信号不足。市场陷入“数据走弱=降息预期=利好风险资产”与“通胀若反弹=降息延后=利空”的拉锯。
         </div>
       </section>
 
-      <!-- ═══ 7. 投资者的建议 ═══ -->
+      <!-- 7. 投资者的建议 -->
       <section class="section">
         <div class="section-header">
-          <div
-            class="section-icon"
-            style="background: rgba(90, 154, 106, 0.14)"
-          >
-            💡
-          </div>
+          <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
         <div class="alert-box green">
-          <div class="alert-title">🟢 重点观察</div>
+          <div class="alert-title">🟢 值得关注 — 机会</div>
           <div class="alert-text">
-            <strong>① 霍尔木兹海峡原油通道</strong> — 能否在周二前实质重开，是油价和风险情绪的最直接试金石。确认通航将利好航运、消费和利率敏感型资产<br />
-            <strong>② AI财报后的资金承接</strong> — Palantir盘后大涨13%+、亚马逊创新高3万亿美元。若今晚盘前继续强势，AI/云计算主题有望延续
+            <strong>① AI软件/半导体主线回归</strong> — PLTR带动AI情绪，ARM、MRVL、INTC跟涨；地缘缓和后资金回流高Beta科技， tonight可观察早盘动能是否延续。<br />
+            <strong>② 油价回落压制通胀预期</strong> — WTI跌破$80利好航空、物流及利率敏感型板块，若协议落地可阶段性关注非能源周期股。
           </div>
         </div>
 
         <div class="alert-box red">
-          <div class="alert-title">🔴 风险提示</div>
+          <div class="alert-title">🔴 需要警惕 — 风险</div>
           <div class="alert-text">
-            <strong>① 日元套利交易逆转风险</strong> — 逾万亿美元敞口悬而未决，美日干预效果已在消退。若日元回升可能触发系统性平仓，冲击全球风险资产<br />
-            <strong>② 韩国KOSPI杠杆新规</strong> — 监管机构拟将单股杠杆ETF倍数调低至1倍，短期亚洲科技板块的波动可能外溢至美股相关供应链
+            <strong>① 美伊协议仍存变数</strong> — 卡塔尔否认有直接对话安排，若协议落空油价可能暴力反弹，拖累风险资产。<br />
+            <strong>② 高估值科技股对宏观数据极度敏感</strong> — 若今晚公布的PPI/CPI或美联储官员讲话偏鹰，PLTR等强势股可能出现获利回吐。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div
-          style="
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-          "
-        >
-          ✅ 三条可执行关注清单
-        </div>
+        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">✅ 三条可执行关注清单</div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">今晚跟踪VIX和股指期货的开盘方向</div>
-            <div class="action-desc">
-              若VIX守住15.5下方、期指维持0.2%以上涨幅 → 短线风险偏暖，可维持科技股仓位；若VIX升破17或期指转跌 → 降低高估值科技仓位。
-            </div>
+            <div class="action-title">今晚开盘观察VIX与美股期货开盘方向</div>
+            <div class="action-desc">若三大期指高开后VIX未明显回落，说明情绪谨慎；可等待早盘30分钟确认趋势，再决定是否追涨AI/半导体。<span class="num">（VIX与期货数据因来源页面未渲染而缺失）</span></div>
           </li>
           <li class="action-item">
-            <div class="action-title">关注霍尔木兹通航消息与油价联动</div>
-            <div class="action-desc">
-              确认重开则能源空头/航运行情可能延续；若谈判反复，WTI可能反弹至$83–85，需重新评估通胀预期与美联储路径。
-            </div>
+            <div class="action-title">持有能源股的投资者做好油价波动对冲</div>
+            <div class="action-desc">美伊协议消息主导油价；若霍尔木兹海峡相关船只顺利通行，WTI或测试$75支撑，反之可能反弹。可通过 options 或降低仓位管理风险。</div>
           </li>
           <li class="action-item">
-            <div class="action-title">观察Palantir与亚马逊的盘前资金承接</div>
-            <div class="action-desc">
-              若盘前继续强势，AI/云计算主题有望延续；若冲高回落，建议锁定部分Mag7短线利润，等待更明确 Catalyst 再加仓。
-            </div>
+            <div class="action-title">锁定AI财报龙头，避免追高落后标的</div>
+            <div class="action-desc">PLTR已大幅反应利好； tonight关注其盘后延续性以及台积电、英伟达等上游是否补涨。对未公布业绩的AI概念股，不宜盲目追高。</div>
           </li>
         </ol>
       </section>
 
-      <!-- ═══ Footer ═══ -->
+      <!-- Footer -->
       <footer class="footer">
-        <div class="disclaimer">
-          ⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。
-        </div>
+        <div class="disclaimer">⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。</div>
         <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG)</div>
-        <div style="margin-top: 4px">
-          由 AI 助手自动生成 · 2026年8月4日 · 晨间版
-        </div>
+        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年08月04日 · 晨间版</div>
       </footer>
     </div>
   </body>
