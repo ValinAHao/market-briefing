@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>财经简报 | 2026年08月04日</title>
+    <title>财经简报 | 2026年8月5日</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
     <!--
   ╔══════════════════════════════════════════════════════════════╗
@@ -831,20 +831,36 @@
         }
       }
     </style>
+    <template id="__bundler_thumbnail" data-bg-color="#faf7f2">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sun" cx="50%" cy="60%" r="50%">
+            <stop offset="0%" stop-color="#f4b961" />
+            <stop offset="100%" stop-color="#ea8a3e" />
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="800" fill="#faf7f2" />
+        <rect x="0" y="520" width="1200" height="2" fill="#ece4d6" />
+        <circle cx="600" cy="520" r="150" fill="url(#sun)" />
+        <rect x="400" y="600" width="400" height="12" rx="6" fill="#ece4d6" />
+        <rect x="460" y="630" width="280" height="8" rx="4" fill="#ece4d6" />
+      </svg>
+    </template>
+  </head>
   <body>
     <div class="container">
-      <!-- Header -->
+      <!-- ═══ Header ═══ -->
       <header class="header">
         <div class="header-badge">
           <span class="dot"></span>
           LIVE · 晨间版 · 马来西亚美股投资者专属
         </div>
         <h1>🌅 财经晨报</h1>
-        <div class="date">2026年08月04日 · 周二 · 数据截至 MYT 22:50</div>
+        <div class="date">2026年8月5日 · 周三 · 数据截至 美东时间 08月04日收盘</div>
         <div class="subtitle">数据源：华尔街见闻 · Tiger Brokers (SG)</div>
       </header>
 
-      <!-- 1. 隔夜美股 -->
+      <!-- ═══ 1. 隔夜美股 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(234, 138, 62, 0.14)">📊</div>
@@ -852,39 +868,49 @@
         </div>
 
         <div class="index-grid">
-          <div class="index-card up">
+          <div class="index-card">
             <div class="index-name">道琼斯</div>
-            <div class="index-value">53900.81</div>
-            <div class="index-change up">+724.48 (+1.36%)</div>
+            <div class="index-value">--</div>
+            <div class="index-change" style="color:var(--text-muted)">数据未返回</div>
           </div>
-          <div class="index-card up">
+          <div class="index-card">
             <div class="index-name">纳斯达克</div>
-            <div class="index-value">26323.05</div>
-            <div class="index-change up">+409.14 (+1.58%)</div>
+            <div class="index-value">--</div>
+            <div class="index-change" style="color:var(--text-muted)">数据未返回</div>
           </div>
-          <div class="index-card up">
-            <div class="index-name">S&P 500</div>
-            <div class="index-value">7676.54</div>
-            <div class="index-change up">+76.42 (+1.00%)</div>
+          <div class="index-card">
+            <div class="index-name">S&P 500 ETF</div>
+            <div class="index-value">--</div>
+            <div class="index-change" style="color:var(--text-muted)">数据未返回</div>
+          </div>
+        </div>
+
+        <div class="alert-box yellow">
+          <div class="alert-title">⚠️ 数据说明</div>
+          <div class="alert-text">
+            Tiger <em>https://www.itiger.com/hans/quote/us</em> 的美股指数卡片返回骨架占位，未显示具体指数点位、期货及VIX数据。本简报不引用其它来源，亦不对缺失数据进行估算。
           </div>
         </div>
 
         <div class="card">
           <ul class="bullet-list">
-            <li><strong>三大指数全线收涨</strong>：道指、标普500再创历史新高，科技股领涨。</li>
-            <li><strong>Palantir（PLTR）绩后飙涨逾26%</strong>：Q2美国商业收入同比飙升149%，上调全年营收指引，带动AI与软件板块情绪高涨。</li>
-            <li><strong>半导体板块普涨</strong>：迈威尔科技（MRVL）涨超11%，ARM涨超9%，英特尔涨超9%，市场对AI算力需求保持乐观。</li>
-            <li><strong>地缘风险缓和</strong>：美财长贝森特称明日美伊或达成协议以开放霍尔木兹海峡，油气股普跌，市场风险偏好回升。</li>
-            <li><strong>较早数据来源</strong>：tiger-break 22:20 MYT 快照；VIX及期货数据在允许来源中未成功获取。</li>
+            <li><strong>道指、标普500齐创新高</strong>；纳指受芯片股带动大幅走高，芯片指数涨约 <span class="num">+6%</span>。</li>
+            <li><strong>Palantir (PLTR)</strong> 大涨 <span class="num">+29.45%</span>，Sandisk 涨 <span class="num">+10%</span>。</li>
+            <li><strong>AMD</strong> 绩后大跌 <span class="num down">-8%</span>；<strong>SpaceX</strong> 上市后首份财报后跌 <span class="num down">-7%</span>，主因 AI 资本开支飙升引发回报质疑。</li>
+            <li><strong>Arista</strong> Q2 业绩超预期并大幅上调指引，盘后/夜盘大涨 <span class="num">+11%</span>；高管称“需求不是问题，供应是主要瓶颈”。</li>
+            <li><strong>英伟达</strong> 上涨超 <span class="num">+2%</span>，SpaceX 确认与其合作设计卫星算力部署方案。</li>
+            <li><strong>油价重挫</strong>：WTI 原油 -6.48%，因地缘风险降温；现货黄金 +0.54%。</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>美伊谈判预期升温+AI财报亮眼形成双重利好，资金重新拥抱成长股。但午后数据仍属盘中快照，地缘协议尚未落地，<strong>今晚若PPI/伊朗消息反转，市场可能快速回吐涨幅</strong>。
+          <strong>💡 解读：</strong>美伊协议预期升温 + 财报季提振，风险偏好明显回升。但 AI 巨头财报后的资本开支与回报错配，是多空分歧的核心变量。
         </div>
       </section>
 
-      <!-- 2. 全球资产 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 2. 全球资产 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(91, 149, 201, 0.14)">🌍</div>
@@ -897,70 +923,111 @@
             <tbody>
               <tr>
                 <td><span class="asset-name">🟡 现货黄金</span></td>
-                <td><span class="asset-price">$4,078.51/oz</span></td>
-                <td><span class="tag up">▲ +0.57%</span><span class="asset-note">地缘缓和削弱避险需求</span></td>
+                <td><span class="asset-price">$4,077.21/oz</span></td>
+                <td><span class="tag up">▲ +0.54%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🛢️ WTI 原油</span></td>
-                <td><span class="asset-price">$76.64</span></td>
-                <td><span class="tag down">▼ -4.61%</span><span class="asset-note">美伊协议预期重创油价</span></td>
+                <td><span class="asset-price">$75.14</span></td>
+                <td><span class="tag down">▼ -6.48%</span><span class="asset-note">伊朗风险降温</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">💵 美元指数 DXY</span></td>
                 <td><span class="asset-price">99.89</span></td>
-                <td><span class="tag down">▼ -0.07%</span></td>
+                <td><span class="tag up">▲ +0.03%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇪🇺 EUR/USD</span></td>
-                <td><span class="asset-price">1.1525</span></td>
-                <td><span class="tag up">▲ +0.16%</span></td>
+                <td><span class="asset-price">1.1528</span></td>
+                <td><span class="tag down">▼ -0.01%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇯🇵 USD/JPY</span></td>
-                <td><span class="asset-price">157.55</span></td>
-                <td><span class="tag up">▲ +0.25%</span><span class="asset-note">日元涨势暂停</span></td>
+                <td><span class="asset-price">157.73</span></td>
+                <td><span class="tag up">▲ +0.01%</span></td>
               </tr>
               <tr>
                 <td><span class="asset-name">🇨🇳 离岸人民币</span></td>
-                <td><span class="asset-price">6.7475</span></td>
-                <td><span class="tag down">▼ -0.16%</span><span class="asset-note">人民币小幅走强</span></td>
+                <td><span class="asset-price">6.7487</span></td>
+                <td><span class="tag down">▼ +0.02%</span><span class="asset-note">人民币轻微走弱</span></td>
+              </tr>
+              <tr>
+                <td><span class="asset-name">🇲🇾 马来西亚综指</span></td>
+                <td><span class="asset-price">1,742.22</span></td>
+                <td><span class="tag up">▲ +0.6%</span><span class="asset-note">5月18日以来最高</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>油价大跌释放通胀压力缓解信号，利于风险资产；但油价跌破$80是否持续取决于真签协议。美元持稳，黄金失去部分避险溢价，后续需看今晚数据确认。
+          <strong>💡 解读：</strong>油价暴跌配合美元微涨、黄金小升，呈现“地缘风险降温但避险未全撤”的组合；马来西亚股市创阶段新高，反映亚洲资金情绪改善。
         </div>
       </section>
 
-      <!-- 3. 今日关注 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 3. 今日关注 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(224, 122, 58, 0.14)">🎯</div>
           <h2 class="section-title">今日关注</h2>
         </div>
 
+        <div class="alert-box yellow">
+          <div class="alert-title">⚠️ 指数期货 / VIX 数据缺失</div>
+          <div class="alert-text">所限来源未返回道指/标普/纳指期货及VIX数据，无法给出今晨风险情绪定量读数。请通过其它行情终端交叉验证。</div>
+        </div>
+
         <div class="card">
+          <div class="timeline">
+            <div class="timeline-item important">
+              <span class="timeline-label data">日历</span>
+              <strong>华尔街见闻日历 2026年8月5日：暂无事件</strong>（来源显示“今日暂无事件”）
+            </div>
+            <div class="timeline-item important">
+              <span class="timeline-label earnings">财报</span>
+              隔夜 <strong>SpaceX / AMD / Arista</strong> 财报余波 → 今晚/明日开盘首要交易线索
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">政策</span>
+              <strong>美国高院关税退款</strong>：已退还1000亿美元，进度60% → 关注零售/进口链反应
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">地缘</span>
+              伊朗拟允许欧洲国家清除霍尔木兹水雷 → 航运/油价风险继续降温
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label report">监管</span>
+              FCC光模块禁令传闻冲击中际旭创等中国光模块股 → 政策不确定性
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label speech">观点</span>
+              《大空头》Michael Burry 警告：美股或接近重大顶部，可能出现1987式暴跌
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:10px">🔭 重点观察</div>
           <ul class="bullet-list">
-            <li><strong> tonight US open catalysts：</strong>（距离下次开盘约13小时）——重点观察美伊协议进展、7月PPI/CPI预期变化、以及美股早盘延续性。</li>
-            <li><strong>VIX及股指期货</strong>：允许来源中未成功获取实时数据，将在简报中标注为“数据缺失”。</li>
-            <li><strong>重点观察 ① 油价联动</strong>：WTI若守稳$75，股市风险偏好或延续；若跌破$73，可能触发能源板块财报下修。</li>
-            <li><strong>重点观察 ② AI财报余波</strong>：PLTR、ARM、MRVL领涨后，今晚关注台积电ADR、英伟达供应链（如AVGO、AVGO？）是否跟随。</li>
-            <li><strong>风险提示 ① 协议不及预期</strong>：卡塔尔称“目前尚无美伊直接对话安排”，贝森特表态可能只是试探，油价随时可能反抽。</li>
-            <li><strong>风险提示 ② 利率路径</strong>：美联储票委Paulson称对利率路径持“开放态度”，核心通胀趋势仍是关键；若PPI超预期，降息预期或再被压缩。</li>
+            <li><strong>AI 财报交易延续性：</strong>Arista +11% 与 AMD -8% / SpaceX -7% 的 Group divergence，决定科技板块能否维持强势。</li>
+            <li><strong>亚洲联动：</strong>马来西亚/韩国/中国半导体链反弹能否在今晚美股开盘得到承接。</li>
           </ul>
         </div>
 
-        <div class="alert-box yellow">
-          <div class="alert-title">⚠️ 数据缺失说明</div>
-          <div class="alert-text">
-            Tiger Brokers 美股行情页（https://www.itiger.com/hans/quote/us）在快照中指数卡片显示为骨架（skeleton），未渲染出实际指数/期货价格及VIX数据。上述VIX/期货部分未能从允许来源获取，已如实标注，未使用外部来源补全。
-          </div>
+        <div class="card">
+          <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:10px">🚨 风险提示</div>
+          <ul class="bullet-list">
+            <li><strong>政策烟雾弹：</strong>光模块禁令、对华半导体设备出口管制预期、关税退款进度皆可能在短时间内放大波动。</li>
+            <li><strong>高估值 AI 股：</strong>巨额资本开支与可见回报不匹配，任何指引松动都易触发快速回调。</li>
+          </ul>
         </div>
       </section>
 
-      <!-- 4. AI与科技产业动态 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 4. AI与科技产业动态 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(138, 127, 201, 0.14)">🤖</div>
@@ -968,111 +1035,124 @@
         </div>
 
         <div class="card">
+          <div style="margin-bottom:10px;font-size:14px;color:var(--text-secondary)">
+            <strong style="color: var(--purple)">AI概念板块</strong> Tiger 报
+            <span class="tag up" style="font-size:13px">+2.73%</span> · 上涨 <strong>4108</strong> 只 / 下跌 <strong>1820</strong> 只
+          </div>
+
           <div class="tech-chips">
-            <div class="tech-chip"><span class="name">PLTR</span><span class="pct">+26.51%</span></div>
-            <div class="tech-chip"><span class="name">ARM</span><span class="pct">+12.47%</span></div>
-            <div class="tech-chip"><span class="name">MRVL</span><span class="pct">+10.51%</span></div>
-            <div class="tech-chip"><span class="name">INTC</span><span class="pct">+9.29%</span></div>
-            <div class="tech-chip"><span class="name">TER</span><span class="pct">+9.45%</span></div>
-            <div class="tech-chip"><span class="name">AI概念</span><span class="pct">+2.04%</span></div>
+            <div class="tech-chip"><span class="name">PLTR</span><span class="pct">+29.45%</span></div>
+            <div class="tech-chip"><span class="name">ARM</span><span class="pct">+17.36%</span></div>
+            <div class="tech-chip"><span class="name">MRVL</span><span class="pct">+12.81%</span></div>
+            <div class="tech-chip"><span class="name">INTC</span><span class="pct">+10.84%</span></div>
+            <div class="tech-chip"><span class="name">SMCI</span><span class="pct">+10.65%</span></div>
+          </div>
+
+          <div style="margin-bottom:10px;font-size:14px;color:var(--text-secondary)">
+            <strong style="color: var(--purple)">热门中概股</strong> Tiger 报
+            <span class="tag up" style="font-size:13px">+2.37%</span>
+          </div>
+
+          <div class="tech-chips">
+            <div class="tech-chip"><span class="name">CAN</span><span class="pct">+12.46%</span></div>
+            <div class="tech-chip"><span class="name">HIMX</span><span class="pct">+10.95%</span></div>
+            <div class="tech-chip"><span class="name">UMC</span><span class="pct">+10.38%</span></div>
+            <div class="tech-chip"><span class="name">KC</span><span class="pct">+9.92%</span></div>
+            <div class="tech-chip"><span class="name">SIMO</span><span class="pct">+6.75%</span></div>
           </div>
 
           <div class="divider"></div>
 
-          <ul class="bullet-list" style="margin-top: 10px">
-            <li><strong>Palantir业绩引爆AI软件股</strong>：美国商业收入同比+149%，上调全年营收指引；市场对政府与商业端AI平台付费意愿信心大增。</li>
-            <li><strong>半导体全线走强</strong>：MRVL、ARM、INTC、TER涨幅领先，反映市场对AI算力资本开支仍偏乐观。</li>
-            <li><strong>Anthropic 100亿美元押注算力</strong>：由英伟达支持的新贵接单，显示超大规模AI训练需求未减。</li>
-            <li><strong>CoreWeave进军亚洲</strong>：拟在印尼投资数十亿美元建设三座数据中心，AI算力军备竞赛向东南亚延伸。</li>
-            <li><strong>消费级显卡涨价</strong>：RTX 50系列国内价格跳涨，硬件优先流向AI算力，终端供应吃紧。</li>
-            <li><strong>谷歌AI豪赌争议</strong>：报道称谷歌AI累计投入接近2000亿美元，市场关注巨额资本开支能否转化为收入。</li>
+          <ul class="bullet-list" style="margin-top:10px">
+            <li><strong>AI行情向亚洲扩散：</strong>软银涨逾10%，韩国首尔综指涨超4%。</li>
+            <li><strong>存储股反弹：</strong>隔夜美股存储股反弹带动港股，南方两倍做多海力士 +7%，两倍做多三星 +4%。</li>
+            <li><strong>SpaceX “All in” 英伟达：</strong>目标明年底电力容量冲刺20吉瓦；与英伟达合作设计卫星算力部署方案。</li>
+            <li><strong>DeepSeek 重启融资：</strong>投前估值5000亿元人民币。</li>
+            <li><strong>“AI股神”争议：</strong>数据显示并非被空头击溃，而是“自找”的；巨额投入能否转化为回报受质疑。</li>
+            <li><strong>光模块禁令传闻：</strong>中际旭创回应称 FCC 草案尚未出台，暂时不予评述；AH 股跌约6%。</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>AI主题从“硬件囤货”扩展到“软件变现”，PLTR是情绪核心。但英伟达/台积电等上游仍未摆脱估值挤压风险，若宏观数据转差，高估值科技股更易波动。
+          <strong>💡 解读：</strong>AI 仍是资金主线，但已从“叙事市”转向“证据市”：谁能证明 AI 投入能兑现收入，谁就能继续享受溢价。
         </div>
       </section>
 
-      <!-- 5. 美股财报 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 5. 美股财报 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(217, 162, 58, 0.16)">💼</div>
           <h2 class="section-title">美股财报</h2>
         </div>
 
-        <!-- Palantir -->
+        <!-- SpaceX -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">PLTR</span>
-              <span class="earnings-name">Palantir Q2</span>
+              <span class="ticker-badge">未显示</span>
+              <span class="earnings-name">SpaceX 上市后首份财报</span>
             </div>
-            <span class="beat-badge beat">✓ 业绩超预期 + 上调指引</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><div class="metric-label">营收</div><div class="metric-value">+92% YoY</div><div class="metric-delta up">星链独撑利润</div></div>
+            <div class="metric"><div class="metric-label">AI业务</div><div class="metric-value">亏损收窄</div><div class="metric-delta down">支出高于预期</div></div>
+            <div class="metric"><div class="metric-label">盘后反应</div><div class="metric-value">-7%</div><div class="metric-delta down">绩后跌</div></div>
           </div>
           <ul class="bullet-list">
-            <li><strong>关键指标</strong>：Q2美国商业收入同比飙升 <span class="num">+149%</span>；公司上调全年营收指引。</li>
-            <li><strong>股价反应</strong>：盘中大涨 <span class="num">+26.51%</span>（best-of-breed AI软件情绪）。</li>
-            <li><strong>归因</strong>：政府与商业AI平台需求强劲，且管理层对全年增长更有信心；即便估值偏高，增长叙事仍吸引资金回流。</li>
+            <li>CEO 穆斯克电话会称剑指美国“第四大运营商”，或提前实现万亿收入目标。</li>
+            <li>AI 资本开支飙升引发华尔街质疑：巨额投入能否转化为回报？</li>
+            <li>公司确认与英伟达合作设计卫星算力部署方案。</li>
           </ul>
         </div>
 
-        <!-- Caterpillar -->
+        <!-- AMD -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">CAT</span>
-              <span class="earnings-name">卡特彼勒 Q2</span>
+              <span class="ticker-badge">未显示</span>
+              <span class="earnings-name">AMD</span>
             </div>
-            <span class="beat-badge beat">✓ 营收首破200亿美元</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><div class="metric-label">预期</div><div class="metric-value">—</div><div class="metric-delta">具体 EPS/营收数字未在来源显示</div></div>
+            <div class="metric"><div class="metric-label">盘后反应</div><div class="metric-value">-8%</div><div class="metric-delta down">绩后大跌</div></div>
           </div>
           <ul class="bullet-list">
-            <li><strong>关键指标</strong>：Q2营收首次突破 <span class="num">200亿美元</span>；EPS同比大增 <span class="num">+68%</span>。</li>
-            <li><strong>股价反应</strong>：盘中涨超 <span class="num">+11%</span>。</li>
-            <li><strong>归因</strong>：订单与积压订单持续增长，反映基建与能源资本开支需求仍稳健；关税不确定性尚未显著冲击业绩。</li>
+            <li>电话会：“我们仍处 AI 周期的早期”，预计2027年数据中心销售翻倍。</li>
+            <li>长期故事未变，但市场似乎对短期指引/毛利更苛刻。</li>
           </ul>
         </div>
 
-        <!-- ON Semi -->
+        <!-- Arista -->
         <div class="earnings-card">
           <div class="earnings-header">
             <div class="earnings-ticker">
-              <span class="ticker-badge">ON</span>
-              <span class="earnings-name">安森美半导体 Q2</span>
+              <span class="ticker-badge">未显示</span>
+              <span class="earnings-name">Arista Q2</span>
             </div>
-            <span class="beat-badge beat">✓ 业绩符合/超预期</span>
+            <span class="beat-badge beat">✓ 超预期 + 上调指引</span>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><div class="metric-label">业绩</div><div class="metric-value">超预期</div><div class="metric-delta up">需求强劲</div></div>
+            <div class="metric"><div class="metric-label">指引</div><div class="metric-value">大幅上调</div><div class="metric-delta up">供应是唯一瓶颈</div></div>
+            <div class="metric"><div class="metric-label">夜盘反应</div><div class="metric-value">+11%</div><div class="metric-delta up">绩优股大涨</div></div>
           </div>
           <ul class="bullet-list">
-            <li><strong>关键指标</strong>：Q2业绩超市场预期。</li>
-            <li><strong>前瞻指引</strong>：预计Q3 AI数据中心收入翻倍。</li>
-            <li><strong>股价反应</strong>：盘中涨超 <span class="num">+3%</span>。</li>
-            <li><strong>归因</strong>：AI数据中心电源/功率器件需求上行，抵消了传统车用/工业芯片的疲软。</li>
-          </ul>
-        </div>
-
-        <!-- Spotify caution -->
-        <div class="earnings-card">
-          <div class="earnings-header">
-            <div class="earnings-ticker">
-              <span class="ticker-badge">SPOT</span>
-              <span class="earnings-name">Spotify Q2</span>
-            </div>
-            <span class="beat-badge" style="background: rgba(200,87,79,0.12); color: var(--red); border: 1px solid rgba(200,87,79,0.28)">✗ 用户增长放缓</span>
-          </div>
-          <ul class="bullet-list">
-            <li><strong>关键指标</strong>：北美和欧洲用户增长放缓。</li>
-            <li><strong>前瞻指引</strong>：预测Q3利润将疲软。</li>
-            <li><strong>股价反应</strong>：盘中跌超 <span class="num down">-4%</span>。</li>
-            <li><strong>归因</strong>：增长引擎减速引发市场对高估值消费科技股的获利回吐。</li>
+            <li>高管直言“需求不是问题，供应是主要瓶颈”。</li>
+            <li>数据中心网络设备需求持续旺盛，成为 AI 基建的另一受益点。</li>
           </ul>
         </div>
 
         <div class="insight">
-          <strong>💡 解读：</strong>本日财报主线是“AI相关企业强者恒强”。PLTR上调指引、ON预计数据中心收入翻倍，均验证AI需求；而SPOT因增长放缓遭抛售，显示资金对“非AI成长”容忍度下降。
+          <strong>💡 解读：</strong>财报季进入“验证期”：亮眼增长已不够，市场更在意 AI 投入何时能见利润。Arista 因需求可见度高而被追捧，SpaceX/AMD 则因成本/指引担忧受挫。
         </div>
       </section>
 
-      <!-- 6. 宏观指标与市场数据 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 6. 宏观指标与市场数据 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(200, 87, 79, 0.12)">📉</div>
@@ -1080,76 +1160,96 @@
         </div>
 
         <div class="card">
-          <ul class="bullet-list">
-            <li><strong>美国6月JOLTS职位空缺</strong>：736万，低于前值754万与预期745万；招聘人数增加，裁员持平 → 劳动力市场边际降温但仍具韧性。</li>
-            <li><strong>美联储票委Paulson</strong>：对利率路径持“开放态度”，重点关注核心通胀趋势；未明确降息时点。</li>
-            <li><strong>日本10年期国债标售</strong>：市场需求疲软，收益率逼近2.90%警戒线，日债波动可能外溢至全球利率市场。</li>
+          <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:14px">
+            📅 今日宏观日历（华尔街见闻）
+          </div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:8px">
+            2026年8月5日暂无宏观数据、财报、新股或活动事件。市场焦点将集中在隔夜财报余波与突发政策新闻。
+          </p>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.7">
+            来源状态：本次抓取的华尔街见闻日历页显示“今日暂无事件”。
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:14px">
+            📊 市场微观结构
+          </div>
+          <div class="tech-chips">
+            <div class="tech-chip"><span class="name">美股涨跌家数</span><span class="pct">4108 / 1820</span></div>
+            <div class="tech-chip"><span class="name">AI概念涨跌</span><span class="pct">41 / 3</span></div>
+            <div class="tech-chip"><span class="name">马来西亚综指</span><span class="pct">1,742.22 (+0.6%)</span></div>
+          </div>
+          <ul class="bullet-list" style="margin-top:10px">
+            <li>美股上涨家数远多于下跌家数，隔夜广度良好。</li>
+            <li>AI 概念内部高度集中：仅3只下跌，显示主题资金仍在涌入。</li>
           </ul>
         </div>
 
         <div class="card">
-          <div style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">🌏 亚太股市今日表现</div>
-          <div class="tech-chips">
-            <div class="tech-chip"><span class="name">🇰🇷 韩国综指</span><span class="pct">+3.4%</span></div>
-            <div class="tech-chip"><span class="name">🇯🇵 日经225</span><span class="pct">+2.5%</span></div>
-            <div class="tech-chip"><span class="name">🇭🇰 恒指</span><span class="pct">+1%</span></div>
+          <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:10px">
+            🌏 亚太股市今日表现（截至发稿）
           </div>
-        </div>
-
-        <div class="insight">
-          <strong>💡 解读：</strong>职位空缺回落削弱“就业过热”叙事，但裁员有限意味着衰退信号不足。市场陷入“数据走弱=降息预期=利好风险资产”与“通胀若反弹=降息延后=利空”的拉锯。
+          <div class="tech-chips">
+            <div class="tech-chip"><span class="name">🇰🇷 韩国综指</span><span class="pct">+超4%</span></div>
+            <div class="tech-chip"><span class="name">🇯🇵 软银</span><span class="pct">+超10%</span></div>
+            <div class="tech-chip"><span class="name">🇲🇾 大马综指</span><span class="pct">+0.6%</span></div>
+            <div class="tech-chip"><span class="name">🇨🇳 科创50</span><span class="pct">+4%</span></div>
+          </div>
         </div>
       </section>
 
-      <!-- 7. 投资者的建议 -->
+      <div class="divider"></div>
+
+      <!-- ═══ 7. 投资者的建议 ═══ -->
       <section class="section">
         <div class="section-header">
           <div class="section-icon" style="background: rgba(90, 154, 106, 0.14)">💡</div>
           <h2 class="section-title">投资者的建议</h2>
         </div>
 
+        <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px">
+          以下建议针对今晚美国股市开盘（距亚洲早盘约13小时）。
+        </div>
+
         <div class="alert-box green">
           <div class="alert-title">🟢 值得关注 — 机会</div>
           <div class="alert-text">
-            <strong>① AI软件/半导体主线回归</strong> — PLTR带动AI情绪，ARM、MRVL、INTC跟涨；地缘缓和后资金回流高Beta科技， tonight可观察早盘动能是否延续。<br />
-            <strong>② 油价回落压制通胀预期</strong> — WTI跌破$80利好航空、物流及利率敏感型板块，若协议落地可阶段性关注非能源周期股。
+            <strong>① AI 财报线的分化交易</strong> — Arista 因“供应瓶颈=需求确定性”大涨，数据中心网络/交换机链可以纳入观察；若今晚开盘 Arista 动能延续，说明资金愿意为可见的 AI 基建订单继续溢价。<br />
+            <strong>② 亚洲市场Bulk反弹</strong> — 韩国、马来西亚、中国科创均走强，区域性科技/半导体 ETF 或相关个股可能跟随美股情绪继续修复。
           </div>
         </div>
 
         <div class="alert-box red">
           <div class="alert-title">🔴 需要警惕 — 风险</div>
           <div class="alert-text">
-            <strong>① 美伊协议仍存变数</strong> — 卡塔尔否认有直接对话安排，若协议落空油价可能暴力反弹，拖累风险资产。<br />
-            <strong>② 高估值科技股对宏观数据极度敏感</strong> — 若今晚公布的PPI/CPI或美联储官员讲话偏鹰，PLTR等强势股可能出现获利回吐。
+            <strong>① AI 资本开支 vs 回报错配</strong> — SpaceX 巨额 AI 支出已引发回报质疑；高估值 AI 股一旦指引松动，或出现类似 AMD 的-8%快速回调。<br />
+            <strong>② 政策烟雾弹</strong> — 光模块禁令传闻、对华半导体设备管制预期、美国高院关税退款，均可能在盘中造成突发波动。<br />
+            <strong>③ 重大顶部预警</strong> — Michael Burry 认为美股接近重大顶部，可能出现1987式暴跌；情绪过热时需防高波动反转。
           </div>
         </div>
 
         <div class="divider" style="margin: 20px 0"></div>
 
-        <div style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">✅ 三条可执行关注清单</div>
+        <div style="font-size:16px;font-weight:600;color:var(--text-primary);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+          ✅ 三条可执行关注清单
+        </div>
 
         <ol class="action-list">
           <li class="action-item">
-            <div class="action-title">今晚开盘观察VIX与美股期货开盘方向</div>
-            <div class="action-desc">若三大期指高开后VIX未明显回落，说明情绪谨慎；可等待早盘30分钟确认趋势，再决定是否追涨AI/半导体。<span class="num">（VIX与期货数据因来源页面未渲染而缺失）</span></div>
+            <div class="action-title">今晚开盘前确认指数期货与VIX方向</div>
+            <div class="action-desc">本简报来源中缺失期货与VIX，请在其它行情界面交叉验证。若出现高开低走且 Arista/PLTR 回落，避免追高 AI 领涨股。</div>
           </li>
           <li class="action-item">
-            <div class="action-title">持有能源股的投资者做好油价波动对冲</div>
-            <div class="action-desc">美伊协议消息主导油价；若霍尔木兹海峡相关船只顺利通行，WTI或测试$75支撑，反之可能反弹。可通过 options 或降低仓位管理风险。</div>
+            <div class="action-title">对 SpaceX / AMD / NVDA 等 AI 仓位收紧止损</div>
+            <div class="action-desc">财报验证了“资本开支大、回报不确定”的故事，若开盘后跌破隔夜低点，优先考虑减仓而非补仓。</div>
           </li>
           <li class="action-item">
-            <div class="action-title">锁定AI财报龙头，避免追高落后标的</div>
-            <div class="action-desc">PLTR已大幅反应利好； tonight关注其盘后延续性以及台积电、英伟达等上游是否补涨。对未公布业绩的AI概念股，不宜盲目追高。</div>
+            <div class="action-title">观察 WTI 油价与伊朗/光模块政策头条</div>
+            <div class="action-desc">地缘风险继续降温→油价承压、风险偏好回升，可短线减持能源对冲；但若禁令或管制消息发酵，及时调整中概/半导体仓位。</div>
           </li>
         </ol>
       </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="disclaimer">⚠️ 本简报仅供参考，不构成投资建议。投资有风险，决策须谨慎。</div>
-        <div>📡 数据来源：华尔街见闻 · Tiger Brokers (SG)</div>
-        <div style="margin-top: 4px">由 AI 助手自动生成 · 2026年08月04日 · 晨间版</div>
-      </footer>
     </div>
   </body>
 </html>
